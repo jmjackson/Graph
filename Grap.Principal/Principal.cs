@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Grap.Principal.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,12 @@ namespace Grap.Principal
             this.Close();
         }
 
-        
+        private void BtnSignIn_Click(object sender, EventArgs e)
+        {
+            Home h = new Home();
+            this.Hide();
+            h.Show();
+            
+        }
     }
 }
