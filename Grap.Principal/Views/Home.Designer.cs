@@ -29,11 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.ElHome = new ns1.BunifuElipse(this.components);
+            this.DCHome = new ns1.BunifuDragControl(this.components);
+            this.SuspendLayout();
+            // 
+            // ElHome
+            // 
+            this.ElHome.ElipseRadius = 5;
+            this.ElHome.TargetControl = this;
+            // 
+            // DCHome
+            // 
+            this.DCHome.Fixed = true;
+            this.DCHome.Horizontal = true;
+            this.DCHome.Vertical = true;
+            // 
+            // Home
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(871, 503);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private ns1.BunifuElipse ElHome;
+        private ns1.BunifuDragControl DCHome;
     }
 }

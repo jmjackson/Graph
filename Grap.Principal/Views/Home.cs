@@ -16,5 +16,10 @@ namespace Grap.Principal.Views
         {
             InitializeComponent();
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
