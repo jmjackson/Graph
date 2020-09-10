@@ -57,7 +57,7 @@
             this.MenuPanel.BackColor = System.Drawing.Color.SteelBlue;
             this.MenuPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuPanel.BackgroundImage")));
             this.MenuPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MenuPanel.Location = new System.Drawing.Point(0, 1);
+            this.MenuPanel.Location = new System.Drawing.Point(2, 2);
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(463, 580);
             this.MenuPanel.TabIndex = 0;

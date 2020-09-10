@@ -17,9 +17,35 @@ namespace Grap.Principal.Views
             InitializeComponent();
         }
 
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Btnprod_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void AbrirFormEnPanel(object Formhijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+        }
+
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Cliente());
         }
     }
 }
