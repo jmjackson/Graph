@@ -42,10 +42,12 @@ namespace Grap.Principal.Views
             this.panelContenedor.Tag = fh;
             fh.Show();
         }
-
-        private void BtnClientes_Click(object sender, EventArgs e)
+        private void BunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
+            //PBSlider.Left = ((Bunifu.Framework.UI.BunifuFlatButton)sender).Left;
+            //PBSlider.Width = ((Bunifu.Framework.UI.BunifuFlatButton)sender).Width;
             AbrirFormEnPanel(new Cliente());
+
         }
     }
 }
