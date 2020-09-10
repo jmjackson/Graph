@@ -23,12 +23,32 @@ namespace Grap.Principal
             this.Close();
         }
 
-        private void BtnSignIn_Click(object sender, EventArgs e)
+        private void BtnSingIn_Click(object sender, EventArgs e)
+        {
+            ValidationLogin();
+            
+        }
+
+        private void ValidationLogin()
         {
             Home h = new Home();
-            this.Hide();
-            h.Show();
-            
+            if (TxtUser.Text == "admin" && TxtPassword.Text == "password")
+            {
+                h.Show();
+                this.Hide();
+            }
+            else
+            {
+                LblError.Text = "Contraseña o Password Incorrecto";
+            }
+        }
+
+        private void BtnSingIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(char)Keys.Enter)
+            {
+                ValidationLogin();
+            }
         }
     }
 }

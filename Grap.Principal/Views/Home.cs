@@ -22,32 +22,22 @@ namespace Grap.Principal.Views
 
         }
 
-        private void BtnClose_Click(object sender, EventArgs e)
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            var currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Btnprod_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void AbrirFormEnPanel(object Formhijo)
-        {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = Formhijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
-        }
-        private void BunifuFlatButton1_Click_1(object sender, EventArgs e)
-        {
-            //PBSlider.Left = ((Bunifu.Framework.UI.BunifuFlatButton)sender).Left;
-            //PBSlider.Width = ((Bunifu.Framework.UI.BunifuFlatButton)sender).Width;
-            AbrirFormEnPanel(new Cliente());
-
         }
     }
 }
