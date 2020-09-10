@@ -23,12 +23,11 @@ namespace Grap.Principal
             this.Close();
         }
 
-        private void BtnSignIn_Click(object sender, EventArgs e)
+        private void BtnSingIn_Click(object sender, EventArgs e)
         {
             Home h = new Home();
-            this.Hide();
             h.Show();
-            
+            this.Hide();
         }
     }
 }

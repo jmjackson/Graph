@@ -28,106 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.BtnClose = new ns1.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnOtros = new FontAwesome.Sharp.IconButton();
+            this.BtnConfiguracion = new FontAwesome.Sharp.IconButton();
+            this.BtnClientes = new FontAwesome.Sharp.IconButton();
+            this.BtnDashboard = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.BtnClientes = new System.Windows.Forms.Button();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.DCMove = new ns1.BunifuDragControl(this.components);
-            this.PictureLogo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BtnClose
-            // 
-            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
-            this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
-            this.BtnClose.ImageActive = null;
-            this.BtnClose.Location = new System.Drawing.Point(772, 3);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(25, 26);
-            this.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnClose.TabIndex = 5;
-            this.BtnClose.TabStop = false;
-            this.BtnClose.Zoom = 10;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.BtnClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
+            this.panel1.Controls.Add(this.BtnOtros);
+            this.panel1.Controls.Add(this.BtnConfiguracion);
+            this.panel1.Controls.Add(this.BtnClientes);
+            this.panel1.Controls.Add(this.BtnDashboard);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 35);
-            this.panel1.TabIndex = 6;
+            this.panel1.Size = new System.Drawing.Size(199, 527);
+            this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // BtnOtros
             // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.PictureLogo);
-            this.panel2.Controls.Add(this.BtnClientes);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 35);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(190, 415);
-            this.panel2.TabIndex = 7;
+            this.BtnOtros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.BtnOtros.FlatAppearance.BorderSize = 0;
+            this.BtnOtros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOtros.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.BtnOtros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOtros.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnOtros.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.BtnOtros.IconColor = System.Drawing.Color.White;
+            this.BtnOtros.IconSize = 18;
+            this.BtnOtros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnOtros.Location = new System.Drawing.Point(0, 244);
+            this.BtnOtros.Name = "BtnOtros";
+            this.BtnOtros.Rotation = 0D;
+            this.BtnOtros.Size = new System.Drawing.Size(196, 35);
+            this.BtnOtros.TabIndex = 0;
+            this.BtnOtros.Text = "Otros";
+            this.BtnOtros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnOtros.UseVisualStyleBackColor = false;
+            // 
+            // BtnConfiguracion
+            // 
+            this.BtnConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.BtnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.BtnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConfiguracion.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.BtnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConfiguracion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.BtnConfiguracion.IconColor = System.Drawing.Color.White;
+            this.BtnConfiguracion.IconSize = 18;
+            this.BtnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnConfiguracion.Location = new System.Drawing.Point(0, 203);
+            this.BtnConfiguracion.Name = "BtnConfiguracion";
+            this.BtnConfiguracion.Rotation = 0D;
+            this.BtnConfiguracion.Size = new System.Drawing.Size(196, 35);
+            this.BtnConfiguracion.TabIndex = 0;
+            this.BtnConfiguracion.Text = "Configuración";
+            this.BtnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnConfiguracion.UseVisualStyleBackColor = false;
             // 
             // BtnClientes
             // 
+            this.BtnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
             this.BtnClientes.FlatAppearance.BorderSize = 0;
-            this.BtnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.BtnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnClientes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnClientes.ForeColor = System.Drawing.Color.White;
-            this.BtnClientes.Image = ((System.Drawing.Image)(resources.GetObject("BtnClientes.Image")));
+            this.BtnClientes.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.BtnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnClientes.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.BtnClientes.IconColor = System.Drawing.Color.White;
+            this.BtnClientes.IconSize = 18;
             this.BtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClientes.Location = new System.Drawing.Point(0, 71);
+            this.BtnClientes.Location = new System.Drawing.Point(0, 162);
             this.BtnClientes.Name = "BtnClientes";
-            this.BtnClientes.Size = new System.Drawing.Size(190, 40);
-            this.BtnClientes.TabIndex = 4;
+            this.BtnClientes.Rotation = 0D;
+            this.BtnClientes.Size = new System.Drawing.Size(196, 35);
+            this.BtnClientes.TabIndex = 0;
             this.BtnClientes.Text = "Clientes";
-            this.BtnClientes.UseVisualStyleBackColor = true;
+            this.BtnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnClientes.UseVisualStyleBackColor = false;
             this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
-            // panelContenedor
+            // BtnDashboard
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.LightGray;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(190, 35);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(610, 415);
-            this.panelContenedor.TabIndex = 8;
+            this.BtnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
+            this.BtnDashboard.FlatAppearance.BorderSize = 0;
+            this.BtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDashboard.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.BtnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnDashboard.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.BtnDashboard.IconColor = System.Drawing.Color.White;
+            this.BtnDashboard.IconSize = 18;
+            this.BtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnDashboard.Location = new System.Drawing.Point(3, 121);
+            this.BtnDashboard.Name = "BtnDashboard";
+            this.BtnDashboard.Rotation = 0D;
+            this.BtnDashboard.Size = new System.Drawing.Size(196, 35);
+            this.BtnDashboard.TabIndex = 0;
+            this.BtnDashboard.Text = "Dashboard";
+            this.BtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnDashboard.UseVisualStyleBackColor = false;
             // 
-            // DCMove
+            // panel2
             // 
-            this.DCMove.Fixed = true;
-            this.DCMove.Horizontal = true;
-            this.DCMove.TargetControl = this.panel1;
-            this.DCMove.Vertical = true;
-            // 
-            // PictureLogo
-            // 
-            this.PictureLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureLogo.Image")));
-            this.PictureLogo.Location = new System.Drawing.Point(56, 6);
-            this.PictureLogo.Name = "PictureLogo";
-            this.PictureLogo.Size = new System.Drawing.Size(69, 59);
-            this.PictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureLogo.TabIndex = 6;
-            this.PictureLogo.TabStop = false;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
+            this.panel2.Location = new System.Drawing.Point(199, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 37);
+            this.panel2.TabIndex = 1;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelContenedor);
+            this.ClientSize = new System.Drawing.Size(975, 527);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -135,22 +156,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ns1.BunifuImageButton BtnClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelContenedor;
-        private ns1.BunifuDragControl DCMove;
-        private System.Windows.Forms.Button BtnClientes;
-        private System.Windows.Forms.PictureBox PictureLogo;
+        private FontAwesome.Sharp.IconButton BtnDashboard;
+        private FontAwesome.Sharp.IconButton BtnOtros;
+        private FontAwesome.Sharp.IconButton BtnConfiguracion;
+        private FontAwesome.Sharp.IconButton BtnClientes;
     }
 }
