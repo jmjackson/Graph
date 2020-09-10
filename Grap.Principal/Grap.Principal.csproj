@@ -119,5 +119,8 @@
   <ItemGroup>
     <Content Include="Resources\Bunifu_UI_v1.52.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataModel\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

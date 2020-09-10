@@ -25,9 +25,30 @@ namespace Grap.Principal
 
         private void BtnSingIn_Click(object sender, EventArgs e)
         {
+            ValidationLogin();
+            
+        }
+
+        private void ValidationLogin()
+        {
             Home h = new Home();
-            h.Show();
-            this.Hide();
+            if (TxtUser.Text == "admin" && TxtPassword.Text == "password")
+            {
+                h.Show();
+                this.Hide();
+            }
+            else
+            {
+                LblError.Text = "Contraseña o Password Incorrecto";
+            }
+        }
+
+        private void BtnSingIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==(char)Keys.Enter)
+            {
+                ValidationLogin();
+            }
         }
     }
 }

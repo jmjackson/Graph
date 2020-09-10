@@ -56,13 +56,13 @@
             this.BtnOtros.FlatAppearance.BorderSize = 0;
             this.BtnOtros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOtros.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.BtnOtros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOtros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOtros.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnOtros.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.BtnOtros.IconChar = FontAwesome.Sharp.IconChar.Cube;
             this.BtnOtros.IconColor = System.Drawing.Color.White;
             this.BtnOtros.IconSize = 18;
             this.BtnOtros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnOtros.Location = new System.Drawing.Point(0, 244);
+            this.BtnOtros.Location = new System.Drawing.Point(0, 261);
             this.BtnOtros.Name = "BtnOtros";
             this.BtnOtros.Rotation = 0D;
             this.BtnOtros.Size = new System.Drawing.Size(196, 35);
@@ -77,13 +77,13 @@
             this.BtnConfiguracion.FlatAppearance.BorderSize = 0;
             this.BtnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfiguracion.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.BtnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConfiguracion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.BtnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Cogs;
             this.BtnConfiguracion.IconColor = System.Drawing.Color.White;
             this.BtnConfiguracion.IconSize = 18;
             this.BtnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnConfiguracion.Location = new System.Drawing.Point(0, 203);
+            this.BtnConfiguracion.Location = new System.Drawing.Point(0, 220);
             this.BtnConfiguracion.Name = "BtnConfiguracion";
             this.BtnConfiguracion.Rotation = 0D;
             this.BtnConfiguracion.Size = new System.Drawing.Size(196, 35);
@@ -98,13 +98,13 @@
             this.BtnClientes.FlatAppearance.BorderSize = 0;
             this.BtnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClientes.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.BtnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnClientes.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.BtnClientes.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.BtnClientes.IconColor = System.Drawing.Color.White;
             this.BtnClientes.IconSize = 18;
             this.BtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClientes.Location = new System.Drawing.Point(0, 162);
+            this.BtnClientes.Location = new System.Drawing.Point(0, 179);
             this.BtnClientes.Name = "BtnClientes";
             this.BtnClientes.Rotation = 0D;
             this.BtnClientes.Size = new System.Drawing.Size(196, 35);
@@ -120,13 +120,13 @@
             this.BtnDashboard.FlatAppearance.BorderSize = 0;
             this.BtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDashboard.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.BtnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnDashboard.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.BtnDashboard.IconColor = System.Drawing.Color.White;
             this.BtnDashboard.IconSize = 18;
             this.BtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDashboard.Location = new System.Drawing.Point(3, 121);
+            this.BtnDashboard.Location = new System.Drawing.Point(3, 138);
             this.BtnDashboard.Name = "BtnDashboard";
             this.BtnDashboard.Rotation = 0D;
             this.BtnDashboard.Size = new System.Drawing.Size(196, 35);
@@ -138,6 +138,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(199, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(776, 37);
@@ -151,10 +152,11 @@
             this.ClientSize = new System.Drawing.Size(975, 527);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

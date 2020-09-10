@@ -37,6 +37,7 @@
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
             this.BtnClose = new ns1.BunifuImageButton();
+            this.LblError = new ns1.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@
             this.TxtUser.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(205, 30);
-            this.TxtUser.TabIndex = 1;
+            this.TxtUser.TabIndex = 0;
             this.TxtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TxtPassword
@@ -109,9 +110,10 @@
             this.BtnSingIn.Margin = new System.Windows.Forms.Padding(5);
             this.BtnSingIn.Name = "BtnSingIn";
             this.BtnSingIn.Size = new System.Drawing.Size(140, 41);
-            this.BtnSingIn.TabIndex = 2;
+            this.BtnSingIn.TabIndex = 3;
             this.BtnSingIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnSingIn.Click += new System.EventHandler(this.BtnSingIn_Click);
+            this.BtnSingIn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BtnSingIn_KeyPress);
             // 
             // bunifuCustomLabel2
             // 
@@ -157,12 +159,23 @@
             this.BtnClose.Zoom = 10;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
+            // LblError
+            // 
+            this.LblError.AutoSize = true;
+            this.LblError.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblError.ForeColor = System.Drawing.Color.Red;
+            this.LblError.Location = new System.Drawing.Point(482, 130);
+            this.LblError.Name = "LblError";
+            this.LblError.Size = new System.Drawing.Size(0, 14);
+            this.LblError.TabIndex = 6;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(695, 401);
+            this.Controls.Add(this.LblError);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -191,6 +204,7 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
         private ns1.BunifuCustomLabel bunifuCustomLabel3;
         private ns1.BunifuImageButton BtnClose;
+        private ns1.BunifuCustomLabel LblError;
     }
 }
 
