@@ -14,12 +14,7 @@ namespace Grap.Principal.Views
     {
         public Cliente()
         {
-            InitializeComponent();
-        }
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            Registro frm = new Registro();
-            frm.Show();
+                InitializeComponent();
         }
     }
 }
