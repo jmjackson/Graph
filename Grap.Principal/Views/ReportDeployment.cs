@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Grap.Principal
 {
-    public partial class Report : Form
+    public partial class ReportDeployment : Form
     {
-        public Report()
+        public ReportDeployment()
         {
             InitializeComponent();
         }
@@ -33,6 +33,11 @@ namespace Grap.Principal
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReportDeployment_Load(object sender, EventArgs e)
         {
 
         }

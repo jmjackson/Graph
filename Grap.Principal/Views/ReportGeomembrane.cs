@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Grap.Principal
 {
-    public partial class Report2 : Form
+    public partial class ReportGeomembrane : Form
     {
-        public Report2()
+        public ReportGeomembrane()
         {
             InitializeComponent();
         }
@@ -33,6 +33,16 @@ namespace Grap.Principal
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_InfoProjectNo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReportGeomembrane_Load(object sender, EventArgs e)
         {
 
         }
