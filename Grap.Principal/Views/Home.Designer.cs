@@ -33,7 +33,7 @@
             this.BtnConfiguracion = new FontAwesome.Sharp.IconButton();
             this.BtnClientes = new FontAwesome.Sharp.IconButton();
             this.BtnDashboard = new FontAwesome.Sharp.IconButton();
-            this.PanelLogo = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,14 +41,13 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
             this.panel1.Controls.Add(this.BtnOtros);
-            this.panel1.Controls.Add(this.PanelLogo);
-            this.panel1.Controls.Add(this.BtnDashboard);
             this.panel1.Controls.Add(this.BtnConfiguracion);
             this.panel1.Controls.Add(this.BtnClientes);
+            this.panel1.Controls.Add(this.BtnDashboard);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 527);
+            this.panel1.Size = new System.Drawing.Size(199, 527);
             this.panel1.TabIndex = 0;
             // 
             // BtnOtros
@@ -63,10 +62,10 @@
             this.BtnOtros.IconColor = System.Drawing.Color.White;
             this.BtnOtros.IconSize = 18;
             this.BtnOtros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnOtros.Location = new System.Drawing.Point(0, 250);
+            this.BtnOtros.Location = new System.Drawing.Point(0, 261);
             this.BtnOtros.Name = "BtnOtros";
             this.BtnOtros.Rotation = 0D;
-            this.BtnOtros.Size = new System.Drawing.Size(217, 35);
+            this.BtnOtros.Size = new System.Drawing.Size(196, 35);
             this.BtnOtros.TabIndex = 0;
             this.BtnOtros.Text = "Otros";
             this.BtnOtros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -84,10 +83,10 @@
             this.BtnConfiguracion.IconColor = System.Drawing.Color.White;
             this.BtnConfiguracion.IconSize = 18;
             this.BtnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnConfiguracion.Location = new System.Drawing.Point(0, 209);
+            this.BtnConfiguracion.Location = new System.Drawing.Point(0, 220);
             this.BtnConfiguracion.Name = "BtnConfiguracion";
             this.BtnConfiguracion.Rotation = 0D;
-            this.BtnConfiguracion.Size = new System.Drawing.Size(217, 35);
+            this.BtnConfiguracion.Size = new System.Drawing.Size(196, 35);
             this.BtnConfiguracion.TabIndex = 0;
             this.BtnConfiguracion.Text = "Configuración";
             this.BtnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -105,10 +104,10 @@
             this.BtnClientes.IconColor = System.Drawing.Color.White;
             this.BtnClientes.IconSize = 18;
             this.BtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClientes.Location = new System.Drawing.Point(0, 168);
+            this.BtnClientes.Location = new System.Drawing.Point(0, 179);
             this.BtnClientes.Name = "BtnClientes";
             this.BtnClientes.Rotation = 0D;
-            this.BtnClientes.Size = new System.Drawing.Size(217, 35);
+            this.BtnClientes.Size = new System.Drawing.Size(196, 35);
             this.BtnClientes.TabIndex = 0;
             this.BtnClientes.Text = "Clientes";
             this.BtnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -127,22 +126,23 @@
             this.BtnDashboard.IconColor = System.Drawing.Color.White;
             this.BtnDashboard.IconSize = 18;
             this.BtnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDashboard.Location = new System.Drawing.Point(0, 127);
+            this.BtnDashboard.Location = new System.Drawing.Point(3, 138);
             this.BtnDashboard.Name = "BtnDashboard";
             this.BtnDashboard.Rotation = 0D;
-            this.BtnDashboard.Size = new System.Drawing.Size(217, 35);
+            this.BtnDashboard.Size = new System.Drawing.Size(196, 35);
             this.BtnDashboard.TabIndex = 0;
             this.BtnDashboard.Text = "Dashboard";
             this.BtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnDashboard.UseVisualStyleBackColor = false;
             // 
-            // PanelLogo
+            // panel2
             // 
-            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
-            this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(220, 121);
-            this.PanelLogo.TabIndex = 0;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(199, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 37);
+            this.panel2.TabIndex = 1;
             // 
             // Home
             // 
@@ -150,6 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(975, 527);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Home";
@@ -165,10 +166,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton BtnDashboard;
         private FontAwesome.Sharp.IconButton BtnOtros;
         private FontAwesome.Sharp.IconButton BtnConfiguracion;
         private FontAwesome.Sharp.IconButton BtnClientes;
-        private System.Windows.Forms.Panel PanelLogo;
     }
 }
