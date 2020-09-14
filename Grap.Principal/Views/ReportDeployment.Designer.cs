@@ -40,6 +40,14 @@
             this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGV1 = new ns1.BunifuCustomDataGrid();
+            this.Deployment_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Panel_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Roll_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Widht = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblClient = new ns1.BunifuCustomLabel();
             this.LblProject = new ns1.BunifuCustomLabel();
             this.LblProjectNo = new ns1.BunifuCustomLabel();
@@ -56,14 +64,6 @@
             this.BtnGetPDF = new FontAwesome.Sharp.IconButton();
             this.BtnNextReport = new FontAwesome.Sharp.IconButton();
             this.LblGeomembranePanel = new ns1.BunifuCustomLabel();
-            this.Deployment_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Panel_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Roll_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Widht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close_Button)).BeginInit();
@@ -86,7 +86,7 @@
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1438, 61);
+            this.Header.Size = new System.Drawing.Size(1386, 61);
             this.Header.TabIndex = 0;
             this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
             // 
@@ -179,6 +179,54 @@
             this.DGV1.RowHeadersVisible = false;
             this.DGV1.Size = new System.Drawing.Size(1414, 446);
             this.DGV1.TabIndex = 1;
+            // 
+            // Deployment_Date
+            // 
+            this.Deployment_Date.HeaderText = "Deployment Date";
+            this.Deployment_Date.Name = "Deployment_Date";
+            this.Deployment_Date.ReadOnly = true;
+            // 
+            // Panel_No
+            // 
+            this.Panel_No.HeaderText = "Panel No.";
+            this.Panel_No.Name = "Panel_No";
+            this.Panel_No.ReadOnly = true;
+            // 
+            // Roll_No
+            // 
+            this.Roll_No.HeaderText = "Roll No.";
+            this.Roll_No.Name = "Roll_No";
+            this.Roll_No.ReadOnly = true;
+            // 
+            // Lenght
+            // 
+            this.Lenght.HeaderText = "Lenght";
+            this.Lenght.Name = "Lenght";
+            this.Lenght.ReadOnly = true;
+            // 
+            // Widht
+            // 
+            this.Widht.HeaderText = "Width";
+            this.Widht.Name = "Widht";
+            this.Widht.ReadOnly = true;
+            // 
+            // Thickness
+            // 
+            this.Thickness.HeaderText = "Thickness";
+            this.Thickness.Name = "Thickness";
+            this.Thickness.ReadOnly = true;
+            // 
+            // Area
+            // 
+            this.Area.HeaderText = "Area";
+            this.Area.Name = "Area";
+            this.Area.ReadOnly = true;
+            // 
+            // Remarks
+            // 
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            this.Remarks.ReadOnly = true;
             // 
             // LblClient
             // 
@@ -375,60 +423,12 @@
             this.LblGeomembranePanel.Text = "Geomembrane Panel Deployment Log";
             this.LblGeomembranePanel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Deployment_Date
-            // 
-            this.Deployment_Date.HeaderText = "Deployment Date";
-            this.Deployment_Date.Name = "Deployment_Date";
-            this.Deployment_Date.ReadOnly = true;
-            // 
-            // Panel_No
-            // 
-            this.Panel_No.HeaderText = "Panel No.";
-            this.Panel_No.Name = "Panel_No";
-            this.Panel_No.ReadOnly = true;
-            // 
-            // Roll_No
-            // 
-            this.Roll_No.HeaderText = "Roll No.";
-            this.Roll_No.Name = "Roll_No";
-            this.Roll_No.ReadOnly = true;
-            // 
-            // Lenght
-            // 
-            this.Lenght.HeaderText = "Lenght";
-            this.Lenght.Name = "Lenght";
-            this.Lenght.ReadOnly = true;
-            // 
-            // Widht
-            // 
-            this.Widht.HeaderText = "Width";
-            this.Widht.Name = "Widht";
-            this.Widht.ReadOnly = true;
-            // 
-            // Thickness
-            // 
-            this.Thickness.HeaderText = "Thickness";
-            this.Thickness.Name = "Thickness";
-            this.Thickness.ReadOnly = true;
-            // 
-            // Area
-            // 
-            this.Area.HeaderText = "Area";
-            this.Area.Name = "Area";
-            this.Area.ReadOnly = true;
-            // 
-            // Remarks
-            // 
-            this.Remarks.HeaderText = "Remarks";
-            this.Remarks.Name = "Remarks";
-            this.Remarks.ReadOnly = true;
-            // 
             // ReportDeployment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1438, 725);
+            this.ClientSize = new System.Drawing.Size(1386, 725);
             this.Controls.Add(this.LblGeomembranePanel);
             this.Controls.Add(this.BtnNextReport);
             this.Controls.Add(this.BtnGetPDF);

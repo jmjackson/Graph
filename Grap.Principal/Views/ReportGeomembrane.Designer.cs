@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportGeomembrane));
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.Header = new System.Windows.Forms.Panel();
@@ -40,6 +40,15 @@
             this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGV1 = new ns1.BunifuCustomDataGrid();
+            this.Seaming_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seam_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seam_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WTemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seam_Lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Carry_Over = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reamarks_Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblClient = new ns1.BunifuCustomLabel();
             this.LblProject = new ns1.BunifuCustomLabel();
             this.LblProjectNo = new ns1.BunifuCustomLabel();
@@ -60,15 +69,6 @@
             this.BtnGetPDF = new FontAwesome.Sharp.IconButton();
             this.PBLogoImage = new System.Windows.Forms.PictureBox();
             this.LblGeomembranePanel = new ns1.BunifuCustomLabel();
-            this.Seaming_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seam_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seam_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WTemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seam_Lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Carry_Over = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Reamarks_Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close_Button)).BeginInit();
@@ -91,7 +91,7 @@
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1438, 61);
+            this.Header.Size = new System.Drawing.Size(1386, 61);
             this.Header.TabIndex = 0;
             this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
             // 
@@ -148,21 +148,21 @@
             // 
             // DGV1
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DGV1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV1.BackgroundColor = System.Drawing.Color.White;
             this.DGV1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGV1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGV1.ColumnHeadersHeight = 45;
             this.DGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seaming_Date,
@@ -185,6 +185,60 @@
             this.DGV1.RowHeadersVisible = false;
             this.DGV1.Size = new System.Drawing.Size(1414, 446);
             this.DGV1.TabIndex = 1;
+            // 
+            // Seaming_Date
+            // 
+            this.Seaming_Date.HeaderText = "Seaming Date";
+            this.Seaming_Date.Name = "Seaming_Date";
+            this.Seaming_Date.ReadOnly = true;
+            // 
+            // Seam_No
+            // 
+            this.Seam_No.HeaderText = "Seam No.";
+            this.Seam_No.Name = "Seam_No";
+            this.Seam_No.ReadOnly = true;
+            // 
+            // Seam_Time
+            // 
+            this.Seam_Time.HeaderText = "Seam Time";
+            this.Seam_Time.Name = "Seam_Time";
+            this.Seam_Time.ReadOnly = true;
+            // 
+            // WTemp
+            // 
+            this.WTemp.HeaderText = "Wedge Temp.";
+            this.WTemp.Name = "WTemp";
+            this.WTemp.ReadOnly = true;
+            // 
+            // WSpeed
+            // 
+            this.WSpeed.HeaderText = "Wedge Speed";
+            this.WSpeed.Name = "WSpeed";
+            this.WSpeed.ReadOnly = true;
+            // 
+            // Seam_Lenght
+            // 
+            this.Seam_Lenght.HeaderText = "Seam Lenght";
+            this.Seam_Lenght.Name = "Seam_Lenght";
+            this.Seam_Lenght.ReadOnly = true;
+            // 
+            // Carry_Over
+            // 
+            this.Carry_Over.HeaderText = "Carry Over";
+            this.Carry_Over.Name = "Carry_Over";
+            this.Carry_Over.ReadOnly = true;
+            // 
+            // Destructive
+            // 
+            this.Destructive.HeaderText = "Destructive";
+            this.Destructive.Name = "Destructive";
+            this.Destructive.ReadOnly = true;
+            // 
+            // Reamarks_Destructive
+            // 
+            this.Reamarks_Destructive.HeaderText = "Remarks / Destructive";
+            this.Reamarks_Destructive.Name = "Reamarks_Destructive";
+            this.Reamarks_Destructive.ReadOnly = true;
             // 
             // LblClient
             // 
@@ -426,66 +480,12 @@
             this.LblGeomembranePanel.Text = "Geomembrane Field Seaming Log";
             this.LblGeomembranePanel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Seaming_Date
-            // 
-            this.Seaming_Date.HeaderText = "Seaming Date";
-            this.Seaming_Date.Name = "Seaming_Date";
-            this.Seaming_Date.ReadOnly = true;
-            // 
-            // Seam_No
-            // 
-            this.Seam_No.HeaderText = "Seam No.";
-            this.Seam_No.Name = "Seam_No";
-            this.Seam_No.ReadOnly = true;
-            // 
-            // Seam_Time
-            // 
-            this.Seam_Time.HeaderText = "Seam Time";
-            this.Seam_Time.Name = "Seam_Time";
-            this.Seam_Time.ReadOnly = true;
-            // 
-            // WTemp
-            // 
-            this.WTemp.HeaderText = "Wedge Temp.";
-            this.WTemp.Name = "WTemp";
-            this.WTemp.ReadOnly = true;
-            // 
-            // WSpeed
-            // 
-            this.WSpeed.HeaderText = "Wedge Speed";
-            this.WSpeed.Name = "WSpeed";
-            this.WSpeed.ReadOnly = true;
-            // 
-            // Seam_Lenght
-            // 
-            this.Seam_Lenght.HeaderText = "Seam Lenght";
-            this.Seam_Lenght.Name = "Seam_Lenght";
-            this.Seam_Lenght.ReadOnly = true;
-            // 
-            // Carry_Over
-            // 
-            this.Carry_Over.HeaderText = "Carry Over";
-            this.Carry_Over.Name = "Carry_Over";
-            this.Carry_Over.ReadOnly = true;
-            // 
-            // Destructive
-            // 
-            this.Destructive.HeaderText = "Destructive";
-            this.Destructive.Name = "Destructive";
-            this.Destructive.ReadOnly = true;
-            // 
-            // Reamarks_Destructive
-            // 
-            this.Reamarks_Destructive.HeaderText = "Remarks / Destructive";
-            this.Reamarks_Destructive.Name = "Reamarks_Destructive";
-            this.Reamarks_Destructive.ReadOnly = true;
-            // 
             // ReportGeomembrane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1438, 725);
+            this.ClientSize = new System.Drawing.Size(1386, 725);
             this.Controls.Add(this.LblGeomembranePanel);
             this.Controls.Add(this.PBLogoImage);
             this.Controls.Add(this.BtnReturnReport);
