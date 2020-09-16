@@ -34,6 +34,7 @@
             this.BtnClientes = new FontAwesome.Sharp.IconButton();
             this.BtnDashboard = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,6 +135,7 @@
             this.BtnDashboard.Text = "Dashboard";
             this.BtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnDashboard.UseVisualStyleBackColor = false;
+            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // panel2
             // 
@@ -144,12 +146,21 @@
             this.panel2.Size = new System.Drawing.Size(776, 37);
             this.panel2.TabIndex = 1;
             // 
+            // panelContenedor
+            // 
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(199, 37);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(776, 490);
+            this.panelContenedor.TabIndex = 2;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(975, 527);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -171,5 +182,6 @@
         private FontAwesome.Sharp.IconButton BtnOtros;
         private FontAwesome.Sharp.IconButton BtnConfiguracion;
         private FontAwesome.Sharp.IconButton BtnClientes;
+        private System.Windows.Forms.Panel panelContenedor;
     }
 }
