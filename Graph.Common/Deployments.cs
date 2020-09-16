@@ -16,7 +16,7 @@ namespace Graph.Common
         public double Area { get; set; }
         public string Remarks { get; set; }
         public int ProjectId { get; set; }
-        public Project Project { get; set; }
+        //public Project Project { get; set; }
 
     }
 }

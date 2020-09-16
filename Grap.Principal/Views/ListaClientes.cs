@@ -14,7 +14,7 @@ namespace Grap.Principal.Views
 {
     public partial class ListaClientes : Form
     {
-        SQLiteController SQ = new SQLiteController();
+        
         public ListaClientes()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace Grap.Principal.Views
 
         private void ListaClientes_Load(object sender, EventArgs e)
         {
-            SQ.cargarPersonas(DgvPersonas);
+            
         }
     }
 }

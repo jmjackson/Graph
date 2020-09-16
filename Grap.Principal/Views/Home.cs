@@ -24,8 +24,7 @@ namespace Grap.Principal.Views
 
         private void BtnClientes_Click(object sender, EventArgs e)
         {
-            Cliente c = new Cliente();
-            c.Show();
+            
         }
 
         private void OpenChildForm(Form childForm)

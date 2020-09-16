@@ -17,7 +17,7 @@ namespace Graph.Common
         public string Destructive { get; set; }
         public string RemarksDestructive { get; set; }
         public int ProjectId { get; set; }
-        public Project Project { get; set; }
+       // public Project Project { get; set; }
 
     }
 }

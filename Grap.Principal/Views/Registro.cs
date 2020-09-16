@@ -12,7 +12,7 @@ namespace Grap.Principal.Views
 {
     public partial class Registro : Form
     {
-        SQLiteController SQ = new SQLiteController();
+       
         public Registro()
         {
             InitializeComponent();
@@ -29,8 +29,7 @@ namespace Grap.Principal.Views
             //Correguir esta part dela comparacion ya que no se sabe si el codigo lleva letas o no 
             //if (SQ.Registrado(Convert.ToInt32(TxtCode.Text)) == 0)
             //{
-                MessageBox.Show(SQ.insertar(TxtCode.Text, TxtName.Text, TxtImage.Text));
-                TxtCode.Text = "";
+                
                 TxtName.Text = "";
                 TxtImage.Text = "";
 
