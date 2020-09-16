@@ -32,7 +32,7 @@ namespace Grap.Principal
         private void ValidationLogin()
         {
             Home h = new Home();
-            if (TxtUser.Text == "admin" && TxtPassword.Text == "password")
+            if (TxtUser.Text == "admin" && TxtPassword.Text == "123")
             {
                 h.Show();
                 this.Hide();

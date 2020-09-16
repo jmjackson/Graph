@@ -29,165 +29,260 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
-            this.MenuPanel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
+            this.BtnRegistrar = new ns1.BunifuThinButton2();
+            this.bunifuImageButton1 = new ns1.BunifuImageButton();
+            this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
+            this.TxtImage = new ns1.BunifuMetroTextbox();
+            this.TxtFecha = new ns1.BunifuMetroTextbox();
+            this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
+            this.TxtName = new ns1.BunifuMetroTextbox();
+            this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
+            this.TxtCode = new ns1.BunifuMetroTextbox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.BtnClose = new ns1.BunifuImageButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.TxtCliente = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtProyecto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // MenuPanel
+            // panel3
             // 
-            this.MenuPanel.BackColor = System.Drawing.Color.SteelBlue;
-            this.MenuPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuPanel.BackgroundImage")));
-            this.MenuPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MenuPanel.Location = new System.Drawing.Point(0, -3);
-            this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(275, 312);
-            this.MenuPanel.TabIndex = 1;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.BtnClose);
+            this.panel3.Controls.Add(this.bunifuCustomLabel5);
+            this.panel3.Controls.Add(this.BtnRegistrar);
+            this.panel3.Controls.Add(this.bunifuImageButton1);
+            this.panel3.Controls.Add(this.bunifuCustomLabel4);
+            this.panel3.Controls.Add(this.TxtImage);
+            this.panel3.Controls.Add(this.TxtFecha);
+            this.panel3.Controls.Add(this.bunifuCustomLabel3);
+            this.panel3.Controls.Add(this.bunifuCustomLabel1);
+            this.panel3.Controls.Add(this.TxtName);
+            this.panel3.Controls.Add(this.bunifuCustomLabel2);
+            this.panel3.Controls.Add(this.TxtCode);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(88, 38);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(656, 414);
+            this.panel3.TabIndex = 7;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Corbel", 15.75F);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(100, 36);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(179, 26);
+            this.bunifuCustomLabel5.TabIndex = 8;
+            this.bunifuCustomLabel5.Text = "Resgistro de Cliente";
+            // 
+            // BtnRegistrar
+            // 
+            this.BtnRegistrar.ActiveBorderThickness = 1;
+            this.BtnRegistrar.ActiveCornerRadius = 20;
+            this.BtnRegistrar.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.BtnRegistrar.ActiveForecolor = System.Drawing.Color.White;
+            this.BtnRegistrar.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.BtnRegistrar.BackColor = System.Drawing.Color.White;
+            this.BtnRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnRegistrar.BackgroundImage")));
+            this.BtnRegistrar.ButtonText = "Registrar";
+            this.BtnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.BtnRegistrar.IdleBorderThickness = 1;
+            this.BtnRegistrar.IdleCornerRadius = 20;
+            this.BtnRegistrar.IdleFillColor = System.Drawing.Color.White;
+            this.BtnRegistrar.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.BtnRegistrar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.BtnRegistrar.Location = new System.Drawing.Point(78, 350);
+            this.BtnRegistrar.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnRegistrar.Name = "BtnRegistrar";
+            this.BtnRegistrar.Size = new System.Drawing.Size(201, 41);
+            this.BtnRegistrar.TabIndex = 13;
+            this.BtnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(220, 275);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(59, 46);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 12;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.BunifuImageButton1_Click);
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(13, 253);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(46, 18);
+            this.bunifuCustomLabel4.TabIndex = 11;
+            this.bunifuCustomLabel4.Text = "Image";
+            // 
+            // TxtImage
+            // 
+            this.TxtImage.BackColor = System.Drawing.Color.White;
+            this.TxtImage.BorderColorFocused = System.Drawing.Color.Blue;
+            this.TxtImage.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.TxtImage.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.TxtImage.BorderThickness = 3;
+            this.TxtImage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtImage.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TxtImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtImage.isPassword = false;
+            this.TxtImage.Location = new System.Drawing.Point(16, 275);
+            this.TxtImage.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtImage.Name = "TxtImage";
+            this.TxtImage.Size = new System.Drawing.Size(197, 46);
+            this.TxtImage.TabIndex = 10;
+            this.TxtImage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // TxtFecha
+            // 
+            this.TxtFecha.BackColor = System.Drawing.Color.White;
+            this.TxtFecha.BorderColorFocused = System.Drawing.Color.Blue;
+            this.TxtFecha.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.TxtFecha.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.TxtFecha.BorderThickness = 3;
+            this.TxtFecha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtFecha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TxtFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtFecha.isPassword = false;
+            this.TxtFecha.Location = new System.Drawing.Point(220, 102);
+            this.TxtFecha.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtFecha.Name = "TxtFecha";
+            this.TxtFecha.Size = new System.Drawing.Size(133, 46);
+            this.TxtFecha.TabIndex = 9;
+            this.TxtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(217, 80);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(45, 18);
+            this.bunifuCustomLabel3.TabIndex = 8;
+            this.bunifuCustomLabel3.Text = "Fecha";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(13, 169);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(44, 18);
+            this.bunifuCustomLabel1.TabIndex = 6;
+            this.bunifuCustomLabel1.Text = "Name";
+            // 
+            // TxtName
+            // 
+            this.TxtName.BackColor = System.Drawing.Color.White;
+            this.TxtName.BorderColorFocused = System.Drawing.Color.Blue;
+            this.TxtName.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.TxtName.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.TxtName.BorderThickness = 3;
+            this.TxtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TxtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtName.isPassword = false;
+            this.TxtName.Location = new System.Drawing.Point(16, 191);
+            this.TxtName.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtName.Name = "TxtName";
+            this.TxtName.Size = new System.Drawing.Size(337, 44);
+            this.TxtName.TabIndex = 5;
+            this.TxtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(13, 80);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(40, 18);
+            this.bunifuCustomLabel2.TabIndex = 4;
+            this.bunifuCustomLabel2.Text = "Code";
+            // 
+            // TxtCode
+            // 
+            this.TxtCode.BackColor = System.Drawing.Color.White;
+            this.TxtCode.BorderColorFocused = System.Drawing.Color.Blue;
+            this.TxtCode.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.TxtCode.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.TxtCode.BorderThickness = 3;
+            this.TxtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtCode.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TxtCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtCode.isPassword = false;
+            this.TxtCode.Location = new System.Drawing.Point(16, 102);
+            this.TxtCode.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCode.Name = "TxtCode";
+            this.TxtCode.Size = new System.Drawing.Size(133, 46);
+            this.TxtCode.TabIndex = 0;
+            this.TxtCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // BtnClose
             // 
-            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.BackColor = System.Drawing.Color.White;
             this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
-            this.BtnClose.ImageActive = null;
-            this.BtnClose.Location = new System.Drawing.Point(694, 1);
+            this.BtnClose.ImageActive = ((System.Drawing.Image)(resources.GetObject("BtnClose.ImageActive")));
+            this.BtnClose.Location = new System.Drawing.Point(627, 14);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(25, 26);
-            this.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnClose.TabIndex = 5;
+            this.BtnClose.Size = new System.Drawing.Size(16, 16);
+            this.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnClose.TabIndex = 15;
             this.BtnClose.TabStop = false;
             this.BtnClose.Zoom = 10;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(457, 24);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(111, 92);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(629, 156);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(78, 20);
-            this.textBox3.TabIndex = 19;
-            // 
-            // TxtCliente
-            // 
-            this.TxtCliente.Location = new System.Drawing.Point(355, 121);
-            this.TxtCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtCliente.Name = "TxtCliente";
-            this.TxtCliente.Size = new System.Drawing.Size(352, 20);
-            this.TxtCliente.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(282, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 20);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Cliente";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(282, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Proyecto";
-            // 
-            // TxtProyecto
-            // 
-            this.TxtProyecto.Location = new System.Drawing.Point(355, 156);
-            this.TxtProyecto.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtProyecto.Name = "TxtProyecto";
-            this.TxtProyecto.Size = new System.Drawing.Size(156, 20);
-            this.TxtProyecto.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(525, 156);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 20);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Proyecto No.";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(420, 198);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 35);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "GUARDAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click_1);
             // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(721, 309);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtProyecto);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.TxtCliente);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.BtnClose);
-            this.Controls.Add(this.MenuPanel);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(776, 490);
+            this.Controls.Add(this.panel3);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel MenuPanel;
+        private System.Windows.Forms.Panel panel3;
+        private ns1.BunifuMetroTextbox TxtCode;
+        private ns1.BunifuCustomLabel bunifuCustomLabel2;
+        private ns1.BunifuCustomLabel bunifuCustomLabel3;
+        private ns1.BunifuCustomLabel bunifuCustomLabel1;
+        private ns1.BunifuMetroTextbox TxtName;
+        private ns1.BunifuImageButton bunifuImageButton1;
+        private ns1.BunifuCustomLabel bunifuCustomLabel4;
+        private ns1.BunifuMetroTextbox TxtImage;
+        private ns1.BunifuMetroTextbox TxtFecha;
+        private ns1.BunifuThinButton2 BtnRegistrar;
+        private ns1.BunifuCustomLabel bunifuCustomLabel5;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private ns1.BunifuImageButton BtnClose;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox TxtCliente;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtProyecto;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
     }
 }
