@@ -27,5 +27,6 @@ namespace Grap.Principal.DataModel
         }
 
         public DbSet<Clients> Clients { get; set;  }
+        
     }
 }

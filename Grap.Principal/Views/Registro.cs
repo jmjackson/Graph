@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Grap.Principal.DataModel;
+using Grap.Principal.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,7 @@ namespace Grap.Principal.Views
 {
     public partial class Registro : Form
     {
-       
+        readonly DataBaseContext db = new DataBaseContext();
         public Registro()
         {
             InitializeComponent();
@@ -26,19 +28,22 @@ namespace Grap.Principal.Views
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
-            //Correguir esta part dela comparacion ya que no se sabe si el codigo lleva letas o no 
-            //if (SQ.Registrado(Convert.ToInt32(TxtCode.Text)) == 0)
-            //{
-                
-                TxtName.Text = "";
-                TxtImage.Text = "";
+            var cd=TxtCode.Text;
+            Clients c = new Clients()
+            {
+                Code=cd,
+                Name=TxtName.Text,
+                Image=cd+"_"+TxtImage.Text
+            };
+
+            db.Clients.Add(c);
+            db.SaveChanges();
+
+            ListaClientes lc = new ListaClientes();
+            lc.Show();
+            this.Close();
 
 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Imposible de regitrar, El registro ya existe");
-            //}
         }
 
         private void BunifuImageButton1_Click(object sender, EventArgs e)
@@ -51,6 +56,7 @@ namespace Grap.Principal.Views
                 {
                     //Aqui seleciona el Archivo y se ponen el el cuadro de texto
                     TxtImage.Text = openFileDialog1.FileName;
+
                 }
 
             }
