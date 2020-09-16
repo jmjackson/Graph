@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Grap.Principal.DataModel;
+using Grap.Principal.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,9 +25,6 @@ namespace Grap.Principal.Views
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

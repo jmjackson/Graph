@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grap.Principal", "Grap.Principal\Grap.Principal.csproj", "{8826E4D6-D88F-4D21-BBBE-34060D788AD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph.Common", "Graph.Common\Graph.Common.csproj", "{A79F8F41-A861-43FD-AFEB-1BFC9CFEBFC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph.Common", "Graph.Common\Graph.Common.csproj", "{A79F8F41-A861-43FD-AFEB-1BFC9CFEBFC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

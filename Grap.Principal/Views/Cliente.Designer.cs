@@ -33,9 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.bunifuMetroTextbox1 = new ns1.BunifuMetroTextbox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.bunifuCustomDataGrid1 = new ns1.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +57,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 55);
             this.panel1.TabIndex = 0;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SteelBlue;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SteelBlue;
+            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "New Cliente";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SteelBlue;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SteelBlue;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SteelBlue;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(658, 9);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(137, 34);
+            this.bunifuThinButton21.TabIndex = 4;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+           
             // 
             // bunifuMetroTextbox1
             // 
@@ -85,31 +111,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SteelBlue;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SteelBlue;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "New Cliente";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SteelBlue;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SteelBlue;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SteelBlue;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(658, 9);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(137, 34);
-            this.bunifuThinButton21.TabIndex = 4;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuCustomDataGrid1
             // 

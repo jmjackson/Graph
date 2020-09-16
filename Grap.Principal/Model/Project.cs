@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Graph.Common
+namespace Grap.Principal.Model
 {
+    [Table("Projects")]
     public class Project
     {
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string Number { get; set; }
@@ -16,6 +21,6 @@ namespace Graph.Common
         public string Operator { get; set; }
         public string MachineNumber { get; set; }
         public int ClientId { get; set; }
-        public Client Client { get; set; }
+        public Clients Client { get; set; }
     }
 }
