@@ -30,63 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.PanelDock = new System.Windows.Forms.Panel();
-            this.TxtUser = new ns1.BunifuMaterialTextbox();
-            this.TxtPassword = new ns1.BunifuMaterialTextbox();
             this.BtnSingIn = new ns1.BunifuThinButton2();
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
             this.BtnClose = new ns1.BunifuImageButton();
             this.LblError = new ns1.BunifuCustomLabel();
+            this.TxtUser = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.TxtPassword = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PanelDock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelDock
             // 
             this.PanelDock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.PanelDock.Controls.Add(this.pictureBox1);
             this.PanelDock.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelDock.Location = new System.Drawing.Point(0, 0);
             this.PanelDock.Name = "PanelDock";
             this.PanelDock.Size = new System.Drawing.Size(352, 401);
             this.PanelDock.TabIndex = 0;
-            // 
-            // TxtUser
-            // 
-            this.TxtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtUser.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TxtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TxtUser.HintForeColor = System.Drawing.Color.Empty;
-            this.TxtUser.HintText = "";
-            this.TxtUser.isPassword = false;
-            this.TxtUser.LineFocusedColor = System.Drawing.Color.SlateGray;
-            this.TxtUser.LineIdleColor = System.Drawing.Color.Gray;
-            this.TxtUser.LineMouseHoverColor = System.Drawing.Color.SlateGray;
-            this.TxtUser.LineThickness = 2;
-            this.TxtUser.Location = new System.Drawing.Point(464, 150);
-            this.TxtUser.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtUser.Name = "TxtUser";
-            this.TxtUser.Size = new System.Drawing.Size(205, 30);
-            this.TxtUser.TabIndex = 0;
-            this.TxtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // TxtPassword
-            // 
-            this.TxtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TxtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TxtPassword.HintForeColor = System.Drawing.Color.Empty;
-            this.TxtPassword.HintText = "";
-            this.TxtPassword.isPassword = true;
-            this.TxtPassword.LineFocusedColor = System.Drawing.Color.SlateGray;
-            this.TxtPassword.LineIdleColor = System.Drawing.Color.Gray;
-            this.TxtPassword.LineMouseHoverColor = System.Drawing.Color.SlateGray;
-            this.TxtPassword.LineThickness = 2;
-            this.TxtPassword.Location = new System.Drawing.Point(464, 200);
-            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.Size = new System.Drawing.Size(205, 30);
-            this.TxtPassword.TabIndex = 1;
-            this.TxtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // BtnSingIn
             // 
@@ -169,26 +135,55 @@
             this.LblError.Size = new System.Drawing.Size(0, 14);
             this.LblError.TabIndex = 6;
             // 
+            // TxtUser
+            // 
+            this.TxtUser.BorderColor = System.Drawing.Color.SeaGreen;
+            this.TxtUser.Location = new System.Drawing.Point(462, 158);
+            this.TxtUser.Name = "TxtUser";
+            this.TxtUser.Size = new System.Drawing.Size(196, 20);
+            this.TxtUser.TabIndex = 7;
+            // 
+            // TxtPassword
+            // 
+            this.TxtPassword.BorderColor = System.Drawing.Color.SeaGreen;
+            this.TxtPassword.Location = new System.Drawing.Point(462, 210);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(196, 20);
+            this.TxtPassword.TabIndex = 7;
+            this.TxtPassword.UseSystemPasswordChar = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(74, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 225);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(695, 401);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.TxtUser);
             this.Controls.Add(this.LblError);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.BtnSingIn);
-            this.Controls.Add(this.TxtPassword);
-            this.Controls.Add(this.TxtUser);
             this.Controls.Add(this.PanelDock);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.PanelDock.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,14 +192,15 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelDock;
-        private ns1.BunifuMaterialTextbox TxtUser;
-        private ns1.BunifuMaterialTextbox TxtPassword;
         private ns1.BunifuThinButton2 BtnSingIn;
         private ns1.BunifuCustomLabel bunifuCustomLabel2;
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
         private ns1.BunifuCustomLabel bunifuCustomLabel3;
         private ns1.BunifuImageButton BtnClose;
         private ns1.BunifuCustomLabel LblError;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtUser;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtPassword;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

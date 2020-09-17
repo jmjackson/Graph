@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
-            this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
+            this.BtnNuevo = new ns1.BunifuThinButton2();
+            this.LblCliente = new ns1.BunifuCustomLabel();
             this.DgvPersonas = new ns1.BunifuCustomDataGrid();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPersonas)).BeginInit();
@@ -41,8 +41,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bunifuThinButton21);
-            this.panel1.Controls.Add(this.bunifuCustomLabel5);
+            this.panel1.Controls.Add(this.BtnNuevo);
+            this.panel1.Controls.Add(this.LblCliente);
             this.panel1.Controls.Add(this.DgvPersonas);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -50,59 +50,59 @@
             this.panel1.Size = new System.Drawing.Size(760, 451);
             this.panel1.TabIndex = 0;
             // 
-            // bunifuThinButton21
+            // BtnNuevo
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Nuevo Cliente ";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(595, 50);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(147, 41);
-            this.bunifuThinButton21.TabIndex = 14;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.BunifuThinButton21_Click);
+            this.BtnNuevo.ActiveBorderThickness = 1;
+            this.BtnNuevo.ActiveCornerRadius = 20;
+            this.BtnNuevo.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.BtnNuevo.ActiveForecolor = System.Drawing.Color.White;
+            this.BtnNuevo.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.BtnNuevo.BackColor = System.Drawing.Color.White;
+            this.BtnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnNuevo.BackgroundImage")));
+            this.BtnNuevo.ButtonText = "Nuevo Cliente ";
+            this.BtnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNuevo.ForeColor = System.Drawing.Color.SeaGreen;
+            this.BtnNuevo.IdleBorderThickness = 1;
+            this.BtnNuevo.IdleCornerRadius = 20;
+            this.BtnNuevo.IdleFillColor = System.Drawing.Color.White;
+            this.BtnNuevo.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.BtnNuevo.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.BtnNuevo.Location = new System.Drawing.Point(595, 50);
+            this.BtnNuevo.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnNuevo.Name = "BtnNuevo";
+            this.BtnNuevo.Size = new System.Drawing.Size(147, 41);
+            this.BtnNuevo.TabIndex = 14;
+            this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnNuevo.Click += new System.EventHandler(this.BunifuThinButton21_Click);
             // 
-            // bunifuCustomLabel5
+            // LblCliente
             // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Corbel", 15.75F);
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(12, 26);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(149, 26);
-            this.bunifuCustomLabel5.TabIndex = 9;
-            this.bunifuCustomLabel5.Text = "Lista de Clientes";
+            this.LblCliente.AutoSize = true;
+            this.LblCliente.Font = new System.Drawing.Font("Corbel", 15.75F);
+            this.LblCliente.Location = new System.Drawing.Point(12, 26);
+            this.LblCliente.Name = "LblCliente";
+            this.LblCliente.Size = new System.Drawing.Size(149, 26);
+            this.LblCliente.TabIndex = 9;
+            this.LblCliente.Text = "Lista de Clientes";
             // 
             // DgvPersonas
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DgvPersonas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DgvPersonas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvPersonas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvPersonas.BackgroundColor = System.Drawing.Color.White;
             this.DgvPersonas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvPersonas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DgvPersonas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvPersonas.ColumnHeadersHeight = 30;
             this.DgvPersonas.DoubleBuffered = true;
             this.DgvPersonas.EnableHeadersVisualStyles = false;
@@ -123,6 +123,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(760, 451);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaClientes";
             this.Text = "ListaClientes";
             this.Load += new System.EventHandler(this.ListaClientes_Load);
@@ -136,8 +137,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private ns1.BunifuCustomLabel bunifuCustomLabel5;
-        private ns1.BunifuThinButton2 bunifuThinButton21;
+        private ns1.BunifuCustomLabel LblCliente;
+        private ns1.BunifuThinButton2 BtnNuevo;
         private ns1.BunifuCustomDataGrid DgvPersonas;
     }
 }

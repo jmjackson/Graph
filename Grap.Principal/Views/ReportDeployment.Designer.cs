@@ -363,7 +363,7 @@
             // PBLogoImage
             // 
             this.PBLogoImage.Image = ((System.Drawing.Image)(resources.GetObject("PBLogoImage.Image")));
-            this.PBLogoImage.Location = new System.Drawing.Point(1269, 67);
+            this.PBLogoImage.Location = new System.Drawing.Point(1229, 67);
             this.PBLogoImage.Name = "PBLogoImage";
             this.PBLogoImage.Size = new System.Drawing.Size(157, 151);
             this.PBLogoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
