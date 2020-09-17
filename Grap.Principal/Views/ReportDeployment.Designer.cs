@@ -86,7 +86,7 @@
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1386, 61);
+            this.Header.Size = new System.Drawing.Size(1435, 61);
             this.Header.TabIndex = 0;
             this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
             // 
@@ -428,7 +428,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1386, 725);
+            this.ClientSize = new System.Drawing.Size(1435, 683);
             this.Controls.Add(this.LblGeomembranePanel);
             this.Controls.Add(this.BtnNextReport);
             this.Controls.Add(this.BtnGetPDF);

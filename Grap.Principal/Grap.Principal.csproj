@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\DisplayClientData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DisplayClientData.Designer.cs">
+      <DependentUpon>DisplayClientData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="Views\Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\DisplayClientData.resx">
+      <DependentUpon>DisplayClientData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
