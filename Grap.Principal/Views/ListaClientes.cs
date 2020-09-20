@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using Grap.Principal.Model;
+using Grap.Principal.DataModel;
 
 namespace Grap.Principal.Views
 {
     public partial class ListaClientes : Form
     {
-        
+        readonly DataBaseContext db = new DataBaseContext();
         public ListaClientes()
         {
             InitializeComponent();
@@ -27,7 +29,15 @@ namespace Grap.Principal.Views
 
         private void ListaClientes_Load(object sender, EventArgs e)
         {
-            
+            //dummy data
+            var lc = db.Clients.ToList();
+
+            //use binding source to hold dummy data
+            BindingSource binding = new BindingSource();
+            binding.DataSource = lc;
+
+            //bind datagridview to binding source
+            DgvPersonas.DataSource = binding;
         }
     }
 }

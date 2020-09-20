@@ -24,7 +24,7 @@ namespace Grap.Principal.Views
 
         private void BtnClientes_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormEnPanel(new ListaClientes());
         }
 
         private void OpenChildForm(Form childForm)
@@ -53,7 +53,7 @@ namespace Grap.Principal.Views
         }
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new ListaClientes());
+            
         }
     }
 }
