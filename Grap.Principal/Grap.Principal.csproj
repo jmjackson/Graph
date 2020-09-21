@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Operacion\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

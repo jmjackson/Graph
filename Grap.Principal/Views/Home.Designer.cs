@@ -205,6 +205,7 @@
             this.BtnOut.Text = "Cerrar Sesión";
             this.BtnOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnOut.UseVisualStyleBackColor = false;
+            this.BtnOut.Click += new System.EventHandler(this.BtnOut_Click);
             // 
             // Home
             // 

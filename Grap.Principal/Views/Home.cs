@@ -27,23 +27,17 @@ namespace Grap.Principal.Views
             OpenPanelForm(new ListaClientes());
         }
 
-        private void OpenChildForm(Form childForm)
-        {
-            var currentChildForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-        }
+        
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-        private void OpenPanelForm(object formhija)
+        private void OpenPanelForm(object childForm)
         {
             if (this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = formhija as Form;
+            Form fh = childForm as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
             this.panelContenedor.Controls.Add(fh);
@@ -66,6 +60,11 @@ namespace Grap.Principal.Views
         private void BtnConfig_Click(object sender, EventArgs e)
         {
             OpenPanelForm(new Config());
+        }
+
+        private void BtnOut_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

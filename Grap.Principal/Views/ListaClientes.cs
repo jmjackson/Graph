@@ -20,6 +20,7 @@ namespace Grap.Principal.Views
         public ListaClientes()
         {
             InitializeComponent();
+            
         }
 
         private void BunifuThinButton21_Click(object sender, EventArgs e)
@@ -32,12 +33,22 @@ namespace Grap.Principal.Views
             //dummy data
             var lc = db.Clients.ToList();
 
-            //use binding source to hold dummy data
-            BindingSource binding = new BindingSource();
-            binding.DataSource = lc;
+            DGVClients.AutoGenerateColumns = false;
+            DGVClients.Columns["Id"].DataPropertyName = "Id";
+            DGVClients.Columns["Code"].DataPropertyName = "Code";
+            DGVClients.Columns["CName"].DataPropertyName = "Name";
 
-            //bind datagridview to binding source
-            DgvPersonas.DataSource = binding;
+            DGVClients.DataSource = lc;
+
+
         }
+
+        private void BtnRegistro_Click(object sender, EventArgs e)
+        {
+            Registro r = new Registro();
+            r.Show();
+        }
+
+        
     }
 }
