@@ -31,9 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PanelHeader = new System.Windows.Forms.Panel();
-            this.BtnRegistro = new FontAwesome.Sharp.IconButton();
-            this.LblTitle = new ns1.BunifuCustomLabel();
             this.SpContainer = new System.Windows.Forms.SplitContainer();
             this.CardDGrid = new ns1.BunifuCards();
             this.DGVClients = new ns1.BunifuCustomDataGrid();
@@ -41,14 +38,17 @@
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CardBtn = new ns1.BunifuCards();
+            this.PanelHeader = new System.Windows.Forms.Panel();
+            this.BtnRegistro = new FontAwesome.Sharp.IconButton();
+            this.LblTitle = new ns1.BunifuCustomLabel();
             this.panel1.SuspendLayout();
-            this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpContainer)).BeginInit();
             this.SpContainer.Panel1.SuspendLayout();
             this.SpContainer.Panel2.SuspendLayout();
             this.SpContainer.SuspendLayout();
             this.CardDGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVClients)).BeginInit();
+            this.PanelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,6 +60,111 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(760, 451);
             this.panel1.TabIndex = 0;
+            // 
+            // SpContainer
+            // 
+            this.SpContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SpContainer.Location = new System.Drawing.Point(0, 43);
+            this.SpContainer.Name = "SpContainer";
+            // 
+            // SpContainer.Panel1
+            // 
+            this.SpContainer.Panel1.BackColor = System.Drawing.Color.White;
+            this.SpContainer.Panel1.Controls.Add(this.CardDGrid);
+            // 
+            // SpContainer.Panel2
+            // 
+            this.SpContainer.Panel2.BackColor = System.Drawing.Color.White;
+            this.SpContainer.Panel2.Controls.Add(this.CardBtn);
+            this.SpContainer.Size = new System.Drawing.Size(760, 408);
+            this.SpContainer.SplitterDistance = 575;
+            this.SpContainer.TabIndex = 1;
+            // 
+            // CardDGrid
+            // 
+            this.CardDGrid.BackColor = System.Drawing.Color.White;
+            this.CardDGrid.BorderRadius = 5;
+            this.CardDGrid.BottomSahddow = true;
+            this.CardDGrid.color = System.Drawing.Color.DarkSlateBlue;
+            this.CardDGrid.Controls.Add(this.DGVClients);
+            this.CardDGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CardDGrid.LeftSahddow = false;
+            this.CardDGrid.Location = new System.Drawing.Point(0, 0);
+            this.CardDGrid.Name = "CardDGrid";
+            this.CardDGrid.RightSahddow = true;
+            this.CardDGrid.ShadowDepth = 20;
+            this.CardDGrid.Size = new System.Drawing.Size(575, 408);
+            this.CardDGrid.TabIndex = 0;
+            // 
+            // DGVClients
+            // 
+            this.DGVClients.AllowUserToAddRows = false;
+            this.DGVClients.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DGVClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGVClients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGVClients.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.DGVClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGVClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGVClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Code,
+            this.CName});
+            this.DGVClients.DoubleBuffered = true;
+            this.DGVClients.EnableHeadersVisualStyles = false;
+            this.DGVClients.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            this.DGVClients.HeaderForeColor = System.Drawing.Color.White;
+            this.DGVClients.Location = new System.Drawing.Point(12, 17);
+            this.DGVClients.Name = "DGVClients";
+            this.DGVClients.ReadOnly = true;
+            this.DGVClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGVClients.Size = new System.Drawing.Size(560, 208);
+            this.DGVClients.TabIndex = 1;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Code
+            // 
+            this.Code.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Code.HeaderText = "Código";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            // 
+            // CName
+            // 
+            this.CName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CName.HeaderText = "Nombre";
+            this.CName.Name = "CName";
+            this.CName.ReadOnly = true;
+            // 
+            // CardBtn
+            // 
+            this.CardBtn.BackColor = System.Drawing.Color.White;
+            this.CardBtn.BorderRadius = 5;
+            this.CardBtn.BottomSahddow = true;
+            this.CardBtn.color = System.Drawing.Color.DarkSlateBlue;
+            this.CardBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CardBtn.LeftSahddow = false;
+            this.CardBtn.Location = new System.Drawing.Point(0, 0);
+            this.CardBtn.Name = "CardBtn";
+            this.CardBtn.RightSahddow = true;
+            this.CardBtn.ShadowDepth = 20;
+            this.CardBtn.Size = new System.Drawing.Size(181, 408);
+            this.CardBtn.TabIndex = 0;
             // 
             // PanelHeader
             // 
@@ -103,110 +208,6 @@
             this.LblTitle.TabIndex = 0;
             this.LblTitle.Text = "Lista de Clientes";
             // 
-            // SpContainer
-            // 
-            this.SpContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SpContainer.Location = new System.Drawing.Point(0, 43);
-            this.SpContainer.Name = "SpContainer";
-            // 
-            // SpContainer.Panel1
-            // 
-            this.SpContainer.Panel1.BackColor = System.Drawing.Color.White;
-            this.SpContainer.Panel1.Controls.Add(this.CardDGrid);
-            // 
-            // SpContainer.Panel2
-            // 
-            this.SpContainer.Panel2.BackColor = System.Drawing.Color.White;
-            this.SpContainer.Panel2.Controls.Add(this.CardBtn);
-            this.SpContainer.Size = new System.Drawing.Size(760, 408);
-            this.SpContainer.SplitterDistance = 575;
-            this.SpContainer.TabIndex = 1;
-            // 
-            // CardDGrid
-            // 
-            this.CardDGrid.BackColor = System.Drawing.Color.White;
-            this.CardDGrid.BorderRadius = 5;
-            this.CardDGrid.BottomSahddow = true;
-            this.CardDGrid.color = System.Drawing.Color.DarkSlateBlue;
-            this.CardDGrid.Controls.Add(this.DGVClients);
-            this.CardDGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CardDGrid.LeftSahddow = false;
-            this.CardDGrid.Location = new System.Drawing.Point(0, 0);
-            this.CardDGrid.Name = "CardDGrid";
-            this.CardDGrid.RightSahddow = true;
-            this.CardDGrid.ShadowDepth = 20;
-            this.CardDGrid.Size = new System.Drawing.Size(575, 408);
-            this.CardDGrid.TabIndex = 0;
-            // 
-            // DGVClients
-            // 
-            this.DGVClients.AllowUserToAddRows = false;
-            this.DGVClients.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DGVClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGVClients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGVClients.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.DGVClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGVClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DGVClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Code,
-            this.CName});
-            this.DGVClients.DoubleBuffered = true;
-            this.DGVClients.EnableHeadersVisualStyles = false;
-            this.DGVClients.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.DGVClients.HeaderForeColor = System.Drawing.Color.White;
-            this.DGVClients.Location = new System.Drawing.Point(12, 37);
-            this.DGVClients.Name = "DGVClients";
-            this.DGVClients.ReadOnly = true;
-            this.DGVClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DGVClients.Size = new System.Drawing.Size(560, 208);
-            this.DGVClients.TabIndex = 1;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Code
-            // 
-            this.Code.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Code.HeaderText = "Código";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            // 
-            // CName
-            // 
-            this.CName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CName.HeaderText = "Nombre";
-            this.CName.Name = "CName";
-            this.CName.ReadOnly = true;
-            // 
-            // CardBtn
-            // 
-            this.CardBtn.BackColor = System.Drawing.Color.White;
-            this.CardBtn.BorderRadius = 5;
-            this.CardBtn.BottomSahddow = true;
-            this.CardBtn.color = System.Drawing.Color.DarkSlateBlue;
-            this.CardBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CardBtn.LeftSahddow = false;
-            this.CardBtn.Location = new System.Drawing.Point(0, 0);
-            this.CardBtn.Name = "CardBtn";
-            this.CardBtn.RightSahddow = true;
-            this.CardBtn.ShadowDepth = 20;
-            this.CardBtn.Size = new System.Drawing.Size(181, 408);
-            this.CardBtn.TabIndex = 0;
-            // 
             // ListaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,14 +220,14 @@
             this.Text = "ListaClientes";
             this.Load += new System.EventHandler(this.ListaClientes_Load);
             this.panel1.ResumeLayout(false);
-            this.PanelHeader.ResumeLayout(false);
-            this.PanelHeader.PerformLayout();
             this.SpContainer.Panel1.ResumeLayout(false);
             this.SpContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SpContainer)).EndInit();
             this.SpContainer.ResumeLayout(false);
             this.CardDGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVClients)).EndInit();
+            this.PanelHeader.ResumeLayout(false);
+            this.PanelHeader.PerformLayout();
             this.ResumeLayout(false);
 
         }
