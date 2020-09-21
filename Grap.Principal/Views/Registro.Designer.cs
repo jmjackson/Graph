@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnClose = new ns1.BunifuImageButton();
             this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
             this.BtnRegistrar = new ns1.BunifuThinButton2();
             this.bunifuImageButton1 = new ns1.BunifuImageButton();
@@ -42,10 +43,9 @@
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.TxtCode = new ns1.BunifuMetroTextbox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.BtnClose = new ns1.BunifuImageButton();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -68,6 +68,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(656, 414);
             this.panel3.TabIndex = 7;
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.BackColor = System.Drawing.Color.White;
+            this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
+            this.BtnClose.ImageActive = ((System.Drawing.Image)(resources.GetObject("BtnClose.ImageActive")));
+            this.BtnClose.Location = new System.Drawing.Point(627, 14);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(16, 16);
+            this.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnClose.TabIndex = 15;
+            this.BtnClose.TabStop = false;
+            this.BtnClose.Zoom = 10;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click_1);
             // 
             // bunifuCustomLabel5
             // 
@@ -235,20 +249,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // BtnClose
-            // 
-            this.BtnClose.BackColor = System.Drawing.Color.White;
-            this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
-            this.BtnClose.ImageActive = ((System.Drawing.Image)(resources.GetObject("BtnClose.ImageActive")));
-            this.BtnClose.Location = new System.Drawing.Point(627, 14);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(16, 16);
-            this.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnClose.TabIndex = 15;
-            this.BtnClose.TabStop = false;
-            this.BtnClose.Zoom = 10;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click_1);
-            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,8 +263,8 @@
             this.Text = "Registro";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
