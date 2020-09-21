@@ -18,17 +18,6 @@ namespace Grap.Principal
             InitializeComponent();
         }
 
-        private void BtnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void BtnSingIn_Click(object sender, EventArgs e)
-        {
-            ValidationLogin();
-            
-        }
-
         private void ValidationLogin()
         {
             Home h = new Home();
@@ -43,9 +32,21 @@ namespace Grap.Principal
             }
         }
 
-        private void BtnSingIn_KeyPress(object sender, KeyPressEventArgs e)
+       
+
+        private void BtnClose_Click(object sender, EventArgs e)
         {
-            if (e.KeyChar==(char)Keys.Enter)
+            this.Close();
+        }
+
+        private void BtnSignIn_Click(object sender, EventArgs e)
+        {
+            ValidationLogin();
+        }
+
+        private void BtnSignIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 ValidationLogin();
             }
