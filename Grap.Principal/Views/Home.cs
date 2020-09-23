@@ -24,7 +24,9 @@ namespace Grap.Principal.Views
 
         private void BtnClientes_Click(object sender, EventArgs e)
         {
-            OpenPanelForm(new ListaClientes());
+            ListaClientes lc = new ListaClientes();
+            lc.Show();
+            this.Hide();
         }
 
         
@@ -33,33 +35,18 @@ namespace Grap.Principal.Views
         {
             Application.Exit();
         }
-        private void OpenPanelForm(object childForm)
-        {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = childForm as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
-
-        }
-        private void BtnDashboard_Click(object sender, EventArgs e)
-        {
-            OpenPanelForm(new Dashboard());
-        }
-
+        
+       
        
 
         private void BtnOther_Click(object sender, EventArgs e)
         {
-            OpenPanelForm(new Other());
+            
         }
 
         private void BtnConfig_Click(object sender, EventArgs e)
         {
-            OpenPanelForm(new Config());
+           
         }
 
         private void BtnOut_Click(object sender, EventArgs e)
