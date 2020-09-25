@@ -16,5 +16,6 @@ namespace Grap.Principal.Views.Modal
         {
             InitializeComponent();
         }
+
     }
 }

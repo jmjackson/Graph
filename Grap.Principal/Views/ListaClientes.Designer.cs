@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SpContainer = new System.Windows.Forms.SplitContainer();
             this.CardDGrid = new ns1.BunifuCards();
@@ -38,6 +38,7 @@
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CardBtn = new ns1.BunifuCards();
+            this.BtnEditar = new FontAwesome.Sharp.IconButton();
             this.BtnDetalle = new FontAwesome.Sharp.IconButton();
             this.BtnDelete = new FontAwesome.Sharp.IconButton();
             this.BtnActualizar = new FontAwesome.Sharp.IconButton();
@@ -104,21 +105,21 @@
             // 
             this.DGVClients.AllowUserToAddRows = false;
             this.DGVClients.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DGVClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DGVClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVClients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVClients.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DGVClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -134,6 +135,7 @@
             this.DGVClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DGVClients.Size = new System.Drawing.Size(560, 257);
             this.DGVClients.TabIndex = 1;
+            this.DGVClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVClients_CellContentClick);
             // 
             // Id
             // 
@@ -162,6 +164,7 @@
             this.CardBtn.BorderRadius = 5;
             this.CardBtn.BottomSahddow = true;
             this.CardBtn.color = System.Drawing.Color.DarkSlateBlue;
+            this.CardBtn.Controls.Add(this.BtnEditar);
             this.CardBtn.Controls.Add(this.BtnDetalle);
             this.CardBtn.Controls.Add(this.BtnDelete);
             this.CardBtn.Controls.Add(this.BtnActualizar);
@@ -173,6 +176,27 @@
             this.CardBtn.ShadowDepth = 20;
             this.CardBtn.Size = new System.Drawing.Size(181, 408);
             this.CardBtn.TabIndex = 0;
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEditar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnEditar.ForeColor = System.Drawing.Color.White;
+            this.BtnEditar.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.BtnEditar.IconColor = System.Drawing.Color.White;
+            this.BtnEditar.IconSize = 16;
+            this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEditar.Location = new System.Drawing.Point(30, 126);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Rotation = 0D;
+            this.BtnEditar.Size = new System.Drawing.Size(114, 29);
+            this.BtnEditar.TabIndex = 3;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnDetalle
             // 
@@ -323,5 +347,6 @@
         private FontAwesome.Sharp.IconButton BtnDetalle;
         private FontAwesome.Sharp.IconButton BtnDelete;
         private FontAwesome.Sharp.IconButton BtnActualizar;
+        private FontAwesome.Sharp.IconButton BtnEditar;
     }
 }
