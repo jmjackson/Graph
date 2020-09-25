@@ -16,7 +16,7 @@ namespace Grap.Principal.Model
     [Table(Name = "Clients")]
     public class Clients
     {
-        [Column(Name = "Id", IsDbGenerated = true,IsPrimaryKey=true,DbType="INTEGER")]
+        [Column(Name = "Id", IsDbGenerated = true, IsPrimaryKey=true, DbType="INTEGER")]
         [Key]
         public int Id { get; set; }
         [Column(Name="Code",DbType ="TEXT")]

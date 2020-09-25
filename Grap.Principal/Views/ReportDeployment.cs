@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
+using System.IO;
+using Grap.Principal.Model;
+using Grap.Principal.DataModel;
 
 namespace Grap.Principal
 {
     public partial class ReportDeployment : Form
     {
+        readonly DataBaseContext dbase = new DataBaseContext();
+
         public ReportDeployment()
         {
             InitializeComponent();
@@ -38,6 +44,25 @@ namespace Grap.Principal
         }
 
         private void ReportDeployment_Load(object sender, EventArgs e)
+        {
+            //DGV data
+            var Dp = dbase.Deployments.ToList();
+
+            DGVDeployment.AutoGenerateColumns = false;
+
+            DGVDeployment.Columns["DeploymentDate"].DataPropertyName = "DeploymentDate";
+            DGVDeployment.Columns["PanelNo"].DataPropertyName = "PanelNo";
+            DGVDeployment.Columns["RollNo"].DataPropertyName = "RollNo";
+            DGVDeployment.Columns["Lenght"].DataPropertyName = "PanelLenght";
+            DGVDeployment.Columns["Width"].DataPropertyName = "Width";
+            DGVDeployment.Columns["Thickness"].DataPropertyName = "Thickness";
+            DGVDeployment.Columns["Area"].DataPropertyName = "Area";
+            DGVDeployment.Columns["Remarks"].DataPropertyName = "Remarks";
+
+            DGVDeployment.DataSource = Dp;
+        }
+
+        private void DGVDeployment_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

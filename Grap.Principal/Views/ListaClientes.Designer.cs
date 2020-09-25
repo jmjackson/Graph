@@ -130,6 +130,7 @@
             this.DGVClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DGVClients.Size = new System.Drawing.Size(560, 208);
             this.DGVClients.TabIndex = 1;
+            this.DGVClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVClients_CellContentClick);
             // 
             // Id
             // 

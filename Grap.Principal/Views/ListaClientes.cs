@@ -49,6 +49,9 @@ namespace Grap.Principal.Views
             r.Show();
         }
 
-        
+        private void DGVClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

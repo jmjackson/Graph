@@ -39,10 +39,10 @@
             this.Close_Button = new ns1.BunifuImageButton();
             this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DGV1 = new ns1.BunifuCustomDataGrid();
-            this.Deployment_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Panel_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Roll_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGVDeployment = new ns1.BunifuCustomDataGrid();
+            this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Widht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close_Button)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDeployment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogoImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,21 +135,21 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.DGV1);
+            this.panel1.Controls.Add(this.DGVDeployment);
             this.panel1.Location = new System.Drawing.Point(12, 224);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1414, 446);
             this.panel1.TabIndex = 1;
             // 
-            // DGV1
+            // DGVDeployment
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DGV1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGV1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGV1.BackgroundColor = System.Drawing.Color.White;
-            this.DGV1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGV1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGVDeployment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGVDeployment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGVDeployment.BackgroundColor = System.Drawing.Color.White;
+            this.DGVDeployment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGVDeployment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
@@ -157,46 +157,47 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV1.ColumnHeadersHeight = 45;
-            this.DGV1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Deployment_Date,
-            this.Panel_No,
-            this.Roll_No,
+            this.DGVDeployment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGVDeployment.ColumnHeadersHeight = 45;
+            this.DGVDeployment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DeploymentDate,
+            this.PanelNo,
+            this.RollNo,
             this.Lenght,
             this.Widht,
             this.Thickness,
             this.Area,
             this.Remarks});
-            this.DGV1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGV1.DoubleBuffered = true;
-            this.DGV1.EnableHeadersVisualStyles = false;
-            this.DGV1.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
-            this.DGV1.HeaderForeColor = System.Drawing.Color.White;
-            this.DGV1.Location = new System.Drawing.Point(0, 0);
-            this.DGV1.Name = "DGV1";
-            this.DGV1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DGV1.RowHeadersVisible = false;
-            this.DGV1.Size = new System.Drawing.Size(1414, 446);
-            this.DGV1.TabIndex = 1;
+            this.DGVDeployment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVDeployment.DoubleBuffered = true;
+            this.DGVDeployment.EnableHeadersVisualStyles = false;
+            this.DGVDeployment.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
+            this.DGVDeployment.HeaderForeColor = System.Drawing.Color.White;
+            this.DGVDeployment.Location = new System.Drawing.Point(0, 0);
+            this.DGVDeployment.Name = "DGVDeployment";
+            this.DGVDeployment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGVDeployment.RowHeadersVisible = false;
+            this.DGVDeployment.Size = new System.Drawing.Size(1414, 446);
+            this.DGVDeployment.TabIndex = 1;
+            this.DGVDeployment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDeployment_CellContentClick);
             // 
-            // Deployment_Date
+            // DeploymentDate
             // 
-            this.Deployment_Date.HeaderText = "Deployment Date";
-            this.Deployment_Date.Name = "Deployment_Date";
-            this.Deployment_Date.ReadOnly = true;
+            this.DeploymentDate.HeaderText = "Deployment Date";
+            this.DeploymentDate.Name = "DeploymentDate";
+            this.DeploymentDate.ReadOnly = true;
             // 
-            // Panel_No
+            // PanelNo
             // 
-            this.Panel_No.HeaderText = "Panel No.";
-            this.Panel_No.Name = "Panel_No";
-            this.Panel_No.ReadOnly = true;
+            this.PanelNo.HeaderText = "Panel No.";
+            this.PanelNo.Name = "PanelNo";
+            this.PanelNo.ReadOnly = true;
             // 
-            // Roll_No
+            // RollNo
             // 
-            this.Roll_No.HeaderText = "Roll No.";
-            this.Roll_No.Name = "Roll_No";
-            this.Roll_No.ReadOnly = true;
+            this.RollNo.HeaderText = "Roll No.";
+            this.RollNo.Name = "RollNo";
+            this.RollNo.ReadOnly = true;
             // 
             // Lenght
             // 
@@ -456,7 +457,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close_Button)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDeployment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogoImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -478,7 +479,7 @@
         private ns1.BunifuCustomLabel LblProject;
         private ns1.BunifuCustomLabel LblClient;
         private System.Windows.Forms.Panel panel1;
-        private ns1.BunifuCustomDataGrid DGV1;
+        private ns1.BunifuCustomDataGrid DGVDeployment;
         private ns1.BunifuCustomLabel LblInfoClient;
         private ns1.BunifuCustomLabel LblInfoGeosynthetic;
         private ns1.BunifuCustomLabel LblInfoSupplier;
@@ -489,9 +490,9 @@
         private FontAwesome.Sharp.IconButton BtnNextReport;
         private FontAwesome.Sharp.IconButton BtnGetPDF;
         private ns1.BunifuCustomLabel LblGeomembranePanel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Deployment_Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Panel_No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Roll_No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeploymentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RollNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lenght;
         private System.Windows.Forms.DataGridViewTextBoxColumn Widht;
         private System.Windows.Forms.DataGridViewTextBoxColumn Thickness;
