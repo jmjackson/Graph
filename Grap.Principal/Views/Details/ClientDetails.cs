@@ -35,18 +35,22 @@ namespace Grap.Principal.Views.Details
 
             //tabla Projects
             var lp = db.Projects.ToList();
+            if (/*lp != null || */lp.Count > 0)
+            {
+                DGVProject.AutoGenerateColumns = false;
+                DGVProject.Columns["Id"].DataPropertyName = "Id";
+                DGVProject.Columns["ProjectName"].DataPropertyName = "ProjectName";
+                DGVProject.Columns["ProjectNo"].DataPropertyName = "ProjectNo";
+                DGVProject.Columns["Contractor"].DataPropertyName = "Contractor";
+                DGVProject.Columns["Supplier"].DataPropertyName = "Supplier";
+                DGVProject.Columns["Geosynthetic"].DataPropertyName = "Geosynthetic";
+                DGVProject.Columns["LeachPad"].DataPropertyName = "LeachPad";
+                DGVProject.Columns["Operator"].DataPropertyName = "Operator";
+                DGVProject.Columns["MachineNo"].DataPropertyName = "MachineNo";
+                DGVProject.Columns["ClientId"].DataPropertyName = "ClientId";
+                DGVProject.DataSource = lp;
+            }
 
-            DGVProject.AutoGenerateColumns = false;
-            DGVProject.Columns["Id"].DataPropertyName = "Id";
-            DGVProject.Columns["ProjectName"].DataPropertyName = "ProjectName";
-            DGVProject.Columns["ProjectNo"].DataPropertyName = "ProjectNo";
-            DGVProject.Columns["Contractor"].DataPropertyName = "Contractor";
-            DGVProject.Columns["Supplier"].DataPropertyName = "Supplier";
-            DGVProject.Columns["LeachPad"].DataPropertyName = "LeachPad";
-            DGVProject.Columns["Operator"].DataPropertyName = "Operator";
-            DGVProject.Columns["MachineNo"].DataPropertyName = "MachineNo";
-            DGVProject.Columns["ClientId"].DataPropertyName = "ClientId";
-            DGVProject.DataSource = lp;
 
         }
 
