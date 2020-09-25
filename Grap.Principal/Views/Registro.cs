@@ -16,11 +16,13 @@ namespace Grap.Principal.Views
     public partial class Registro : Form
     {
         readonly DataBaseContext db = new DataBaseContext();
-        public Registro()
+        public Registro(ListaClientes lf)
         {
             InitializeComponent();
+            
         }
 
+        
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -74,10 +76,10 @@ namespace Grap.Principal.Views
 
             db.Clients.Add(c);
             db.SaveChanges();
-
-            Home lc = new Home();
-            lc.Show();
+           
             this.Close();
+            
+
         }
     }
 }

@@ -76,8 +76,7 @@
     <Compile Include="DataModel\DataBaseContext.cs" />
     <Compile Include="DataModel\SqliteConfiguration.cs" />
     <Compile Include="Model\Client.cs" />
-    <Compile Include="Model\Deployments.cs" />
-    <Compile Include="Model\Project.cs" />
+    <Compile Include="Model\Projects.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +97,29 @@
     <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Details\ClientDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Details\ClientDetails.Designer.cs">
+      <DependentUpon>ClientDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ListaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\ListaClientes.Designer.cs">
       <DependentUpon>ListaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modal\ModalDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Modal\ModalDelete.Designer.cs">
+      <DependentUpon>ModalDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modal\ModalEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Modal\ModalEditar.Designer.cs">
+      <DependentUpon>ModalEditar.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Other.cs">
       <SubType>Form</SubType>
@@ -146,8 +163,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Details\ClientDetails.resx">
+      <DependentUpon>ClientDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ListaClientes.resx">
       <DependentUpon>ListaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modal\ModalDelete.resx">
+      <DependentUpon>ModalDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modal\ModalEditar.resx">
+      <DependentUpon>ModalEditar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ReportDeployment.resx">
       <DependentUpon>ReportDeployment.cs</DependentUpon>
