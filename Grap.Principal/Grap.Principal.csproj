@@ -76,6 +76,7 @@
     <Compile Include="DataModel\DataBaseContext.cs" />
     <Compile Include="DataModel\SqliteConfiguration.cs" />
     <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Deployments.cs" />
     <Compile Include="Model\Projects.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>

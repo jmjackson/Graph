@@ -41,44 +41,50 @@ namespace Grap.Principal.Views
         {
             try
             {
-                //////    //Filtro de los archivos que se veran en este caso solo veremos pueros .pdf
-                openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                OFDialog.Filter = "Image Files((*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+                if (OFDialog.ShowDialog()==DialogResult.OK)
                 {
-                    TxtImage.Text = openFileDialog1.FileName;
+                    PBoxImage.Image = new Bitmap(OFDialog.FileName);
                 }
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("No se Cargo la Imagen " + ex.ToString());
+                MessageBox.Show("Su imagen no pudo ser cargada"+ex.ToString(),"Error de Carga",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+           
         }
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
         {
-            var cd = TxtCode.Text;
-            //var Path = "C:Resources\\images" + ".jpg";
-            var path = "~/Resources/images/";
-            if (Directory.Exists(path))
+            try
             {
-                //Bitmap bmp;
-                String paths = Application.StartupPath;
-                //bmp.Save(openFileDialog1.FileName, "Resources\\images\\" + Path.GetFileName(openFileDialog1.FileName));
-                File.Copy(openFileDialog1.FileName, "Resources\\images\\" + Path.GetFileName(openFileDialog1.FileName));
-            }
-            Clients c = new Clients()
-            {
-                Code = cd,
-                Name = TxtName.Text,
-                Image = cd + "_" + TxtImage.Text
-            };
+                var cd = TxtCode.Text;
+                var path = @"Resources/images/";
 
-            db.Clients.Add(c);
-            db.SaveChanges();
-           
+                if (Directory.Exists(path))
+                {
+                    PBoxImage.Image.Save(path + cd + "_cliente.jpg");
+                }
+                else
+                {
+                    Directory.CreateDirectory(path);
+                    PBoxImage.Image.Save(path + cd + "_cliente.jpg");
+                }
+                Clients c = new Clients()
+                {
+                    Code = cd,
+                    Name = TxtName.Text,
+                    Image = path + cd + "_cliente.jpg"
+                };
+                db.Clients.Add(c);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sus datos no han sido cargados"+ex.ToString(),"Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+
             this.Close();
-            
 
         }
     }

@@ -28,32 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientDetails));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.bunifuCards1 = new ns1.BunifuCards();
-            this.TxtName = new ns1.BunifuMaterialTextbox();
-            this.TxtCode = new ns1.BunifuMaterialTextbox();
-            this.TxtItem = new ns1.BunifuMaterialTextbox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TxtName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.TxtCode = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.TxtItem = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.PBLogo = new System.Windows.Forms.PictureBox();
             this.LblName = new System.Windows.Forms.Label();
             this.LblId = new System.Windows.Forms.Label();
             this.LblCode = new System.Windows.Forms.Label();
             this.DGVProject = new ns1.BunifuCustomDataGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjectNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contractor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GeoSynthetic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LeachPad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Operator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MachineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClientsId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelHeader.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProject)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +64,7 @@
             this.PanelHeader.ForeColor = System.Drawing.SystemColors.ControlText;
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(800, 150);
+            this.PanelHeader.Size = new System.Drawing.Size(842, 150);
             this.PanelHeader.TabIndex = 0;
             // 
             // bunifuCards1
@@ -77,7 +76,7 @@
             this.bunifuCards1.Controls.Add(this.TxtName);
             this.bunifuCards1.Controls.Add(this.TxtCode);
             this.bunifuCards1.Controls.Add(this.TxtItem);
-            this.bunifuCards1.Controls.Add(this.pictureBox1);
+            this.bunifuCards1.Controls.Add(this.PBLogo);
             this.bunifuCards1.Controls.Add(this.LblName);
             this.bunifuCards1.Controls.Add(this.LblId);
             this.bunifuCards1.Controls.Add(this.LblCode);
@@ -88,85 +87,48 @@
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(800, 150);
+            this.bunifuCards1.Size = new System.Drawing.Size(842, 150);
             this.bunifuCards1.TabIndex = 0;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.BunifuCards1_Paint);
             // 
             // TxtName
             // 
-            this.TxtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtName.Enabled = false;
-            this.TxtName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TxtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TxtName.HintForeColor = System.Drawing.Color.Empty;
-            this.TxtName.HintText = "";
-            this.TxtName.isPassword = false;
-            this.TxtName.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.TxtName.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.TxtName.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.TxtName.LineThickness = 1;
-            this.TxtName.Location = new System.Drawing.Point(447, 33);
-            this.TxtName.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(96)))));
+            this.TxtName.Location = new System.Drawing.Point(419, 41);
             this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(242, 29);
-            this.TxtName.TabIndex = 3;
-            this.TxtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TxtName.Size = new System.Drawing.Size(269, 20);
+            this.TxtName.TabIndex = 6;
             // 
             // TxtCode
             // 
-            this.TxtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtCode.Enabled = false;
-            this.TxtCode.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TxtCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TxtCode.HintForeColor = System.Drawing.Color.Empty;
-            this.TxtCode.HintText = "";
-            this.TxtCode.isPassword = false;
-            this.TxtCode.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.TxtCode.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.TxtCode.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.TxtCode.LineThickness = 1;
-            this.TxtCode.Location = new System.Drawing.Point(241, 33);
-            this.TxtCode.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            this.TxtCode.Location = new System.Drawing.Point(222, 42);
             this.TxtCode.Name = "TxtCode";
-            this.TxtCode.Size = new System.Drawing.Size(104, 29);
-            this.TxtCode.TabIndex = 3;
-            this.TxtCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TxtCode.Size = new System.Drawing.Size(100, 20);
+            this.TxtCode.TabIndex = 5;
             // 
             // TxtItem
             // 
-            this.TxtItem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtItem.Enabled = false;
-            this.TxtItem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TxtItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TxtItem.HintForeColor = System.Drawing.Color.Empty;
-            this.TxtItem.HintText = "";
-            this.TxtItem.isPassword = false;
-            this.TxtItem.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.TxtItem.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.TxtItem.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
-            this.TxtItem.LineThickness = 1;
-            this.TxtItem.Location = new System.Drawing.Point(85, 33);
-            this.TxtItem.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtItem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            this.TxtItem.Location = new System.Drawing.Point(84, 42);
             this.TxtItem.Name = "TxtItem";
-            this.TxtItem.Size = new System.Drawing.Size(64, 29);
-            this.TxtItem.TabIndex = 3;
-            this.TxtItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TxtItem.Size = new System.Drawing.Size(66, 20);
+            this.TxtItem.TabIndex = 4;
             // 
-            // pictureBox1
+            // PBLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(708, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.PBLogo.Location = new System.Drawing.Point(708, 12);
+            this.PBLogo.Name = "PBLogo";
+            this.PBLogo.Size = new System.Drawing.Size(122, 99);
+            this.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBLogo.TabIndex = 2;
+            this.PBLogo.TabStop = false;
             // 
             // LblName
             // 
             this.LblName.AutoSize = true;
             this.LblName.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblName.Location = new System.Drawing.Point(374, 41);
+            this.LblName.Location = new System.Drawing.Point(347, 41);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(66, 21);
             this.LblName.TabIndex = 1;
@@ -200,7 +162,7 @@
             this.DGVProject.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVProject.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGVProject.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.DGVProject.BackgroundColor = System.Drawing.Color.White;
             this.DGVProject.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVProject.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -211,18 +173,18 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGVProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DGVProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGVProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10});
+            this.Id,
+            this.ProjectName,
+            this.ProjectNo,
+            this.Contractor,
+            this.Supplier,
+            this.GeoSynthetic,
+            this.LeachPad,
+            this.Operator,
+            this.MachineNo,
+            this.ClientsId});
             this.DGVProject.DoubleBuffered = true;
             this.DGVProject.EnableHeadersVisualStyles = false;
             this.DGVProject.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
@@ -231,74 +193,76 @@
             this.DGVProject.Name = "DGVProject";
             this.DGVProject.ReadOnly = true;
             this.DGVProject.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DGVProject.Size = new System.Drawing.Size(776, 282);
+            this.DGVProject.Size = new System.Drawing.Size(818, 282);
             this.DGVProject.TabIndex = 2;
             // 
-            // Column1
+            // Id
             // 
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.Id.HeaderText = "Item";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
-            // Column2
+            // ProjectName
             // 
-            this.Column2.HeaderText = "ProjectName";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.ProjectName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProjectName.HeaderText = "Project Name";
+            this.ProjectName.Name = "ProjectName";
+            this.ProjectName.ReadOnly = true;
             // 
-            // Column3
+            // ProjectNo
             // 
-            this.Column3.HeaderText = "ProyectNo";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.ProjectNo.HeaderText = "Project No";
+            this.ProjectNo.Name = "ProjectNo";
+            this.ProjectNo.ReadOnly = true;
             // 
-            // Column4
+            // Contractor
             // 
-            this.Column4.HeaderText = "Contractor";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.Contractor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Contractor.HeaderText = "Contractor";
+            this.Contractor.Name = "Contractor";
+            this.Contractor.ReadOnly = true;
             // 
-            // Column5
+            // Supplier
             // 
-            this.Column5.HeaderText = "Supplier";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.Supplier.HeaderText = "Supplier";
+            this.Supplier.Name = "Supplier";
+            this.Supplier.ReadOnly = true;
             // 
-            // Column6
+            // GeoSynthetic
             // 
-            this.Column6.HeaderText = "Geosynthetic";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
+            this.GeoSynthetic.HeaderText = "Geosynthetic";
+            this.GeoSynthetic.Name = "GeoSynthetic";
+            this.GeoSynthetic.ReadOnly = true;
             // 
-            // Column7
+            // LeachPad
             // 
-            this.Column7.HeaderText = "Leachpad";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
+            this.LeachPad.HeaderText = "Leachpad";
+            this.LeachPad.Name = "LeachPad";
+            this.LeachPad.ReadOnly = true;
             // 
-            // Column8
+            // Operator
             // 
-            this.Column8.HeaderText = "Operator";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
+            this.Operator.HeaderText = "Operator";
+            this.Operator.Name = "Operator";
+            this.Operator.ReadOnly = true;
             // 
-            // Column9
+            // MachineNo
             // 
-            this.Column9.HeaderText = "MachineNo";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
+            this.MachineNo.HeaderText = "MachineNo";
+            this.MachineNo.Name = "MachineNo";
+            this.MachineNo.ReadOnly = true;
             // 
-            // Column10
+            // ClientsId
             // 
-            this.Column10.HeaderText = "ClientId";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
+            this.ClientsId.HeaderText = "ClientId";
+            this.ClientsId.Name = "ClientsId";
+            this.ClientsId.ReadOnly = true;
             // 
             // ClientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(842, 450);
             this.Controls.Add(this.DGVProject);
             this.Controls.Add(this.PanelHeader);
             this.Name = "ClientDetails";
@@ -307,7 +271,7 @@
             this.PanelHeader.ResumeLayout(false);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProject)).EndInit();
             this.ResumeLayout(false);
 
@@ -320,20 +284,20 @@
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.Label LblId;
         private System.Windows.Forms.Label LblCode;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private ns1.BunifuMaterialTextbox TxtItem;
-        private ns1.BunifuMaterialTextbox TxtName;
-        private ns1.BunifuMaterialTextbox TxtCode;
+        private System.Windows.Forms.PictureBox PBLogo;
         private ns1.BunifuCustomDataGrid DGVProject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contractor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Supplier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GeoSynthetic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LeachPad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Operator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MachineNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClientsId;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtItem;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtCode;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtName;
     }
 }

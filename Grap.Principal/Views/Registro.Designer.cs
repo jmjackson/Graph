@@ -34,15 +34,17 @@
             this.LblImg = new ns1.BunifuCustomLabel();
             this.LblName = new ns1.BunifuCustomLabel();
             this.LblCodigo = new ns1.BunifuCustomLabel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.OFDialog = new System.Windows.Forms.OpenFileDialog();
             this.CardCliente = new ns1.BunifuCards();
             this.BtnRegistrar = new ns1.BunifuFlatButton();
             this.BtnImage = new FontAwesome.Sharp.IconButton();
-            this.TxtImage = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.TxtName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.TxtCode = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.PBoxImage = new System.Windows.Forms.PictureBox();
+            this.LblImage = new ns1.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.CardCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnClose
@@ -75,9 +77,9 @@
             this.LblImg.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblImg.Location = new System.Drawing.Point(66, 145);
             this.LblImg.Name = "LblImg";
-            this.LblImg.Size = new System.Drawing.Size(52, 21);
+            this.LblImg.Size = new System.Drawing.Size(61, 21);
             this.LblImg.TabIndex = 11;
-            this.LblImg.Text = "Image";
+            this.LblImg.Text = "Imagen";
             // 
             // LblName
             // 
@@ -85,9 +87,9 @@
             this.LblName.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblName.Location = new System.Drawing.Point(293, 96);
             this.LblName.Name = "LblName";
-            this.LblName.Size = new System.Drawing.Size(51, 21);
+            this.LblName.Size = new System.Drawing.Size(66, 21);
             this.LblName.TabIndex = 6;
-            this.LblName.Text = "Name";
+            this.LblName.Text = "Nombre";
             // 
             // LblCodigo
             // 
@@ -95,13 +97,13 @@
             this.LblCodigo.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCodigo.Location = new System.Drawing.Point(66, 97);
             this.LblCodigo.Name = "LblCodigo";
-            this.LblCodigo.Size = new System.Drawing.Size(46, 21);
+            this.LblCodigo.Size = new System.Drawing.Size(60, 21);
             this.LblCodigo.TabIndex = 4;
-            this.LblCodigo.Text = "Code";
+            this.LblCodigo.Text = "Codigo";
             // 
-            // openFileDialog1
+            // OFDialog
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.OFDialog.FileName = "openFileDialog1";
             // 
             // CardCliente
             // 
@@ -109,9 +111,10 @@
             this.CardCliente.BorderRadius = 5;
             this.CardCliente.BottomSahddow = true;
             this.CardCliente.color = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            this.CardCliente.Controls.Add(this.LblImage);
+            this.CardCliente.Controls.Add(this.PBoxImage);
             this.CardCliente.Controls.Add(this.BtnRegistrar);
             this.CardCliente.Controls.Add(this.BtnImage);
-            this.CardCliente.Controls.Add(this.TxtImage);
             this.CardCliente.Controls.Add(this.TxtName);
             this.CardCliente.Controls.Add(this.TxtCode);
             this.CardCliente.Controls.Add(this.LblRegister);
@@ -172,7 +175,7 @@
             this.BtnImage.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.BtnImage.IconColor = System.Drawing.Color.White;
             this.BtnImage.IconSize = 16;
-            this.BtnImage.Location = new System.Drawing.Point(542, 147);
+            this.BtnImage.Location = new System.Drawing.Point(318, 142);
             this.BtnImage.Name = "BtnImage";
             this.BtnImage.Rotation = 0D;
             this.BtnImage.Size = new System.Drawing.Size(98, 24);
@@ -181,14 +184,6 @@
             this.BtnImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnImage.UseVisualStyleBackColor = false;
             this.BtnImage.Click += new System.EventHandler(this.BtnImage_Click);
-            // 
-            // TxtImage
-            // 
-            this.TxtImage.BorderColor = System.Drawing.Color.SeaGreen;
-            this.TxtImage.Location = new System.Drawing.Point(132, 151);
-            this.TxtImage.Name = "TxtImage";
-            this.TxtImage.Size = new System.Drawing.Size(392, 20);
-            this.TxtImage.TabIndex = 18;
             // 
             // TxtName
             // 
@@ -206,6 +201,25 @@
             this.TxtCode.Size = new System.Drawing.Size(137, 20);
             this.TxtCode.TabIndex = 16;
             // 
+            // PBoxImage
+            // 
+            this.PBoxImage.Location = new System.Drawing.Point(152, 123);
+            this.PBoxImage.Name = "PBoxImage";
+            this.PBoxImage.Size = new System.Drawing.Size(156, 121);
+            this.PBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBoxImage.TabIndex = 21;
+            this.PBoxImage.TabStop = false;
+            // 
+            // LblImage
+            // 
+            this.LblImage.AutoSize = true;
+            this.LblImage.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblImage.Location = new System.Drawing.Point(314, 169);
+            this.LblImage.Name = "LblImage";
+            this.LblImage.Size = new System.Drawing.Size(110, 21);
+            this.LblImage.TabIndex = 23;
+            this.LblImage.Text = "Cargar Imagen";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).EndInit();
             this.CardCliente.ResumeLayout(false);
             this.CardCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBoxImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,13 +245,14 @@
         private ns1.BunifuCustomLabel LblName;
         private ns1.BunifuCustomLabel LblImg;
         private ns1.BunifuCustomLabel LblRegister;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog OFDialog;
         private ns1.BunifuImageButton BtnClose;
         private ns1.BunifuCards CardCliente;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtCode;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtImage;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtName;
         private FontAwesome.Sharp.IconButton BtnImage;
         private ns1.BunifuFlatButton BtnRegistrar;
+        private ns1.BunifuCustomLabel LblImage;
+        private System.Windows.Forms.PictureBox PBoxImage;
     }
 }

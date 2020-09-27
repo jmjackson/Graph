@@ -18,7 +18,7 @@ namespace Grap.Principal.Views.Details
 {
     public partial class ClientDetails : Form
     {
-        int clientId = 0;
+        readonly int clientId = 0;
         readonly DataBaseContext db = new DataBaseContext();
         public ClientDetails(int id)
         {
@@ -32,6 +32,11 @@ namespace Grap.Principal.Views.Details
             TxtCode.Text = client.Code;
             TxtItem.Text = client.Id.ToString();
             TxtName.Text = client.Name;
+            if (client.Image!=null)
+            {
+                PBLogo.Image = new Bitmap(client.Image);
+            }
+           
 
             //tabla Projects
             var lp = db.Projects.ToList();
