@@ -32,10 +32,7 @@ namespace Grap.Principal
 
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void Lbl_InfoProjectNo_Click(object sender, EventArgs e)
         {

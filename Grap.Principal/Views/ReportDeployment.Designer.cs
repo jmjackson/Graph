@@ -28,351 +28,389 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDeployment));
-            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
-            this.Header = new System.Windows.Forms.Panel();
-            this.LabelName = new ns1.BunifuCustomLabel();
-            this.PictureLogo = new System.Windows.Forms.PictureBox();
-            this.Close_Button = new ns1.BunifuImageButton();
-            this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
-            this.LblClient = new ns1.BunifuCustomLabel();
-            this.LblProject = new ns1.BunifuCustomLabel();
-            this.LblProjectNo = new ns1.BunifuCustomLabel();
-            this.LblContractor = new ns1.BunifuCustomLabel();
-            this.LblSupplier = new ns1.BunifuCustomLabel();
-            this.LblGeosynthetic = new ns1.BunifuCustomLabel();
-            this.LblInfoClient = new ns1.BunifuCustomLabel();
-            this.LblInfoProject = new ns1.BunifuCustomLabel();
-            this.LblInfoProjectNo = new ns1.BunifuCustomLabel();
-            this.LblInfoContractor = new ns1.BunifuCustomLabel();
-            this.LblInfoSupplier = new ns1.BunifuCustomLabel();
-            this.LblInfoGeosynthetic = new ns1.BunifuCustomLabel();
-            this.PBLogoImage = new System.Windows.Forms.PictureBox();
-            this.BtnGetPDF = new FontAwesome.Sharp.IconButton();
-            this.BtnNextReport = new FontAwesome.Sharp.IconButton();
-            this.LblGeomembranePanel = new ns1.BunifuCustomLabel();
-            this.Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Close_Button)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBLogoImage)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.CardDeployment = new ns1.BunifuCards();
+            this.LblTitle = new ns1.BunifuCustomLabel();
+            this.LblProject = new System.Windows.Forms.Label();
+            this.LblContractor = new System.Windows.Forms.Label();
+            this.LblClient = new System.Windows.Forms.Label();
+            this.LblProjectNo = new System.Windows.Forms.Label();
+            this.LblGeosynthetic = new System.Windows.Forms.Label();
+            this.LblSupplier = new System.Windows.Forms.Label();
+            this.TxtClient = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.TxtProject = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.TxtPNumber = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.TxtContractor = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.TxtGeoSynthetic = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.TxtSupplier = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.PBImage = new System.Windows.Forms.PictureBox();
+            this.DGDeployment = new ns1.BunifuCustomDataGrid();
+            this.BtnProject = new FontAwesome.Sharp.IconButton();
+            this.BtnDetails = new FontAwesome.Sharp.IconButton();
+            this.BtnDelete = new FontAwesome.Sharp.IconButton();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateCreated = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Length = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelPrincipal.SuspendLayout();
+            this.CardDeployment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGDeployment)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuElipse1
+            // PanelPrincipal
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
+            this.PanelPrincipal.Controls.Add(this.CardDeployment);
+            this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.PanelPrincipal.Name = "PanelPrincipal";
+            this.PanelPrincipal.Size = new System.Drawing.Size(957, 683);
+            this.PanelPrincipal.TabIndex = 0;
             // 
-            // Header
+            // CardDeployment
             // 
-            this.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
-            this.Header.Controls.Add(this.LabelName);
-            this.Header.Controls.Add(this.PictureLogo);
-            this.Header.Controls.Add(this.Close_Button);
-            this.Header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Header.Location = new System.Drawing.Point(0, 0);
-            this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1386, 61);
-            this.Header.TabIndex = 0;
-            this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
+            this.CardDeployment.BackColor = System.Drawing.Color.White;
+            this.CardDeployment.BorderRadius = 5;
+            this.CardDeployment.BottomSahddow = true;
+            this.CardDeployment.color = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            this.CardDeployment.Controls.Add(this.BtnDelete);
+            this.CardDeployment.Controls.Add(this.BtnDetails);
+            this.CardDeployment.Controls.Add(this.BtnProject);
+            this.CardDeployment.Controls.Add(this.DGDeployment);
+            this.CardDeployment.Controls.Add(this.PBImage);
+            this.CardDeployment.Controls.Add(this.TxtGeoSynthetic);
+            this.CardDeployment.Controls.Add(this.TxtSupplier);
+            this.CardDeployment.Controls.Add(this.TxtPNumber);
+            this.CardDeployment.Controls.Add(this.TxtContractor);
+            this.CardDeployment.Controls.Add(this.TxtProject);
+            this.CardDeployment.Controls.Add(this.TxtClient);
+            this.CardDeployment.Controls.Add(this.LblSupplier);
+            this.CardDeployment.Controls.Add(this.LblGeosynthetic);
+            this.CardDeployment.Controls.Add(this.LblProjectNo);
+            this.CardDeployment.Controls.Add(this.LblClient);
+            this.CardDeployment.Controls.Add(this.LblContractor);
+            this.CardDeployment.Controls.Add(this.LblProject);
+            this.CardDeployment.Controls.Add(this.LblTitle);
+            this.CardDeployment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CardDeployment.LeftSahddow = false;
+            this.CardDeployment.Location = new System.Drawing.Point(0, 0);
+            this.CardDeployment.Name = "CardDeployment";
+            this.CardDeployment.RightSahddow = true;
+            this.CardDeployment.ShadowDepth = 20;
+            this.CardDeployment.Size = new System.Drawing.Size(957, 683);
+            this.CardDeployment.TabIndex = 0;
             // 
-            // LabelName
+            // LblTitle
             // 
-            this.LabelName.AutoSize = true;
-            this.LabelName.Font = new System.Drawing.Font("Calibri", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelName.ForeColor = System.Drawing.SystemColors.Control;
-            this.LabelName.Location = new System.Drawing.Point(64, 17);
-            this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(81, 32);
-            this.LabelName.TabIndex = 2;
-            this.LabelName.Text = "Graph";
-            this.LabelName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // PictureLogo
-            // 
-            this.PictureLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureLogo.Image")));
-            this.PictureLogo.Location = new System.Drawing.Point(3, 3);
-            this.PictureLogo.Name = "PictureLogo";
-            this.PictureLogo.Size = new System.Drawing.Size(55, 55);
-            this.PictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureLogo.TabIndex = 6;
-            this.PictureLogo.TabStop = false;
-            // 
-            // Close_Button
-            // 
-            this.Close_Button.BackColor = System.Drawing.Color.Transparent;
-            this.Close_Button.Image = ((System.Drawing.Image)(resources.GetObject("Close_Button.Image")));
-            this.Close_Button.ImageActive = null;
-            this.Close_Button.Location = new System.Drawing.Point(1394, 12);
-            this.Close_Button.Name = "Close_Button";
-            this.Close_Button.Size = new System.Drawing.Size(32, 37);
-            this.Close_Button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Close_Button.TabIndex = 5;
-            this.Close_Button.TabStop = false;
-            this.Close_Button.Zoom = 10;
-            this.Close_Button.Click += new System.EventHandler(this.Close_Button_Click);
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.Header;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // LblClient
-            // 
-            this.LblClient.AutoSize = true;
-            this.LblClient.BackColor = System.Drawing.Color.White;
-            this.LblClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblClient.Location = new System.Drawing.Point(451, 115);
-            this.LblClient.Name = "LblClient";
-            this.LblClient.Size = new System.Drawing.Size(44, 15);
-            this.LblClient.TabIndex = 2;
-            this.LblClient.Text = "Client :";
+            this.LblTitle.AutoSize = true;
+            this.LblTitle.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitle.Location = new System.Drawing.Point(453, 18);
+            this.LblTitle.Name = "LblTitle";
+            this.LblTitle.Size = new System.Drawing.Size(118, 20);
+            this.LblTitle.TabIndex = 1;
+            this.LblTitle.Text = "Deployment Log";
             // 
             // LblProject
             // 
             this.LblProject.AutoSize = true;
-            this.LblProject.BackColor = System.Drawing.Color.White;
-            this.LblProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblProject.Location = new System.Drawing.Point(451, 150);
+            this.LblProject.Location = new System.Drawing.Point(50, 82);
             this.LblProject.Name = "LblProject";
-            this.LblProject.Size = new System.Drawing.Size(51, 15);
-            this.LblProject.TabIndex = 3;
-            this.LblProject.Text = "Project :";
-            // 
-            // LblProjectNo
-            // 
-            this.LblProjectNo.AutoSize = true;
-            this.LblProjectNo.BackColor = System.Drawing.Color.White;
-            this.LblProjectNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblProjectNo.Location = new System.Drawing.Point(451, 187);
-            this.LblProjectNo.Name = "LblProjectNo";
-            this.LblProjectNo.Size = new System.Drawing.Size(73, 15);
-            this.LblProjectNo.TabIndex = 4;
-            this.LblProjectNo.Text = "Project No. :";
+            this.LblProject.Size = new System.Drawing.Size(40, 13);
+            this.LblProject.TabIndex = 2;
+            this.LblProject.Text = "Project";
             // 
             // LblContractor
             // 
             this.LblContractor.AutoSize = true;
-            this.LblContractor.BackColor = System.Drawing.Color.White;
-            this.LblContractor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblContractor.Location = new System.Drawing.Point(752, 115);
+            this.LblContractor.Location = new System.Drawing.Point(441, 51);
             this.LblContractor.Name = "LblContractor";
-            this.LblContractor.Size = new System.Drawing.Size(69, 15);
-            this.LblContractor.TabIndex = 5;
-            this.LblContractor.Text = "Contractor :";
+            this.LblContractor.Size = new System.Drawing.Size(56, 13);
+            this.LblContractor.TabIndex = 2;
+            this.LblContractor.Text = "Contractor";
             // 
-            // LblSupplier
+            // LblClient
             // 
-            this.LblSupplier.AutoSize = true;
-            this.LblSupplier.BackColor = System.Drawing.Color.White;
-            this.LblSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblSupplier.Location = new System.Drawing.Point(752, 150);
-            this.LblSupplier.Name = "LblSupplier";
-            this.LblSupplier.Size = new System.Drawing.Size(59, 15);
-            this.LblSupplier.TabIndex = 6;
-            this.LblSupplier.Text = "Supplier :";
+            this.LblClient.AutoSize = true;
+            this.LblClient.Location = new System.Drawing.Point(50, 51);
+            this.LblClient.Name = "LblClient";
+            this.LblClient.Size = new System.Drawing.Size(33, 13);
+            this.LblClient.TabIndex = 2;
+            this.LblClient.Text = "Client";
+            // 
+            // LblProjectNo
+            // 
+            this.LblProjectNo.AutoSize = true;
+            this.LblProjectNo.Location = new System.Drawing.Point(50, 122);
+            this.LblProjectNo.Name = "LblProjectNo";
+            this.LblProjectNo.Size = new System.Drawing.Size(57, 13);
+            this.LblProjectNo.TabIndex = 2;
+            this.LblProjectNo.Text = "Project No";
             // 
             // LblGeosynthetic
             // 
             this.LblGeosynthetic.AutoSize = true;
-            this.LblGeosynthetic.BackColor = System.Drawing.Color.White;
-            this.LblGeosynthetic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblGeosynthetic.Location = new System.Drawing.Point(752, 187);
+            this.LblGeosynthetic.Location = new System.Drawing.Point(426, 122);
             this.LblGeosynthetic.Name = "LblGeosynthetic";
-            this.LblGeosynthetic.Size = new System.Drawing.Size(83, 15);
-            this.LblGeosynthetic.TabIndex = 3;
-            this.LblGeosynthetic.Text = "Geosynthetic :";
+            this.LblGeosynthetic.Size = new System.Drawing.Size(71, 13);
+            this.LblGeosynthetic.TabIndex = 2;
+            this.LblGeosynthetic.Text = "GeoSynthetic";
             // 
-            // LblInfoClient
+            // LblSupplier
             // 
-            this.LblInfoClient.AutoSize = true;
-            this.LblInfoClient.BackColor = System.Drawing.Color.White;
-            this.LblInfoClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblInfoClient.Location = new System.Drawing.Point(533, 115);
-            this.LblInfoClient.Name = "LblInfoClient";
-            this.LblInfoClient.Size = new System.Drawing.Size(182, 15);
-            this.LblInfoClient.TabIndex = 14;
-            this.LblInfoClient.Text = "_________________________";
+            this.LblSupplier.AutoSize = true;
+            this.LblSupplier.Location = new System.Drawing.Point(454, 82);
+            this.LblSupplier.Name = "LblSupplier";
+            this.LblSupplier.Size = new System.Drawing.Size(45, 13);
+            this.LblSupplier.TabIndex = 2;
+            this.LblSupplier.Text = "Supplier";
             // 
-            // LblInfoProject
+            // TxtClient
             // 
-            this.LblInfoProject.AutoSize = true;
-            this.LblInfoProject.BackColor = System.Drawing.Color.White;
-            this.LblInfoProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblInfoProject.Location = new System.Drawing.Point(533, 150);
-            this.LblInfoProject.Name = "LblInfoProject";
-            this.LblInfoProject.Size = new System.Drawing.Size(182, 15);
-            this.LblInfoProject.TabIndex = 15;
-            this.LblInfoProject.Text = "_________________________";
+            this.TxtClient.BorderColor = System.Drawing.Color.SeaGreen;
+            this.TxtClient.Location = new System.Drawing.Point(126, 48);
+            this.TxtClient.Name = "TxtClient";
+            this.TxtClient.ReadOnly = true;
+            this.TxtClient.Size = new System.Drawing.Size(266, 20);
+            this.TxtClient.TabIndex = 3;
             // 
-            // LblInfoProjectNo
+            // TxtProject
             // 
-            this.LblInfoProjectNo.AutoSize = true;
-            this.LblInfoProjectNo.BackColor = System.Drawing.Color.White;
-            this.LblInfoProjectNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblInfoProjectNo.Location = new System.Drawing.Point(533, 187);
-            this.LblInfoProjectNo.Name = "LblInfoProjectNo";
-            this.LblInfoProjectNo.Size = new System.Drawing.Size(182, 15);
-            this.LblInfoProjectNo.TabIndex = 15;
-            this.LblInfoProjectNo.Text = "_________________________";
+            this.TxtProject.BorderColor = System.Drawing.Color.SeaGreen;
+            this.TxtProject.Location = new System.Drawing.Point(126, 82);
+            this.TxtProject.Name = "TxtProject";
+            this.TxtProject.ReadOnly = true;
+            this.TxtProject.Size = new System.Drawing.Size(266, 20);
+            this.TxtProject.TabIndex = 3;
             // 
-            // LblInfoContractor
+            // TxtPNumber
             // 
-            this.LblInfoContractor.AutoSize = true;
-            this.LblInfoContractor.BackColor = System.Drawing.Color.White;
-            this.LblInfoContractor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblInfoContractor.Location = new System.Drawing.Point(843, 112);
-            this.LblInfoContractor.Name = "LblInfoContractor";
-            this.LblInfoContractor.Size = new System.Drawing.Size(182, 15);
-            this.LblInfoContractor.TabIndex = 16;
-            this.LblInfoContractor.Text = "_________________________";
+            this.TxtPNumber.BorderColor = System.Drawing.Color.SeaGreen;
+            this.TxtPNumber.Location = new System.Drawing.Point(126, 115);
+            this.TxtPNumber.Name = "TxtPNumber";
+            this.TxtPNumber.ReadOnly = true;
+            this.TxtPNumber.Size = new System.Drawing.Size(266, 20);
+            this.TxtPNumber.TabIndex = 3;
             // 
-            // LblInfoSupplier
+            // TxtContractor
             // 
-            this.LblInfoSupplier.AutoSize = true;
-            this.LblInfoSupplier.BackColor = System.Drawing.Color.White;
-            this.LblInfoSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblInfoSupplier.Location = new System.Drawing.Point(843, 150);
-            this.LblInfoSupplier.Name = "LblInfoSupplier";
-            this.LblInfoSupplier.Size = new System.Drawing.Size(182, 15);
-            this.LblInfoSupplier.TabIndex = 17;
-            this.LblInfoSupplier.Text = "_________________________";
+            this.TxtContractor.BorderColor = System.Drawing.Color.SeaGreen;
+            this.TxtContractor.Location = new System.Drawing.Point(505, 48);
+            this.TxtContractor.Name = "TxtContractor";
+            this.TxtContractor.ReadOnly = true;
+            this.TxtContractor.Size = new System.Drawing.Size(266, 20);
+            this.TxtContractor.TabIndex = 3;
             // 
-            // LblInfoGeosynthetic
+            // TxtGeoSynthetic
             // 
-            this.LblInfoGeosynthetic.AutoSize = true;
-            this.LblInfoGeosynthetic.BackColor = System.Drawing.Color.White;
-            this.LblInfoGeosynthetic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LblInfoGeosynthetic.Location = new System.Drawing.Point(843, 187);
-            this.LblInfoGeosynthetic.Name = "LblInfoGeosynthetic";
-            this.LblInfoGeosynthetic.Size = new System.Drawing.Size(182, 15);
-            this.LblInfoGeosynthetic.TabIndex = 15;
-            this.LblInfoGeosynthetic.Text = "_________________________";
+            this.TxtGeoSynthetic.BorderColor = System.Drawing.Color.SeaGreen;
+            this.TxtGeoSynthetic.Location = new System.Drawing.Point(505, 115);
+            this.TxtGeoSynthetic.Name = "TxtGeoSynthetic";
+            this.TxtGeoSynthetic.ReadOnly = true;
+            this.TxtGeoSynthetic.Size = new System.Drawing.Size(266, 20);
+            this.TxtGeoSynthetic.TabIndex = 3;
             // 
-            // PBLogoImage
+            // TxtSupplier
             // 
-            this.PBLogoImage.Location = new System.Drawing.Point(1208, 67);
-            this.PBLogoImage.Name = "PBLogoImage";
-            this.PBLogoImage.Size = new System.Drawing.Size(166, 135);
-            this.PBLogoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBLogoImage.TabIndex = 26;
-            this.PBLogoImage.TabStop = false;
+            this.TxtSupplier.BorderColor = System.Drawing.Color.SeaGreen;
+            this.TxtSupplier.Location = new System.Drawing.Point(505, 82);
+            this.TxtSupplier.Name = "TxtSupplier";
+            this.TxtSupplier.ReadOnly = true;
+            this.TxtSupplier.Size = new System.Drawing.Size(266, 20);
+            this.TxtSupplier.TabIndex = 3;
             // 
-            // BtnGetPDF
+            // PBImage
             // 
-            this.BtnGetPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
-            this.BtnGetPDF.FlatAppearance.BorderSize = 0;
-            this.BtnGetPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGetPDF.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.BtnGetPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGetPDF.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnGetPDF.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
-            this.BtnGetPDF.IconColor = System.Drawing.Color.White;
-            this.BtnGetPDF.IconSize = 18;
-            this.BtnGetPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGetPDF.Location = new System.Drawing.Point(1052, 123);
-            this.BtnGetPDF.Name = "BtnGetPDF";
-            this.BtnGetPDF.Rotation = 0D;
-            this.BtnGetPDF.Size = new System.Drawing.Size(127, 35);
-            this.BtnGetPDF.TabIndex = 27;
-            this.BtnGetPDF.Text = "PDF";
-            this.BtnGetPDF.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnGetPDF.UseVisualStyleBackColor = false;
+            this.PBImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PBImage.Location = new System.Drawing.Point(790, 48);
+            this.PBImage.Name = "PBImage";
+            this.PBImage.Size = new System.Drawing.Size(155, 87);
+            this.PBImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBImage.TabIndex = 4;
+            this.PBImage.TabStop = false;
             // 
-            // BtnNextReport
+            // DGDeployment
             // 
-            this.BtnNextReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
-            this.BtnNextReport.FlatAppearance.BorderSize = 0;
-            this.BtnNextReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNextReport.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.BtnNextReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNextReport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnNextReport.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.BtnNextReport.IconColor = System.Drawing.Color.White;
-            this.BtnNextReport.IconSize = 18;
-            this.BtnNextReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNextReport.Location = new System.Drawing.Point(1052, 168);
-            this.BtnNextReport.Name = "BtnNextReport";
-            this.BtnNextReport.Rotation = 0D;
-            this.BtnNextReport.Size = new System.Drawing.Size(127, 35);
-            this.BtnNextReport.TabIndex = 28;
-            this.BtnNextReport.Text = "Next Report";
-            this.BtnNextReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnNextReport.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DGDeployment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGDeployment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGDeployment.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.DGDeployment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGDeployment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGDeployment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGDeployment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGDeployment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Item,
+            this.DateCreated,
+            this.PanelNo,
+            this.RollNo,
+            this.Length,
+            this.DWidth,
+            this.Thickness,
+            this.Area,
+            this.Remarks});
+            this.DGDeployment.DoubleBuffered = true;
+            this.DGDeployment.EnableHeadersVisualStyles = false;
+            this.DGDeployment.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(98)))));
+            this.DGDeployment.HeaderForeColor = System.Drawing.Color.White;
+            this.DGDeployment.Location = new System.Drawing.Point(12, 188);
+            this.DGDeployment.Name = "DGDeployment";
+            this.DGDeployment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGDeployment.Size = new System.Drawing.Size(933, 408);
+            this.DGDeployment.TabIndex = 5;
             // 
-            // LblGeomembranePanel
+            // BtnProject
             // 
-            this.LblGeomembranePanel.AutoSize = true;
-            this.LblGeomembranePanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGeomembranePanel.Location = new System.Drawing.Point(629, 79);
-            this.LblGeomembranePanel.Name = "LblGeomembranePanel";
-            this.LblGeomembranePanel.Size = new System.Drawing.Size(219, 15);
-            this.LblGeomembranePanel.TabIndex = 29;
-            this.LblGeomembranePanel.Text = "Geomembrane Panel Deployment Log";
-            this.LblGeomembranePanel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnProject.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnProject.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnProject.IconColor = System.Drawing.Color.Black;
+            this.BtnProject.IconSize = 16;
+            this.BtnProject.Location = new System.Drawing.Point(684, 602);
+            this.BtnProject.Name = "BtnProject";
+            this.BtnProject.Rotation = 0D;
+            this.BtnProject.Size = new System.Drawing.Size(75, 23);
+            this.BtnProject.TabIndex = 6;
+            this.BtnProject.Text = "Save";
+            this.BtnProject.UseVisualStyleBackColor = true;
+            // 
+            // BtnDetails
+            // 
+            this.BtnDetails.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnDetails.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnDetails.IconColor = System.Drawing.Color.Black;
+            this.BtnDetails.IconSize = 16;
+            this.BtnDetails.Location = new System.Drawing.Point(781, 602);
+            this.BtnDetails.Name = "BtnDetails";
+            this.BtnDetails.Rotation = 0D;
+            this.BtnDetails.Size = new System.Drawing.Size(75, 23);
+            this.BtnDetails.TabIndex = 6;
+            this.BtnDetails.Text = "Edit";
+            this.BtnDetails.UseVisualStyleBackColor = true;
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnDelete.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnDelete.IconColor = System.Drawing.Color.Black;
+            this.BtnDelete.IconSize = 16;
+            this.BtnDelete.Location = new System.Drawing.Point(870, 602);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Rotation = 0D;
+            this.BtnDelete.Size = new System.Drawing.Size(75, 23);
+            this.BtnDelete.TabIndex = 6;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // Item
+            // 
+            this.Item.HeaderText = "Item";
+            this.Item.Name = "Item";
+            // 
+            // DateCreated
+            // 
+            this.DateCreated.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DateCreated.HeaderText = "Date Created";
+            this.DateCreated.Name = "DateCreated";
+            // 
+            // PanelNo
+            // 
+            this.PanelNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PanelNo.HeaderText = "PanelNo";
+            this.PanelNo.Name = "PanelNo";
+            // 
+            // RollNo
+            // 
+            this.RollNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RollNo.HeaderText = "Roll No";
+            this.RollNo.Name = "RollNo";
+            // 
+            // Length
+            // 
+            this.Length.HeaderText = "Length";
+            this.Length.Name = "Length";
+            // 
+            // DWidth
+            // 
+            this.DWidth.HeaderText = "Width";
+            this.DWidth.Name = "DWidth";
+            // 
+            // Thickness
+            // 
+            this.Thickness.HeaderText = "Thickness";
+            this.Thickness.Name = "Thickness";
+            // 
+            // Area
+            // 
+            this.Area.HeaderText = "Area(Ft2)";
+            this.Area.Name = "Area";
+            // 
+            // Remarks
+            // 
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
             // 
             // ReportDeployment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1386, 683);
-            this.Controls.Add(this.LblGeomembranePanel);
-            this.Controls.Add(this.BtnNextReport);
-            this.Controls.Add(this.BtnGetPDF);
-            this.Controls.Add(this.PBLogoImage);
-            this.Controls.Add(this.LblInfoGeosynthetic);
-            this.Controls.Add(this.LblInfoSupplier);
-            this.Controls.Add(this.LblInfoContractor);
-            this.Controls.Add(this.LblInfoProjectNo);
-            this.Controls.Add(this.LblInfoProject);
-            this.Controls.Add(this.LblInfoClient);
-            this.Controls.Add(this.LblGeosynthetic);
-            this.Controls.Add(this.LblSupplier);
-            this.Controls.Add(this.LblContractor);
-            this.Controls.Add(this.LblProjectNo);
-            this.Controls.Add(this.LblProject);
-            this.Controls.Add(this.LblClient);
-            this.Controls.Add(this.Header);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(957, 683);
+            this.Controls.Add(this.PanelPrincipal);
             this.Name = "ReportDeployment";
             this.Text = "Report";
             this.Load += new System.EventHandler(this.ReportDeployment_Load);
-            this.Header.ResumeLayout(false);
-            this.Header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Close_Button)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBLogoImage)).EndInit();
+            this.PanelPrincipal.ResumeLayout(false);
+            this.CardDeployment.ResumeLayout(false);
+            this.CardDeployment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGDeployment)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private ns1.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel Header;
-        private ns1.BunifuDragControl bunifuDragControl1;
-        private ns1.BunifuImageButton Close_Button;
-        private System.Windows.Forms.PictureBox PictureLogo;
-        private ns1.BunifuCustomLabel LabelName;
-        private ns1.BunifuCustomLabel LblGeosynthetic;
-        private ns1.BunifuCustomLabel LblSupplier;
-        private ns1.BunifuCustomLabel LblContractor;
-        private ns1.BunifuCustomLabel LblProjectNo;
-        private ns1.BunifuCustomLabel LblProject;
-        private ns1.BunifuCustomLabel LblClient;
-        private ns1.BunifuCustomLabel LblInfoClient;
-        private ns1.BunifuCustomLabel LblInfoGeosynthetic;
-        private ns1.BunifuCustomLabel LblInfoSupplier;
-        private ns1.BunifuCustomLabel LblInfoContractor;
-        private ns1.BunifuCustomLabel LblInfoProjectNo;
-        private ns1.BunifuCustomLabel LblInfoProject;
-        private System.Windows.Forms.PictureBox PBLogoImage;
-        private FontAwesome.Sharp.IconButton BtnNextReport;
-        private FontAwesome.Sharp.IconButton BtnGetPDF;
-        private ns1.BunifuCustomLabel LblGeomembranePanel;
+        private System.Windows.Forms.Panel PanelPrincipal;
+        private ns1.BunifuCards CardDeployment;
+        private ns1.BunifuCustomLabel LblTitle;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtGeoSynthetic;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtSupplier;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtPNumber;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtContractor;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtProject;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtClient;
+        private System.Windows.Forms.Label LblSupplier;
+        private System.Windows.Forms.Label LblGeosynthetic;
+        private System.Windows.Forms.Label LblProjectNo;
+        private System.Windows.Forms.Label LblClient;
+        private System.Windows.Forms.Label LblContractor;
+        private System.Windows.Forms.Label LblProject;
+        private System.Windows.Forms.PictureBox PBImage;
+        private ns1.BunifuCustomDataGrid DGDeployment;
+        private FontAwesome.Sharp.IconButton BtnDelete;
+        private FontAwesome.Sharp.IconButton BtnDetails;
+        private FontAwesome.Sharp.IconButton BtnProject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateCreated;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RollNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Length;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DWidth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thickness;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
     }
 }
