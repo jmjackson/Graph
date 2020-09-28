@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+
 using System.Data;
-using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Linq.Mapping;
 using System.Data.SQLite;
@@ -47,7 +47,7 @@ namespace Grap.Principal.Model
 
         [Column(Name = "ClientId", DbType = "INTEGER")]
         public int ClientId { get; set; }
-
+  
         public Clients Client { get; set; }
     }
 }

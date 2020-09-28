@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.PanelHead = new System.Windows.Forms.Panel();
             this.SpContainer = new System.Windows.Forms.SplitContainer();
             this.CardDGrid = new ns1.BunifuCards();
             this.DGVClients = new ns1.BunifuCustomDataGrid();
@@ -45,7 +45,7 @@
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.BtnRegistro = new FontAwesome.Sharp.IconButton();
             this.LblTitle = new ns1.BunifuCustomLabel();
-            this.panel1.SuspendLayout();
+            this.PanelHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpContainer)).BeginInit();
             this.SpContainer.Panel1.SuspendLayout();
             this.SpContainer.Panel2.SuspendLayout();
@@ -56,15 +56,15 @@
             this.PanelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // PanelHead
             // 
-            this.panel1.Controls.Add(this.SpContainer);
-            this.panel1.Controls.Add(this.PanelHeader);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(760, 451);
-            this.panel1.TabIndex = 0;
+            this.PanelHead.Controls.Add(this.SpContainer);
+            this.PanelHead.Controls.Add(this.PanelHeader);
+            this.PanelHead.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelHead.Location = new System.Drawing.Point(0, 0);
+            this.PanelHead.Name = "PanelHead";
+            this.PanelHead.Size = new System.Drawing.Size(760, 451);
+            this.PanelHead.TabIndex = 0;
             // 
             // SpContainer
             // 
@@ -308,14 +308,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(760, 451);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ListaClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListaClientes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListaClientes_FormClosing);
             this.Load += new System.EventHandler(this.ListaClientes_Load);
-            this.panel1.ResumeLayout(false);
+            this.PanelHead.ResumeLayout(false);
             this.SpContainer.Panel1.ResumeLayout(false);
             this.SpContainer.Panel2.ResumeLayout(false);
             this.SpContainer.Panel2.PerformLayout();
@@ -332,7 +332,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelHead;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientName;
         private System.Windows.Forms.Panel PanelHeader;
         private ns1.BunifuCustomLabel LblTitle;

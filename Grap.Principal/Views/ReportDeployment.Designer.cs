@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDeployment));
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.Header = new System.Windows.Forms.Panel();
@@ -38,16 +36,6 @@
             this.PictureLogo = new System.Windows.Forms.PictureBox();
             this.Close_Button = new ns1.BunifuImageButton();
             this.bunifuDragControl1 = new ns1.BunifuDragControl(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.DGVDeployment = new ns1.BunifuCustomDataGrid();
-            this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Widht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblClient = new ns1.BunifuCustomLabel();
             this.LblProject = new ns1.BunifuCustomLabel();
             this.LblProjectNo = new ns1.BunifuCustomLabel();
@@ -67,8 +55,6 @@
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close_Button)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVDeployment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogoImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +72,7 @@
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1435, 61);
+            this.Header.Size = new System.Drawing.Size(1386, 61);
             this.Header.TabIndex = 0;
             this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
             // 
@@ -132,102 +118,6 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.Header;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.DGVDeployment);
-            this.panel1.Location = new System.Drawing.Point(12, 224);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1414, 446);
-            this.panel1.TabIndex = 1;
-            // 
-            // DGVDeployment
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DGVDeployment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGVDeployment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGVDeployment.BackgroundColor = System.Drawing.Color.White;
-            this.DGVDeployment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGVDeployment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDeployment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DGVDeployment.ColumnHeadersHeight = 45;
-            this.DGVDeployment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DeploymentDate,
-            this.PanelNo,
-            this.RollNo,
-            this.Lenght,
-            this.Widht,
-            this.Thickness,
-            this.Area,
-            this.Remarks});
-            this.DGVDeployment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGVDeployment.DoubleBuffered = true;
-            this.DGVDeployment.EnableHeadersVisualStyles = false;
-            this.DGVDeployment.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
-            this.DGVDeployment.HeaderForeColor = System.Drawing.Color.White;
-            this.DGVDeployment.Location = new System.Drawing.Point(0, 0);
-            this.DGVDeployment.Name = "DGVDeployment";
-            this.DGVDeployment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DGVDeployment.RowHeadersVisible = false;
-            this.DGVDeployment.Size = new System.Drawing.Size(1414, 446);
-            this.DGVDeployment.TabIndex = 1;
-            this.DGVDeployment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDeployment_CellContentClick);
-            // 
-            // DeploymentDate
-            // 
-            this.DeploymentDate.HeaderText = "Deployment Date";
-            this.DeploymentDate.Name = "DeploymentDate";
-            this.DeploymentDate.ReadOnly = true;
-            // 
-            // PanelNo
-            // 
-            this.PanelNo.HeaderText = "Panel No.";
-            this.PanelNo.Name = "PanelNo";
-            this.PanelNo.ReadOnly = true;
-            // 
-            // RollNo
-            // 
-            this.RollNo.HeaderText = "Roll No.";
-            this.RollNo.Name = "RollNo";
-            this.RollNo.ReadOnly = true;
-            // 
-            // Lenght
-            // 
-            this.Lenght.HeaderText = "Lenght";
-            this.Lenght.Name = "Lenght";
-            this.Lenght.ReadOnly = true;
-            // 
-            // Widht
-            // 
-            this.Widht.HeaderText = "Width";
-            this.Widht.Name = "Widht";
-            this.Widht.ReadOnly = true;
-            // 
-            // Thickness
-            // 
-            this.Thickness.HeaderText = "Thickness";
-            this.Thickness.Name = "Thickness";
-            this.Thickness.ReadOnly = true;
-            // 
-            // Area
-            // 
-            this.Area.HeaderText = "Area";
-            this.Area.Name = "Area";
-            this.Area.ReadOnly = true;
-            // 
-            // Remarks
-            // 
-            this.Remarks.HeaderText = "Remarks";
-            this.Remarks.Name = "Remarks";
-            this.Remarks.ReadOnly = true;
             // 
             // LblClient
             // 
@@ -363,10 +253,9 @@
             // 
             // PBLogoImage
             // 
-            this.PBLogoImage.Image = ((System.Drawing.Image)(resources.GetObject("PBLogoImage.Image")));
-            this.PBLogoImage.Location = new System.Drawing.Point(1229, 67);
+            this.PBLogoImage.Location = new System.Drawing.Point(1208, 67);
             this.PBLogoImage.Name = "PBLogoImage";
-            this.PBLogoImage.Size = new System.Drawing.Size(157, 151);
+            this.PBLogoImage.Size = new System.Drawing.Size(166, 135);
             this.PBLogoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBLogoImage.TabIndex = 26;
             this.PBLogoImage.TabStop = false;
@@ -429,7 +318,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1435, 683);
+            this.ClientSize = new System.Drawing.Size(1386, 683);
             this.Controls.Add(this.LblGeomembranePanel);
             this.Controls.Add(this.BtnNextReport);
             this.Controls.Add(this.BtnGetPDF);
@@ -446,7 +335,6 @@
             this.Controls.Add(this.LblProjectNo);
             this.Controls.Add(this.LblProject);
             this.Controls.Add(this.LblClient);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReportDeployment";
@@ -456,8 +344,6 @@
             this.Header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Close_Button)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVDeployment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogoImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -478,8 +364,6 @@
         private ns1.BunifuCustomLabel LblProjectNo;
         private ns1.BunifuCustomLabel LblProject;
         private ns1.BunifuCustomLabel LblClient;
-        private System.Windows.Forms.Panel panel1;
-        private ns1.BunifuCustomDataGrid DGVDeployment;
         private ns1.BunifuCustomLabel LblInfoClient;
         private ns1.BunifuCustomLabel LblInfoGeosynthetic;
         private ns1.BunifuCustomLabel LblInfoSupplier;
@@ -490,13 +374,5 @@
         private FontAwesome.Sharp.IconButton BtnNextReport;
         private FontAwesome.Sharp.IconButton BtnGetPDF;
         private ns1.BunifuCustomLabel LblGeomembranePanel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeploymentDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RollNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lenght;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Widht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Thickness;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
     }
 }

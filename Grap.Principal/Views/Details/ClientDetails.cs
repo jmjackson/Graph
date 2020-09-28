@@ -13,6 +13,8 @@ using Grap.Principal.Model;
 using Grap.Principal.DataModel;
 using Grap.Principal.Views.Modal;
 using Grap.Principal.Views.Details;
+using Grap.Principal.Views.Create;
+using System.Data.Entity.Infrastructure;
 
 namespace Grap.Principal.Views.Details
 {
@@ -28,22 +30,22 @@ namespace Grap.Principal.Views.Details
 
         private void ClientDetails_Load(object sender, EventArgs e)
         {
-           var client= db.Clients.Find(clientId);
+            var client = db.Clients.Find(clientId);
             TxtCode.Text = client.Code;
             TxtItem.Text = client.Id.ToString();
             TxtName.Text = client.Name;
-            if (client.Image!=null)
+            if (client.Image != null)
             {
-                PBLogo.Image = new Bitmap(client.Image);
+                PBImage.Image = new Bitmap(client.Image);
             }
-           
+
 
             //tabla Projects
-            var lp = db.Projects.ToList();
-            if (/*lp != null || */lp.Count > 0)
+            var lp = db.Projects.Where(a => a.ClientId == clientId).ToList ();
+            if (lp.Count > 0)
             {
                 DGVProject.AutoGenerateColumns = false;
-                DGVProject.Columns["Id"].DataPropertyName = "Id";
+                DGVProject.Columns["Item"].DataPropertyName = "Id";
                 DGVProject.Columns["ProjectName"].DataPropertyName = "ProjectName";
                 DGVProject.Columns["ProjectNo"].DataPropertyName = "ProjectNo";
                 DGVProject.Columns["Contractor"].DataPropertyName = "Contractor";
@@ -52,15 +54,26 @@ namespace Grap.Principal.Views.Details
                 DGVProject.Columns["LeachPad"].DataPropertyName = "LeachPad";
                 DGVProject.Columns["Operator"].DataPropertyName = "Operator";
                 DGVProject.Columns["MachineNo"].DataPropertyName = "MachineNo";
-                DGVProject.Columns["ClientId"].DataPropertyName = "ClientId";
                 DGVProject.DataSource = lp;
             }
 
 
         }
 
-        private void BunifuCards1_Paint(object sender, PaintEventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
+            int id = clientId;
+            CreateProject cp = new CreateProject(id);
+            cp.ShowDialog();
+            
+
+        }
+
+        private void BtnDeploy_Click(object sender, EventArgs e)
+        {
+            var id = Convert.ToInt32(DGVProject.CurrentRow.Cells[0].Value);
+            ReportDeployment dp = new ReportDeployment(id);
+            dp.Show();
 
         }
     }
