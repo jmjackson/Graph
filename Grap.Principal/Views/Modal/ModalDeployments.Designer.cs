@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CbCliente = new System.Windows.Forms.ComboBox();
             this.LbCliente = new System.Windows.Forms.Label();
             this.LbProject = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CbProyecto = new System.Windows.Forms.ComboBox();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnOk = new System.Windows.Forms.Button();
             this.LbFecha = new System.Windows.Forms.Label();
             this.TxtFecha = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // CbCliente
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(86, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Seleccionar una Cliente";
+            this.CbCliente.FormattingEnabled = true;
+            this.CbCliente.Location = new System.Drawing.Point(86, 48);
+            this.CbCliente.Name = "CbCliente";
+            this.CbCliente.Size = new System.Drawing.Size(140, 21);
+            this.CbCliente.TabIndex = 0;
+            this.CbCliente.Text = "Seleccionar una Cliente";
+            this.CbCliente.SelectedIndexChanged += new System.EventHandler(this.CbCliente_SelectedIndexChanged);
             // 
             // LbCliente
             // 
@@ -69,14 +70,14 @@
             this.LbProject.TabIndex = 3;
             this.LbProject.Text = "Proyectos";
             // 
-            // comboBox2
+            // CbProyecto
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(86, 99);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(140, 21);
-            this.comboBox2.TabIndex = 2;
-            this.comboBox2.Text = "Selecionar un Proyecto";
+            this.CbProyecto.FormattingEnabled = true;
+            this.CbProyecto.Location = new System.Drawing.Point(86, 99);
+            this.CbProyecto.Name = "CbProyecto";
+            this.CbProyecto.Size = new System.Drawing.Size(140, 21);
+            this.CbProyecto.TabIndex = 2;
+            this.CbProyecto.Text = "Selecionar un Proyecto";
             // 
             // BtnCancelar
             // 
@@ -103,6 +104,7 @@
             this.BtnOk.TabIndex = 5;
             this.BtnOk.Text = "OK";
             this.BtnOk.UseVisualStyleBackColor = false;
+            this.BtnOk.Click += new System.EventHandler(this.BtnOk_Click);
             // 
             // LbFecha
             // 
@@ -132,11 +134,12 @@
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnOk);
             this.Controls.Add(this.LbProject);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.CbProyecto);
             this.Controls.Add(this.LbCliente);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CbCliente);
             this.Name = "ModalDeployments";
             this.Text = "ModalDeployments";
+            this.Load += new System.EventHandler(this.ModalDeployments_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,10 +147,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CbCliente;
         private System.Windows.Forms.Label LbCliente;
         private System.Windows.Forms.Label LbProject;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox CbProyecto;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnOk;
         private System.Windows.Forms.Label LbFecha;

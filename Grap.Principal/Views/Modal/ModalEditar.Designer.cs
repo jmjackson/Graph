@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModalEditar));
             this.LblImage = new ns1.BunifuCustomLabel();
-            this.PBoxImage = new System.Windows.Forms.PictureBox();
+            this.PBox = new System.Windows.Forms.PictureBox();
             this.BtnRegistrar = new ns1.BunifuFlatButton();
             this.BtnImage = new FontAwesome.Sharp.IconButton();
             this.TxtName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -41,7 +41,7 @@
             this.LblName = new ns1.BunifuCustomLabel();
             this.LblCodigo = new ns1.BunifuCustomLabel();
             this.OFDialog = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.PBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,14 +55,14 @@
             this.LblImage.TabIndex = 34;
             this.LblImage.Text = "Cargar Imagen";
             // 
-            // PBoxImage
+            // PBox
             // 
-            this.PBoxImage.Location = new System.Drawing.Point(133, 120);
-            this.PBoxImage.Name = "PBoxImage";
-            this.PBoxImage.Size = new System.Drawing.Size(156, 121);
-            this.PBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBoxImage.TabIndex = 33;
-            this.PBoxImage.TabStop = false;
+            this.PBox.Location = new System.Drawing.Point(133, 120);
+            this.PBox.Name = "PBox";
+            this.PBox.Size = new System.Drawing.Size(156, 121);
+            this.PBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBox.TabIndex = 33;
+            this.PBox.TabStop = false;
             // 
             // BtnRegistrar
             // 
@@ -197,7 +197,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 279);
             this.Controls.Add(this.LblImage);
-            this.Controls.Add(this.PBoxImage);
+            this.Controls.Add(this.PBox);
             this.Controls.Add(this.BtnRegistrar);
             this.Controls.Add(this.BtnImage);
             this.Controls.Add(this.TxtName);
@@ -209,7 +209,7 @@
             this.Controls.Add(this.LblCodigo);
             this.Name = "ModalEditar";
             this.Text = "ModalEditar";
-            ((System.ComponentModel.ISupportInitialize)(this.PBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,7 +219,7 @@
         #endregion
 
         private ns1.BunifuCustomLabel LblImage;
-        private System.Windows.Forms.PictureBox PBoxImage;
+        private System.Windows.Forms.PictureBox PBox;
         private ns1.BunifuFlatButton BtnRegistrar;
         private FontAwesome.Sharp.IconButton BtnImage;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox TxtName;

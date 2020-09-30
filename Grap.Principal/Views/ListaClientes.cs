@@ -99,9 +99,5 @@ namespace Grap.Principal.Views
             }
         }
 
-        private void DGVClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

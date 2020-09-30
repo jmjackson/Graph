@@ -30,7 +30,7 @@ namespace Grap.Principal.Views.Modal
             TxtCode.Text = client.Code;
             TxtName.Text = client.Name;
             //No muestra la imagen que tiene el cliente a editar 
-            //PBoxImage.Image= client.Image;
+            PBox.Image = new Bitmap(client.Image);
         }
 
         //private void BtnEditar_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace Grap.Principal.Views.Modal
                 OFDialog.Filter = "Image Files((*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
                 if (OFDialog.ShowDialog() == DialogResult.OK)
                 {
-                    PBoxImage.Image = new Bitmap(OFDialog.FileName);
+                    PBox.Image = new Bitmap(OFDialog.FileName);
                 }
             }
             catch (Exception ex)
@@ -69,12 +69,12 @@ namespace Grap.Principal.Views.Modal
 
                 if (Directory.Exists(path))
                 {
-                    PBoxImage.Image.Save(path + cd + "_cliente.jpg");
+                    PBox.Image.Save(path + cd + "_cliente.jpg");
                 }
                 else
                 {
                     Directory.CreateDirectory(path);
-                    PBoxImage.Image.Save(path + cd + "_cliente.jpg");
+                    PBox.Image.Save(path + cd + "_cliente.jpg");
                 }
                 //Clients c = new Clients()
                 //{
