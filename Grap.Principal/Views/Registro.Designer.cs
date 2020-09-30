@@ -36,12 +36,12 @@
             this.LblCodigo = new ns1.BunifuCustomLabel();
             this.OFDialog = new System.Windows.Forms.OpenFileDialog();
             this.CardCliente = new ns1.BunifuCards();
+            this.LblImage = new ns1.BunifuCustomLabel();
+            this.PBoxImage = new System.Windows.Forms.PictureBox();
             this.BtnRegistrar = new ns1.BunifuFlatButton();
             this.BtnImage = new FontAwesome.Sharp.IconButton();
             this.TxtName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.TxtCode = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.PBoxImage = new System.Windows.Forms.PictureBox();
-            this.LblImage = new ns1.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.CardCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBoxImage)).BeginInit();
@@ -70,6 +70,7 @@
             this.LblRegister.Size = new System.Drawing.Size(186, 30);
             this.LblRegister.TabIndex = 8;
             this.LblRegister.Text = "Registro de Cliente";
+            this.LblRegister.Click += new System.EventHandler(this.LblRegister_Click);
             // 
             // LblImg
             // 
@@ -80,6 +81,7 @@
             this.LblImg.Size = new System.Drawing.Size(61, 21);
             this.LblImg.TabIndex = 11;
             this.LblImg.Text = "Imagen";
+            this.LblImg.Click += new System.EventHandler(this.LblImg_Click);
             // 
             // LblName
             // 
@@ -90,6 +92,7 @@
             this.LblName.Size = new System.Drawing.Size(66, 21);
             this.LblName.TabIndex = 6;
             this.LblName.Text = "Nombre";
+            this.LblName.Click += new System.EventHandler(this.LblName_Click);
             // 
             // LblCodigo
             // 
@@ -100,6 +103,7 @@
             this.LblCodigo.Size = new System.Drawing.Size(60, 21);
             this.LblCodigo.TabIndex = 4;
             this.LblCodigo.Text = "Codigo";
+            this.LblCodigo.Click += new System.EventHandler(this.LblCodigo_Click);
             // 
             // OFDialog
             // 
@@ -130,6 +134,27 @@
             this.CardCliente.ShadowDepth = 20;
             this.CardCliente.Size = new System.Drawing.Size(705, 290);
             this.CardCliente.TabIndex = 8;
+            // 
+            // LblImage
+            // 
+            this.LblImage.AutoSize = true;
+            this.LblImage.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblImage.Location = new System.Drawing.Point(314, 169);
+            this.LblImage.Name = "LblImage";
+            this.LblImage.Size = new System.Drawing.Size(110, 21);
+            this.LblImage.TabIndex = 23;
+            this.LblImage.Text = "Cargar Imagen";
+            this.LblImage.Click += new System.EventHandler(this.LblImage_Click);
+            // 
+            // PBoxImage
+            // 
+            this.PBoxImage.Location = new System.Drawing.Point(152, 123);
+            this.PBoxImage.Name = "PBoxImage";
+            this.PBoxImage.Size = new System.Drawing.Size(156, 121);
+            this.PBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBoxImage.TabIndex = 21;
+            this.PBoxImage.TabStop = false;
+            this.PBoxImage.Click += new System.EventHandler(this.PBoxImage_Click);
             // 
             // BtnRegistrar
             // 
@@ -192,6 +217,7 @@
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(279, 20);
             this.TxtName.TabIndex = 17;
+            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // TxtCode
             // 
@@ -200,25 +226,7 @@
             this.TxtCode.Name = "TxtCode";
             this.TxtCode.Size = new System.Drawing.Size(137, 20);
             this.TxtCode.TabIndex = 16;
-            // 
-            // PBoxImage
-            // 
-            this.PBoxImage.Location = new System.Drawing.Point(152, 123);
-            this.PBoxImage.Name = "PBoxImage";
-            this.PBoxImage.Size = new System.Drawing.Size(156, 121);
-            this.PBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBoxImage.TabIndex = 21;
-            this.PBoxImage.TabStop = false;
-            // 
-            // LblImage
-            // 
-            this.LblImage.AutoSize = true;
-            this.LblImage.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblImage.Location = new System.Drawing.Point(314, 169);
-            this.LblImage.Name = "LblImage";
-            this.LblImage.Size = new System.Drawing.Size(110, 21);
-            this.LblImage.TabIndex = 23;
-            this.LblImage.Text = "Cargar Imagen";
+            this.TxtCode.TextChanged += new System.EventHandler(this.TxtCode_TextChanged);
             // 
             // Registro
             // 

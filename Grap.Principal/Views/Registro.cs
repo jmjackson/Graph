@@ -30,8 +30,6 @@ namespace Grap.Principal.Views
         }
 
        
-
-
         private void BtnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -85,6 +83,46 @@ namespace Grap.Principal.Views
             }
 
             this.Close();
+
+        }
+
+        private void PBoxImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtCode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblRegister_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblImg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblCodigo_Click(object sender, EventArgs e)
+        {
 
         }
     }
