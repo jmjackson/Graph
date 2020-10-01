@@ -204,11 +204,11 @@
             this.bunifuTileButton4.ImagePosition = 20;
             this.bunifuTileButton4.ImageZoom = 50;
             this.bunifuTileButton4.LabelPosition = 41;
-            this.bunifuTileButton4.LabelText = "Tile 1";
-            this.bunifuTileButton4.Location = new System.Drawing.Point(494, 25);
+            this.bunifuTileButton4.LabelText = "Geomembrane";
+            this.bunifuTileButton4.Location = new System.Drawing.Point(560, 22);
             this.bunifuTileButton4.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton4.Name = "bunifuTileButton4";
-            this.bunifuTileButton4.Size = new System.Drawing.Size(128, 129);
+            this.bunifuTileButton4.Size = new System.Drawing.Size(155, 140);
             this.bunifuTileButton4.TabIndex = 0;
             // 
             // bunifuTileButton3
@@ -223,11 +223,11 @@
             this.bunifuTileButton3.ImagePosition = 20;
             this.bunifuTileButton3.ImageZoom = 50;
             this.bunifuTileButton3.LabelPosition = 41;
-            this.bunifuTileButton3.LabelText = "Tile 1";
-            this.bunifuTileButton3.Location = new System.Drawing.Point(343, 25);
+            this.bunifuTileButton3.LabelText = "Project";
+            this.bunifuTileButton3.Location = new System.Drawing.Point(226, 22);
             this.bunifuTileButton3.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton3.Name = "bunifuTileButton3";
-            this.bunifuTileButton3.Size = new System.Drawing.Size(128, 129);
+            this.bunifuTileButton3.Size = new System.Drawing.Size(155, 140);
             this.bunifuTileButton3.TabIndex = 0;
             // 
             // bunifuTileButton2
@@ -242,11 +242,11 @@
             this.bunifuTileButton2.ImagePosition = 20;
             this.bunifuTileButton2.ImageZoom = 50;
             this.bunifuTileButton2.LabelPosition = 41;
-            this.bunifuTileButton2.LabelText = "Tile 1";
-            this.bunifuTileButton2.Location = new System.Drawing.Point(203, 25);
+            this.bunifuTileButton2.LabelText = "Clients";
+            this.bunifuTileButton2.Location = new System.Drawing.Point(393, 22);
             this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton2.Name = "bunifuTileButton2";
-            this.bunifuTileButton2.Size = new System.Drawing.Size(128, 129);
+            this.bunifuTileButton2.Size = new System.Drawing.Size(155, 140);
             this.bunifuTileButton2.TabIndex = 0;
             // 
             // bunifuTileButton1
@@ -261,12 +261,13 @@
             this.bunifuTileButton1.ImagePosition = 20;
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 41;
-            this.bunifuTileButton1.LabelText = "Tile 1";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(45, 25);
+            this.bunifuTileButton1.LabelText = "Deployments";
+            this.bunifuTileButton1.Location = new System.Drawing.Point(59, 22);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(128, 129);
+            this.bunifuTileButton1.Size = new System.Drawing.Size(155, 140);
             this.bunifuTileButton1.TabIndex = 0;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.BunifuTileButton1_Click);
             // 
             // Home
             // 

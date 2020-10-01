@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Grap.Principal.Views.Modal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,6 +53,12 @@ namespace Grap.Principal.Views
         private void BtnOut_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void BunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            ModalDeployments md = new ModalDeployments();
+            md.ShowDialog();
         }
     }
 }

@@ -86,15 +86,18 @@ namespace Grap.Principal.Views
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
+            //var id = Convert.ToInt32(DGVClients.CurrentRow.Cells[0].Value);
+            //ModalEditar me = new ModalEditar(id);
+            //me.ShowDialog();
+            //UpdateForm();
             var id = Convert.ToInt32(DGVClients.CurrentRow.Cells[0].Value);
             ModalEditar me = new ModalEditar(id);
-            me.ShowDialog();
-            UpdateForm();
+            if (me.ShowDialog() == DialogResult.OK)
+            {
+                me.ShowDialog();
+                UpdateForm();
+            }
         }
 
-        private void DGVClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
