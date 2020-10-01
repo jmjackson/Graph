@@ -55,7 +55,34 @@ namespace Grap.Principal.Views
             
         }
 
-        private void BunifuTileButton1_Click(object sender, EventArgs e)
+       
+
+        private void ButtonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState==FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                this.StartPosition = FormStartPosition.CenterParent;
+            }
+            
+        }
+
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+             
+        }
+
+        private void BtnDeploy_Click(object sender, EventArgs e)
         {
             ModalDeployments md = new ModalDeployments();
             md.ShowDialog();

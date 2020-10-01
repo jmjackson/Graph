@@ -332,7 +332,6 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelHead;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClientName;
         private System.Windows.Forms.Panel PanelHeader;
         private ns1.BunifuCustomLabel LblTitle;
         private FontAwesome.Sharp.IconButton BtnRegistro;
