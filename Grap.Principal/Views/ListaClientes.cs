@@ -94,7 +94,6 @@ namespace Grap.Principal.Views
             ModalEditar me = new ModalEditar(id);
             if (me.ShowDialog() == DialogResult.OK)
             {
-                me.ShowDialog();
                 UpdateForm();
             }
         }

@@ -57,5 +57,7 @@ namespace Grap.Principal.Views.Modal
                 CbProyecto.Items.Add(lpbox.ProjectName);
             }
         }
+
+        
     }
 }
