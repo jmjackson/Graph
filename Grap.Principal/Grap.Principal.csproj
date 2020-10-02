@@ -93,12 +93,6 @@
     <Compile Include="Views\Config.Designer.cs">
       <DependentUpon>Config.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Create\CreateDeployment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Create\CreateDeployment.Designer.cs">
-      <DependentUpon>CreateDeployment.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Create\CreateProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,9 +177,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Create\CreateDeployment.resx">
-      <DependentUpon>CreateDeployment.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Create\CreateProject.resx">
       <DependentUpon>CreateProject.cs</DependentUpon>
     </EmbeddedResource>
