@@ -209,6 +209,7 @@
             this.TileDevelopment.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.TileDevelopment.UseSelectable = true;
             this.TileDevelopment.UseTileImage = true;
+            this.TileDevelopment.Click += new System.EventHandler(this.TileDevelopment_Click);
             // 
             // TileGeomembrane
             // 

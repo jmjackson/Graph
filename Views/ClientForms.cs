@@ -55,7 +55,7 @@ namespace Mine.Views
                     PBImage.Image = new Bitmap(ofd.FileName);
                     PBImage.Image.Save(img);
                     Client c = clientBindingSource.Current as Client;
-                    if (c!=null)
+                    if(c != null)
                     {
                         c.Image = img;
                     }
@@ -105,7 +105,7 @@ namespace Mine.Views
                     Client cl = clientBindingSource.Current as Client;
                     if (cl!=null)
                     {
-                        if (db.Entry<Client>(cl).State== EntityState.Detached)
+                        if (db.Entry<Client>(cl).State == EntityState.Detached)
                         {
                             db.Set<Client>().Attach(cl);
                         }
@@ -125,13 +125,13 @@ namespace Mine.Views
             using (GraphDbContext db=new GraphDbContext())
             {
                 Client c = clientBindingSource.Current as Client;
-                if (c!=null)
+                if (c != null)
                 {
-                    if (db.Entry<Client>(c).State==EntityState.Detached)
+                    if (db.Entry<Client>(c).State == EntityState.Detached)
                     {
                         db.Set<Client>().Attach(c);
                     }
-                    if (c.Id==0)
+                    if (c.Id == 0)
                     {
                         db.Entry<Client>(c).State = EntityState.Added;
                     }

@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="DataContext\GraphDbContext.cs" />
     <Compile Include="DataModel\Client.cs" />
+    <Compile Include="DataModel\Development.cs" />
     <Compile Include="DataModel\Project.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -86,6 +87,12 @@
       <DependentUpon>202010032204209_UpdateProject.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Modal\ModalDevelopment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\ModalDevelopment.Designer.cs">
+      <DependentUpon>ModalDevelopment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modal\ModalProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +106,12 @@
     </Compile>
     <Compile Include="Views\ClientForms.Designer.cs">
       <DependentUpon>ClientForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DevelopmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DevelopmentForm.Designer.cs">
+      <DependentUpon>DevelopmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Principal.cs">
       <SubType>Form</SubType>
@@ -121,6 +134,9 @@
     <EmbeddedResource Include="Migrations\202010032204209_UpdateProject.resx">
       <DependentUpon>202010032204209_UpdateProject.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modal\ModalDevelopment.resx">
+      <DependentUpon>ModalDevelopment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalProject.resx">
       <DependentUpon>ModalProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +151,9 @@
     </Compile>
     <EmbeddedResource Include="Views\ClientForms.resx">
       <DependentUpon>ClientForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DevelopmentForm.resx">
+      <DependentUpon>DevelopmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

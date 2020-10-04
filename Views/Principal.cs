@@ -45,5 +45,15 @@ namespace Mine.Views
                 pf.Show();
             }
         }
+
+        private void TileDevelopment_Click(object sender, EventArgs e)
+        {
+            ModalDevelopment md = new ModalDevelopment();
+            if (md.ShowDialog() == DialogResult.Yes)
+            {
+                int pId = md.ProjectId;
+
+            }
+        }
     }
 }

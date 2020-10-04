@@ -32,6 +32,7 @@
             this.BtnYes = new MetroFramework.Controls.MetroButton();
             this.BtnNo = new MetroFramework.Controls.MetroButton();
             this.LblClients = new MetroFramework.Controls.MetroLabel();
+            this.LblTitle = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // CbClients
@@ -72,11 +73,21 @@
             this.LblClients.TabIndex = 2;
             this.LblClients.Text = "Clients";
             // 
+            // LblTitle
+            // 
+            this.LblTitle.AutoSize = true;
+            this.LblTitle.Location = new System.Drawing.Point(61, 11);
+            this.LblTitle.Name = "LblTitle";
+            this.LblTitle.Size = new System.Drawing.Size(275, 19);
+            this.LblTitle.TabIndex = 3;
+            this.LblTitle.Text = "Choice The Client For add o modify a project";
+            // 
             // ModalProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 194);
+            this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.LblClients);
             this.Controls.Add(this.BtnNo);
             this.Controls.Add(this.BtnYes);
@@ -98,5 +109,6 @@
         private MetroFramework.Controls.MetroButton BtnYes;
         private MetroFramework.Controls.MetroButton BtnNo;
         private MetroFramework.Controls.MetroLabel LblClients;
+        private MetroFramework.Controls.MetroLabel LblTitle;
     }
 }
