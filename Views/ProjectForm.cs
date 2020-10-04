@@ -73,6 +73,29 @@ namespace Mine.Views
             TxtSupplier.Text = String.Empty;
             TxtGeosynthetic.Text = String.Empty;
         }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var cell = DGVProject.CurrentRow.Cells[0].Value;
+                var cdb = db.Projects.Find(cell);
+                if (cdb!=null)
+                {
+                    TxtPid.Text = cdb.Id.ToString();
+                    TxtPName.Text = cdb.PName;
+                    TxtPNumber.Text = cdb.ProjectNo;
+                    TxtContractor.Text = cdb.Contractor;
+                    TxtSupplier.Text = cdb.Supplier;
+                    TxtGeosynthetic.Text = cdb.GeoSynthetic;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MetroFramework.MetroMessageBox.Show(this,"Ocurred and error "+ex.ToString(),"Info");
+            }
+        }
     }
 }
     

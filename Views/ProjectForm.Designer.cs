@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblId = new MetroFramework.Controls.MetroLabel();
             this.LblName = new MetroFramework.Controls.MetroLabel();
             this.LblCode = new MetroFramework.Controls.MetroLabel();
@@ -39,6 +39,12 @@
             this.TxtCode = new MetroFramework.Controls.MetroTextBox();
             this.TxtName = new MetroFramework.Controls.MetroTextBox();
             this.DGVProject = new MetroFramework.Controls.MetroGrid();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjectNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contractor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Geosynthetic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelAdd = new System.Windows.Forms.Panel();
             this.TxtGeosynthetic = new MetroFramework.Controls.MetroTextBox();
             this.TxtPNumber = new MetroFramework.Controls.MetroTextBox();
@@ -46,6 +52,7 @@
             this.TxtPName = new MetroFramework.Controls.MetroTextBox();
             this.TxtPid = new MetroFramework.Controls.MetroTextBox();
             this.TxtContractor = new MetroFramework.Controls.MetroTextBox();
+            this.BtnSave = new MetroFramework.Controls.MetroButton();
             this.BtnEdit = new MetroFramework.Controls.MetroButton();
             this.BtnCreate = new MetroFramework.Controls.MetroButton();
             this.LblPNumber = new MetroFramework.Controls.MetroLabel();
@@ -54,13 +61,7 @@
             this.LblSupplier = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.LblPId = new MetroFramework.Controls.MetroLabel();
-            this.BtnSave = new MetroFramework.Controls.MetroButton();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contractor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Geosynthetic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnDelete = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProject)).BeginInit();
             this.PanelAdd.SuspendLayout();
@@ -202,14 +203,14 @@
             this.DGVProject.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVProject.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVProject.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -218,32 +219,65 @@
             this.Contractor,
             this.Supplier,
             this.Geosynthetic});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVProject.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVProject.DefaultCellStyle = dataGridViewCellStyle5;
             this.DGVProject.EnableHeadersVisualStyles = false;
             this.DGVProject.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DGVProject.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DGVProject.Location = new System.Drawing.Point(23, 116);
             this.DGVProject.Name = "DGVProject";
             this.DGVProject.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVProject.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVProject.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DGVProject.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVProject.Size = new System.Drawing.Size(886, 239);
             this.DGVProject.TabIndex = 4;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Id.HeaderText = "Item";
+            this.Id.Name = "Id";
+            // 
+            // PName
+            // 
+            this.PName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PName.HeaderText = "Name";
+            this.PName.Name = "PName";
+            // 
+            // ProjectNo
+            // 
+            this.ProjectNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProjectNo.HeaderText = "Project No";
+            this.ProjectNo.Name = "ProjectNo";
+            // 
+            // Contractor
+            // 
+            this.Contractor.HeaderText = "Contractor";
+            this.Contractor.Name = "Contractor";
+            // 
+            // Supplier
+            // 
+            this.Supplier.HeaderText = "Supplier";
+            this.Supplier.Name = "Supplier";
+            // 
+            // Geosynthetic
+            // 
+            this.Geosynthetic.HeaderText = "GeoSynthetic";
+            this.Geosynthetic.Name = "Geosynthetic";
             // 
             // PanelAdd
             // 
@@ -253,6 +287,7 @@
             this.PanelAdd.Controls.Add(this.TxtPName);
             this.PanelAdd.Controls.Add(this.TxtPid);
             this.PanelAdd.Controls.Add(this.TxtContractor);
+            this.PanelAdd.Controls.Add(this.BtnDelete);
             this.PanelAdd.Controls.Add(this.BtnSave);
             this.PanelAdd.Controls.Add(this.BtnEdit);
             this.PanelAdd.Controls.Add(this.BtnCreate);
@@ -264,7 +299,7 @@
             this.PanelAdd.Controls.Add(this.LblPId);
             this.PanelAdd.Location = new System.Drawing.Point(23, 370);
             this.PanelAdd.Name = "PanelAdd";
-            this.PanelAdd.Size = new System.Drawing.Size(886, 100);
+            this.PanelAdd.Size = new System.Drawing.Size(886, 130);
             this.PanelAdd.TabIndex = 5;
             // 
             // TxtGeosynthetic
@@ -447,6 +482,15 @@
             this.TxtContractor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtContractor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // BtnSave
+            // 
+            this.BtnSave.Location = new System.Drawing.Point(751, 97);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(119, 23);
+            this.BtnSave.TabIndex = 8;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseSelectable = true;
+            // 
             // BtnEdit
             // 
             this.BtnEdit.Location = new System.Drawing.Point(751, 39);
@@ -455,6 +499,7 @@
             this.BtnEdit.TabIndex = 7;
             this.BtnEdit.Text = "Edit";
             this.BtnEdit.UseSelectable = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // BtnCreate
             // 
@@ -520,53 +565,20 @@
             this.LblPId.TabIndex = 0;
             this.LblPId.Text = "Id";
             // 
-            // BtnSave
+            // BtnDelete
             // 
-            this.BtnSave.Location = new System.Drawing.Point(751, 66);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(119, 23);
-            this.BtnSave.TabIndex = 8;
-            this.BtnSave.Text = "Save";
-            this.BtnSave.UseSelectable = true;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Id.HeaderText = "Item";
-            this.Id.Name = "Id";
-            // 
-            // PName
-            // 
-            this.PName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PName.HeaderText = "Name";
-            this.PName.Name = "PName";
-            // 
-            // ProjectNo
-            // 
-            this.ProjectNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProjectNo.HeaderText = "Project No";
-            this.ProjectNo.Name = "ProjectNo";
-            // 
-            // Contractor
-            // 
-            this.Contractor.HeaderText = "Contractor";
-            this.Contractor.Name = "Contractor";
-            // 
-            // Supplier
-            // 
-            this.Supplier.HeaderText = "Supplier";
-            this.Supplier.Name = "Supplier";
-            // 
-            // Geosynthetic
-            // 
-            this.Geosynthetic.HeaderText = "GeoSynthetic";
-            this.Geosynthetic.Name = "Geosynthetic";
+            this.BtnDelete.Location = new System.Drawing.Point(751, 68);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(119, 23);
+            this.BtnDelete.TabIndex = 8;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.UseSelectable = true;
             // 
             // ProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 482);
+            this.ClientSize = new System.Drawing.Size(932, 506);
             this.Controls.Add(this.PanelAdd);
             this.Controls.Add(this.DGVProject);
             this.Controls.Add(this.TxtName);
@@ -619,5 +631,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Contractor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Supplier;
         private System.Windows.Forms.DataGridViewTextBoxColumn Geosynthetic;
+        private MetroFramework.Controls.MetroButton BtnDelete;
     }
 }
