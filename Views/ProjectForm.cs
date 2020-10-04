@@ -82,6 +82,7 @@ namespace Mine.Views
                 var cdb = db.Projects.Find(cell);
                 if (cdb!=null)
                 {
+                    TxtId.ReadOnly = true;
                     TxtPid.Text = cdb.Id.ToString();
                     TxtPName.Text = cdb.PName;
                     TxtPNumber.Text = cdb.ProjectNo;
@@ -94,6 +95,61 @@ namespace Mine.Views
             {
 
                 MetroFramework.MetroMessageBox.Show(this,"Ocurred and error "+ex.ToString(),"Info");
+            }
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            var id = TxtPid.Text;
+            var pdb=db.Projects.Find(id);
+            pdb.PName = TxtPName.Text;
+            pdb.ProjectNo = TxtPNumber.Text;
+            pdb.Contractor = TxtContractor.Text;
+            pdb.GeoSynthetic = TxtGeosynthetic.Text;
+            pdb.Supplier = TxtSupplier.Text;
+            db.SaveChanges();
+            MetroFramework.MetroMessageBox.Show(this,"Successfull Update","Info",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ProjectForm_Load(sender, e);
+            TxtPName.Text = String.Empty;
+            TxtPNumber.Text = String.Empty;
+            TxtContractor.Text = String.Empty;
+            TxtSupplier.Text = String.Empty;
+            TxtGeosynthetic.Text = String.Empty;
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var cell = DGVProject.CurrentRow.Cells[0].Value;
+                var cdb = db.Projects.Find(cell);
+                if (cdb != null)
+                {
+                    TxtId.ReadOnly = true;
+                    TxtPid.Text = cdb.Id.ToString();
+                    TxtPName.Text = cdb.PName;
+                    TxtPNumber.Text = cdb.ProjectNo;
+                    TxtContractor.Text = cdb.Contractor;
+                    TxtSupplier.Text = cdb.Supplier;
+                    TxtGeosynthetic.Text = cdb.GeoSynthetic;
+                }
+                if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes);
+                {
+                    db.Projects.Remove(cdb);
+                    db.SaveChanges();
+                    MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully");
+                }
+                ProjectForm_Load(sender, e);
+                TxtPName.Text = String.Empty;
+                TxtPNumber.Text = String.Empty;
+                TxtContractor.Text = String.Empty;
+                TxtSupplier.Text = String.Empty;
+                TxtGeosynthetic.Text = String.Empty;
+            }
+            catch (Exception ex)
+            {
+
+                MetroFramework.MetroMessageBox.Show(this,"Have a Error :"+ex.ToString(),"Info");
             }
         }
     }
