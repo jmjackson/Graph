@@ -17,5 +17,7 @@ namespace Mine.DataContext
 
         public DbSet<Client> Clients { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectDev> ProjectDevs { get; set; }
+        public DbSet<Development> Developments { get; set; }
     }
 }

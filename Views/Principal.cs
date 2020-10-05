@@ -52,7 +52,8 @@ namespace Mine.Views
             if (md.ShowDialog() == DialogResult.Yes)
             {
                 int pId = md.ProjectId;
-
+                DevelopmentForm df = new DevelopmentForm(pId);
+                df.Show();
             }
         }
     }
