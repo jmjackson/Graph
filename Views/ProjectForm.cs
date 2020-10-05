@@ -40,7 +40,8 @@ namespace Mine.Views
                 DGVProject.Columns["PName"].DataPropertyName = "PName";
                 DGVProject.Columns["ProjectNo"].DataPropertyName = "ProjectNo";
                 DGVProject.Columns["Contractor"].DataPropertyName = "Contractor";
-                DGVProject.Columns["GeoSynthetic"].DataPropertyName = "Supplier";
+                DGVProject.Columns["Supplier"].DataPropertyName = "Supplier";
+                DGVProject.Columns["GeoSynthetic"].DataPropertyName = "GeoSynthetic";
                 DGVProject.DataSource = pr;
             }
             

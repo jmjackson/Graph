@@ -96,12 +96,6 @@
       <DependentUpon>202010050803050_UpdateProjectdev.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Modal\ModalDev.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modal\ModalDev.Designer.cs">
-      <DependentUpon>ModalDev.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modal\ModalDevelopment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,9 +148,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010050803050_UpdateProjectdev.resx">
       <DependentUpon>202010050803050_UpdateProjectdev.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modal\ModalDev.resx">
-      <DependentUpon>ModalDev.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalDevelopment.resx">
       <DependentUpon>ModalDevelopment.cs</DependentUpon>
