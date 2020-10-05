@@ -1,4 +1,5 @@
 ﻿using Mine.DataContext;
+using Mine.Modal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,12 @@ namespace Mine.Views
             TxtProjectNo.Text = pro.ProjectNo;
             TxtSupplier.Text = pro.Supplier;
             PBPicture.Image = Image.FromFile(pro.Client.Image);
+            
+            
+        }
+
+        private void BtnSaveDev_Click(object sender, EventArgs e)
+        {
 
         }
     }
