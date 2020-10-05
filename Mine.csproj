@@ -91,6 +91,10 @@
     <Compile Include="Migrations\202010050735083_OpAndDevelop.designer.cs">
       <DependentUpon>202010050735083_OpAndDevelop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010050803050_UpdateProjectdev.cs" />
+    <Compile Include="Migrations\202010050803050_UpdateProjectdev.designer.cs">
+      <DependentUpon>202010050803050_UpdateProjectdev.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modal\ModalDevelopment.cs">
       <SubType>Form</SubType>
@@ -141,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010050735083_OpAndDevelop.resx">
       <DependentUpon>202010050735083_OpAndDevelop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010050803050_UpdateProjectdev.resx">
+      <DependentUpon>202010050803050_UpdateProjectdev.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalDevelopment.resx">
       <DependentUpon>ModalDevelopment.cs</DependentUpon>

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
@@ -42,7 +45,17 @@
             this.TxtProjectNo = new MetroFramework.Controls.MetroTextBox();
             this.TxtGeoSynthetic = new MetroFramework.Controls.MetroTextBox();
             this.LblTitle = new MetroFramework.Controls.MetroLabel();
+            this.DGVDev = new MetroFramework.Controls.MetroGrid();
+            this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Length = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
             this.SuspendLayout();
             // 
             // LblClient
@@ -299,11 +312,121 @@
             this.LblTitle.Text = "Deployment Log";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // DGVDev
+            // 
+            this.DGVDev.AllowUserToResizeRows = false;
+            this.DGVDev.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.DGVDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DGVDev.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DGVDev.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGVDev.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVDev.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DeploymentDate,
+            this.PanelNo,
+            this.RollNo,
+            this.Length,
+            this.Width,
+            this.Thickness,
+            this.Area,
+            this.Remarks});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDev.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGVDev.EnableHeadersVisualStyles = false;
+            this.DGVDev.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.DGVDev.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.DGVDev.Location = new System.Drawing.Point(20, 150);
+            this.DGVDev.Name = "DGVDev";
+            this.DGVDev.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DGVDev.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGVDev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVDev.Size = new System.Drawing.Size(1007, 286);
+            this.DGVDev.TabIndex = 5;
+            this.DGVDev.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // DeploymentDate
+            // 
+            this.DeploymentDate.FillWeight = 94.8718F;
+            this.DeploymentDate.HeaderText = "Deployment Date";
+            this.DeploymentDate.Name = "DeploymentDate";
+            this.DeploymentDate.Width = 150;
+            // 
+            // PanelNo
+            // 
+            this.PanelNo.FillWeight = 162.4365F;
+            this.PanelNo.HeaderText = "Panel No";
+            this.PanelNo.Name = "PanelNo";
+            this.PanelNo.Width = 80;
+            // 
+            // RollNo
+            // 
+            this.RollNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RollNo.FillWeight = 68.33269F;
+            this.RollNo.HeaderText = "Roll No";
+            this.RollNo.Name = "RollNo";
+            // 
+            // Length
+            // 
+            this.Length.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Length.FillWeight = 94.8718F;
+            this.Length.HeaderText = "Length";
+            this.Length.Name = "Length";
+            // 
+            // Width
+            // 
+            this.Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Width.FillWeight = 94.8718F;
+            this.Width.HeaderText = "Width";
+            this.Width.Name = "Width";
+            // 
+            // Thickness
+            // 
+            this.Thickness.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Thickness.FillWeight = 94.8718F;
+            this.Thickness.HeaderText = "Thickness";
+            this.Thickness.Name = "Thickness";
+            // 
+            // Area
+            // 
+            this.Area.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Area.FillWeight = 94.8718F;
+            this.Area.HeaderText = "Area (ft)";
+            this.Area.Name = "Area";
+            // 
+            // Remarks
+            // 
+            this.Remarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Remarks.FillWeight = 94.8718F;
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            // 
             // DevelopmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 573);
+            this.Controls.Add(this.DGVDev);
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.TxtSupplier);
             this.Controls.Add(this.TxtGeoSynthetic);
@@ -322,6 +445,7 @@
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Load += new System.EventHandler(this.DevelopmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,5 +467,14 @@
         private MetroFramework.Controls.MetroTextBox TxtProjectNo;
         private MetroFramework.Controls.MetroTextBox TxtGeoSynthetic;
         private MetroFramework.Controls.MetroLabel LblTitle;
+        private MetroFramework.Controls.MetroGrid DGVDev;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeploymentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RollNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Length;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Width;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thickness;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
     }
 }

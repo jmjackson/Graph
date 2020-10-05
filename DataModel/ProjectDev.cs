@@ -13,6 +13,7 @@ namespace Mine.DataModel
         [Key]
         public int Id { get; set; }
         public string Inspector { get; set; }
+        public DateTime DevTime { get; set; }
         public string Location { get; set; }
         public int ProjectId { get; set; }        
         [ForeignKey("ProjectId")]
