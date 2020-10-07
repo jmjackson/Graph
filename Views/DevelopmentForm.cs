@@ -39,8 +39,8 @@ namespace Mine.Views
             PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
             TxtLocation.Text = pdev.Location;
             TxtInspector.Text = pdev.Inspector;
-
-            //var prdev = db.ProjectDevs.Find(pdev);
+            TxtDate.Value = pdev.DevTime;
+            DGVFill();
             
 
             
