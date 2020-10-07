@@ -54,15 +54,8 @@ namespace Mine.Views
             df.Show();
         }
 
-        private void TileGeomembrane_Click(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void metroTile1_Click(object sender, EventArgs e)
-        {
-            Dibujo dj = new Dibujo();
-            dj.Show();
-        }
+       
     }
 }

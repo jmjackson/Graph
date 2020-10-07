@@ -128,6 +128,12 @@
     <Compile Include="Views\DevForm.Designer.cs">
       <DependentUpon>DevForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dibujo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dibujo.Designer.cs">
+      <DependentUpon>Dibujo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DevForm.resx">
       <DependentUpon>DevForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dibujo.resx">
+      <DependentUpon>Dibujo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
