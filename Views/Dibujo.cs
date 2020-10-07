@@ -69,7 +69,7 @@ namespace Mine.Views
 
             saveFileDialog1.FileName = "Dibujo" + DateTime.Now.ToString("yyyy_MM_dd_HHmmss");
             //saveFileDialog1.Filter = "Excel files (*.png)|*.png";
-            saveFileDialog1.Filter = "Excel files (*.png)|*.png|(*.jpg)|*.jpg";
+            saveFileDialog1.Filter = "Draw files (*.png)|*.png|(*.jpg)|*.jpg";
 
             saveFileDialog1.RestoreDirectory = true;
 

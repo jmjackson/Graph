@@ -17,8 +17,8 @@ namespace Mine.Views
     public partial class DevelopmentForm : MetroFramework.Forms.MetroForm
     {
         int proDevId;
-        int pdev = 0;
-        ProjectDev dvep;
+        
+     
         readonly GraphDbContext db = new GraphDbContext();
 
         public DevelopmentForm(int pdId)
@@ -37,6 +37,8 @@ namespace Mine.Views
             TxtProjectNo.Text = pdev.Project.ProjectNo;
             TxtSupplier.Text = pdev.Project.Supplier;
             PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
+            TxtLocation.Text = pdev.Location;
+            TxtInspector.Text = pdev.Inspector;
 
             //var prdev = db.ProjectDevs.Find(pdev);
             
@@ -54,11 +56,11 @@ namespace Mine.Views
         {
             var development = new Development()
             { 
-                DeploymentDate=dvep.DevTime,
+                
                 Area=Convert.ToDecimal(TxtArea.Text),
                 Lenght=Convert.ToDecimal(TxtLenght.Text),
                 PanelNo=Convert.ToInt32(TxtPanelNo.Text),
-                ProjectDevId=dvep.Id,
+                ProjectDevId=proDevId,
                 RollNo=Convert.ToDouble(TxtRollNo.Text),
                 Remarks=TxtRemarks.Text,
                 Thickness=TxtThickness.Text,
@@ -73,7 +75,7 @@ namespace Mine.Views
 
         public void DGVFill()
         {
-            var devdata = db.Developments.Where(a=>a.ProjectDevId==dvep.Id).ToList();
+            var devdata = db.Developments.Where(a=>a.ProjectDevId==proDevId).ToList();
             if (devdata.Count>0)
             {
                 DGVDev.AutoGenerateColumns = false;
