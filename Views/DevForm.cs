@@ -72,5 +72,10 @@ namespace Mine.Views
 
             DevForm_Load(sender,e);
         }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
