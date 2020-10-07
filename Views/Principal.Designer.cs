@@ -38,8 +38,7 @@
             this.LblTitle = new MetroFramework.Controls.MetroLabel();
             this.TileClient = new MetroFramework.Controls.MetroTile();
             this.TileProject = new MetroFramework.Controls.MetroTile();
-            this.TileDevelopment = new MetroFramework.Controls.MetroTile();
-            this.TileGeomembrane = new MetroFramework.Controls.MetroTile();
+            this.TileInspection = new MetroFramework.Controls.MetroTile();
             this.PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -157,7 +156,7 @@
             // LblTitle
             // 
             this.LblTitle.AutoSize = true;
-            this.LblTitle.Location = new System.Drawing.Point(211, 17);
+            this.LblTitle.Location = new System.Drawing.Point(441, 18);
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(73, 19);
             this.LblTitle.TabIndex = 1;
@@ -196,49 +195,34 @@
             this.TileProject.UseTileImage = true;
             this.TileProject.Click += new System.EventHandler(this.TileProject_Click);
             // 
-            // TileDevelopment
+            // TileInspection
             // 
-            this.TileDevelopment.ActiveControl = null;
-            this.TileDevelopment.Location = new System.Drawing.Point(492, 63);
-            this.TileDevelopment.Name = "TileDevelopment";
-            this.TileDevelopment.Size = new System.Drawing.Size(116, 125);
-            this.TileDevelopment.Style = MetroFramework.MetroColorStyle.Purple;
-            this.TileDevelopment.TabIndex = 2;
-            this.TileDevelopment.Text = "Development";
-            this.TileDevelopment.TileImage = ((System.Drawing.Image)(resources.GetObject("TileDevelopment.TileImage")));
-            this.TileDevelopment.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TileDevelopment.UseSelectable = true;
-            this.TileDevelopment.UseTileImage = true;
-            this.TileDevelopment.Click += new System.EventHandler(this.TileDevelopment_Click);
-            // 
-            // TileGeomembrane
-            // 
-            this.TileGeomembrane.ActiveControl = null;
-            this.TileGeomembrane.Location = new System.Drawing.Point(614, 63);
-            this.TileGeomembrane.Name = "TileGeomembrane";
-            this.TileGeomembrane.Size = new System.Drawing.Size(116, 125);
-            this.TileGeomembrane.Style = MetroFramework.MetroColorStyle.Purple;
-            this.TileGeomembrane.TabIndex = 2;
-            this.TileGeomembrane.Text = "Geomembrane";
-            this.TileGeomembrane.TileImage = ((System.Drawing.Image)(resources.GetObject("TileGeomembrane.TileImage")));
-            this.TileGeomembrane.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TileGeomembrane.UseSelectable = true;
-            this.TileGeomembrane.UseTileImage = true;
+            this.TileInspection.ActiveControl = null;
+            this.TileInspection.Location = new System.Drawing.Point(506, 64);
+            this.TileInspection.Name = "TileInspection";
+            this.TileInspection.Size = new System.Drawing.Size(116, 124);
+            this.TileInspection.Style = MetroFramework.MetroColorStyle.Purple;
+            this.TileInspection.TabIndex = 3;
+            this.TileInspection.Text = "Inspection";
+            this.TileInspection.TileImage = ((System.Drawing.Image)(resources.GetObject("TileInspection.TileImage")));
+            this.TileInspection.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TileInspection.UseSelectable = true;
+            this.TileInspection.UseStyleColors = true;
+            this.TileInspection.UseTileImage = true;
+            this.TileInspection.Click += new System.EventHandler(this.TileInspection_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 520);
-            this.Controls.Add(this.TileGeomembrane);
-            this.Controls.Add(this.TileDevelopment);
+            this.Controls.Add(this.TileInspection);
             this.Controls.Add(this.TileProject);
             this.Controls.Add(this.TileClient);
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.PanelLeft);
             this.Name = "Principal";
             this.Style = MetroFramework.MetroColorStyle.Purple;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.PanelLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -258,7 +242,6 @@
         private MetroFramework.Controls.MetroLabel LblTitle;
         private MetroFramework.Controls.MetroTile TileClient;
         private MetroFramework.Controls.MetroTile TileProject;
-        private MetroFramework.Controls.MetroTile TileDevelopment;
-        private MetroFramework.Controls.MetroTile TileGeomembrane;
+        private MetroFramework.Controls.MetroTile TileInspection;
     }
 }

@@ -82,6 +82,7 @@
             this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnPDF = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
             this.PanelAdd.SuspendLayout();
@@ -740,7 +741,7 @@
             // 
             this.LblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(905, 23);
+            this.LblTotal.Location = new System.Drawing.Point(864, 9);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(95, 19);
             this.LblTotal.TabIndex = 14;
@@ -854,6 +855,7 @@
             // 
             // PanelAdd
             // 
+            this.PanelAdd.Controls.Add(this.BtnPDF);
             this.PanelAdd.Controls.Add(this.TxtLenght);
             this.PanelAdd.Controls.Add(this.LblTotal);
             this.PanelAdd.Controls.Add(this.LblPanel);
@@ -944,6 +946,15 @@
             this.Remarks.FillWeight = 94.8718F;
             this.Remarks.HeaderText = "Remarks";
             this.Remarks.Name = "Remarks";
+            // 
+            // BtnPDF
+            // 
+            this.BtnPDF.Location = new System.Drawing.Point(935, 85);
+            this.BtnPDF.Name = "BtnPDF";
+            this.BtnPDF.Size = new System.Drawing.Size(75, 23);
+            this.BtnPDF.TabIndex = 15;
+            this.BtnPDF.Text = "BtnPDF";
+            this.BtnPDF.UseSelectable = true;
             // 
             // DevelopmentForm
             // 
@@ -1038,5 +1049,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Thickness;
         private System.Windows.Forms.DataGridViewTextBoxColumn Area;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
+        private MetroFramework.Controls.MetroButton BtnPDF;
     }
 }
