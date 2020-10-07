@@ -40,6 +40,7 @@
             this.TileProject = new MetroFramework.Controls.MetroTile();
             this.TileDevelopment = new MetroFramework.Controls.MetroTile();
             this.TileGeomembrane = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -224,12 +225,29 @@
             this.TileGeomembrane.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.TileGeomembrane.UseSelectable = true;
             this.TileGeomembrane.UseTileImage = true;
+            this.TileGeomembrane.Click += new System.EventHandler(this.TileGeomembrane_Click);
+            // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(736, 63);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(116, 125);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Purple;
+            this.metroTile1.TabIndex = 3;
+            this.metroTile1.Text = "Dibujo";
+            this.metroTile1.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile1.TileImage")));
+            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.UseTileImage = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 520);
+            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.TileGeomembrane);
             this.Controls.Add(this.TileDevelopment);
             this.Controls.Add(this.TileProject);
@@ -260,5 +278,6 @@
         private MetroFramework.Controls.MetroTile TileProject;
         private MetroFramework.Controls.MetroTile TileDevelopment;
         private MetroFramework.Controls.MetroTile TileGeomembrane;
+        private MetroFramework.Controls.MetroTile metroTile1;
     }
 }
