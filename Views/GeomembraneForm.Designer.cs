@@ -28,31 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.MetroClient = new MetroFramework.Controls.MetroLabel();
+            this.MetroProject = new MetroFramework.Controls.MetroLabel();
+            this.MetroProjectNo = new MetroFramework.Controls.MetroLabel();
             this.LblContractor = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LblSupplier = new MetroFramework.Controls.MetroLabel();
+            this.LblGeosynthetic = new MetroFramework.Controls.MetroLabel();
+            this.MetroContractor = new MetroFramework.Controls.MetroLabel();
+            this.MetroSupplier = new MetroFramework.Controls.MetroLabel();
+            this.MetroGeosynthetic = new MetroFramework.Controls.MetroLabel();
+            this.LblOperator = new MetroFramework.Controls.MetroLabel();
+            this.LblMachine = new MetroFramework.Controls.MetroLabel();
+            this.MetroOperator = new MetroFramework.Controls.MetroLabel();
+            this.MetroMachineNo = new MetroFramework.Controls.MetroLabel();
+            this.PbLogo = new System.Windows.Forms.PictureBox();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.LblSeamNo = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
@@ -73,7 +71,7 @@
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,171 +80,145 @@
             this.LblClient.AutoSize = true;
             this.LblClient.Location = new System.Drawing.Point(23, 32);
             this.LblClient.Name = "LblClient";
-            this.LblClient.Size = new System.Drawing.Size(81, 19);
+            this.LblClient.Size = new System.Drawing.Size(49, 19);
             this.LblClient.TabIndex = 0;
-            this.LblClient.Text = "metroLabel1";
+            this.LblClient.Text = "Client :";
             // 
             // LblProject
             // 
             this.LblProject.AutoSize = true;
             this.LblProject.Location = new System.Drawing.Point(23, 60);
             this.LblProject.Name = "LblProject";
-            this.LblProject.Size = new System.Drawing.Size(81, 19);
+            this.LblProject.Size = new System.Drawing.Size(57, 19);
             this.LblProject.TabIndex = 0;
-            this.LblProject.Text = "metroLabel1";
+            this.LblProject.Text = "Project :";
             // 
             // LblProjectNo
             // 
             this.LblProjectNo.AutoSize = true;
             this.LblProjectNo.Location = new System.Drawing.Point(23, 88);
             this.LblProjectNo.Name = "LblProjectNo";
-            this.LblProjectNo.Size = new System.Drawing.Size(81, 19);
+            this.LblProjectNo.Size = new System.Drawing.Size(79, 19);
             this.LblProjectNo.TabIndex = 0;
-            this.LblProjectNo.Text = "metroLabel1";
+            this.LblProjectNo.Text = "Project No :";
             // 
-            // metroLabel4
+            // MetroClient
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(110, 32);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel4.TabIndex = 0;
-            this.metroLabel4.Text = "metroLabel1";
+            this.MetroClient.AutoSize = true;
+            this.MetroClient.Location = new System.Drawing.Point(110, 32);
+            this.MetroClient.Name = "MetroClient";
+            this.MetroClient.Size = new System.Drawing.Size(0, 0);
+            this.MetroClient.TabIndex = 0;
             // 
-            // metroLabel5
+            // MetroProject
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(110, 60);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel5.TabIndex = 0;
-            this.metroLabel5.Text = "metroLabel1";
+            this.MetroProject.AutoSize = true;
+            this.MetroProject.Location = new System.Drawing.Point(110, 60);
+            this.MetroProject.Name = "MetroProject";
+            this.MetroProject.Size = new System.Drawing.Size(0, 0);
+            this.MetroProject.TabIndex = 0;
             // 
-            // metroLabel6
+            // MetroProjectNo
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(110, 88);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel6.TabIndex = 0;
-            this.metroLabel6.Text = "metroLabel1";
+            this.MetroProjectNo.AutoSize = true;
+            this.MetroProjectNo.Location = new System.Drawing.Point(110, 88);
+            this.MetroProjectNo.Name = "MetroProjectNo";
+            this.MetroProjectNo.Size = new System.Drawing.Size(0, 0);
+            this.MetroProjectNo.TabIndex = 0;
             // 
             // LblContractor
             // 
             this.LblContractor.AutoSize = true;
             this.LblContractor.Location = new System.Drawing.Point(266, 32);
             this.LblContractor.Name = "LblContractor";
-            this.LblContractor.Size = new System.Drawing.Size(81, 19);
+            this.LblContractor.Size = new System.Drawing.Size(79, 19);
             this.LblContractor.TabIndex = 0;
-            this.LblContractor.Text = "metroLabel1";
+            this.LblContractor.Text = "Contractor :";
             // 
-            // metroLabel8
+            // LblSupplier
             // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(266, 60);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel8.TabIndex = 0;
-            this.metroLabel8.Text = "metroLabel1";
+            this.LblSupplier.AutoSize = true;
+            this.LblSupplier.Location = new System.Drawing.Point(266, 60);
+            this.LblSupplier.Name = "LblSupplier";
+            this.LblSupplier.Size = new System.Drawing.Size(64, 19);
+            this.LblSupplier.TabIndex = 0;
+            this.LblSupplier.Text = "Supplier :";
             // 
-            // metroLabel9
+            // LblGeosynthetic
             // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(266, 88);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel9.TabIndex = 0;
-            this.metroLabel9.Text = "metroLabel1";
+            this.LblGeosynthetic.AutoSize = true;
+            this.LblGeosynthetic.Location = new System.Drawing.Point(266, 88);
+            this.LblGeosynthetic.Name = "LblGeosynthetic";
+            this.LblGeosynthetic.Size = new System.Drawing.Size(89, 19);
+            this.LblGeosynthetic.TabIndex = 0;
+            this.LblGeosynthetic.Text = "Geosynthetic :";
             // 
-            // metroLabel10
+            // MetroContractor
             // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(353, 32);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel10.TabIndex = 0;
-            this.metroLabel10.Text = "metroLabel1";
+            this.MetroContractor.AutoSize = true;
+            this.MetroContractor.Location = new System.Drawing.Point(353, 32);
+            this.MetroContractor.Name = "MetroContractor";
+            this.MetroContractor.Size = new System.Drawing.Size(0, 0);
+            this.MetroContractor.TabIndex = 0;
             // 
-            // metroLabel11
+            // MetroSupplier
             // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(353, 60);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel11.TabIndex = 0;
-            this.metroLabel11.Text = "metroLabel1";
+            this.MetroSupplier.AutoSize = true;
+            this.MetroSupplier.Location = new System.Drawing.Point(353, 60);
+            this.MetroSupplier.Name = "MetroSupplier";
+            this.MetroSupplier.Size = new System.Drawing.Size(0, 0);
+            this.MetroSupplier.TabIndex = 0;
             // 
-            // metroLabel12
+            // MetroGeosynthetic
             // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(353, 88);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel12.TabIndex = 0;
-            this.metroLabel12.Text = "metroLabel1";
+            this.MetroGeosynthetic.AutoSize = true;
+            this.MetroGeosynthetic.Location = new System.Drawing.Point(353, 88);
+            this.MetroGeosynthetic.Name = "MetroGeosynthetic";
+            this.MetroGeosynthetic.Size = new System.Drawing.Size(0, 0);
+            this.MetroGeosynthetic.TabIndex = 0;
             // 
-            // metroLabel13
+            // LblOperator
             // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(543, 32);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel13.TabIndex = 0;
-            this.metroLabel13.Text = "metroLabel1";
+            this.LblOperator.AutoSize = true;
+            this.LblOperator.Location = new System.Drawing.Point(543, 32);
+            this.LblOperator.Name = "LblOperator";
+            this.LblOperator.Size = new System.Drawing.Size(71, 19);
+            this.LblOperator.TabIndex = 0;
+            this.LblOperator.Text = "Operator :";
             // 
-            // metroLabel14
+            // LblMachine
             // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(543, 60);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel14.TabIndex = 0;
-            this.metroLabel14.Text = "metroLabel1";
+            this.LblMachine.AutoSize = true;
+            this.LblMachine.Location = new System.Drawing.Point(543, 60);
+            this.LblMachine.Name = "LblMachine";
+            this.LblMachine.Size = new System.Drawing.Size(73, 19);
+            this.LblMachine.TabIndex = 0;
+            this.LblMachine.Text = "Machine #:";
             // 
-            // metroLabel15
+            // MetroOperator
             // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(543, 88);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel15.TabIndex = 0;
-            this.metroLabel15.Text = "metroLabel1";
+            this.MetroOperator.AutoSize = true;
+            this.MetroOperator.Location = new System.Drawing.Point(630, 32);
+            this.MetroOperator.Name = "MetroOperator";
+            this.MetroOperator.Size = new System.Drawing.Size(0, 0);
+            this.MetroOperator.TabIndex = 0;
             // 
-            // metroLabel16
+            // MetroMachineNo
             // 
-            this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(630, 32);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel16.TabIndex = 0;
-            this.metroLabel16.Text = "metroLabel1";
+            this.MetroMachineNo.AutoSize = true;
+            this.MetroMachineNo.Location = new System.Drawing.Point(630, 60);
+            this.MetroMachineNo.Name = "MetroMachineNo";
+            this.MetroMachineNo.Size = new System.Drawing.Size(0, 0);
+            this.MetroMachineNo.TabIndex = 0;
             // 
-            // metroLabel17
+            // PbLogo
             // 
-            this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(630, 60);
-            this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel17.TabIndex = 0;
-            this.metroLabel17.Text = "metroLabel1";
-            // 
-            // metroLabel18
-            // 
-            this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(630, 88);
-            this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel18.TabIndex = 0;
-            this.metroLabel18.Text = "metroLabel1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(822, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.PbLogo.Location = new System.Drawing.Point(822, 32);
+            this.PbLogo.Name = "PbLogo";
+            this.PbLogo.Size = new System.Drawing.Size(189, 50);
+            this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbLogo.TabIndex = 1;
+            this.PbLogo.TabStop = false;
             // 
             // metroGrid1
             // 
@@ -255,37 +227,37 @@
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle35;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGrid1.Location = new System.Drawing.Point(23, 156);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(873, 227);
@@ -323,14 +295,14 @@
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel19
+            // LblSeamNo
             // 
-            this.metroLabel19.AutoSize = true;
-            this.metroLabel19.Location = new System.Drawing.Point(23, 405);
-            this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(88, 19);
-            this.metroLabel19.TabIndex = 4;
-            this.metroLabel19.Text = "metroLabel19";
+            this.LblSeamNo.AutoSize = true;
+            this.LblSeamNo.Location = new System.Drawing.Point(23, 405);
+            this.LblSeamNo.Name = "LblSeamNo";
+            this.LblSeamNo.Size = new System.Drawing.Size(88, 19);
+            this.LblSeamNo.TabIndex = 4;
+            this.LblSeamNo.Text = "metroLabel19";
             // 
             // metroTextBox2
             // 
@@ -713,7 +685,7 @@
             this.Controls.Add(this.metroLabel20);
             this.Controls.Add(this.metroLabel25);
             this.Controls.Add(this.metroLabel22);
-            this.Controls.Add(this.metroLabel19);
+            this.Controls.Add(this.LblSeamNo);
             this.Controls.Add(this.metroTextBox9);
             this.Controls.Add(this.metroTextBox8);
             this.Controls.Add(this.metroTextBox6);
@@ -724,28 +696,27 @@
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.metroGrid1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.metroLabel18);
-            this.Controls.Add(this.metroLabel17);
-            this.Controls.Add(this.metroLabel15);
-            this.Controls.Add(this.metroLabel14);
-            this.Controls.Add(this.metroLabel12);
-            this.Controls.Add(this.metroLabel11);
-            this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.metroLabel16);
-            this.Controls.Add(this.metroLabel8);
-            this.Controls.Add(this.metroLabel13);
-            this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.metroLabel10);
-            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.PbLogo);
+            this.Controls.Add(this.MetroMachineNo);
+            this.Controls.Add(this.LblMachine);
+            this.Controls.Add(this.MetroGeosynthetic);
+            this.Controls.Add(this.MetroSupplier);
+            this.Controls.Add(this.LblGeosynthetic);
+            this.Controls.Add(this.MetroOperator);
+            this.Controls.Add(this.LblSupplier);
+            this.Controls.Add(this.LblOperator);
+            this.Controls.Add(this.MetroProjectNo);
+            this.Controls.Add(this.MetroContractor);
+            this.Controls.Add(this.MetroProject);
             this.Controls.Add(this.LblContractor);
             this.Controls.Add(this.LblProjectNo);
-            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.MetroClient);
             this.Controls.Add(this.LblProject);
             this.Controls.Add(this.LblClient);
             this.Name = "GeomembraneForm";
             this.Style = MetroFramework.MetroColorStyle.Purple;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.GeomembraneForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -757,25 +728,23 @@
         private MetroFramework.Controls.MetroLabel LblClient;
         private MetroFramework.Controls.MetroLabel LblProject;
         private MetroFramework.Controls.MetroLabel LblProjectNo;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel MetroClient;
+        private MetroFramework.Controls.MetroLabel MetroProject;
+        private MetroFramework.Controls.MetroLabel MetroProjectNo;
         private MetroFramework.Controls.MetroLabel LblContractor;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
-        private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroLabel metroLabel14;
-        private MetroFramework.Controls.MetroLabel metroLabel15;
-        private MetroFramework.Controls.MetroLabel metroLabel16;
-        private MetroFramework.Controls.MetroLabel metroLabel17;
-        private MetroFramework.Controls.MetroLabel metroLabel18;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroLabel LblSupplier;
+        private MetroFramework.Controls.MetroLabel LblGeosynthetic;
+        private MetroFramework.Controls.MetroLabel MetroContractor;
+        private MetroFramework.Controls.MetroLabel MetroSupplier;
+        private MetroFramework.Controls.MetroLabel MetroGeosynthetic;
+        private MetroFramework.Controls.MetroLabel LblOperator;
+        private MetroFramework.Controls.MetroLabel LblMachine;
+        private MetroFramework.Controls.MetroLabel MetroOperator;
+        private MetroFramework.Controls.MetroLabel MetroMachineNo;
+        private System.Windows.Forms.PictureBox PbLogo;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel19;
+        private MetroFramework.Controls.MetroLabel LblSeamNo;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private MetroFramework.Controls.MetroLabel metroLabel20;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;

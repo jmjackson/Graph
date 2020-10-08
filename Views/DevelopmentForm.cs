@@ -44,11 +44,7 @@ namespace Mine.Views
             
         }
 
-        private void BtnSaveDev_Click(object sender, EventArgs e)
-        {
-            
 
-        }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
