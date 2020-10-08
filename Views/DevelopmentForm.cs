@@ -16,57 +16,39 @@ namespace Mine.Views
 {
     public partial class DevelopmentForm : MetroFramework.Forms.MetroForm
     {
-        int projectId;
-        int pdev = 0;
-        ProjectDev dvep;
+        int proDevId;
+        
+     
         readonly GraphDbContext db = new GraphDbContext();
 
-        public DevelopmentForm(int pId)
+        public DevelopmentForm(int pdId)
         {
             InitializeComponent();
-            projectId = pId;
+            proDevId = pdId;
         }
 
         private void DevelopmentForm_Load(object sender, EventArgs e)
         {
-            var pro = db.Projects.Include(a => a.Client).Where(a=>a.Id==projectId).FirstOrDefault();
-            TxtClient.Text = pro.Client.Name;
-            TxtContractor.Text = pro.Contractor;
-            TxtGeoSynthetic.Text = pro.GeoSynthetic;
-            TxtProject.Text = pro.PName;
-            TxtProjectNo.Text = pro.ProjectNo;
-            TxtSupplier.Text = pro.Supplier;
-            PBPicture.Image = Image.FromFile(pro.Client.Image);
-
-            var prdev = db.ProjectDevs.Find(pdev);
-            if (prdev!=null)
-            {
-                PanelAdd.Enabled = true;
-                dvep = prdev;
-                DGVFill();
-            }
-            else
-            {
-               PanelAdd.Enabled= false;
-            }
+            var pdev = db.ProjectDevs.Include(a => a.Project.Client).Include(a => a.Project).Where(a => a.Id == proDevId).FirstOrDefault();
+            TxtClient.Text = pdev.Project.Client.Name;
+            TxtContractor.Text = pdev.Project.Contractor;
+            TxtGeoSynthetic.Text = pdev.Project.GeoSynthetic;
+            TxtProject.Text = pdev.Project.PName;
+            TxtProjectNo.Text = pdev.Project.ProjectNo;
+            TxtSupplier.Text = pdev.Project.Supplier;
+            PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
+            TxtLocation.Text = pdev.Location;
+            TxtInspector.Text = pdev.Inspector;
+            TxtDate.Value = pdev.DevTime;
+            DGVFill();
+            
 
             
         }
 
         private void BtnSaveDev_Click(object sender, EventArgs e)
         {
-            var pd = new ProjectDev()
-            {
-                ProjectId = projectId,
-                Inspector = TxtInspector.Text,
-                Location=TxtLocation.Text,
-                DevTime=Convert.ToDateTime(TxtDate.Text)
-            };
-
-            db.ProjectDevs.Add(pd);
-            db.SaveChanges();
-            pdev = pd.Id;
-            this.DevelopmentForm_Load(sender, e);
+            
 
         }
 
@@ -74,11 +56,11 @@ namespace Mine.Views
         {
             var development = new Development()
             { 
-                DeploymentDate=dvep.DevTime,
+                
                 Area=Convert.ToDecimal(TxtArea.Text),
                 Lenght=Convert.ToDecimal(TxtLenght.Text),
                 PanelNo=Convert.ToInt32(TxtPanelNo.Text),
-                ProjectDevId=dvep.Id,
+                ProjectDevId=proDevId,
                 RollNo=Convert.ToDouble(TxtRollNo.Text),
                 Remarks=TxtRemarks.Text,
                 Thickness=TxtThickness.Text,
@@ -93,7 +75,7 @@ namespace Mine.Views
 
         public void DGVFill()
         {
-            var devdata = db.Developments.Where(a=>a.ProjectDevId==dvep.Id).ToList();
+            var devdata = db.Developments.Where(a=>a.ProjectDevId==proDevId).ToList();
             if (devdata.Count>0)
             {
                 DGVDev.AutoGenerateColumns = false;
