@@ -85,5 +85,33 @@ namespace Mine.Views
                 DGVDev.DataSource = devdata;
             }
         }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+            var dev = db.Developments.Find(pdId);
+            TxtDate.Text = dev.DeploymentDate.ToString();
+            TxtArea.Text = dev.Area.ToString();
+            TxtLenght.Text = dev.Lenght.ToString();
+            TxtPanelNo.Text = dev.PanelNo.ToString();
+            TxtRollNo.Text = dev.RollNo.ToString();
+            TxtRemarks.Text = dev.Remarks;
+            TxtThickness.Text = dev.Thickness;
+            TxtWidth.Text = dev.Width.ToString();
+
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+            var dev = db.Developments.Find(pdId);
+            db.Developments.Remove(dev);
+            db.SaveChanges();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

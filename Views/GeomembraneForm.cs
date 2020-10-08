@@ -79,6 +79,22 @@ namespace Mine.Views
             GeomembraneForm_Load(sender, e);
         }
 
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            int pdId = Convert.ToInt32(DGVGeo.CurrentRow.Cells[0].Value);
 
+
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            int pdId = Convert.ToInt32(DGVGeo.CurrentRow.Cells[0].Value);
+
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
