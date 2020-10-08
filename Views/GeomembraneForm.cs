@@ -12,9 +12,11 @@ namespace Mine.Views
 {
     public partial class GeomembraneForm : MetroFramework.Forms.MetroForm
     {
-        public GeomembraneForm()
+        int pdId = 0;
+        public GeomembraneForm(int dev)
         {
             InitializeComponent();
+            pdId = dev;
         }
     }
 }

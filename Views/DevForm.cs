@@ -122,5 +122,12 @@ namespace Mine.Views
             df.Show();
 
         }
+
+        private void BtnGeoMembrane_Click(object sender, EventArgs e)
+        {
+            int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+            GeomembraneForm gm = new GeomembraneForm(pdId);
+            gm.Show();
+        }
     }
 }

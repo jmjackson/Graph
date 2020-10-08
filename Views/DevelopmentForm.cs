@@ -54,7 +54,7 @@ namespace Mine.Views
         {
             var development = new Development()
             { 
-                
+                DeploymentDate=Convert.ToDateTime(TxtDate.Text),
                 Area=Convert.ToDecimal(TxtArea.Text),
                 Lenght=Convert.ToDecimal(TxtLenght.Text),
                 PanelNo=Convert.ToInt32(TxtPanelNo.Text),
