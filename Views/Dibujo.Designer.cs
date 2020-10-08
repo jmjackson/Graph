@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.PbLienzo = new System.Windows.Forms.PictureBox();
-            this.BtnAdd = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.BntAdd = new FontAwesome.Sharp.IconButton();
+            this.BntSave = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.PbLienzo)).BeginInit();
@@ -48,34 +48,34 @@
             this.PbLienzo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PbLienzo_MouseMove);
             this.PbLienzo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PbLienzo_MouseUp);
             // 
-            // BtnAdd
+            // BntAdd
             // 
-            this.BtnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnAdd.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BtnAdd.IconColor = System.Drawing.Color.Black;
-            this.BtnAdd.IconSize = 16;
-            this.BtnAdd.Location = new System.Drawing.Point(702, 98);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Rotation = 0D;
-            this.BtnAdd.Size = new System.Drawing.Size(75, 23);
-            this.BtnAdd.TabIndex = 3;
-            this.BtnAdd.Text = "Add";
-            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BntAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BntAdd.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BntAdd.IconColor = System.Drawing.Color.Black;
+            this.BntAdd.IconSize = 16;
+            this.BntAdd.Location = new System.Drawing.Point(702, 98);
+            this.BntAdd.Name = "BntAdd";
+            this.BntAdd.Rotation = 0D;
+            this.BntAdd.Size = new System.Drawing.Size(75, 23);
+            this.BntAdd.TabIndex = 3;
+            this.BntAdd.Text = "Add";
+            this.BntAdd.UseVisualStyleBackColor = true;
             // 
-            // iconButton1
+            // BntSave
             // 
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(702, 127);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(75, 23);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.Text = "Save";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.BntSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BntSave.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BntSave.IconColor = System.Drawing.Color.Black;
+            this.BntSave.IconSize = 16;
+            this.BntSave.Location = new System.Drawing.Point(702, 127);
+            this.BntSave.Name = "BntSave";
+            this.BntSave.Rotation = 0D;
+            this.BntSave.Size = new System.Drawing.Size(75, 23);
+            this.BntSave.TabIndex = 4;
+            this.BntSave.Text = "Save";
+            this.BntSave.UseVisualStyleBackColor = true;
+            this.BntSave.Click += new System.EventHandler(this.BntSave_Click);
             // 
             // iconButton2
             // 
@@ -97,8 +97,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.BtnAdd);
+            this.Controls.Add(this.BntSave);
+            this.Controls.Add(this.BntAdd);
             this.Controls.Add(this.PbLienzo);
             this.Name = "Dibujo";
             this.Style = MetroFramework.MetroColorStyle.Purple;
@@ -111,8 +111,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox PbLienzo;
-        private FontAwesome.Sharp.IconButton BtnAdd;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BntAdd;
+        private FontAwesome.Sharp.IconButton BntSave;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
