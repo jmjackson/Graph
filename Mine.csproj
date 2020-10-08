@@ -71,6 +71,7 @@
     <Compile Include="DataContext\GraphDbContext.cs" />
     <Compile Include="DataModel\Client.cs" />
     <Compile Include="DataModel\Development.cs" />
+    <Compile Include="DataModel\GeoMembrane.cs" />
     <Compile Include="DataModel\Project.cs" />
     <Compile Include="DataModel\ProjectDev.cs" />
     <Compile Include="Login.cs">
@@ -94,6 +95,10 @@
     <Compile Include="Migrations\202010050803050_UpdateProjectdev.cs" />
     <Compile Include="Migrations\202010050803050_UpdateProjectdev.designer.cs">
       <DependentUpon>202010050803050_UpdateProjectdev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010080724061_UpdateProjectGeoMembrane.cs" />
+    <Compile Include="Migrations\202010080724061_UpdateProjectGeoMembrane.designer.cs">
+      <DependentUpon>202010080724061_UpdateProjectGeoMembrane.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modal\ModalDevelopment.cs">
@@ -166,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010050803050_UpdateProjectdev.resx">
       <DependentUpon>202010050803050_UpdateProjectdev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010080724061_UpdateProjectGeoMembrane.resx">
+      <DependentUpon>202010080724061_UpdateProjectGeoMembrane.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalDevelopment.resx">
       <DependentUpon>ModalDevelopment.cs</DependentUpon>
