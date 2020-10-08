@@ -42,8 +42,6 @@ namespace Mine.Views
             TxtDate.Value = pdev.DevTime;
             DGVFill();
             
-
-            
         }
 
         private void BtnSaveDev_Click(object sender, EventArgs e)
