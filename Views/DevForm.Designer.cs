@@ -360,7 +360,7 @@
             this.TxtBoxId.CustomButton.UseSelectable = true;
             this.TxtBoxId.CustomButton.Visible = false;
             this.TxtBoxId.Lines = new string[0];
-            this.TxtBoxId.Location = new System.Drawing.Point(373, 125);
+            this.TxtBoxId.Location = new System.Drawing.Point(331, 404);
             this.TxtBoxId.MaxLength = 32767;
             this.TxtBoxId.Name = "TxtBoxId";
             this.TxtBoxId.PasswordChar = '\0';

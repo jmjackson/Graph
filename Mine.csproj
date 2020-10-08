@@ -100,6 +100,14 @@
     <Compile Include="Migrations\202010080724061_UpdateProjectGeoMembrane.designer.cs">
       <DependentUpon>202010080724061_UpdateProjectGeoMembrane.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010081927209_GeomembraneUpdate.cs" />
+    <Compile Include="Migrations\202010081927209_GeomembraneUpdate.designer.cs">
+      <DependentUpon>202010081927209_GeomembraneUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010081930320_Updategeo.cs" />
+    <Compile Include="Migrations\202010081930320_Updategeo.designer.cs">
+      <DependentUpon>202010081930320_Updategeo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modal\ModalDevelopment.cs">
       <SubType>Form</SubType>
@@ -174,6 +182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010080724061_UpdateProjectGeoMembrane.resx">
       <DependentUpon>202010080724061_UpdateProjectGeoMembrane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010081927209_GeomembraneUpdate.resx">
+      <DependentUpon>202010081927209_GeomembraneUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010081930320_Updategeo.resx">
+      <DependentUpon>202010081930320_Updategeo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalDevelopment.resx">
       <DependentUpon>ModalDevelopment.cs</DependentUpon>

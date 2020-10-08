@@ -19,5 +19,6 @@ namespace Mine.DataContext
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectDev> ProjectDevs { get; set; }
         public DbSet<Development> Developments { get; set; }
+        public DbSet<GeoMembrane> GeoMembranes { get; set; }
     }
 }

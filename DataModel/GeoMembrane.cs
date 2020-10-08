@@ -14,7 +14,7 @@ namespace Mine.DataModel
         public int Id { get; set; }
         public DateTime SeamingDate { get; set; }
         public string SeamNo { get; set; }
-        public DateTime SeamTime { get; set; }
+        public string SeamTime { get; set; }
         public double WedgeTemp { get; set; }
         public double WedgeSpeed { get; set; }
         public double SeamLength { get; set; }
