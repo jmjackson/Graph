@@ -49,6 +49,16 @@
             this.MetroMachineNo = new MetroFramework.Controls.MetroLabel();
             this.PbLogo = new System.Windows.Forms.PictureBox();
             this.DGVGeo = new MetroFramework.Controls.MetroGrid();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeamingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeamNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeamTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WedgeTemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WedgeSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeamLength = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CarryOver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemarksDestructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TxtSeamNo = new MetroFramework.Controls.MetroTextBox();
             this.LblSeamNo = new MetroFramework.Controls.MetroLabel();
             this.TxtSeamTime = new MetroFramework.Controls.MetroTextBox();
@@ -71,16 +81,6 @@
             this.BtnPdf = new MetroFramework.Controls.MetroButton();
             this.BtnDelete = new MetroFramework.Controls.MetroButton();
             this.DateDev = new MetroFramework.Controls.MetroDateTime();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeamingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeamNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeamTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WedgeTemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WedgeSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeamLength = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CarryOver = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RemarksDestructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TxtGeoId = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVGeo)).BeginInit();
@@ -285,6 +285,66 @@
             this.DGVGeo.Size = new System.Drawing.Size(1026, 304);
             this.DGVGeo.Style = MetroFramework.MetroColorStyle.Purple;
             this.DGVGeo.TabIndex = 2;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Id.HeaderText = "Item";
+            this.Id.Name = "Id";
+            // 
+            // SeamingDate
+            // 
+            this.SeamingDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamingDate.HeaderText = "Seaming Date";
+            this.SeamingDate.Name = "SeamingDate";
+            // 
+            // SeamNo
+            // 
+            this.SeamNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamNo.HeaderText = "Seam No";
+            this.SeamNo.Name = "SeamNo";
+            // 
+            // SeamTime
+            // 
+            this.SeamTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamTime.HeaderText = "Seam Time";
+            this.SeamTime.Name = "SeamTime";
+            // 
+            // WedgeTemp
+            // 
+            this.WedgeTemp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WedgeTemp.HeaderText = "Wedge Temp";
+            this.WedgeTemp.Name = "WedgeTemp";
+            // 
+            // WedgeSpeed
+            // 
+            this.WedgeSpeed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WedgeSpeed.HeaderText = "Wedge Speed";
+            this.WedgeSpeed.Name = "WedgeSpeed";
+            // 
+            // SeamLength
+            // 
+            this.SeamLength.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamLength.HeaderText = "Seam Length";
+            this.SeamLength.Name = "SeamLength";
+            // 
+            // CarryOver
+            // 
+            this.CarryOver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CarryOver.HeaderText = "Carry Over";
+            this.CarryOver.Name = "CarryOver";
+            // 
+            // Destructive
+            // 
+            this.Destructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Destructive.HeaderText = "Destructive";
+            this.Destructive.Name = "Destructive";
+            // 
+            // RemarksDestructive
+            // 
+            this.RemarksDestructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RemarksDestructive.HeaderText = "Remarks/Destructive";
+            this.RemarksDestructive.Name = "RemarksDestructive";
             // 
             // TxtSeamNo
             // 
@@ -639,6 +699,7 @@
             this.BtnPdf.TabIndex = 5;
             this.BtnPdf.Text = "Save PDF";
             this.BtnPdf.UseSelectable = true;
+            this.BtnPdf.Click += new System.EventHandler(this.BtnPdf_Click);
             // 
             // BtnDelete
             // 
@@ -658,66 +719,6 @@
             this.DateDev.Name = "DateDev";
             this.DateDev.Size = new System.Drawing.Size(200, 29);
             this.DateDev.TabIndex = 6;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Id.HeaderText = "Item";
-            this.Id.Name = "Id";
-            // 
-            // SeamingDate
-            // 
-            this.SeamingDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamingDate.HeaderText = "Seaming Date";
-            this.SeamingDate.Name = "SeamingDate";
-            // 
-            // SeamNo
-            // 
-            this.SeamNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamNo.HeaderText = "Seam No";
-            this.SeamNo.Name = "SeamNo";
-            // 
-            // SeamTime
-            // 
-            this.SeamTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamTime.HeaderText = "Seam Time";
-            this.SeamTime.Name = "SeamTime";
-            // 
-            // WedgeTemp
-            // 
-            this.WedgeTemp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WedgeTemp.HeaderText = "Wedge Temp";
-            this.WedgeTemp.Name = "WedgeTemp";
-            // 
-            // WedgeSpeed
-            // 
-            this.WedgeSpeed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WedgeSpeed.HeaderText = "Wedge Speed";
-            this.WedgeSpeed.Name = "WedgeSpeed";
-            // 
-            // SeamLength
-            // 
-            this.SeamLength.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamLength.HeaderText = "Seam Length";
-            this.SeamLength.Name = "SeamLength";
-            // 
-            // CarryOver
-            // 
-            this.CarryOver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CarryOver.HeaderText = "Carry Over";
-            this.CarryOver.Name = "CarryOver";
-            // 
-            // Destructive
-            // 
-            this.Destructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Destructive.HeaderText = "Destructive";
-            this.Destructive.Name = "Destructive";
-            // 
-            // RemarksDestructive
-            // 
-            this.RemarksDestructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RemarksDestructive.HeaderText = "Remarks/Destructive";
-            this.RemarksDestructive.Name = "RemarksDestructive";
             // 
             // TxtGeoId
             // 

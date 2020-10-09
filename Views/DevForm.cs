@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using MetroFramework;
 
 namespace Mine.Views
 {
@@ -60,18 +61,31 @@ namespace Mine.Views
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            var prodev = new ProjectDev()
+            try
             {
-                Inspector = TxtInspector.Text,
-                Location = TxtLocation.Text,
-                ProjectId = Convert.ToInt32(CbProject.SelectedValue),
-                DevTime=Convert.ToDateTime(DateDev.Text)
-            };
+                var prodev = new ProjectDev()
+                {
+                    Inspector = TxtInspector.Text,
+                    Location = TxtLocation.Text,
+                    ProjectId = Convert.ToInt32(CbProject.SelectedValue),
+                    DevTime = Convert.ToDateTime(DateDev.Text)
+                };
 
-            db.ProjectDevs.Add(prodev);
-            db.SaveChanges();
+                db.ProjectDevs.Add(prodev);
+                db.SaveChanges();
+                MetroMessageBox.Show(this, "Saved successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DevForm_Load(sender, e);
+                TxtInspector.Text = string.Empty;
+                TxtLocation.Text = string.Empty;
+                
 
-            DevForm_Load(sender,e);
+            }
+            catch (Exception ex)
+            {
+
+                
+            }
+            
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace Mine.Views
     public partial class GeomembraneForm : MetroFramework.Forms.MetroForm
     {
         readonly GraphDbContext db = new GraphDbContext();
-        int pdId = 0;
+        readonly int pdId = 0;
         public GeomembraneForm(int dev)
         {
             InitializeComponent();
@@ -120,6 +120,11 @@ namespace Mine.Views
             geo.WedgeTemp = Convert.ToDouble(TxtTemp.Text);
             db.SaveChanges();
             GeomembraneForm_Load(sender, e) ;
+        }
+
+        private void BtnPdf_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

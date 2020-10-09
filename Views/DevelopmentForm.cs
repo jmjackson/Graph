@@ -1,4 +1,5 @@
-﻿using Mine.DataContext;
+﻿using MetroFramework;
+using Mine.DataContext;
 using Mine.DataModel;
 using Mine.Modal;
 using System;
@@ -48,21 +49,41 @@ namespace Mine.Views
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            var development = new Development()
-            { 
-                DeploymentDate=Convert.ToDateTime(TxtDate.Text),
-                Area=Convert.ToDecimal(TxtArea.Text),
-                Lenght=Convert.ToDecimal(TxtLenght.Text),
-                PanelNo=Convert.ToInt32(TxtPanelNo.Text),
-                ProjectDevId=proDevId,
-                RollNo=Convert.ToDouble(TxtRollNo.Text),
-                Remarks=TxtRemarks.Text,
-                Thickness=TxtThickness.Text,
-                Width=Convert.ToDecimal(TxtWidth.Text)
-            };
-            db.Developments.Add(development);
-            db.SaveChanges();
-            DevelopmentForm_Load(sender, e);
+            try
+            {
+                var development = new Development()
+                {
+                    DeploymentDate = Convert.ToDateTime(TxtDate.Text),
+                    Area = Convert.ToDecimal(TxtArea.Text),
+                    Lenght = Convert.ToDecimal(TxtLenght.Text),
+                    PanelNo = Convert.ToInt32(TxtPanelNo.Text),
+                    ProjectDevId = proDevId,
+                    RollNo = Convert.ToDouble(TxtRollNo.Text),
+                    Remarks = TxtRemarks.Text,
+                    Thickness = TxtThickness.Text,
+                    Width = Convert.ToDecimal(TxtWidth.Text)
+                };
+
+                db.Developments.Add(development);
+                db.SaveChanges();
+                DevelopmentForm_Load(sender, e);
+                MetroMessageBox.Show(this,"Saved successfully","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                TxtArea.Text = string.Empty;
+                TxtLenght.Text = string.Empty;
+                TxtPanelNo.Text = string.Empty;
+                TxtRollNo.Text = string.Empty;
+                TxtWidth.Text = string.Empty;
+                TxtThickness.Text = string.Empty;
+                TxtArea.Text = string.Empty;
+                TxtRemarks.Text = string.Empty;
+            }
+            catch (Exception ex)
+            {
+
+                MetroMessageBox.Show(this, "Error in your record "+ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+           
 
             
         }
@@ -103,27 +124,65 @@ namespace Mine.Views
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
-            var dev = db.Developments.Find(pdId);
-            db.Developments.Remove(dev);
-            db.SaveChanges();
-            DevelopmentForm_Load(sender,e);
+            try
+            {
+                if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+                    var dev = db.Developments.Find(pdId);
+                    db.Developments.Remove(dev);
+                    db.SaveChanges();
+                    MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully","Info");
+                    DevelopmentForm_Load(sender, e);
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, "Error in your record " + ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(TxtId.Text);
-            var dev = db.Developments.Find(id);
-            dev.Area = Convert.ToDecimal(TxtArea.Text);
-            dev.Lenght = Convert.ToDecimal(TxtLenght.Text);
-            dev.PanelNo = Convert.ToInt32(TxtPanelNo.Text);
-            dev.Remarks = TxtRemarks.Text;
-            dev.RollNo=Convert.ToDouble(TxtRollNo.Text);
-            dev.Thickness = TxtThickness.Text;
-            dev.Width = Convert.ToDecimal(TxtWidth.Text);
-            db.SaveChanges();
-            DevelopmentForm_Load(sender, e);
+            try
+            {
+                int id = Convert.ToInt32(TxtId.Text);
+                var dev = db.Developments.Find(id);
+                dev.Area = Convert.ToDecimal(TxtArea.Text);
+                dev.Lenght = Convert.ToDecimal(TxtLenght.Text);
+                dev.PanelNo = Convert.ToInt32(TxtPanelNo.Text);
+                dev.Remarks = TxtRemarks.Text;
+                dev.RollNo = Convert.ToDouble(TxtRollNo.Text);
+                dev.Thickness = TxtThickness.Text;
+                dev.Width = Convert.ToDecimal(TxtWidth.Text);
+                db.SaveChanges();
+                DevelopmentForm_Load(sender, e);
+                MetroMessageBox.Show(this, "Update successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtArea.Text = string.Empty;
+                TxtLenght.Text = string.Empty;
+                TxtPanelNo.Text = string.Empty;
+                TxtRollNo.Text = string.Empty;
+                TxtWidth.Text = string.Empty;
+                TxtThickness.Text = string.Empty;
+                TxtArea.Text = string.Empty;
+                TxtRemarks.Text = string.Empty;
 
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, "Error in your record " + ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+           
+
+        }
+
+        private void BtnPDF_Click(object sender, EventArgs e)
+        {
+            ReportDev rd = new ReportDev();
+            rd.Show();
         }
     }
 }
