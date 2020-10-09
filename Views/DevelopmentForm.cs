@@ -98,7 +98,7 @@ namespace Mine.Views
             TxtRemarks.Text = dev.Remarks;
             TxtThickness.Text = dev.Thickness;
             TxtWidth.Text = dev.Width.ToString();
-
+            TxtId.Text = Convert.ToString(dev.Id);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -107,10 +107,23 @@ namespace Mine.Views
             var dev = db.Developments.Find(pdId);
             db.Developments.Remove(dev);
             db.SaveChanges();
+            DevelopmentForm_Load(sender,e);
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(TxtId.Text);
+            var dev = db.Developments.Find(id);
+            dev.Area = Convert.ToDecimal(TxtArea.Text);
+            dev.Lenght = Convert.ToDecimal(TxtLenght.Text);
+            dev.PanelNo = Convert.ToInt32(TxtPanelNo.Text);
+            dev.Remarks = TxtRemarks.Text;
+            dev.RollNo=Convert.ToDouble(TxtRollNo.Text);
+            dev.Thickness = TxtThickness.Text;
+            dev.Width = Convert.ToDecimal(TxtWidth.Text);
+            db.SaveChanges();
+            DevelopmentForm_Load(sender, e);
+
 
         }
     }
