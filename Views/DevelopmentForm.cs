@@ -124,7 +124,6 @@ namespace Mine.Views
             db.SaveChanges();
             DevelopmentForm_Load(sender, e);
 
-
         }
     }
 }

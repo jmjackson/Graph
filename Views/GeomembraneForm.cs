@@ -81,20 +81,45 @@ namespace Mine.Views
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            int pdId = Convert.ToInt32(DGVGeo.CurrentRow.Cells[0].Value);
-
+            int gId = Convert.ToInt32(DGVGeo.CurrentRow.Cells[0].Value);
+            var geo = db.GeoMembranes.Find(gId);
+            TxtGeoId.Text= geo.Id.ToString();
+            TxtSeamNo.Text = geo.SeamNo.ToString();
+            TxtSeamTime.Text = geo.SeamTime;
+            TxtTemp.Text = geo.WedgeTemp.ToString();
+            TxtSpeed.Text = geo.WedgeSpeed.ToString();
+            TxtSeamLength.Text = geo.SeamLength.ToString();
+            TxtCarryOver.Text = geo.CarryOver.ToString();
+            TxtDestructive.Text = geo.Destructive;
+            TxtRemarks.Text = geo.RemarksDestructive; 
 
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             int pdId = Convert.ToInt32(DGVGeo.CurrentRow.Cells[0].Value);
+            var geo=db.GeoMembranes.Find(pdId);
+            db.GeoMembranes.Remove(geo);
+            db.SaveChanges();
+            GeomembraneForm_Load(sender,e);
+
+
 
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
+            var id=Convert.ToInt32(TxtGeoId.Text);
+            var geo = db.GeoMembranes.Find(id);
+            geo.Destructive = TxtDestructive.Text;
+            geo.RemarksDestructive = TxtRemarks.Text;
+            geo.SeamLength = Convert.ToDouble(TxtSeamLength.Text);
+            geo.SeamNo = TxtSeamNo.Text;
+            geo.SeamTime = TxtSeamTime.Text;
+            geo.WedgeSpeed = Convert.ToDouble(TxtSpeed.Text);
+            geo.WedgeTemp = Convert.ToDouble(TxtTemp.Text);
+            db.SaveChanges();
+            GeomembraneForm_Load(sender, e) ;
         }
     }
 }
