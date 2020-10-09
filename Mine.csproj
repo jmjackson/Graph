@@ -147,6 +147,7 @@
     <Compile Include="Views\Dibujo.Designer.cs">
       <DependentUpon>Dibujo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DibujoM.cs" />
     <Compile Include="Views\GeomembraneForm.cs">
       <SubType>Form</SubType>
     </Compile>
