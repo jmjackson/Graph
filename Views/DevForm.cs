@@ -143,11 +143,23 @@ namespace Mine.Views
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
-            var pd = db.ProjectDevs.Find(pdId);
-            db.ProjectDevs.Remove(pd);
-            db.SaveChanges();
-            DevForm_Load(sender, e);
+            try
+            {
+                int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+                var pd = db.ProjectDevs.Find(pdId);
+                if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    db.ProjectDevs.Remove(pd);
+                    db.SaveChanges();
+                }   
+                DevForm_Load(sender, e);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         private void BtnDeployment_Click(object sender, EventArgs e)
