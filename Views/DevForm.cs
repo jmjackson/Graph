@@ -78,29 +78,33 @@ namespace Mine.Views
                 TxtInspector.Text = string.Empty;
                 TxtLocation.Text = string.Empty;
                 
-
+                
             }
             catch (Exception ex)
             {
 
-                
+                MetroMessageBox.Show(this, "Error "+ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
+            
             int pdId= Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
             var pdev = db.ProjectDevs.Include(a => a.Project.Client).
                 Include(a => a.Project).Where(a => a.Id == pdId)
                 .FirstOrDefault();
-
+            
             TxtInspector.Text = pdev.Inspector;
             TxtLocation.Text = pdev.Location;
             DateDev.Value =pdev.DevTime;
             TxtBoxId.Text = pdId.ToString();
             CbClient.Enabled = false;
             CbProject.Enabled = false;
+            
+
+
         }
 
         private void BtnDraw_Click(object sender, EventArgs e)
@@ -111,13 +115,30 @@ namespace Mine.Views
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            var pdId = Int32.Parse(TxtBoxId.Text);
-            var pd = db.ProjectDevs.Find(pdId);
-            pd.Inspector=TxtInspector.Text;
-            pd.Location = TxtLocation.Text;
-            pd.DevTime = Convert.ToDateTime(DateDev.Text);
-            db.SaveChanges();
-            DevForm_Load(sender, e);
+            try
+            {
+                var pdId = Int32.Parse(TxtBoxId.Text);
+                var pd = db.ProjectDevs.Find(pdId);
+                pd.Inspector = TxtInspector.Text;
+                pd.Location = TxtLocation.Text;
+                pd.DevTime = Convert.ToDateTime(DateDev.Text);
+                db.SaveChanges();
+                MetroMessageBox.Show(this, "Update is successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                TxtInspector.Text = string.Empty;
+                TxtLocation.Text = string.Empty;
+                TxtBoxId.Text = string.Empty;
+                CbClient.Enabled = true;
+                CbProject.Enabled = true;
+                DevForm_Load(sender, e);
+
+            }
+            catch (Exception ex)
+            {
+
+                MetroMessageBox.Show(this, "Error "+ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
