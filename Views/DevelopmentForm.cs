@@ -31,15 +31,15 @@ namespace Mine.Views
         private void DevelopmentForm_Load(object sender, EventArgs e)
         {
             var pdev = db.ProjectDevs.Include(a => a.Project.Client).Include(a => a.Project).Where(a => a.Id == proDevId).FirstOrDefault();
-            TxtClient.Text = pdev.Project.Client.Name;
-            TxtContractor.Text = pdev.Project.Contractor;
-            TxtGeoSynthetic.Text = pdev.Project.GeoSynthetic;
-            TxtProject.Text = pdev.Project.PName;
-            TxtProjectNo.Text = pdev.Project.ProjectNo;
-            TxtSupplier.Text = pdev.Project.Supplier;
+            LblRClient.Text = pdev.Project.Client.Name;
+            LblRContractor.Text = pdev.Project.Contractor;
+            LblRGeosyntetic.Text = pdev.Project.GeoSynthetic;
+            LblRProject.Text = pdev.Project.PName;
+            LblRProjectNo.Text = pdev.Project.ProjectNo;
+            LblRSupplier.Text = pdev.Project.Supplier;
             PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
-            TxtLocation.Text = pdev.Location;
-            TxtInspector.Text = pdev.Inspector;
+            LblRLocation.Text = pdev.Location;
+            LblRInspector.Text = pdev.Inspector;
             TxtDate.Value = pdev.DevTime;
             DGVFill();
             
