@@ -109,6 +109,7 @@ namespace Mine.Views
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
+            
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
             var projectno =(from d in db.Developments where d.ProjectDevId== Pn.Id select d ).ToList();
