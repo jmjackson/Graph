@@ -29,11 +29,58 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.ReportDevView = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DevelopmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.DevelopmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // ReportDevView
+            // 
+            this.ReportDevView.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DevelopmentBindinSource";
+            reportDataSource1.Value = this.DevelopmentBindingSource;
+            reportDataSource2.Name = "ProjectBindingSource";
+            reportDataSource2.Value = this.ProjectBindingSource;
+            this.ReportDevView.LocalReport.DataSources.Add(reportDataSource1);
+            this.ReportDevView.LocalReport.DataSources.Add(reportDataSource2);
+            this.ReportDevView.LocalReport.ReportEmbeddedResource = "Mine.Views.ReportViewDeploy.rdlc";
+            this.ReportDevView.Location = new System.Drawing.Point(0, 0);
+            this.ReportDevView.Name = "ReportDevView";
+            this.ReportDevView.ServerReport.BearerToken = null;
+            this.ReportDevView.Size = new System.Drawing.Size(800, 450);
+            this.ReportDevView.TabIndex = 0;
+            // 
+            // DevelopmentBindingSource
+            // 
+            this.DevelopmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
+            // 
+            // ProjectBindingSource
+            // 
+            this.ProjectBindingSource.DataSource = typeof(Mine.DataModel.Project);
+            // 
+            // ReportDev
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ReportDevView);
+            this.Name = "ReportDev";
             this.Text = "ReportDev";
+            this.Load += new System.EventHandler(this.ReportDev_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DevelopmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer ReportDevView;
+        private System.Windows.Forms.BindingSource DevelopmentBindingSource;
+        private System.Windows.Forms.BindingSource ProjectBindingSource;
     }
 }

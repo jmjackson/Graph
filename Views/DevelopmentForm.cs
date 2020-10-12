@@ -17,7 +17,7 @@ namespace Mine.Views
 {
     public partial class DevelopmentForm : MetroFramework.Forms.MetroForm
     {
-        int proDevId;
+        readonly int proDevId;
         
      
         readonly GraphDbContext db = new GraphDbContext();
@@ -181,7 +181,8 @@ namespace Mine.Views
 
         private void BtnPDF_Click(object sender, EventArgs e)
         {
-            ReportDev rd = new ReportDev();
+            var pdev = db.ProjectDevs.Include(a => a.Project.Client).Include(a => a.Project).Where(a => a.Id == proDevId).FirstOrDefault();
+            ReportDev rd = new ReportDev(pdev.Id);
             rd.Show();
         }
     }

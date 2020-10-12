@@ -170,7 +170,8 @@ namespace Mine.Views
 
         private void BtnPdf_Click(object sender, EventArgs e)
         {
-
+            ReportGeo rg = new ReportGeo();
+            rg.Show();
         }
     }
 }

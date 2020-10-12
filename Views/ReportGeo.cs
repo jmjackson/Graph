@@ -19,8 +19,10 @@ namespace Mine.Views
 
         private void ReportGeo_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.Visible = true;
-            this.reportViewer1.RefreshReport();
+            
+           
         }
+
+
     }
 }
