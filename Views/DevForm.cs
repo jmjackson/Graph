@@ -109,7 +109,8 @@ namespace Mine.Views
 
         private void BtnDraw_Click(object sender, EventArgs e)
         {
-            Dibujo draw = new Dibujo();
+            int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+            Dibujo draw = new Dibujo(pdId);
             draw.Show();
         }
 

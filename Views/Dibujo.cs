@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 
 namespace Mine.Views
@@ -19,12 +20,18 @@ namespace Mine.Views
         readonly GraphDbContext db = new GraphDbContext();
         Graphics g;
         private Bitmap imagen;
-        public Dibujo()
+
+        int pdId;
+
+
+        public Dibujo(int dev)
         {
             InitializeComponent();
             g = PbLienzo.CreateGraphics();
             //PbLienzo.Image = new Bitmap(PbLienzo.Width, PbLienzo.Height);
             imagen = new Bitmap(PbLienzo.Width, PbLienzo.Height);
+
+            pdId = dev;
 
         }
 
@@ -82,25 +89,6 @@ namespace Mine.Views
 
             PbLienzo.Image = imagen;
         }
-
-        private Font FindBestFitFont(Graphics g, String text, Font font, Size proposedSize)
-        {
-            // Compute actual size, shrink if needed
-            while (true)
-            {
-                SizeF size = g.MeasureString(text, font);
-
-                // It fits, back out
-                if (size.Height <= proposedSize.Height &&
-                     size.Width <= proposedSize.Width) { return font; }
-
-                // Try a smaller font (90% of old size)
-                Font oldFont = font;
-                font = new Font(font.Name, (float)(font.Size * .9), font.Style);
-                oldFont.Dispose();
-            }
-        }
-
         private void BntSave_Click(object sender, EventArgs e)
         {
 
@@ -119,5 +107,21 @@ namespace Mine.Views
 
         }
 
+        private void Dibujo_Load(object sender, EventArgs e)
+        {
+            var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
+
+            var projectno =(from d in db.Developments where d.ProjectDevId== Pn.Id select d ).ToList();
+
+            foreach (var item in projectno)
+            {
+                DgLpn.AutoGenerateColumns = false;
+                DgLpn.Columns["Id"].DataPropertyName = "Id";
+                DgLpn.Columns["PanelNo"].DataPropertyName = "PanelNo";
+                DgLpn.DataSource = projectno;
+                //var panel = item.PanelNo;
+            }
+
+        }
     }
 }
