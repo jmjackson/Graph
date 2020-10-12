@@ -41,7 +41,7 @@ namespace Mine.Views
 
         private void DGVFill()
         {
-            var gms = db.GeoMembranes.ToList();
+            var gms = db.GeoMembranes.Where(a=>a.ProjectDevId==pdId).ToList();
             if (gms.Count>0)
             {
                 DGVGeo.AutoGenerateColumns = false;
@@ -170,7 +170,7 @@ namespace Mine.Views
 
         private void BtnPdf_Click(object sender, EventArgs e)
         {
-            ReportGeo rg = new ReportGeo();
+            ReportGeo rg = new ReportGeo(pdId);
             rg.Show();
         }
     }
