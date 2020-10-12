@@ -79,7 +79,6 @@ namespace Mine.Views
             }
             catch (Exception ex)
             {
-
                 MetroMessageBox.Show(this, "Error in your record "+ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
@@ -98,7 +97,7 @@ namespace Mine.Views
                 DGVDev.Columns["DeploymentDate"].DataPropertyName = "DeploymentDate";
                 DGVDev.Columns["PanelNo"].DataPropertyName = "PanelNo";
                 DGVDev.Columns["RollNo"].DataPropertyName = "RollNo";
-                DGVDev.Columns["Length"].DataPropertyName = "Length";
+                DGVDev.Columns["Length"].DataPropertyName = "Lenght";
                 DGVDev.Columns["Width"].DataPropertyName = "Width";
                 DGVDev.Columns["Thickness"].DataPropertyName = "Thickness";
                 DGVDev.Columns["Area"].DataPropertyName = "Area";
