@@ -20,29 +20,23 @@ namespace Mine.Views
         readonly GraphDbContext db = new GraphDbContext();
         Graphics g;
         private Bitmap imagen;
-
         int pdId;
-
+        string texto;
 
         public Dibujo(int dev)
         {
             InitializeComponent();
             g = PbLienzo.CreateGraphics();
-            //PbLienzo.Image = new Bitmap(PbLienzo.Width, PbLienzo.Height);
             imagen = new Bitmap(PbLienzo.Width, PbLienzo.Height);
-
             pdId = dev;
 
         }
 
         int? X = null;
         int? Y = null;
-
+        bool dibujar = false;
         Color color = Color.Black;
         int ancho = 2;
-
-        bool dibujar = false;
-
 
         private void PbLienzo_MouseDown(object sender, MouseEventArgs e)
         {
@@ -59,7 +53,6 @@ namespace Mine.Views
 
         private void PbLienzo_MouseMove(object sender, MouseEventArgs e)
         {
-
             if (dibujar == true)
             {
                 //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
@@ -78,14 +71,10 @@ namespace Mine.Views
 
         private void PbLienzo_MouseClick(object sender, MouseEventArgs e)
         {
-            string text2 = "p-1";
             Font font2 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
-
             Graphics g = Graphics.FromImage(imagen);
 
-            g.DrawString(text2, font2, new SolidBrush(Color.Black),e.X+10,e.Y+25);
-
-            //TextRenderer.DrawText(g, text2, font2, new Point(X ?? e.X, Y ?? e.Y), Color.Blue,flags);
+            g.DrawString(texto, font2, new SolidBrush(Color.Black),e.X+10,e.Y+25);
 
             PbLienzo.Image = imagen;
         }
@@ -122,6 +111,16 @@ namespace Mine.Views
                 //var panel = item.PanelNo;
             }
 
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void BntAdd_Click(object sender, EventArgs e)
+        {
+            int projecn = Convert.ToInt32(DgLpn.CurrentRow.Cells[1].Value);
+            texto = Convert.ToString(projecn);
         }
     }
 }

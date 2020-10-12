@@ -34,20 +34,21 @@
             this.PbLienzo = new System.Windows.Forms.PictureBox();
             this.BntAdd = new FontAwesome.Sharp.IconButton();
             this.BntSave = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.BtnClear = new FontAwesome.Sharp.IconButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.DgLpn = new MetroFramework.Controls.MetroGrid();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PbLienzo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgLpn)).BeginInit();
             this.SuspendLayout();
             // 
             // PbLienzo
             // 
-            this.PbLienzo.Location = new System.Drawing.Point(11, 63);
+            this.PbLienzo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PbLienzo.Location = new System.Drawing.Point(23, 63);
             this.PbLienzo.Name = "PbLienzo";
-            this.PbLienzo.Size = new System.Drawing.Size(486, 364);
+            this.PbLienzo.Size = new System.Drawing.Size(522, 364);
             this.PbLienzo.TabIndex = 0;
             this.PbLienzo.TabStop = false;
             this.PbLienzo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PbLienzo_MouseClick);
@@ -68,6 +69,7 @@
             this.BntAdd.TabIndex = 3;
             this.BntAdd.Text = "Add";
             this.BntAdd.UseVisualStyleBackColor = true;
+            this.BntAdd.Click += new System.EventHandler(this.BntAdd_Click);
             // 
             // BntSave
             // 
@@ -84,19 +86,20 @@
             this.BntSave.UseVisualStyleBackColor = true;
             this.BntSave.Click += new System.EventHandler(this.BntSave_Click);
             // 
-            // iconButton2
+            // BtnClear
             // 
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconSize = 16;
-            this.iconButton2.Location = new System.Drawing.Point(643, 156);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(134, 23);
-            this.iconButton2.TabIndex = 5;
-            this.iconButton2.Text = "Add";
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.BtnClear.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnClear.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnClear.IconColor = System.Drawing.Color.Black;
+            this.BtnClear.IconSize = 16;
+            this.BtnClear.Location = new System.Drawing.Point(643, 156);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Rotation = 0D;
+            this.BtnClear.Size = new System.Drawing.Size(134, 23);
+            this.BtnClear.TabIndex = 5;
+            this.BtnClear.Text = "Clear";
+            this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // DgLpn
             // 
@@ -115,8 +118,8 @@
             this.DgLpn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgLpn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgLpn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column1});
+            this.Id,
+            this.PanelNo});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -145,15 +148,15 @@
             this.DgLpn.Style = MetroFramework.MetroColorStyle.Purple;
             this.DgLpn.TabIndex = 7;
             // 
-            // Column2
+            // Id
             // 
-            this.Column2.HeaderText = "Id";
-            this.Column2.Name = "Column2";
+            this.Id.HeaderText = "Item";
+            this.Id.Name = "Id";
             // 
-            // Column1
+            // PanelNo
             // 
-            this.Column1.HeaderText = "PanelNo";
-            this.Column1.Name = "Column1";
+            this.PanelNo.HeaderText = "Panel No";
+            this.PanelNo.Name = "PanelNo";
             // 
             // Dibujo
             // 
@@ -161,7 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DgLpn);
-            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.BntSave);
             this.Controls.Add(this.BntAdd);
             this.Controls.Add(this.PbLienzo);
@@ -180,10 +183,10 @@
         private System.Windows.Forms.PictureBox PbLienzo;
         private FontAwesome.Sharp.IconButton BntAdd;
         private FontAwesome.Sharp.IconButton BntSave;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton BtnClear;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private MetroFramework.Controls.MetroGrid DgLpn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
     }
 }
