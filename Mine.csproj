@@ -269,6 +269,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Mine.DataModel.Development.datasource" />
+    <None Include="Properties\DataSources\Mine.DataModel.GeoMembrane.datasource" />
     <None Include="Properties\DataSources\Mine.DataModel.Project.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
