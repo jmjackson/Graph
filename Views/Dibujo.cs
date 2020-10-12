@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mine.DataContext;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -14,10 +15,10 @@ namespace Mine.Views
 {
     public partial class Dibujo : MetroFramework.Forms.MetroForm
     {
+        //conexion bd o consulta 
+        readonly GraphDbContext db = new GraphDbContext();
         Graphics g;
         private Bitmap imagen;
-        //
-        Collection<DibujoM> dm = new Collection<DibujoM>();
         public Dibujo()
         {
             InitializeComponent();
@@ -70,24 +71,34 @@ namespace Mine.Views
 
         private void PbLienzo_MouseClick(object sender, MouseEventArgs e)
         {
-            string text2 = "Prueba 1";
+            string text2 = "p-1";
             Font font2 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
 
-            StringFormat stringFormat = new StringFormat();
-            stringFormat.Alignment = StringAlignment.Center;
-            stringFormat.LineAlignment = StringAlignment.Center;
-
-            //TextFormatFlags flags = TextFormatFlags.HorizontalCenter |
-            //TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak;
-
-
             Graphics g = Graphics.FromImage(imagen);
-            g.DrawString(text2, font2, Brushes.Blue, new Point(X ?? e.X, Y ?? e.Y), stringFormat);
+
+            g.DrawString(text2, font2, new SolidBrush(Color.Black),e.X+10,e.Y+25);
 
             //TextRenderer.DrawText(g, text2, font2, new Point(X ?? e.X, Y ?? e.Y), Color.Blue,flags);
 
-
             PbLienzo.Image = imagen;
+        }
+
+        private Font FindBestFitFont(Graphics g, String text, Font font, Size proposedSize)
+        {
+            // Compute actual size, shrink if needed
+            while (true)
+            {
+                SizeF size = g.MeasureString(text, font);
+
+                // It fits, back out
+                if (size.Height <= proposedSize.Height &&
+                     size.Width <= proposedSize.Width) { return font; }
+
+                // Try a smaller font (90% of old size)
+                Font oldFont = font;
+                font = new Font(font.Name, (float)(font.Size * .9), font.Style);
+                oldFont.Dispose();
+            }
         }
 
         private void BntSave_Click(object sender, EventArgs e)
@@ -97,7 +108,7 @@ namespace Mine.Views
 
             saveFileDialog1.FileName = "Dibujo" + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
 
-            saveFileDialog1.Filter = "Excel files (*.png)|*.png|(*.jpg)|*.jpg";
+            saveFileDialog1.Filter = "Excel files (*.jpg)|*.jpg";
 
             saveFileDialog1.RestoreDirectory = true;
 
