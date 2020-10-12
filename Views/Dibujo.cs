@@ -21,15 +21,14 @@ namespace Mine.Views
         Graphics g;
         private Bitmap imagen;
         int pdId;
-        string texto;
-
+        int selecc_Opcion=1;
         public Dibujo(int dev)
         {
             InitializeComponent();
             g = PbLienzo.CreateGraphics();
             imagen = new Bitmap(PbLienzo.Width, PbLienzo.Height);
             pdId = dev;
-
+            BtnDraw.Enabled = false;
         }
 
         int? X = null;
@@ -53,31 +52,25 @@ namespace Mine.Views
 
         private void PbLienzo_MouseMove(object sender, MouseEventArgs e)
         {
-            if (dibujar == true)
+            if (selecc_Opcion == 1)
             {
-                //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
-                //declaradas al inicio
+                if (dibujar == true)
+                {
+                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
+                    //declaradas al inicio
 
-                Graphics g = Graphics.FromImage(imagen);
-                Pen pluma = new Pen(color, ancho);
+                    Graphics g = Graphics.FromImage(imagen);
+                    Pen pluma = new Pen(color, ancho);
 
-                //Dibuja una linea entre el punto anterior y el actual
-                g.DrawLine(pluma, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
-                X = e.X;
-                Y = e.Y;
-                PbLienzo.Image = imagen;
+                    //Dibuja una linea entre el punto anterior y el actual
+                    g.DrawLine(pluma, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    X = e.X;
+                    Y = e.Y;
+                    PbLienzo.Image = imagen;
+                }
             }
         }
 
-        private void PbLienzo_MouseClick(object sender, MouseEventArgs e)
-        {
-            Font font2 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
-            Graphics g = Graphics.FromImage(imagen);
-
-            g.DrawString(texto, font2, new SolidBrush(Color.Black),e.X+10,e.Y+25);
-
-            PbLienzo.Image = imagen;
-        }
         private void BntSave_Click(object sender, EventArgs e)
         {
 
@@ -93,6 +86,7 @@ namespace Mine.Views
             {
                 PbLienzo.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
             }
+
 
         }
 
@@ -116,12 +110,46 @@ namespace Mine.Views
 
         private void BtnClear_Click(object sender, EventArgs e)
         {
+
         }
 
-        private void BntAdd_Click(object sender, EventArgs e)
+        private void PbLienzo_MouseClick(object sender, MouseEventArgs e)
         {
-            int projecn = Convert.ToInt32(DgLpn.CurrentRow.Cells[1].Value);
-            texto = Convert.ToString(projecn);
+            if (selecc_Opcion == 2)
+            {
+                if (dibujar == true)
+                {
+                    Font font2 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
+                    Graphics g = Graphics.FromImage(imagen);
+
+                    //seleciona de la tabla y lo dibuja
+                    int projecn = Convert.ToInt32(DgLpn.CurrentRow.Cells[1].Value);
+                    string texto = Convert.ToString(projecn);
+
+                    g.DrawString(texto, font2, new SolidBrush(Color.Black), e.X, e.Y);
+
+                    PbLienzo.Image = imagen;
+                }
+            }
+        }
+        void resetTools()
+        {
+            foreach (Control b in toolBox.Controls)
+                b.Enabled = true;
+        }
+
+        private void BtnDraw_Click(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 1;
+        }
+
+        private void BntAddPanelNo_Click(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 2;
         }
     }
 }
