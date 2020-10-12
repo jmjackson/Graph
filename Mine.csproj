@@ -141,7 +141,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporView\ReportDevelopment.cs" />
+    <Compile Include="ReporView\ReportGeomembrane.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ViewModelProject\ProjectViewModel.cs" />
     <Compile Include="Views\ClientForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,12 +260,16 @@
     <EmbeddedResource Include="Views\ProjectForm.resx">
       <DependentUpon>ProjectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Report1.rdlc" />
+    <EmbeddedResource Include="Views\ReportDev.resx">
+      <DependentUpon>ReportDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportViewDeploy.rdlc" />
+    <EmbeddedResource Include="Views\ReportViewGeo.rdlc" />
     <EmbeddedResource Include="Views\ReportGeo.resx">
       <DependentUpon>ReportGeo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Mine.DataModel.Client.datasource" />
+    <None Include="Properties\DataSources\Mine.DataModel.Development.datasource" />
     <None Include="Properties\DataSources\Mine.DataModel.Project.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -297,6 +304,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -8,5 +8,7 @@ namespace Mine.ReporView
 {
     public class ReportDevelopment
     {
+        public int Id { get; set; }
+
     }
 }
