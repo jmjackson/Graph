@@ -32,15 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PbLienzo = new System.Windows.Forms.PictureBox();
-            this.BntAdd = new FontAwesome.Sharp.IconButton();
+            this.BntAddPanelNo = new FontAwesome.Sharp.IconButton();
             this.BntSave = new FontAwesome.Sharp.IconButton();
             this.BtnClear = new FontAwesome.Sharp.IconButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.DgLpn = new MetroFramework.Controls.MetroGrid();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolBox = new System.Windows.Forms.GroupBox();
+            this.BtnDraw = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.PbLienzo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgLpn)).BeginInit();
+            this.toolBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // PbLienzo
@@ -56,20 +59,20 @@
             this.PbLienzo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PbLienzo_MouseMove);
             this.PbLienzo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PbLienzo_MouseUp);
             // 
-            // BntAdd
+            // BntAddPanelNo
             // 
-            this.BntAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BntAdd.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BntAdd.IconColor = System.Drawing.Color.Black;
-            this.BntAdd.IconSize = 16;
-            this.BntAdd.Location = new System.Drawing.Point(643, 98);
-            this.BntAdd.Name = "BntAdd";
-            this.BntAdd.Rotation = 0D;
-            this.BntAdd.Size = new System.Drawing.Size(134, 23);
-            this.BntAdd.TabIndex = 3;
-            this.BntAdd.Text = "Add";
-            this.BntAdd.UseVisualStyleBackColor = true;
-            this.BntAdd.Click += new System.EventHandler(this.BntAdd_Click);
+            this.BntAddPanelNo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BntAddPanelNo.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BntAddPanelNo.IconColor = System.Drawing.Color.Black;
+            this.BntAddPanelNo.IconSize = 16;
+            this.BntAddPanelNo.Location = new System.Drawing.Point(26, 48);
+            this.BntAddPanelNo.Name = "BntAddPanelNo";
+            this.BntAddPanelNo.Rotation = 0D;
+            this.BntAddPanelNo.Size = new System.Drawing.Size(134, 23);
+            this.BntAddPanelNo.TabIndex = 3;
+            this.BntAddPanelNo.Text = "Add Panel No";
+            this.BntAddPanelNo.UseVisualStyleBackColor = true;
+            this.BntAddPanelNo.Click += new System.EventHandler(this.BntAddPanelNo_Click);
             // 
             // BntSave
             // 
@@ -77,12 +80,12 @@
             this.BntSave.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BntSave.IconColor = System.Drawing.Color.Black;
             this.BntSave.IconSize = 16;
-            this.BntSave.Location = new System.Drawing.Point(643, 127);
+            this.BntSave.Location = new System.Drawing.Point(26, 77);
             this.BntSave.Name = "BntSave";
             this.BntSave.Rotation = 0D;
             this.BntSave.Size = new System.Drawing.Size(134, 23);
             this.BntSave.TabIndex = 4;
-            this.BntSave.Text = "Save";
+            this.BntSave.Text = "Save Images";
             this.BntSave.UseVisualStyleBackColor = true;
             this.BntSave.Click += new System.EventHandler(this.BntSave_Click);
             // 
@@ -92,7 +95,7 @@
             this.BtnClear.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnClear.IconColor = System.Drawing.Color.Black;
             this.BtnClear.IconSize = 16;
-            this.BtnClear.Location = new System.Drawing.Point(643, 156);
+            this.BtnClear.Location = new System.Drawing.Point(26, 106);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Rotation = 0D;
             this.BtnClear.Size = new System.Drawing.Size(134, 23);
@@ -158,15 +161,41 @@
             this.PanelNo.HeaderText = "Panel No";
             this.PanelNo.Name = "PanelNo";
             // 
+            // toolBox
+            // 
+            this.toolBox.Controls.Add(this.BtnDraw);
+            this.toolBox.Controls.Add(this.BtnClear);
+            this.toolBox.Controls.Add(this.BntSave);
+            this.toolBox.Controls.Add(this.BntAddPanelNo);
+            this.toolBox.Location = new System.Drawing.Point(573, 56);
+            this.toolBox.Name = "toolBox";
+            this.toolBox.Size = new System.Drawing.Size(184, 134);
+            this.toolBox.TabIndex = 8;
+            this.toolBox.TabStop = false;
+            this.toolBox.Text = "Herramientas";
+            // 
+            // BtnDraw
+            // 
+            this.BtnDraw.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnDraw.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnDraw.IconColor = System.Drawing.Color.Black;
+            this.BtnDraw.IconSize = 16;
+            this.BtnDraw.Location = new System.Drawing.Point(26, 19);
+            this.BtnDraw.Name = "BtnDraw";
+            this.BtnDraw.Rotation = 0D;
+            this.BtnDraw.Size = new System.Drawing.Size(134, 23);
+            this.BtnDraw.TabIndex = 9;
+            this.BtnDraw.Text = "Draw";
+            this.BtnDraw.UseVisualStyleBackColor = true;
+            this.BtnDraw.Click += new System.EventHandler(this.BtnDraw_Click);
+            // 
             // Dibujo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolBox);
             this.Controls.Add(this.DgLpn);
-            this.Controls.Add(this.BtnClear);
-            this.Controls.Add(this.BntSave);
-            this.Controls.Add(this.BntAdd);
             this.Controls.Add(this.PbLienzo);
             this.Name = "Dibujo";
             this.Style = MetroFramework.MetroColorStyle.Purple;
@@ -174,6 +203,7 @@
             this.Load += new System.EventHandler(this.Dibujo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbLienzo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgLpn)).EndInit();
+            this.toolBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -181,12 +211,14 @@
         #endregion
 
         private System.Windows.Forms.PictureBox PbLienzo;
-        private FontAwesome.Sharp.IconButton BntAdd;
+        private FontAwesome.Sharp.IconButton BntAddPanelNo;
         private FontAwesome.Sharp.IconButton BntSave;
         private FontAwesome.Sharp.IconButton BtnClear;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private MetroFramework.Controls.MetroGrid DgLpn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
+        private System.Windows.Forms.GroupBox toolBox;
+        private FontAwesome.Sharp.IconButton BtnDraw;
     }
 }
