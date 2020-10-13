@@ -32,22 +32,14 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.ReportDevView = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DevelopmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ReportDevView = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ClientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DevelopmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DevelopmentBindingSource
-            // 
-            this.DevelopmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
-            // 
-            // ProjectBindingSource
-            // 
-            this.ProjectBindingSource.DataSource = typeof(Mine.DataModel.Project);
             // 
             // ReportDevView
             // 
@@ -65,9 +57,17 @@
             this.ReportDevView.Location = new System.Drawing.Point(0, 0);
             this.ReportDevView.Name = "ReportDevView";
             this.ReportDevView.ServerReport.BearerToken = null;
-            this.ReportDevView.Size = new System.Drawing.Size(913, 493);
+            this.ReportDevView.Size = new System.Drawing.Size(928, 493);
             this.ReportDevView.TabIndex = 0;
             this.ReportDevView.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            // 
+            // DevelopmentBindingSource
+            // 
+            this.DevelopmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
+            // 
+            // ProjectBindingSource
+            // 
+            this.ProjectBindingSource.DataSource = typeof(Mine.DataModel.Project);
             // 
             // ClientBindingSource
             // 
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 493);
+            this.ClientSize = new System.Drawing.Size(928, 493);
             this.Controls.Add(this.ReportDevView);
             this.Name = "ReportDev";
             this.Text = "ReportDev";

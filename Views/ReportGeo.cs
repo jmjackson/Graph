@@ -31,10 +31,11 @@ namespace Mine.Views
 
         private void ReportGeomembraneFill()
         {
-            var projectdev = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdevId).FirstOrDefault();
+            var projectdev = db.ProjectDevs.Include(a => a.Project).Include(a=>a.Project.Client).Where(a => a.Id == pdevId).FirstOrDefault();
             var geomm = db.GeoMembranes.Where(a => a.ProjectDevId == pdevId).ToList(); ;
 
             ProjectBindingSource.DataSource = projectdev.Project;
+            ClientBindingSource.DataSource = projectdev.Project.Client;
             GeoMembraneBindingSource.DataSource = geomm;
             this.ReportViewGeom.RefreshReport();
 

@@ -15,7 +15,7 @@ namespace Mine.DataModel
         public DateTime DeploymentDate { get; set; }
         public int PanelNo { get; set; }
         public double RollNo { get; set; }
-        public decimal Lenght { get; set; }
+        public int Lenght { get; set; }
         public decimal Width { get; set; }
         public string Thickness { get; set; }
         public decimal Area { get; set; }

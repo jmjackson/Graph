@@ -15,6 +15,22 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\juanh\Documents\PublishMine\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +50,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A614F42BA58B86A7842F899C1CCA21BA355A19CB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Mine_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -125,6 +153,10 @@
     <Compile Include="Migrations\202010081930320_Updategeo.cs" />
     <Compile Include="Migrations\202010081930320_Updategeo.designer.cs">
       <DependentUpon>202010081930320_Updategeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010132035535_ModifyReport.cs" />
+    <Compile Include="Migrations\202010132035535_ModifyReport.designer.cs">
+      <DependentUpon>202010132035535_ModifyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modal\ModalDevelopment.cs">
@@ -223,6 +255,9 @@
     <EmbeddedResource Include="Migrations\202010081930320_Updategeo.resx">
       <DependentUpon>202010081930320_Updategeo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010132035535_ModifyReport.resx">
+      <DependentUpon>202010132035535_ModifyReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalDevelopment.resx">
       <DependentUpon>ModalDevelopment.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +302,7 @@
     <EmbeddedResource Include="Views\ReportGeo.resx">
       <DependentUpon>ReportGeo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Mine_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Mine.DataModel.Client.datasource" />
     <None Include="Properties\DataSources\Mine.DataModel.Development.datasource" />
@@ -305,7 +341,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

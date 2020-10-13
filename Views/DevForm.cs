@@ -32,7 +32,7 @@ namespace Mine.Views
 
         private void CbClient_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CbClient.SelectedIndex>0)
+            if (CbClient.SelectedIndex>=0)
             {
                int cId= Convert.ToInt32(CbClient.SelectedValue);
                 var pro = db.Projects.Where(a => a.ClientId == cId).ToList();
@@ -55,6 +55,8 @@ namespace Mine.Views
                 DGVDev.Columns["Inspector"].DataPropertyName = "Inspector";
                 DGVDev.Columns["Location"].DataPropertyName = "Location";
                 DGVDev.Columns["DevTime"].DataPropertyName = "DevTime";
+                DGVDev.Columns["Operator"].DataPropertyName = "Operator";
+                DGVDev.Columns["MachineNo"].DataPropertyName = "MachineNo";
                 DGVDev.DataSource = prodev;
             }
         }
@@ -67,6 +69,8 @@ namespace Mine.Views
                 {
                     Inspector = TxtInspector.Text,
                     Location = TxtLocation.Text,
+                    MachineNo=TxtMachine.Text,
+                    Operator=TxtOperator.Text,
                     ProjectId = Convert.ToInt32(CbProject.SelectedValue),
                     DevTime = Convert.ToDateTime(DateDev.Text)
                 };
@@ -100,6 +104,8 @@ namespace Mine.Views
             TxtLocation.Text = pdev.Location;
             DateDev.Value =pdev.DevTime;
             TxtBoxId.Text = pdId.ToString();
+            TxtMachine.Text = pdev.MachineNo;
+            TxtOperator.Text = pdev.Operator;
             CbClient.Enabled = false;
             CbProject.Enabled = false;
             
@@ -122,6 +128,8 @@ namespace Mine.Views
                 var pd = db.ProjectDevs.Find(pdId);
                 pd.Inspector = TxtInspector.Text;
                 pd.Location = TxtLocation.Text;
+                pd.Operator = TxtOperator.Text;
+                pd.MachineNo = TxtMachine.Text;
                 pd.DevTime = Convert.ToDateTime(DateDev.Text);
                 db.SaveChanges();
                 MetroMessageBox.Show(this, "Update is successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -129,6 +137,8 @@ namespace Mine.Views
                 TxtInspector.Text = string.Empty;
                 TxtLocation.Text = string.Empty;
                 TxtBoxId.Text = string.Empty;
+                TxtMachine.Text = string.Empty;
+                TxtOperator.Text = string.Empty;
                 CbClient.Enabled = true;
                 CbProject.Enabled = true;
                 DevForm_Load(sender, e);
@@ -176,6 +186,12 @@ namespace Mine.Views
             int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
             GeomembraneForm gm = new GeomembraneForm(pdId);
             gm.Show();
+        }
+
+        private void DevForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Principal p = new Principal();
+            p.Show();
         }
     }
 }

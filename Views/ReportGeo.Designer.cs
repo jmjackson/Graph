@@ -32,22 +32,14 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.ReportViewGeom = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.GeoMembraneBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ReportViewGeom = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ClientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeoMembraneBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ProjectBindingSource
-            // 
-            this.ProjectBindingSource.DataSource = typeof(Mine.DataModel.Project);
-            // 
-            // GeoMembraneBindingSource
-            // 
-            this.GeoMembraneBindingSource.DataSource = typeof(Mine.DataModel.GeoMembrane);
             // 
             // ReportViewGeom
             // 
@@ -65,8 +57,16 @@
             this.ReportViewGeom.Location = new System.Drawing.Point(0, 0);
             this.ReportViewGeom.Name = "ReportViewGeom";
             this.ReportViewGeom.ServerReport.BearerToken = null;
-            this.ReportViewGeom.Size = new System.Drawing.Size(930, 490);
+            this.ReportViewGeom.Size = new System.Drawing.Size(934, 490);
             this.ReportViewGeom.TabIndex = 0;
+            // 
+            // ProjectBindingSource
+            // 
+            this.ProjectBindingSource.DataSource = typeof(Mine.DataModel.Project);
+            // 
+            // GeoMembraneBindingSource
+            // 
+            this.GeoMembraneBindingSource.DataSource = typeof(Mine.DataModel.GeoMembrane);
             // 
             // ClientBindingSource
             // 
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 490);
+            this.ClientSize = new System.Drawing.Size(934, 490);
             this.Controls.Add(this.ReportViewGeom);
             this.Name = "ReportGeo";
             this.Text = "ReportGeo";

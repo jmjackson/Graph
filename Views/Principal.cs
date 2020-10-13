@@ -33,17 +33,20 @@ namespace Mine.Views
         {
             ClientForms c = new ClientForms();
             c.Show();
+            this.Hide();
         }
 
         private void TileProject_Click(object sender, EventArgs e)
         {
             ModalProject mp = new ModalProject();
+            
             if (mp.ShowDialog()==DialogResult.Yes)
             {
                 var clientId = mp.Cb;
                 ProjectForm pf = new ProjectForm(clientId);
                 pf.Show();
-            }
+               
+            }this.Hide();
         }
 
         
@@ -52,6 +55,7 @@ namespace Mine.Views
         {
             DevForm df = new DevForm();
             df.Show();
+            this.Hide();
         }
 
         

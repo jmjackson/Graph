@@ -44,7 +44,8 @@ namespace Mine.Views
                 DGVProject.Columns["GeoSynthetic"].DataPropertyName = "GeoSynthetic";
                 DGVProject.DataSource = pr;
             }
-            
+
+          
 
             
 
@@ -79,6 +80,7 @@ namespace Mine.Views
         {
             try
             {
+                
                 var cell = DGVProject.CurrentRow.Cells[0].Value;
                 var cdb = db.Projects.Find(cell);
                 if (cdb!=null)
@@ -152,6 +154,12 @@ namespace Mine.Views
 
                 MetroFramework.MetroMessageBox.Show(this,"Have a Error :"+ex.ToString(),"Info");
             }
+        }
+
+        private void ProjectForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Principal p = new Principal();
+            p.Show();
         }
     }
 }

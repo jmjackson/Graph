@@ -39,12 +39,6 @@
             this.TxtCode = new MetroFramework.Controls.MetroTextBox();
             this.TxtName = new MetroFramework.Controls.MetroTextBox();
             this.DGVProject = new MetroFramework.Controls.MetroGrid();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contractor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Geosynthetic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelAdd = new System.Windows.Forms.Panel();
             this.TxtGeosynthetic = new MetroFramework.Controls.MetroTextBox();
             this.TxtPNumber = new MetroFramework.Controls.MetroTextBox();
@@ -62,6 +56,12 @@
             this.LblSupplier = new MetroFramework.Controls.MetroLabel();
             this.LblContractor = new MetroFramework.Controls.MetroLabel();
             this.LblPId = new MetroFramework.Controls.MetroLabel();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjectNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contractor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Geosynthetic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProject)).BeginInit();
             this.PanelAdd.SuspendLayout();
@@ -70,7 +70,7 @@
             // LblId
             // 
             this.LblId.AutoSize = true;
-            this.LblId.Location = new System.Drawing.Point(49, 27);
+            this.LblId.Location = new System.Drawing.Point(49, 54);
             this.LblId.Name = "LblId";
             this.LblId.Size = new System.Drawing.Size(20, 19);
             this.LblId.TabIndex = 0;
@@ -79,7 +79,7 @@
             // LblName
             // 
             this.LblName.AutoSize = true;
-            this.LblName.Location = new System.Drawing.Point(445, 27);
+            this.LblName.Location = new System.Drawing.Point(445, 54);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(82, 19);
             this.LblName.TabIndex = 0;
@@ -88,7 +88,7 @@
             // LblCode
             // 
             this.LblCode.AutoSize = true;
-            this.LblCode.Location = new System.Drawing.Point(177, 27);
+            this.LblCode.Location = new System.Drawing.Point(177, 54);
             this.LblCode.Name = "LblCode";
             this.LblCode.Size = new System.Drawing.Size(78, 19);
             this.LblCode.TabIndex = 0;
@@ -96,7 +96,7 @@
             // 
             // PBLogo
             // 
-            this.PBLogo.Location = new System.Drawing.Point(717, 23);
+            this.PBLogo.Location = new System.Drawing.Point(717, 50);
             this.PBLogo.Name = "PBLogo";
             this.PBLogo.Size = new System.Drawing.Size(153, 50);
             this.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +118,7 @@
             this.TxtId.CustomButton.UseSelectable = true;
             this.TxtId.CustomButton.Visible = false;
             this.TxtId.Lines = new string[0];
-            this.TxtId.Location = new System.Drawing.Point(75, 23);
+            this.TxtId.Location = new System.Drawing.Point(75, 50);
             this.TxtId.MaxLength = 32767;
             this.TxtId.Name = "TxtId";
             this.TxtId.PasswordChar = '\0';
@@ -149,7 +149,7 @@
             this.TxtCode.CustomButton.UseSelectable = true;
             this.TxtCode.CustomButton.Visible = false;
             this.TxtCode.Lines = new string[0];
-            this.TxtCode.Location = new System.Drawing.Point(261, 23);
+            this.TxtCode.Location = new System.Drawing.Point(261, 50);
             this.TxtCode.MaxLength = 32767;
             this.TxtCode.Name = "TxtCode";
             this.TxtCode.PasswordChar = '\0';
@@ -180,7 +180,7 @@
             this.TxtName.CustomButton.UseSelectable = true;
             this.TxtName.CustomButton.Visible = false;
             this.TxtName.Lines = new string[0];
-            this.TxtName.Location = new System.Drawing.Point(533, 23);
+            this.TxtName.Location = new System.Drawing.Point(533, 50);
             this.TxtName.MaxLength = 32767;
             this.TxtName.Name = "TxtName";
             this.TxtName.PasswordChar = '\0';
@@ -199,15 +199,18 @@
             // DGVProject
             // 
             this.DGVProject.AllowUserToResizeRows = false;
-            this.DGVProject.BackgroundColor = System.Drawing.Color.White;
+            this.DGVProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGVProject.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DGVProject.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVProject.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVProject.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGVProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -223,7 +226,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVProject.DefaultCellStyle = dataGridViewCellStyle2;
@@ -234,53 +237,23 @@
             this.DGVProject.Name = "DGVProject";
             this.DGVProject.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGVProject.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVProject.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVProject.Size = new System.Drawing.Size(886, 239);
+            this.DGVProject.Style = MetroFramework.MetroColorStyle.Purple;
             this.DGVProject.TabIndex = 4;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Id.HeaderText = "Item";
-            this.Id.Name = "Id";
-            // 
-            // PName
-            // 
-            this.PName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PName.HeaderText = "Name";
-            this.PName.Name = "PName";
-            // 
-            // ProjectNo
-            // 
-            this.ProjectNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProjectNo.HeaderText = "Project No";
-            this.ProjectNo.Name = "ProjectNo";
-            // 
-            // Contractor
-            // 
-            this.Contractor.HeaderText = "Contractor";
-            this.Contractor.Name = "Contractor";
-            // 
-            // Supplier
-            // 
-            this.Supplier.HeaderText = "Supplier";
-            this.Supplier.Name = "Supplier";
-            // 
-            // Geosynthetic
-            // 
-            this.Geosynthetic.HeaderText = "GeoSynthetic";
-            this.Geosynthetic.Name = "Geosynthetic";
             // 
             // PanelAdd
             // 
+            this.PanelAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelAdd.Controls.Add(this.TxtGeosynthetic);
             this.PanelAdd.Controls.Add(this.TxtPNumber);
             this.PanelAdd.Controls.Add(this.TxtSupplier);
@@ -441,6 +414,7 @@
             this.TxtPid.MaxLength = 32767;
             this.TxtPid.Name = "TxtPid";
             this.TxtPid.PasswordChar = '\0';
+            this.TxtPid.ReadOnly = true;
             this.TxtPid.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtPid.SelectedText = "";
             this.TxtPid.SelectionLength = 0;
@@ -565,9 +539,9 @@
             this.LblPName.AutoSize = true;
             this.LblPName.Location = new System.Drawing.Point(246, 22);
             this.LblPName.Name = "LblPName";
-            this.LblPName.Size = new System.Drawing.Size(45, 19);
+            this.LblPName.Size = new System.Drawing.Size(50, 19);
             this.LblPName.TabIndex = 0;
-            this.LblPName.Text = "Name";
+            this.LblPName.Text = "Project";
             // 
             // LblSupplier
             // 
@@ -596,6 +570,39 @@
             this.LblPId.TabIndex = 0;
             this.LblPId.Text = "Id";
             // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Id.HeaderText = "Item";
+            this.Id.Name = "Id";
+            // 
+            // PName
+            // 
+            this.PName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PName.HeaderText = "Project";
+            this.PName.Name = "PName";
+            // 
+            // ProjectNo
+            // 
+            this.ProjectNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProjectNo.HeaderText = "Project No";
+            this.ProjectNo.Name = "ProjectNo";
+            // 
+            // Contractor
+            // 
+            this.Contractor.HeaderText = "Contractor";
+            this.Contractor.Name = "Contractor";
+            // 
+            // Supplier
+            // 
+            this.Supplier.HeaderText = "Supplier";
+            this.Supplier.Name = "Supplier";
+            // 
+            // Geosynthetic
+            // 
+            this.Geosynthetic.HeaderText = "GeoSynthetic";
+            this.Geosynthetic.Name = "Geosynthetic";
+            // 
             // ProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,6 +619,7 @@
             this.Controls.Add(this.LblId);
             this.Name = "ProjectForm";
             this.Style = MetroFramework.MetroColorStyle.Purple;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProjectForm_FormClosed);
             this.Load += new System.EventHandler(this.ProjectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProject)).EndInit();
@@ -648,12 +656,12 @@
         private MetroFramework.Controls.MetroTextBox TxtContractor;
         private MetroFramework.Controls.MetroButton BtnEdit;
         private MetroFramework.Controls.MetroButton BtnSave;
+        private MetroFramework.Controls.MetroButton BtnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn PName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProjectNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contractor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Supplier;
         private System.Windows.Forms.DataGridViewTextBoxColumn Geosynthetic;
-        private MetroFramework.Controls.MetroButton BtnDelete;
     }
 }

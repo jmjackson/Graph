@@ -147,5 +147,11 @@ namespace Mine.Views
                 }
             }
         }
+
+        private void ClientForms_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Principal p = new Principal();
+            p.Show();
+        }
     }
 }

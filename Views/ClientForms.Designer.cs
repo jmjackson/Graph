@@ -38,6 +38,7 @@
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PanelAdd = new System.Windows.Forms.Panel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.BtnFind = new FontAwesome.Sharp.IconButton();
             this.TxtId = new MetroFramework.Controls.MetroTextBox();
             this.TxtCode = new MetroFramework.Controls.MetroTextBox();
@@ -60,8 +61,9 @@
             // GDVClients
             // 
             this.GDVClients.AllowUserToResizeRows = false;
-            this.GDVClients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.GDVClients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GDVClients.AutoGenerateColumns = false;
             this.GDVClients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.GDVClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -92,7 +94,7 @@
             this.GDVClients.EnableHeadersVisualStyles = false;
             this.GDVClients.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.GDVClients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GDVClients.Location = new System.Drawing.Point(23, 63);
+            this.GDVClients.Location = new System.Drawing.Point(434, 80);
             this.GDVClients.Name = "GDVClients";
             this.GDVClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -105,7 +107,7 @@
             this.GDVClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.GDVClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.GDVClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GDVClients.Size = new System.Drawing.Size(357, 364);
+            this.GDVClients.Size = new System.Drawing.Size(357, 347);
             this.GDVClients.Style = MetroFramework.MetroColorStyle.Purple;
             this.GDVClients.TabIndex = 0;
             this.GDVClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GDVClients_CellClick);
@@ -136,7 +138,8 @@
             // PanelAdd
             // 
             this.PanelAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.PanelAdd.Controls.Add(this.metroLabel1);
             this.PanelAdd.Controls.Add(this.BtnFind);
             this.PanelAdd.Controls.Add(this.TxtId);
             this.PanelAdd.Controls.Add(this.TxtCode);
@@ -145,10 +148,19 @@
             this.PanelAdd.Controls.Add(this.LblName);
             this.PanelAdd.Controls.Add(this.LblCode);
             this.PanelAdd.Controls.Add(this.PBImage);
-            this.PanelAdd.Location = new System.Drawing.Point(386, 64);
+            this.PanelAdd.Location = new System.Drawing.Point(23, 80);
             this.PanelAdd.Name = "PanelAdd";
             this.PanelAdd.Size = new System.Drawing.Size(405, 290);
             this.PanelAdd.TabIndex = 1;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(134, 11);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel1.TabIndex = 3;
+            this.metroLabel1.Text = "Info Client";
             // 
             // BtnFind
             // 
@@ -160,7 +172,7 @@
             this.BtnFind.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.BtnFind.IconColor = System.Drawing.Color.White;
             this.BtnFind.IconSize = 16;
-            this.BtnFind.Location = new System.Drawing.Point(36, 152);
+            this.BtnFind.Location = new System.Drawing.Point(36, 179);
             this.BtnFind.Name = "BtnFind";
             this.BtnFind.Rotation = 0D;
             this.BtnFind.Size = new System.Drawing.Size(100, 23);
@@ -187,7 +199,7 @@
             this.TxtId.CustomButton.Visible = false;
             this.TxtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "Id", true));
             this.TxtId.Lines = new string[0];
-            this.TxtId.Location = new System.Drawing.Point(174, 56);
+            this.TxtId.Location = new System.Drawing.Point(174, 83);
             this.TxtId.MaxLength = 32767;
             this.TxtId.Name = "TxtId";
             this.TxtId.PasswordChar = '\0';
@@ -218,7 +230,7 @@
             this.TxtCode.CustomButton.Visible = false;
             this.TxtCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "Code", true));
             this.TxtCode.Lines = new string[0];
-            this.TxtCode.Location = new System.Drawing.Point(174, 104);
+            this.TxtCode.Location = new System.Drawing.Point(174, 131);
             this.TxtCode.MaxLength = 32767;
             this.TxtCode.Name = "TxtCode";
             this.TxtCode.PasswordChar = '\0';
@@ -249,7 +261,7 @@
             this.TxtName.CustomButton.Visible = false;
             this.TxtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientBindingSource, "Name", true));
             this.TxtName.Lines = new string[0];
-            this.TxtName.Location = new System.Drawing.Point(174, 152);
+            this.TxtName.Location = new System.Drawing.Point(174, 179);
             this.TxtName.MaxLength = 32767;
             this.TxtName.Name = "TxtName";
             this.TxtName.PasswordChar = '\0';
@@ -267,7 +279,7 @@
             // LblId
             // 
             this.LblId.AutoSize = true;
-            this.LblId.Location = new System.Drawing.Point(174, 34);
+            this.LblId.Location = new System.Drawing.Point(174, 61);
             this.LblId.Name = "LblId";
             this.LblId.Size = new System.Drawing.Size(20, 19);
             this.LblId.TabIndex = 1;
@@ -276,7 +288,7 @@
             // LblName
             // 
             this.LblName.AutoSize = true;
-            this.LblName.Location = new System.Drawing.Point(174, 130);
+            this.LblName.Location = new System.Drawing.Point(174, 157);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(45, 19);
             this.LblName.TabIndex = 1;
@@ -285,7 +297,7 @@
             // LblCode
             // 
             this.LblCode.AutoSize = true;
-            this.LblCode.Location = new System.Drawing.Point(174, 82);
+            this.LblCode.Location = new System.Drawing.Point(174, 109);
             this.LblCode.Name = "LblCode";
             this.LblCode.Size = new System.Drawing.Size(41, 19);
             this.LblCode.TabIndex = 1;
@@ -293,7 +305,7 @@
             // 
             // PBImage
             // 
-            this.PBImage.Location = new System.Drawing.Point(36, 27);
+            this.PBImage.Location = new System.Drawing.Point(36, 54);
             this.PBImage.Name = "PBImage";
             this.PBImage.Size = new System.Drawing.Size(100, 104);
             this.PBImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -302,11 +314,12 @@
             // 
             // BtnAdd
             // 
+            this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnAdd.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnAdd.IconColor = System.Drawing.Color.Black;
             this.BtnAdd.IconSize = 16;
-            this.BtnAdd.Location = new System.Drawing.Point(384, 381);
+            this.BtnAdd.Location = new System.Drawing.Point(23, 394);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Rotation = 0D;
             this.BtnAdd.Size = new System.Drawing.Size(75, 23);
@@ -317,11 +330,12 @@
             // 
             // BtnEdit
             // 
+            this.BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnEdit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnEdit.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnEdit.IconColor = System.Drawing.Color.Black;
             this.BtnEdit.IconSize = 16;
-            this.BtnEdit.Location = new System.Drawing.Point(465, 381);
+            this.BtnEdit.Location = new System.Drawing.Point(104, 394);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Rotation = 0D;
             this.BtnEdit.Size = new System.Drawing.Size(75, 23);
@@ -332,11 +346,12 @@
             // 
             // BtnDelete
             // 
+            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnDelete.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnDelete.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnDelete.IconColor = System.Drawing.Color.Black;
             this.BtnDelete.IconSize = 16;
-            this.BtnDelete.Location = new System.Drawing.Point(545, 381);
+            this.BtnDelete.Location = new System.Drawing.Point(184, 394);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Rotation = 0D;
             this.BtnDelete.Size = new System.Drawing.Size(75, 23);
@@ -347,11 +362,12 @@
             // 
             // BtnCancel
             // 
+            this.BtnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnCancel.IconColor = System.Drawing.Color.Black;
             this.BtnCancel.IconSize = 16;
-            this.BtnCancel.Location = new System.Drawing.Point(626, 381);
+            this.BtnCancel.Location = new System.Drawing.Point(265, 394);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
             this.BtnCancel.Size = new System.Drawing.Size(75, 23);
@@ -362,11 +378,12 @@
             // 
             // BtnSave
             // 
+            this.BtnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnSave.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnSave.IconColor = System.Drawing.Color.Black;
             this.BtnSave.IconSize = 16;
-            this.BtnSave.Location = new System.Drawing.Point(707, 381);
+            this.BtnSave.Location = new System.Drawing.Point(346, 394);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
             this.BtnSave.Size = new System.Drawing.Size(75, 23);
@@ -387,10 +404,10 @@
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.PanelAdd);
             this.Controls.Add(this.GDVClients);
-            this.MaximizeBox = false;
             this.Name = "ClientForms";
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Clients";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ClientForms_FormClosed);
             this.Load += new System.EventHandler(this.Clients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GDVClients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
@@ -422,5 +439,6 @@
         private FontAwesome.Sharp.IconButton BtnSave;
         private MetroFramework.Controls.MetroTextBox TxtId;
         private MetroFramework.Controls.MetroLabel LblId;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

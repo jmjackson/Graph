@@ -6,28 +6,28 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.81043cm</Width>
+              <Width>3.07698cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.06562cm</Width>
+              <Width>2.09869cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.18275cm</Width>
+              <Width>2.21582cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.37287cm</Width>
+              <Width>2.40594cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.37287cm</Width>
+              <Width>2.40594cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.37287cm</Width>
+              <Width>2.40594cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.37287cm</Width>
+              <Width>2.40594cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.80703cm</Width>
+              <Width>4.8401cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -45,7 +45,7 @@
                             <TextRun>
                               <Value>Deployment Date</Value>
                               <Style>
-                                <FontWeight>SemiBold</FontWeight>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -77,7 +77,7 @@
                             <TextRun>
                               <Value>Panel No</Value>
                               <Style>
-                                <FontWeight>SemiBold</FontWeight>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -109,7 +109,7 @@
                             <TextRun>
                               <Value>Roll No</Value>
                               <Style>
-                                <FontWeight>SemiBold</FontWeight>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -141,7 +141,7 @@
                             <TextRun>
                               <Value>Lenght</Value>
                               <Style>
-                                <FontWeight>SemiBold</FontWeight>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -173,7 +173,7 @@
                             <TextRun>
                               <Value>Width</Value>
                               <Style>
-                                <FontWeight>SemiBold</FontWeight>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -205,7 +205,7 @@
                             <TextRun>
                               <Value>Thickness</Value>
                               <Style>
-                                <FontWeight>SemiBold</FontWeight>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -237,7 +237,7 @@
                             <TextRun>
                               <Value>Area (ft2)</Value>
                               <Style>
-                                <FontWeight>SemiBold</FontWeight>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -269,7 +269,7 @@
                             <TextRun>
                               <Value>Remarks</Value>
                               <Style>
-                                <FontWeight>SemiBold</FontWeight>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -305,7 +305,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!DeploymentDate.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>d/M/yyyy</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -323,6 +325,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -563,8 +566,9 @@
         </TablixRowHierarchy>
         <DataSetName>DevelopmentBindinSource</DataSetName>
         <Top>0.44565cm</Top>
+        <Left>0.29104cm</Left>
         <Height>1.2cm</Height>
-        <Width>22.35731cm</Width>
+        <Width>21.85535cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -572,7 +576,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.11458in</Height>
+    <Height>1.36458in</Height>
     <Style>
       <Border>
         <Style>None</Style>
@@ -580,7 +584,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>8.875in</Width>
+  <Width>9.13542in</Width>
   <Page>
     <PageHeader>
       <Height>3.33472cm</Height>
@@ -677,16 +681,16 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Sum(Fields!ClientId.Value, "ProjectBindingSource")</Value>
+                  <Value>=First(Fields!Name.Value, "ClientBindingSource")</Value>
                   <Style>
-                    <FontWeight>SemiBold</FontWeight>
+                    <FontWeight>Medium</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>1.04083cm</Top>
+          <Top>1.01437cm</Top>
           <Left>2.82775cm</Left>
           <Height>0.6cm</Height>
           <Width>4.85479cm</Width>
@@ -710,14 +714,14 @@
                 <TextRun>
                   <Value>=First(Fields!PName.Value, "ProjectBindingSource")</Value>
                   <Style>
-                    <FontWeight>SemiBold</FontWeight>
+                    <FontWeight>Medium</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>1.78195cm</Top>
+          <Top>1.75549cm</Top>
           <Left>2.82775cm</Left>
           <Height>0.6cm</Height>
           <Width>4.85479cm</Width>
@@ -741,14 +745,14 @@
                 <TextRun>
                   <Value>=First(Fields!ProjectNo.Value, "ProjectBindingSource")</Value>
                   <Style>
-                    <FontWeight>SemiBold</FontWeight>
+                    <FontWeight>Medium</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>2.55833cm</Top>
+          <Top>2.53187cm</Top>
           <Left>2.82775cm</Left>
           <Height>0.6cm</Height>
           <Width>4.85479cm</Width>
@@ -889,7 +893,7 @@
                 <TextRun>
                   <Value>=First(Fields!Contractor.Value, "ProjectBindingSource")</Value>
                   <Style>
-                    <FontWeight>SemiBold</FontWeight>
+                    <FontWeight>Medium</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -920,14 +924,14 @@
                 <TextRun>
                   <Value>=First(Fields!Supplier.Value, "ProjectBindingSource")</Value>
                   <Style>
-                    <FontWeight>SemiBold</FontWeight>
+                    <FontWeight>Medium</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>1.78195cm</Top>
+          <Top>1.75549cm</Top>
           <Left>13.40648cm</Left>
           <Height>0.6cm</Height>
           <Width>5.86021cm</Width>
@@ -951,14 +955,14 @@
                 <TextRun>
                   <Value>=First(Fields!GeoSynthetic.Value, "ProjectBindingSource")</Value>
                   <Style>
-                    <FontWeight>SemiBold</FontWeight>
+                    <FontWeight>Medium</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>2.55833cm</Top>
+          <Top>2.53187cm</Top>
           <Left>13.44176cm</Left>
           <Height>0.6cm</Height>
           <Width>5.82493cm</Width>
@@ -973,6 +977,20 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Image Name="Image1">
+          <Source>External</Source>
+          <Value>=First(Fields!Image.Value, "ClientBindingSource")</Value>
+          <Top>0.88195cm</Top>
+          <Left>20.10516cm</Left>
+          <Height>1.5cm</Height>
+          <Width>3.09881cm</Width>
+          <ZIndex>13</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
       </ReportItems>
       <Style>
         <Border>

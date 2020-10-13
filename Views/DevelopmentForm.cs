@@ -55,7 +55,7 @@ namespace Mine.Views
                 {
                     DeploymentDate = Convert.ToDateTime(TxtDate.Text),
                     Area = Convert.ToDecimal(TxtArea.Text),
-                    Lenght = Convert.ToDecimal(TxtLenght.Text),
+                    Lenght = Convert.ToInt32(TxtLenght.Text),
                     PanelNo = Convert.ToInt32(TxtPanelNo.Text),
                     ProjectDevId = proDevId,
                     RollNo = Convert.ToDouble(TxtRollNo.Text),
@@ -150,7 +150,7 @@ namespace Mine.Views
                 int id = Convert.ToInt32(TxtId.Text);
                 var dev = db.Developments.Find(id);
                 dev.Area = Convert.ToDecimal(TxtArea.Text);
-                dev.Lenght = Convert.ToDecimal(TxtLenght.Text);
+                dev.Lenght = Convert.ToInt32(TxtLenght.Text);
                 dev.PanelNo = Convert.ToInt32(TxtPanelNo.Text);
                 dev.Remarks = TxtRemarks.Text;
                 dev.RollNo = Convert.ToDouble(TxtRollNo.Text);

@@ -69,7 +69,7 @@ namespace Mine.Views
                     SeamingDate = Convert.ToDateTime(DateDev.Text),
                     SeamNo = TxtSeamNo.Text,
                     SeamTime = TxtSeamTime.Text,
-                    WedgeTemp = Convert.ToDouble(TxtTemp.Text),
+                    WedgeTemp = Convert.ToInt32(TxtTemp.Text),
                     WedgeSpeed = Convert.ToDouble(TxtSpeed.Text),
                     SeamLength = Convert.ToDouble(TxtSeamLength.Text),
                     CarryOver = Convert.ToDouble(TxtCarryOver.Text),
@@ -148,7 +148,7 @@ namespace Mine.Views
                 geo.SeamNo = TxtSeamNo.Text;
                 geo.SeamTime = TxtSeamTime.Text;
                 geo.WedgeSpeed = Convert.ToDouble(TxtSpeed.Text);
-                geo.WedgeTemp = Convert.ToDouble(TxtTemp.Text);
+                geo.WedgeTemp = Convert.ToInt32(TxtTemp.Text);
                 db.SaveChanges();
                 GeomembraneForm_Load(sender, e);
                 MetroMessageBox.Show(this, "Updated successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -35,12 +35,16 @@ namespace Mine.Views
             //ok cuando consultamos ala bd le asignamos los datos a el viewmodel
            
 
-            var projectdev = db.ProjectDevs.Include(a=>a.Project).Where(a=>a.Id==PdevId).FirstOrDefault();
+            var projectdev = db.ProjectDevs.Include(a=>a.Project).Include(a=>a.Project.Client).Where(a=>a.Id==PdevId).FirstOrDefault();
             var developmentlist = db.Developments.Where(a => a.ProjectDevId == projectdev.Id).ToList();
             
            ProjectBindingSource.DataSource = projectdev.Project;
             DevelopmentBindingSource.DataSource = developmentlist;
+            ClientBindingSource.DataSource = projectdev.Project.Client;
+            ReportDevView.LocalReport.EnableExternalImages = true;
             this.ReportDevView.RefreshReport();
         }
+
+       
     }
 }
