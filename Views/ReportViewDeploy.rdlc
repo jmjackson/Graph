@@ -564,7 +564,7 @@
         <DataSetName>DevelopmentBindinSource</DataSetName>
         <Top>0.44565cm</Top>
         <Height>1.2cm</Height>
-        <Width>22.35729cm</Width>
+        <Width>22.35731cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1013,21 +1013,14 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>514e108c-ef04-4329-9cdf-5932faab561a</rd:DataSourceID>
+      <rd:DataSourceID>99ce4d70-80a7-498b-ab1a-41169a664d13</rd:DataSourceID>
     </DataSource>
     <DataSource Name="MineDataModel2">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>7730c450-d412-4949-b5b4-cebc4a091465</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="MineDataModel3">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>c1357c40-dfa8-4dad-a4a4-0d5bb349712f</rd:DataSourceID>
+      <rd:DataSourceID>8f601d70-ec9f-48bc-aead-26f645ae9829</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1090,7 +1083,7 @@
     </DataSet>
     <DataSet Name="ProjectBindingSource">
       <Query>
-        <DataSourceName>MineDataModel3</DataSourceName>
+        <DataSourceName>MineDataModel1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1131,6 +1124,35 @@
         <rd:DataSetName>Mine.DataModel</rd:DataSetName>
         <rd:TableName>Project</rd:TableName>
         <rd:ObjectDataSourceType>Mine.DataModel.Project, Mine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="ClientBindingSource">
+      <Query>
+        <DataSourceName>MineDataModel2</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Code">
+          <DataField>Code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Image">
+          <DataField>Image</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Mine.DataModel</rd:DataSetName>
+        <rd:TableName>Client</rd:TableName>
+        <rd:ObjectDataSourceType>Mine.DataModel.Client, Mine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
