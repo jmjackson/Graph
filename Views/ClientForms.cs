@@ -16,142 +16,78 @@ namespace Mine.Views
 {
     public partial class ClientForms : MetroFramework.Forms.MetroForm
     {
+        readonly GraphDbContext db = new GraphDbContext();
         public ClientForms()
         {
             InitializeComponent();
         }
 
-        private void Clients_Load(object sender, EventArgs e)
-        {
-            using (GraphDbContext db=new GraphDbContext())
-            {
-                clientBindingSource.DataSource = db.Clients.ToList();
-            }
-                PanelAdd.Enabled = false;
-                Client cl = clientBindingSource.Current as Client;
-                if (cl != null)
-                    PBImage.Image = Image.FromFile(cl.Image);
-                
-           
-        }
-
-        private void BtnFind_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog ofd=new OpenFileDialog() {Filter="JPG|*.jpg" })
-            {
-                var path = @"Resources/images/";
-                if (Directory.Exists(path))
-                {
-                    
-                }
-                else
-                {
-                    Directory.CreateDirectory(path);
-                    
-                }
-                if (ofd.ShowDialog()==DialogResult.OK)
-                {
-                    var img = path + TxtCode.Text + "_Client.Jpg";
-                    PBImage.Image = new Bitmap(ofd.FileName);
-                    PBImage.Image.Save(img);
-                    Client c = clientBindingSource.Current as Client;
-                    if(c != null)
-                    {
-                        c.Image = img;
-                    }
-                }
-            }
-        }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            PBImage.Image = null;
-            PanelAdd.Enabled = true;
-            clientBindingSource.Add(new Client());
-            clientBindingSource.MoveLast();
-            TxtCode.Focus();
+            AddClient ac = new AddClient();
+            if (ac.ShowDialog()==DialogResult.OK)
+            {
+                UpdateDGV();
+            }
+        }
+
+        private void UpdateDGV()
+        {
+            var lc = db.Clients.ToList();
+            if (lc.Count>0)
+            {
+                GDVClients.AutoGenerateColumns = false;
+                GDVClients.Columns[columnName: "Id"].DataPropertyName = "Id";
+                GDVClients.Columns["Code"].DataPropertyName = "Code";
+                GDVClients.Columns["CName"].DataPropertyName = "Name";
+                GDVClients.DataSource = lc;
+                GDVClients.Refresh();
+            }
+            
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
-        {
-            PanelAdd.Enabled = true;
-            TxtCode.Focus();
-            Client cl = clientBindingSource.Current as Client;
-
+        {   
+            int id = Convert.ToInt32(GDVClients.CurrentRow.Cells[0].Value);
+            EditClient edit = new EditClient(id);
+            edit.Show();
+            ClientForms_Load(sender,e);
         }
 
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            PanelAdd.Enabled = false;
-            clientBindingSource.ResetBindings(false);
-            Clients_Load(sender,e);
-        }
-
-        private void GDVClients_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Client cl = clientBindingSource.Current as Client;
-            if (cl!=null)
-            {
-                PBImage.Image = Image.FromFile(cl.Image);
-            }
-        }
+       
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            var id = Convert.ToInt32(GDVClients.CurrentRow.Cells[0].Value);
             if (MetroFramework.MetroMessageBox.Show(this,"Are you sure want to delete this record?","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
-            {
-                using (GraphDbContext db=new GraphDbContext())
                 {
-                    Client cl = clientBindingSource.Current as Client;
-                    if (cl!=null)
-                    {
-                        if (db.Entry<Client>(cl).State == EntityState.Detached)
-                        {
-                            db.Set<Client>().Attach(cl);
-                        }
-                        db.Entry<Client>(cl).State = EntityState.Deleted;
-                        db.SaveChanges();
-                        MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully");
-                        clientBindingSource.RemoveCurrent();
-                        PanelAdd.Enabled = false;
-                        PBImage.Image = null;
-                    }
-                }
-            }
-        }
-
-        private void BtnSave_Click(object sender, EventArgs e)
-        {
-            using (GraphDbContext db=new GraphDbContext())
-            {
-                Client c = clientBindingSource.Current as Client;
-                if (c != null)
-                {
-                    if (db.Entry<Client>(c).State == EntityState.Detached)
-                    {
-                        db.Set<Client>().Attach(c);
-                    }
-                    if (c.Id == 0)
-                    {
-                        db.Entry<Client>(c).State = EntityState.Added;
-                    }
-                    else
-                    {
-                        db.Entry<Client>(c).State = EntityState.Modified;
-                    }
+                    var cdb=db.Clients.Find(id);
+                    db.Entry<Client>(cdb).State = EntityState.Deleted;
                     db.SaveChanges();
-                    MetroFramework.MetroMessageBox.Show(this,"Save Successfully");
-                    GDVClients.Refresh();
-                    PanelAdd.Enabled = false;
+                    MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully","Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                 }
-            }
+            UpdateDGV();
         }
+
+       
 
         private void ClientForms_FormClosed(object sender, FormClosedEventArgs e)
         {
             Principal p = new Principal();
             p.Show();
+        }
+
+        private void ClientForms_Load(object sender, EventArgs e)
+        {
+            var lc = db.Clients.ToList();
+            GDVClients.AutoGenerateColumns = false;
+            GDVClients.Columns["Id"].DataPropertyName = "Id";
+            GDVClients.Columns["Code"].DataPropertyName = "Code";
+            GDVClients.Columns["CName"].DataPropertyName = "Name";
+            GDVClients.DataSource = lc;
+            
         }
     }
 }

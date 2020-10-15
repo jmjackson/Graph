@@ -63,6 +63,7 @@
             this.BtnNo.TabIndex = 1;
             this.BtnNo.Text = "No";
             this.BtnNo.UseSelectable = true;
+            this.BtnNo.Click += new System.EventHandler(this.BtnNo_Click);
             // 
             // LblClients
             // 

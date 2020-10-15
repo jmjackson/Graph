@@ -35,5 +35,10 @@ namespace Mine.Modal
             this.DialogResult = DialogResult.Yes;
             this.Close();
         }
+
+        private void BtnNo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -45,7 +45,7 @@
             // 
             // PanelLeft
             // 
-            this.PanelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(46)))), ((int)(((byte)(153)))));
+            this.PanelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(219)))));
             this.PanelLeft.Controls.Add(this.pictureBox1);
             this.PanelLeft.Controls.Add(this.BtnLogout);
             this.PanelLeft.Controls.Add(this.BtnOther);
@@ -54,7 +54,7 @@
             this.PanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLeft.Location = new System.Drawing.Point(20, 60);
             this.PanelLeft.Name = "PanelLeft";
-            this.PanelLeft.Size = new System.Drawing.Size(204, 440);
+            this.PanelLeft.Size = new System.Drawing.Size(204, 467);
             this.PanelLeft.TabIndex = 0;
             // 
             // pictureBox1
@@ -69,11 +69,11 @@
             // 
             // BtnLogout
             // 
-            this.BtnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.BtnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(229)))));
             this.BtnLogout.FlatAppearance.BorderSize = 0;
             this.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogout.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnLogout.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogout.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogout.ForeColor = System.Drawing.Color.White;
             this.BtnLogout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.BtnLogout.IconColor = System.Drawing.Color.White;
@@ -90,11 +90,11 @@
             // 
             // BtnOther
             // 
-            this.BtnOther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.BtnOther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(229)))));
             this.BtnOther.FlatAppearance.BorderSize = 0;
             this.BtnOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOther.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnOther.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOther.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOther.ForeColor = System.Drawing.Color.White;
             this.BtnOther.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
             this.BtnOther.IconColor = System.Drawing.Color.White;
@@ -111,11 +111,11 @@
             // 
             // BtnConfig
             // 
-            this.BtnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.BtnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(229)))));
             this.BtnConfig.FlatAppearance.BorderSize = 0;
             this.BtnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfig.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnConfig.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConfig.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConfig.ForeColor = System.Drawing.Color.White;
             this.BtnConfig.IconChar = FontAwesome.Sharp.IconChar.Sun;
             this.BtnConfig.IconColor = System.Drawing.Color.White;
@@ -132,12 +132,12 @@
             // 
             // BtnClient
             // 
-            this.BtnClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.BtnClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(229)))));
             this.BtnClient.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BtnClient.FlatAppearance.BorderSize = 0;
             this.BtnClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClient.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnClient.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClient.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClient.ForeColor = System.Drawing.Color.White;
             this.BtnClient.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.BtnClient.IconColor = System.Drawing.Color.White;
@@ -145,7 +145,7 @@
             this.BtnClient.Location = new System.Drawing.Point(-3, 200);
             this.BtnClient.Name = "BtnClient";
             this.BtnClient.Rotation = 0D;
-            this.BtnClient.Size = new System.Drawing.Size(204, 41);
+            this.BtnClient.Size = new System.Drawing.Size(207, 41);
             this.BtnClient.TabIndex = 1;
             this.BtnClient.Text = "Clients";
             this.BtnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,14 +167,16 @@
             this.TileClient.ActiveControl = null;
             this.TileClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(68)))), ((int)(((byte)(98)))));
             this.TileClient.ForeColor = System.Drawing.Color.White;
-            this.TileClient.Location = new System.Drawing.Point(235, 63);
+            this.TileClient.Location = new System.Drawing.Point(249, 150);
             this.TileClient.Name = "TileClient";
-            this.TileClient.Size = new System.Drawing.Size(116, 125);
-            this.TileClient.Style = MetroFramework.MetroColorStyle.Purple;
+            this.TileClient.Size = new System.Drawing.Size(246, 277);
+            this.TileClient.Style = MetroFramework.MetroColorStyle.Blue;
             this.TileClient.TabIndex = 2;
             this.TileClient.Text = "Clients";
             this.TileClient.TileImage = ((System.Drawing.Image)(resources.GetObject("TileClient.TileImage")));
             this.TileClient.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TileClient.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.TileClient.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.TileClient.UseSelectable = true;
             this.TileClient.UseStyleColors = true;
             this.TileClient.UseTileImage = true;
@@ -183,14 +185,16 @@
             // TileProject
             // 
             this.TileProject.ActiveControl = null;
-            this.TileProject.Location = new System.Drawing.Point(370, 63);
+            this.TileProject.Location = new System.Drawing.Point(501, 150);
             this.TileProject.Name = "TileProject";
-            this.TileProject.Size = new System.Drawing.Size(116, 125);
-            this.TileProject.Style = MetroFramework.MetroColorStyle.Purple;
+            this.TileProject.Size = new System.Drawing.Size(246, 277);
+            this.TileProject.Style = MetroFramework.MetroColorStyle.Blue;
             this.TileProject.TabIndex = 2;
             this.TileProject.Text = "Project";
             this.TileProject.TileImage = ((System.Drawing.Image)(resources.GetObject("TileProject.TileImage")));
             this.TileProject.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TileProject.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.TileProject.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.TileProject.UseSelectable = true;
             this.TileProject.UseTileImage = true;
             this.TileProject.Click += new System.EventHandler(this.TileProject_Click);
@@ -198,14 +202,16 @@
             // TileInspection
             // 
             this.TileInspection.ActiveControl = null;
-            this.TileInspection.Location = new System.Drawing.Point(506, 64);
+            this.TileInspection.Location = new System.Drawing.Point(753, 150);
             this.TileInspection.Name = "TileInspection";
-            this.TileInspection.Size = new System.Drawing.Size(116, 124);
-            this.TileInspection.Style = MetroFramework.MetroColorStyle.Purple;
+            this.TileInspection.Size = new System.Drawing.Size(246, 277);
+            this.TileInspection.Style = MetroFramework.MetroColorStyle.Blue;
             this.TileInspection.TabIndex = 3;
             this.TileInspection.Text = "Inspection";
             this.TileInspection.TileImage = ((System.Drawing.Image)(resources.GetObject("TileInspection.TileImage")));
             this.TileInspection.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TileInspection.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.TileInspection.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.TileInspection.UseSelectable = true;
             this.TileInspection.UseStyleColors = true;
             this.TileInspection.UseTileImage = true;
@@ -215,14 +221,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 520);
+            this.ClientSize = new System.Drawing.Size(1033, 547);
             this.Controls.Add(this.TileInspection);
             this.Controls.Add(this.TileProject);
             this.Controls.Add(this.TileClient);
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.PanelLeft);
             this.Name = "Principal";
-            this.Style = MetroFramework.MetroColorStyle.Purple;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.PanelLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -136,7 +136,7 @@ namespace Mine.Views
                     TxtSupplier.Text = cdb.Supplier;
                     TxtGeosynthetic.Text = cdb.GeoSynthetic;
                 }
-                if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes);
+                if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     db.Projects.Remove(cdb);
                     db.SaveChanges();

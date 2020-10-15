@@ -45,8 +45,14 @@ namespace Mine.Views
                 var clientId = mp.Cb;
                 ProjectForm pf = new ProjectForm(clientId);
                 pf.Show();
-               
-            }this.Hide();
+                this.Hide();
+
+            }
+            else
+            {
+                
+            }
+            
         }
 
         

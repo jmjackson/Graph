@@ -164,7 +164,6 @@
             this.MaximizeBox = false;
             this.Name = "Login";
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
