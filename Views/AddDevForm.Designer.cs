@@ -55,6 +55,7 @@
             this.CbClients.Size = new System.Drawing.Size(275, 29);
             this.CbClients.TabIndex = 0;
             this.CbClients.UseSelectable = true;
+            this.CbClients.SelectedIndexChanged += new System.EventHandler(this.CbClients_SelectedIndexChanged);
             // 
             // CbProject
             // 
@@ -154,8 +155,11 @@
             // 
             // iconButton1
             // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconSize = 16;
@@ -164,13 +168,16 @@
             this.iconButton1.Rotation = 0D;
             this.iconButton1.Size = new System.Drawing.Size(92, 31);
             this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Text = "Cancel";
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // iconButton2
             // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconSize = 16;
@@ -179,8 +186,8 @@
             this.iconButton2.Rotation = 0D;
             this.iconButton2.Size = new System.Drawing.Size(92, 31);
             this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "iconButton1";
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Text = "Save";
+            this.iconButton2.UseVisualStyleBackColor = false;
             // 
             // DateInspection
             // 

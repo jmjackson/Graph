@@ -26,5 +26,15 @@ namespace Mine.Views
             CbClients.ValueMember = "Id";
             CbClients.DataSource = cls;
         }
+
+        private void CbClients_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int clId = Convert.ToInt32(CbClients.SelectedValue);
+            var projects = db.Projects.Where(a => a.ClientId == clId).ToList();
+
+            CbProject.DisplayMember = "PName";
+            CbProject.ValueMember = "Id";
+            CbProject.DataSource = projects;
+        }
     }
 }

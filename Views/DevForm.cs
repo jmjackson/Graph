@@ -24,26 +24,10 @@ namespace Mine.Views
 
         private void DevForm_Load(object sender, EventArgs e)
         {
-            var cl = db.Clients.ToList();
-            CbClient.ValueMember = "Id";
-            CbClient.DisplayMember = "Name";
-            CbClient.DataSource = cl;
+            DGVFill();
         }
 
-        private void CbClient_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (CbClient.SelectedIndex>=0)
-            {
-               int cId= Convert.ToInt32(CbClient.SelectedValue);
-                var pro = db.Projects.Where(a => a.ClientId == cId).ToList();
-                
-                CbProject.ValueMember = "Id";
-                CbProject.DisplayMember = "PName";
-                CbProject.DataSource = pro;
-            }
-            DGVFill();
-            
-        }
+       
         public void DGVFill()
         {
             var prodev = db.ProjectDevs.ToList();
@@ -65,23 +49,14 @@ namespace Mine.Views
         {
             try
             {
-                var prodev = new ProjectDev()
-                {
-                    Inspector = TxtInspector.Text,
-                    Location = TxtLocation.Text,
-                    MachineNo=TxtMachine.Text,
-                    Operator=TxtOperator.Text,
-                    ProjectId = Convert.ToInt32(CbProject.SelectedValue),
-                    DevTime = Convert.ToDateTime(DateDev.Text)
-                };
 
-                db.ProjectDevs.Add(prodev);
-                db.SaveChanges();
-                MetroMessageBox.Show(this, "Saved successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DevForm_Load(sender, e);
-                TxtInspector.Text = string.Empty;
-                TxtLocation.Text = string.Empty;
+                AddDevForm addDev = new AddDevForm();
+                if (addDev.ShowDialog()==DialogResult.OK)
+                {
+                    DevForm_Load(sender, e);
+                }
                 
+                MetroMessageBox.Show(this, "Saved successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
             catch (Exception ex)
@@ -100,17 +75,6 @@ namespace Mine.Views
                 Include(a => a.Project).Where(a => a.Id == pdId)
                 .FirstOrDefault();
             
-            TxtInspector.Text = pdev.Inspector;
-            TxtLocation.Text = pdev.Location;
-            DateDev.Value =pdev.DevTime;
-            TxtBoxId.Text = pdId.ToString();
-            TxtMachine.Text = pdev.MachineNo;
-            TxtOperator.Text = pdev.Operator;
-            CbClient.Enabled = false;
-            CbProject.Enabled = false;
-            
-
-
         }
 
         private void BtnDraw_Click(object sender, EventArgs e)
@@ -120,37 +84,7 @@ namespace Mine.Views
             draw.Show();
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var pdId = Int32.Parse(TxtBoxId.Text);
-                var pd = db.ProjectDevs.Find(pdId);
-                pd.Inspector = TxtInspector.Text;
-                pd.Location = TxtLocation.Text;
-                pd.Operator = TxtOperator.Text;
-                pd.MachineNo = TxtMachine.Text;
-                pd.DevTime = Convert.ToDateTime(DateDev.Text);
-                db.SaveChanges();
-                MetroMessageBox.Show(this, "Update is successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                TxtInspector.Text = string.Empty;
-                TxtLocation.Text = string.Empty;
-                TxtBoxId.Text = string.Empty;
-                TxtMachine.Text = string.Empty;
-                TxtOperator.Text = string.Empty;
-                CbClient.Enabled = true;
-                CbProject.Enabled = true;
-                DevForm_Load(sender, e);
-
-            }
-            catch (Exception ex)
-            {
-
-                MetroMessageBox.Show(this, "Error "+ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-           
-        }
+        
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
