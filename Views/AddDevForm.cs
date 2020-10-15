@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mine.DataContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace Mine.Views
 {
     public partial class AddDevForm : MetroFramework.Forms.MetroForm
     {
+        readonly GraphDbContext db = new GraphDbContext();
         public AddDevForm()
         {
             InitializeComponent();
+        }
+
+        private void AddDevForm_Load(object sender, EventArgs e)
+        {
+            var cls = db.Clients.ToList();
+            CbClients.DisplayMember = "Name";
+            CbClients.ValueMember = "Id";
+            CbClients.DataSource = cls;
         }
     }
 }

@@ -27,9 +27,7 @@ namespace Mine.Views
         {
             var client = db.Clients.Find(idClient);
 
-            TxtId.Text = client.Id.ToString();
-            TxtName.Text = client.Name;
-            TxtCode.Text = client.Code;
+            
             PBLogo.Image = Image.FromFile(client.Image);
 
             var pr = db.Projects.Include(c => c.Client).Where(a=>a.ClientId==idClient).ToList();
@@ -45,7 +43,10 @@ namespace Mine.Views
                 DGVProject.DataSource = pr;
             }
 
-          
+            LblRId.Text = client.Id.ToString();
+            LblRCode.Text = client.Code;
+            LblRCName.Text = client.Name;
+
 
             
 
@@ -54,26 +55,23 @@ namespace Mine.Views
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            TxtPid.Enabled = false;
-            Project p = new Project()
+            try
             {
-                PName=TxtPName.Text,
-                ProjectNo=TxtPNumber.Text,
-                Contractor=TxtContractor.Text,
-                Supplier=TxtSupplier.Text,
-                ClientId=idClient,
-                GeoSynthetic=TxtGeosynthetic.Text,
-            };
+                AddProject ap = new AddProject(idClient);
+                if (ap.ShowDialog()==DialogResult.Yes)
+                {
+                    ProjectForm_Load(sender, e);
+                }
+        
+            }
+            catch (Exception)
+            {
 
-            db.Projects.Add(p);
-            db.SaveChanges();
-            MetroFramework.MetroMessageBox.Show(this, "Save Successfully");
-            ProjectForm_Load(sender,e);
-            TxtPName.Text = String.Empty;
-            TxtPNumber.Text = String.Empty;
-            TxtContractor.Text = String.Empty;
-            TxtSupplier.Text = String.Empty;
-            TxtGeosynthetic.Text = String.Empty;
+                
+            }
+            
+            
+
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
@@ -81,18 +79,16 @@ namespace Mine.Views
             try
             {
                 
-                var cell = DGVProject.CurrentRow.Cells[0].Value;
+                int cell = Convert.ToInt32(DGVProject.CurrentRow.Cells[0].Value);
                 var cdb = db.Projects.Find(cell);
-                if (cdb!=null)
+                EditProject pr = new EditProject(cell);
+                if (pr.ShowDialog()==DialogResult.Yes)
                 {
-                    TxtId.ReadOnly = true;
-                    TxtPid.Text = cdb.Id.ToString();
-                    TxtPName.Text = cdb.PName;
-                    TxtPNumber.Text = cdb.ProjectNo;
-                    TxtContractor.Text = cdb.Contractor;
-                    TxtSupplier.Text = cdb.Supplier;
-                    TxtGeosynthetic.Text = cdb.GeoSynthetic;
+                    
+                    ProjectForm_Load(sender, e);
+                    DGVProject.Refresh();
                 }
+                
             }
             catch (Exception ex)
             {
@@ -101,24 +97,7 @@ namespace Mine.Views
             }
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
-        {
-            var id = TxtPid.Text;
-            var pdb=db.Projects.Find(id);
-            pdb.PName = TxtPName.Text;
-            pdb.ProjectNo = TxtPNumber.Text;
-            pdb.Contractor = TxtContractor.Text;
-            pdb.GeoSynthetic = TxtGeosynthetic.Text;
-            pdb.Supplier = TxtSupplier.Text;
-            db.SaveChanges();
-            MetroFramework.MetroMessageBox.Show(this,"Successfull Update","Info",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ProjectForm_Load(sender, e);
-            TxtPName.Text = String.Empty;
-            TxtPNumber.Text = String.Empty;
-            TxtContractor.Text = String.Empty;
-            TxtSupplier.Text = String.Empty;
-            TxtGeosynthetic.Text = String.Empty;
-        }
+       
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
@@ -126,28 +105,16 @@ namespace Mine.Views
             {
                 var cell = DGVProject.CurrentRow.Cells[0].Value;
                 var cdb = db.Projects.Find(cell);
-                if (cdb != null)
-                {
-                    TxtId.ReadOnly = true;
-                    TxtPid.Text = cdb.Id.ToString();
-                    TxtPName.Text = cdb.PName;
-                    TxtPNumber.Text = cdb.ProjectNo;
-                    TxtContractor.Text = cdb.Contractor;
-                    TxtSupplier.Text = cdb.Supplier;
-                    TxtGeosynthetic.Text = cdb.GeoSynthetic;
-                }
+                
                 if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     db.Projects.Remove(cdb);
                     db.SaveChanges();
                     MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully");
+                    ProjectForm_Load(sender, e);
                 }
-                ProjectForm_Load(sender, e);
-                TxtPName.Text = String.Empty;
-                TxtPNumber.Text = String.Empty;
-                TxtContractor.Text = String.Empty;
-                TxtSupplier.Text = String.Empty;
-                TxtGeosynthetic.Text = String.Empty;
+                
+               
             }
             catch (Exception ex)
             {
@@ -161,6 +128,8 @@ namespace Mine.Views
             Principal p = new Principal();
             p.Show();
         }
+
+        
     }
 }
     

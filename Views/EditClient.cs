@@ -17,7 +17,7 @@ namespace Mine.Views
     {
         readonly int cId;
         readonly GraphDbContext db = new GraphDbContext();
-        ClientForms fc;
+        
         public EditClient(int id)
         {
             

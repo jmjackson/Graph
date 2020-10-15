@@ -31,16 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.LblClient = new MetroFramework.Controls.MetroLabel();
-            this.LblInspector = new MetroFramework.Controls.MetroLabel();
-            this.LblProject = new MetroFramework.Controls.MetroLabel();
-            this.LblDate = new MetroFramework.Controls.MetroLabel();
-            this.CbClient = new MetroFramework.Controls.MetroComboBox();
-            this.CbProject = new MetroFramework.Controls.MetroComboBox();
-            this.TxtInspector = new MetroFramework.Controls.MetroTextBox();
             this.BtnAdd = new MetroFramework.Controls.MetroButton();
             this.BtnEdit = new MetroFramework.Controls.MetroButton();
-            this.DateDev = new MetroFramework.Controls.MetroDateTime();
             this.BtnDelete = new MetroFramework.Controls.MetroButton();
             this.BtnSave = new MetroFramework.Controls.MetroButton();
             this.DGVDev = new MetroFramework.Controls.MetroGrid();
@@ -53,103 +45,10 @@
             this.MachineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnGeoMembrane = new MetroFramework.Controls.MetroButton();
             this.BtnDeployment = new MetroFramework.Controls.MetroButton();
-            this.LblLocation = new MetroFramework.Controls.MetroLabel();
-            this.TxtLocation = new MetroFramework.Controls.MetroTextBox();
             this.BtnDraw = new MetroFramework.Controls.MetroButton();
             this.TxtBoxId = new MetroFramework.Controls.MetroTextBox();
-            this.LblOperator = new MetroFramework.Controls.MetroLabel();
-            this.LblMachine = new MetroFramework.Controls.MetroLabel();
-            this.TxtOperator = new MetroFramework.Controls.MetroTextBox();
-            this.TxtMachine = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LblClient
-            // 
-            this.LblClient.AutoSize = true;
-            this.LblClient.Location = new System.Drawing.Point(43, 59);
-            this.LblClient.Name = "LblClient";
-            this.LblClient.Size = new System.Drawing.Size(42, 19);
-            this.LblClient.TabIndex = 0;
-            this.LblClient.Text = "Client";
-            // 
-            // LblInspector
-            // 
-            this.LblInspector.AutoSize = true;
-            this.LblInspector.Location = new System.Drawing.Point(23, 88);
-            this.LblInspector.Name = "LblInspector";
-            this.LblInspector.Size = new System.Drawing.Size(62, 19);
-            this.LblInspector.TabIndex = 0;
-            this.LblInspector.Text = "Inspector";
-            // 
-            // LblProject
-            // 
-            this.LblProject.AutoSize = true;
-            this.LblProject.Location = new System.Drawing.Point(317, 59);
-            this.LblProject.Name = "LblProject";
-            this.LblProject.Size = new System.Drawing.Size(50, 19);
-            this.LblProject.TabIndex = 0;
-            this.LblProject.Text = "Project";
-            // 
-            // LblDate
-            // 
-            this.LblDate.AutoSize = true;
-            this.LblDate.Location = new System.Drawing.Point(332, 88);
-            this.LblDate.Name = "LblDate";
-            this.LblDate.Size = new System.Drawing.Size(36, 19);
-            this.LblDate.TabIndex = 0;
-            this.LblDate.Text = "Date";
-            // 
-            // CbClient
-            // 
-            this.CbClient.FormattingEnabled = true;
-            this.CbClient.ItemHeight = 23;
-            this.CbClient.Location = new System.Drawing.Point(91, 49);
-            this.CbClient.Name = "CbClient";
-            this.CbClient.Size = new System.Drawing.Size(201, 29);
-            this.CbClient.TabIndex = 2;
-            this.CbClient.UseSelectable = true;
-            this.CbClient.SelectedIndexChanged += new System.EventHandler(this.CbClient_SelectedIndexChanged);
-            // 
-            // CbProject
-            // 
-            this.CbProject.FormattingEnabled = true;
-            this.CbProject.ItemHeight = 23;
-            this.CbProject.Location = new System.Drawing.Point(374, 49);
-            this.CbProject.Name = "CbProject";
-            this.CbProject.Size = new System.Drawing.Size(240, 29);
-            this.CbProject.TabIndex = 2;
-            this.CbProject.UseSelectable = true;
-            // 
-            // TxtInspector
-            // 
-            // 
-            // 
-            // 
-            this.TxtInspector.CustomButton.Image = null;
-            this.TxtInspector.CustomButton.Location = new System.Drawing.Point(179, 1);
-            this.TxtInspector.CustomButton.Name = "";
-            this.TxtInspector.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtInspector.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtInspector.CustomButton.TabIndex = 1;
-            this.TxtInspector.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtInspector.CustomButton.UseSelectable = true;
-            this.TxtInspector.CustomButton.Visible = false;
-            this.TxtInspector.Lines = new string[0];
-            this.TxtInspector.Location = new System.Drawing.Point(91, 84);
-            this.TxtInspector.MaxLength = 32767;
-            this.TxtInspector.Name = "TxtInspector";
-            this.TxtInspector.PasswordChar = '\0';
-            this.TxtInspector.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtInspector.SelectedText = "";
-            this.TxtInspector.SelectionLength = 0;
-            this.TxtInspector.SelectionStart = 0;
-            this.TxtInspector.ShortcutsEnabled = true;
-            this.TxtInspector.Size = new System.Drawing.Size(201, 23);
-            this.TxtInspector.TabIndex = 1;
-            this.TxtInspector.UseSelectable = true;
-            this.TxtInspector.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtInspector.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // BtnAdd
             // 
@@ -172,14 +71,6 @@
             this.BtnEdit.Text = "Edit";
             this.BtnEdit.UseSelectable = true;
             this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
-            // 
-            // DateDev
-            // 
-            this.DateDev.Location = new System.Drawing.Point(374, 84);
-            this.DateDev.MinimumSize = new System.Drawing.Size(0, 29);
-            this.DateDev.Name = "DateDev";
-            this.DateDev.Size = new System.Drawing.Size(239, 29);
-            this.DateDev.TabIndex = 4;
             // 
             // BtnDelete
             // 
@@ -241,7 +132,7 @@
             this.DGVDev.EnableHeadersVisualStyles = false;
             this.DGVDev.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DGVDev.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DGVDev.Location = new System.Drawing.Point(24, 181);
+            this.DGVDev.Location = new System.Drawing.Point(23, 63);
             this.DGVDev.Name = "DGVDev";
             this.DGVDev.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -318,45 +209,6 @@
             this.BtnDeployment.UseSelectable = true;
             this.BtnDeployment.Click += new System.EventHandler(this.BtnDeployment_Click);
             // 
-            // LblLocation
-            // 
-            this.LblLocation.AutoSize = true;
-            this.LblLocation.Location = new System.Drawing.Point(23, 117);
-            this.LblLocation.Name = "LblLocation";
-            this.LblLocation.Size = new System.Drawing.Size(58, 19);
-            this.LblLocation.TabIndex = 0;
-            this.LblLocation.Text = "Location";
-            // 
-            // TxtLocation
-            // 
-            // 
-            // 
-            // 
-            this.TxtLocation.CustomButton.Image = null;
-            this.TxtLocation.CustomButton.Location = new System.Drawing.Point(179, 1);
-            this.TxtLocation.CustomButton.Name = "";
-            this.TxtLocation.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtLocation.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtLocation.CustomButton.TabIndex = 1;
-            this.TxtLocation.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtLocation.CustomButton.UseSelectable = true;
-            this.TxtLocation.CustomButton.Visible = false;
-            this.TxtLocation.Lines = new string[0];
-            this.TxtLocation.Location = new System.Drawing.Point(91, 113);
-            this.TxtLocation.MaxLength = 32767;
-            this.TxtLocation.Name = "TxtLocation";
-            this.TxtLocation.PasswordChar = '\0';
-            this.TxtLocation.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtLocation.SelectedText = "";
-            this.TxtLocation.SelectionLength = 0;
-            this.TxtLocation.SelectionStart = 0;
-            this.TxtLocation.ShortcutsEnabled = true;
-            this.TxtLocation.Size = new System.Drawing.Size(201, 23);
-            this.TxtLocation.TabIndex = 1;
-            this.TxtLocation.UseSelectable = true;
-            this.TxtLocation.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtLocation.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // BtnDraw
             // 
             this.BtnDraw.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -400,84 +252,6 @@
             this.TxtBoxId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtBoxId.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // LblOperator
-            // 
-            this.LblOperator.AutoSize = true;
-            this.LblOperator.Location = new System.Drawing.Point(304, 123);
-            this.LblOperator.Name = "LblOperator";
-            this.LblOperator.Size = new System.Drawing.Size(64, 19);
-            this.LblOperator.TabIndex = 0;
-            this.LblOperator.Text = "Operator";
-            // 
-            // LblMachine
-            // 
-            this.LblMachine.AutoSize = true;
-            this.LblMachine.Location = new System.Drawing.Point(26, 149);
-            this.LblMachine.Name = "LblMachine";
-            this.LblMachine.Size = new System.Drawing.Size(58, 19);
-            this.LblMachine.TabIndex = 0;
-            this.LblMachine.Text = "Machine";
-            // 
-            // TxtOperator
-            // 
-            // 
-            // 
-            // 
-            this.TxtOperator.CustomButton.Image = null;
-            this.TxtOperator.CustomButton.Location = new System.Drawing.Point(217, 1);
-            this.TxtOperator.CustomButton.Name = "";
-            this.TxtOperator.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtOperator.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtOperator.CustomButton.TabIndex = 1;
-            this.TxtOperator.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtOperator.CustomButton.UseSelectable = true;
-            this.TxtOperator.CustomButton.Visible = false;
-            this.TxtOperator.Lines = new string[0];
-            this.TxtOperator.Location = new System.Drawing.Point(374, 119);
-            this.TxtOperator.MaxLength = 32767;
-            this.TxtOperator.Name = "TxtOperator";
-            this.TxtOperator.PasswordChar = '\0';
-            this.TxtOperator.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtOperator.SelectedText = "";
-            this.TxtOperator.SelectionLength = 0;
-            this.TxtOperator.SelectionStart = 0;
-            this.TxtOperator.ShortcutsEnabled = true;
-            this.TxtOperator.Size = new System.Drawing.Size(239, 23);
-            this.TxtOperator.TabIndex = 1;
-            this.TxtOperator.UseSelectable = true;
-            this.TxtOperator.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtOperator.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // TxtMachine
-            // 
-            // 
-            // 
-            // 
-            this.TxtMachine.CustomButton.Image = null;
-            this.TxtMachine.CustomButton.Location = new System.Drawing.Point(179, 1);
-            this.TxtMachine.CustomButton.Name = "";
-            this.TxtMachine.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtMachine.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtMachine.CustomButton.TabIndex = 1;
-            this.TxtMachine.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtMachine.CustomButton.UseSelectable = true;
-            this.TxtMachine.CustomButton.Visible = false;
-            this.TxtMachine.Lines = new string[0];
-            this.TxtMachine.Location = new System.Drawing.Point(91, 145);
-            this.TxtMachine.MaxLength = 32767;
-            this.TxtMachine.Name = "TxtMachine";
-            this.TxtMachine.PasswordChar = '\0';
-            this.TxtMachine.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtMachine.SelectedText = "";
-            this.TxtMachine.SelectionLength = 0;
-            this.TxtMachine.SelectionStart = 0;
-            this.TxtMachine.ShortcutsEnabled = true;
-            this.TxtMachine.Size = new System.Drawing.Size(201, 23);
-            this.TxtMachine.TabIndex = 1;
-            this.TxtMachine.UseSelectable = true;
-            this.TxtMachine.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtMachine.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // DevForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,56 +264,27 @@
             this.Controls.Add(this.BtnGeoMembrane);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.BtnDelete);
-            this.Controls.Add(this.DateDev);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnAdd);
-            this.Controls.Add(this.CbProject);
-            this.Controls.Add(this.CbClient);
-            this.Controls.Add(this.TxtMachine);
-            this.Controls.Add(this.TxtOperator);
-            this.Controls.Add(this.TxtLocation);
-            this.Controls.Add(this.TxtInspector);
-            this.Controls.Add(this.LblMachine);
-            this.Controls.Add(this.LblDate);
-            this.Controls.Add(this.LblLocation);
-            this.Controls.Add(this.LblOperator);
-            this.Controls.Add(this.LblProject);
-            this.Controls.Add(this.LblInspector);
-            this.Controls.Add(this.LblClient);
             this.Name = "DevForm";
+            this.Text = "Inspection";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DevForm_FormClosed);
             this.Load += new System.EventHandler(this.DevForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroLabel LblClient;
-        private MetroFramework.Controls.MetroLabel LblInspector;
-        private MetroFramework.Controls.MetroLabel LblProject;
-        private MetroFramework.Controls.MetroLabel LblDate;
-        private MetroFramework.Controls.MetroComboBox CbClient;
-        private MetroFramework.Controls.MetroComboBox CbProject;
-        private MetroFramework.Controls.MetroTextBox TxtInspector;
         private MetroFramework.Controls.MetroButton BtnAdd;
         private MetroFramework.Controls.MetroButton BtnEdit;
-        private MetroFramework.Controls.MetroDateTime DateDev;
         private MetroFramework.Controls.MetroButton BtnDelete;
         private MetroFramework.Controls.MetroButton BtnSave;
         private MetroFramework.Controls.MetroGrid DGVDev;
         private MetroFramework.Controls.MetroButton BtnGeoMembrane;
         private MetroFramework.Controls.MetroButton BtnDeployment;
-        private MetroFramework.Controls.MetroLabel LblLocation;
-        private MetroFramework.Controls.MetroTextBox TxtLocation;
         private MetroFramework.Controls.MetroButton BtnDraw;
         private MetroFramework.Controls.MetroTextBox TxtBoxId;
-        private MetroFramework.Controls.MetroLabel LblOperator;
-        private MetroFramework.Controls.MetroLabel LblMachine;
-        private MetroFramework.Controls.MetroTextBox TxtOperator;
-        private MetroFramework.Controls.MetroTextBox TxtMachine;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn DevTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Project;
