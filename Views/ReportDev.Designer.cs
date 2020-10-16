@@ -63,15 +63,12 @@
             // 
             // DevelopmentBindingSource
             // 
-            this.DevelopmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
             // 
             // ProjectBindingSource
             // 
-            this.ProjectBindingSource.DataSource = typeof(Mine.DataModel.Project);
             // 
             // ClientBindingSource
             // 
-            this.ClientBindingSource.DataSource = typeof(Mine.DataModel.Client);
             // 
             // ReportDev
             // 

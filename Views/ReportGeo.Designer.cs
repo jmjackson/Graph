@@ -62,15 +62,12 @@
             // 
             // ProjectBindingSource
             // 
-            this.ProjectBindingSource.DataSource = typeof(Mine.DataModel.Project);
             // 
             // GeoMembraneBindingSource
             // 
-            this.GeoMembraneBindingSource.DataSource = typeof(Mine.DataModel.GeoMembrane);
             // 
             // ClientBindingSource
             // 
-            this.ClientBindingSource.DataSource = typeof(Mine.DataModel.Client);
             // 
             // ReportGeo
             // 

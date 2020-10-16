@@ -79,8 +79,8 @@ namespace Mine.Views
 
         private void BtnDraw_Click(object sender, EventArgs e)
         {
-            int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
-            Dibujo draw = new Dibujo(pdId);
+            //int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+            Dibujo draw = new Dibujo(/*pdId*/);
             draw.Show();
         }
 
