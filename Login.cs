@@ -31,5 +31,10 @@ namespace Mine
                 LblError.Text= "User and Password  incorrect";
             }
         }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }

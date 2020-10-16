@@ -35,7 +35,6 @@
             this.BtnOther = new FontAwesome.Sharp.IconButton();
             this.BtnConfig = new FontAwesome.Sharp.IconButton();
             this.BtnClient = new FontAwesome.Sharp.IconButton();
-            this.LblTitle = new MetroFramework.Controls.MetroLabel();
             this.TileClient = new MetroFramework.Controls.MetroTile();
             this.TileProject = new MetroFramework.Controls.MetroTile();
             this.TileInspection = new MetroFramework.Controls.MetroTile();
@@ -52,9 +51,9 @@
             this.PanelLeft.Controls.Add(this.BtnConfig);
             this.PanelLeft.Controls.Add(this.BtnClient);
             this.PanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelLeft.Location = new System.Drawing.Point(20, 60);
+            this.PanelLeft.Location = new System.Drawing.Point(0, 0);
             this.PanelLeft.Name = "PanelLeft";
-            this.PanelLeft.Size = new System.Drawing.Size(204, 467);
+            this.PanelLeft.Size = new System.Drawing.Size(204, 547);
             this.PanelLeft.TabIndex = 0;
             // 
             // pictureBox1
@@ -153,15 +152,6 @@
             this.BtnClient.UseVisualStyleBackColor = false;
             this.BtnClient.Click += new System.EventHandler(this.BtnClient_Click);
             // 
-            // LblTitle
-            // 
-            this.LblTitle.AutoSize = true;
-            this.LblTitle.Location = new System.Drawing.Point(441, 18);
-            this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(73, 19);
-            this.LblTitle.TabIndex = 1;
-            this.LblTitle.Text = "Dashboard";
-            // 
             // TileClient
             // 
             this.TileClient.ActiveControl = null;
@@ -225,15 +215,14 @@
             this.Controls.Add(this.TileInspection);
             this.Controls.Add(this.TileProject);
             this.Controls.Add(this.TileClient);
-            this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.PanelLeft);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.PanelLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -245,7 +234,6 @@
         private FontAwesome.Sharp.IconButton BtnConfig;
         private FontAwesome.Sharp.IconButton BtnClient;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroLabel LblTitle;
         private MetroFramework.Controls.MetroTile TileClient;
         private MetroFramework.Controls.MetroTile TileProject;
         private MetroFramework.Controls.MetroTile TileInspection;

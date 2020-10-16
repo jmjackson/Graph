@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Mine.Views
 {
-    public partial class Principal : MetroFramework.Forms.MetroForm
+    public partial class Principal : Form
     {
         public Principal()
         {
@@ -64,8 +64,11 @@ namespace Mine.Views
             this.Hide();
         }
 
-        
-
-       
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login l = new Login();
+            l.Show();
+        }
     }
 }

@@ -54,9 +54,9 @@ namespace Mine.Views
                 if (addDev.ShowDialog()==DialogResult.OK)
                 {
                     DevForm_Load(sender, e);
+                    DGVDev.Refresh();
                 }
                 
-                MetroMessageBox.Show(this, "Saved successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
             catch (Exception ex)

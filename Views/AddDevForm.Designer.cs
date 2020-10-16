@@ -31,9 +31,9 @@
             this.CbClients = new MetroFramework.Controls.MetroComboBox();
             this.CbProject = new MetroFramework.Controls.MetroComboBox();
             this.TxtInspector = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtLocation = new System.Windows.Forms.TextBox();
+            this.TxtOperator = new System.Windows.Forms.TextBox();
+            this.TxtMachine = new System.Windows.Forms.TextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -75,29 +75,29 @@
             this.TxtInspector.Size = new System.Drawing.Size(275, 27);
             this.TxtInspector.TabIndex = 1;
             // 
-            // textBox2
+            // TxtLocation
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(390, 221);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 27);
-            this.textBox2.TabIndex = 1;
+            this.TxtLocation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLocation.Location = new System.Drawing.Point(390, 221);
+            this.TxtLocation.Name = "TxtLocation";
+            this.TxtLocation.Size = new System.Drawing.Size(275, 27);
+            this.TxtLocation.TabIndex = 1;
             // 
-            // textBox3
+            // TxtOperator
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(69, 283);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 27);
-            this.textBox3.TabIndex = 1;
+            this.TxtOperator.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtOperator.Location = new System.Drawing.Point(69, 283);
+            this.TxtOperator.Name = "TxtOperator";
+            this.TxtOperator.Size = new System.Drawing.Size(275, 27);
+            this.TxtOperator.TabIndex = 1;
             // 
-            // textBox4
+            // TxtMachine
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(390, 283);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(275, 27);
-            this.textBox4.TabIndex = 1;
+            this.TxtMachine.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMachine.Location = new System.Drawing.Point(390, 283);
+            this.TxtMachine.Name = "TxtMachine";
+            this.TxtMachine.Size = new System.Drawing.Size(275, 27);
+            this.TxtMachine.TabIndex = 1;
             // 
             // metroLabel1
             // 
@@ -156,6 +156,7 @@
             // BtnCancel
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.No;
             this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,6 +175,7 @@
             // BtnSave
             // 
             this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnSave.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,6 +190,7 @@
             this.BtnSave.TabIndex = 3;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // DateInspection
             // 
@@ -221,9 +224,9 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtMachine);
+            this.Controls.Add(this.TxtOperator);
+            this.Controls.Add(this.TxtLocation);
             this.Controls.Add(this.TxtInspector);
             this.Controls.Add(this.CbProject);
             this.Controls.Add(this.CbClients);
@@ -240,9 +243,9 @@
         private MetroFramework.Controls.MetroComboBox CbClients;
         private MetroFramework.Controls.MetroComboBox CbProject;
         private System.Windows.Forms.TextBox TxtInspector;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtLocation;
+        private System.Windows.Forms.TextBox TxtOperator;
+        private System.Windows.Forms.TextBox TxtMachine;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;

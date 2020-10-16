@@ -63,7 +63,14 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>Resources\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -175,7 +182,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporView\ReportDevelopment.cs" />
     <Compile Include="ReporView\ReportGeomembrane.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ViewModelProject\ProjectViewModel.cs" />
     <Compile Include="Views\AddClient.cs">
       <SubType>Form</SubType>
@@ -347,7 +353,6 @@
     <EmbeddedResource Include="Views\ReportGeo.resx">
       <DependentUpon>ReportGeo.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Mine_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Mine.DataModel.Client.datasource" />
     <None Include="Properties\DataSources\Mine.DataModel.Development.datasource" />
@@ -373,19 +378,6 @@
     <Content Include="Resources\appbar.tiles.minus.png" />
     <Content Include="Resources\empresa.png" />
     <Content Include="Resources\logo.png" />
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
