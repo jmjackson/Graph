@@ -22,12 +22,12 @@ namespace Mine.Views
         private Bitmap imagen;
         int pdId;
         int selecc_Opcion=1;
-        public Dibujo(/*int dev*/)
+        public Dibujo(int dev)
         {
             InitializeComponent();
             g = PbLienzo.CreateGraphics();
             imagen = new Bitmap(PbLienzo.Width, PbLienzo.Height);
-            //pdId = dev;
+            pdId = dev;
             BtnDraw.Enabled = false;
         }
 
@@ -128,19 +128,19 @@ namespace Mine.Views
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
-            
-            //var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
-            //var projectno =(from d in db.Developments where d.ProjectDevId== Pn.Id select d ).ToList();
+            var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
-            //foreach (var item in projectno)
-            //{
-            //    DgLpn.AutoGenerateColumns = false;
-            //    DgLpn.Columns["Id"].DataPropertyName = "Id";
-            //    DgLpn.Columns["PanelNo"].DataPropertyName = "PanelNo";
-            //    DgLpn.DataSource = projectno;
-            //    //var panel = item.PanelNo;
-            //}
+            var projectno = (from d in db.Developments where d.ProjectDevId == Pn.Id select d).ToList();
+
+            foreach (var item in projectno)
+            {
+                DgLpn.AutoGenerateColumns = false;
+                DgLpn.Columns["Id"].DataPropertyName = "Id";
+                DgLpn.Columns["PanelNo"].DataPropertyName = "PanelNo";
+                DgLpn.DataSource = projectno;
+                //var panel = item.PanelNo;
+            }
 
         }
 
