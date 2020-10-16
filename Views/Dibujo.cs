@@ -69,6 +69,42 @@ namespace Mine.Views
                     PbLienzo.Image = imagen;
                 }
             }
+            if (selecc_Opcion == 3)
+            {
+                if (dibujar == true)
+                {
+                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
+                    //declaradas al inicio
+                    Color color2 = Color.White;
+                    int ancho2 = 10;
+                    Graphics g = Graphics.FromImage(imagen);
+                    Pen borrador = new Pen(color2, ancho2);
+
+                    //Dibuja una linea entre el punto anterior y el actual
+                    g.DrawLine(borrador, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    X = e.X;
+                    Y = e.Y;
+                    PbLienzo.Image = imagen;
+                }
+            }
+            if (selecc_Opcion == 4)
+            {
+                if (dibujar == true)
+                {
+                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
+                    //declaradas al inicio
+                    Color color2 = Color.Black;
+                    int ancho2 = 10;
+                    Graphics g = Graphics.FromImage(imagen);
+                    Pen borrador = new Pen(color2, ancho2);
+
+                    //Dibuja una linea entre el punto anterior y el actual
+                    g.DrawLine(borrador, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    X = e.X;
+                    Y = e.Y;
+                    PbLienzo.Image = imagen;
+                }
+            }
         }
 
         private void BntSave_Click(object sender, EventArgs e)
@@ -76,7 +112,7 @@ namespace Mine.Views
 
             Bitmap bmp = (Bitmap)PbLienzo.Image;
 
-            saveFileDialog1.FileName = "Dibujo" + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
+            saveFileDialog1.FileName = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
 
             saveFileDialog1.Filter = "Excel files (*.jpg)|*.jpg";
 
@@ -92,10 +128,10 @@ namespace Mine.Views
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
-            
+
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
-            var projectno =(from d in db.Developments where d.ProjectDevId== Pn.Id select d ).ToList();
+            var projectno = (from d in db.Developments where d.ProjectDevId == Pn.Id select d).ToList();
 
             foreach (var item in projectno)
             {
@@ -110,7 +146,9 @@ namespace Mine.Views
 
         private void BtnClear_Click(object sender, EventArgs e)
         {
-
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 3;
         }
 
         private void PbLienzo_MouseClick(object sender, MouseEventArgs e)
@@ -150,6 +188,26 @@ namespace Mine.Views
             resetTools();
             ((Button)sender).Enabled = false;
             selecc_Opcion = 2;
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            try
+            {
+                OpenFileDialog edit = new OpenFileDialog();
+                if (edit.ShowDialog() == DialogResult.OK)
+                {
+                    string imagen = edit.FileName;
+                    PbLienzo.Image = Image.FromFile(imagen);
+                    selecc_Opcion = 4;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+            }
         }
     }
 }
