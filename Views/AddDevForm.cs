@@ -36,5 +36,6 @@ namespace Mine.Views
             CbProject.ValueMember = "Id";
             CbProject.DataSource = projects;
         }
+
     }
 }

@@ -53,9 +53,9 @@
             // 
             this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnAdd.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnAdd.Location = new System.Drawing.Point(770, 33);
+            this.BtnAdd.Location = new System.Drawing.Point(774, 43);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(110, 45);
+            this.BtnAdd.Size = new System.Drawing.Size(110, 35);
             this.BtnAdd.TabIndex = 3;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.UseSelectable = true;
@@ -65,9 +65,9 @@
             // 
             this.BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEdit.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnEdit.Location = new System.Drawing.Point(770, 84);
+            this.BtnEdit.Location = new System.Drawing.Point(774, 84);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(110, 45);
+            this.BtnEdit.Size = new System.Drawing.Size(110, 35);
             this.BtnEdit.TabIndex = 3;
             this.BtnEdit.Text = "Edit";
             this.BtnEdit.UseSelectable = true;
@@ -77,9 +77,9 @@
             // 
             this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDelete.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnDelete.Location = new System.Drawing.Point(770, 134);
+            this.BtnDelete.Location = new System.Drawing.Point(774, 134);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(110, 45);
+            this.BtnDelete.Size = new System.Drawing.Size(110, 35);
             this.BtnDelete.TabIndex = 5;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseSelectable = true;
@@ -89,9 +89,9 @@
             // 
             this.BtnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSave.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnSave.Location = new System.Drawing.Point(770, 185);
+            this.BtnSave.Location = new System.Drawing.Point(774, 185);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(110, 45);
+            this.BtnSave.Size = new System.Drawing.Size(110, 35);
             this.BtnSave.TabIndex = 5;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseSelectable = true;
@@ -147,7 +147,7 @@
             this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVDev.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVDev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVDev.Size = new System.Drawing.Size(690, 249);
+            this.DGVDev.Size = new System.Drawing.Size(694, 240);
             this.DGVDev.Style = MetroFramework.MetroColorStyle.Blue;
             this.DGVDev.TabIndex = 6;
             // 
@@ -191,9 +191,9 @@
             // 
             this.BtnGeoMembrane.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BtnGeoMembrane.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnGeoMembrane.Location = new System.Drawing.Point(770, 323);
+            this.BtnGeoMembrane.Location = new System.Drawing.Point(774, 318);
             this.BtnGeoMembrane.Name = "BtnGeoMembrane";
-            this.BtnGeoMembrane.Size = new System.Drawing.Size(110, 47);
+            this.BtnGeoMembrane.Size = new System.Drawing.Size(110, 35);
             this.BtnGeoMembrane.TabIndex = 5;
             this.BtnGeoMembrane.Text = "Seaming";
             this.BtnGeoMembrane.UseSelectable = true;
@@ -203,9 +203,9 @@
             // 
             this.BtnDeployment.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BtnDeployment.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnDeployment.Location = new System.Drawing.Point(770, 265);
+            this.BtnDeployment.Location = new System.Drawing.Point(774, 269);
             this.BtnDeployment.Name = "BtnDeployment";
-            this.BtnDeployment.Size = new System.Drawing.Size(110, 47);
+            this.BtnDeployment.Size = new System.Drawing.Size(110, 38);
             this.BtnDeployment.TabIndex = 5;
             this.BtnDeployment.Text = "Deployment";
             this.BtnDeployment.UseSelectable = true;
@@ -215,9 +215,9 @@
             // 
             this.BtnDraw.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BtnDraw.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnDraw.Location = new System.Drawing.Point(770, 376);
+            this.BtnDraw.Location = new System.Drawing.Point(774, 371);
             this.BtnDraw.Name = "BtnDraw";
-            this.BtnDraw.Size = new System.Drawing.Size(110, 47);
+            this.BtnDraw.Size = new System.Drawing.Size(110, 35);
             this.BtnDraw.TabIndex = 5;
             this.BtnDraw.Text = "Draw";
             this.BtnDraw.UseSelectable = true;
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 482);
+            this.ClientSize = new System.Drawing.Size(907, 473);
             this.Controls.Add(this.DGVDev);
             this.Controls.Add(this.BtnDeployment);
             this.Controls.Add(this.BtnDraw);

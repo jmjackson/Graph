@@ -40,8 +40,8 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.BtnCancel = new FontAwesome.Sharp.IconButton();
+            this.BtnSave = new FontAwesome.Sharp.IconButton();
             this.DateInspection = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
@@ -153,41 +153,41 @@
             this.metroLabel6.TabIndex = 2;
             this.metroLabel6.Text = "Operator";
             // 
-            // iconButton1
+            // BtnCancel
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(390, 347);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(92, 31);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "Cancel";
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnCancel.IconColor = System.Drawing.Color.Black;
+            this.BtnCancel.IconSize = 16;
+            this.BtnCancel.Location = new System.Drawing.Point(390, 347);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Rotation = 0D;
+            this.BtnCancel.Size = new System.Drawing.Size(92, 31);
+            this.BtnCancel.TabIndex = 3;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = false;
             // 
-            // iconButton2
+            // BtnSave
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconSize = 16;
-            this.iconButton2.Location = new System.Drawing.Point(252, 347);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(92, 31);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Save";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSave.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnSave.IconColor = System.Drawing.Color.Black;
+            this.BtnSave.IconSize = 16;
+            this.BtnSave.Location = new System.Drawing.Point(252, 347);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Rotation = 0D;
+            this.BtnSave.Size = new System.Drawing.Size(92, 31);
+            this.BtnSave.TabIndex = 3;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = false;
             // 
             // DateInspection
             // 
@@ -212,8 +212,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 405);
             this.Controls.Add(this.DateInspection);
-            this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.BtnSave);
+            this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel4);
@@ -249,8 +249,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton BtnCancel;
+        private FontAwesome.Sharp.IconButton BtnSave;
         private MetroFramework.Controls.MetroDateTime DateInspection;
         private MetroFramework.Controls.MetroLabel metroLabel7;
     }
