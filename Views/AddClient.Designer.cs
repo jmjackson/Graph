@@ -44,18 +44,20 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(57, 89);
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(57, 83);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(52, 25);
             this.metroLabel2.TabIndex = 0;
             this.metroLabel2.Text = "Code";
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(57, 158);
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.Location = new System.Drawing.Point(57, 152);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(45, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(58, 25);
             this.metroLabel3.TabIndex = 0;
             this.metroLabel3.Text = "Name";
             // 
@@ -65,10 +67,11 @@
             this.BtnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnSave.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnSave.IconColor = System.Drawing.Color.Black;
+            this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 16;
             this.BtnSave.Location = new System.Drawing.Point(77, 359);
             this.BtnSave.Name = "BtnSave";
@@ -85,10 +88,11 @@
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnCancel.IconColor = System.Drawing.Color.Black;
+            this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 16;
             this.BtnCancel.Location = new System.Drawing.Point(197, 359);
             this.BtnCancel.Name = "BtnCancel";
@@ -113,11 +117,11 @@
             // 
             this.BtnBrowse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBrowse.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBrowse.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBrowse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnBrowse.Location = new System.Drawing.Point(212, 232);
             this.BtnBrowse.Name = "BtnBrowse";
-            this.BtnBrowse.Size = new System.Drawing.Size(115, 30);
+            this.BtnBrowse.Size = new System.Drawing.Size(115, 39);
             this.BtnBrowse.TabIndex = 2;
             this.BtnBrowse.Text = "Browse";
             this.BtnBrowse.UseVisualStyleBackColor = false;

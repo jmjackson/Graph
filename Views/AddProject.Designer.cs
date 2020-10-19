@@ -44,42 +44,42 @@
             // 
             // TxtProject
             // 
-            this.TxtProject.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtProject.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtProject.Location = new System.Drawing.Point(56, 102);
             this.TxtProject.Name = "TxtProject";
-            this.TxtProject.Size = new System.Drawing.Size(274, 27);
+            this.TxtProject.Size = new System.Drawing.Size(274, 33);
             this.TxtProject.TabIndex = 0;
             // 
             // TxtProjectNo
             // 
-            this.TxtProjectNo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtProjectNo.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtProjectNo.Location = new System.Drawing.Point(349, 102);
             this.TxtProjectNo.Name = "TxtProjectNo";
-            this.TxtProjectNo.Size = new System.Drawing.Size(298, 27);
+            this.TxtProjectNo.Size = new System.Drawing.Size(298, 33);
             this.TxtProjectNo.TabIndex = 1;
             // 
             // TxtContractor
             // 
-            this.TxtContractor.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContractor.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContractor.Location = new System.Drawing.Point(56, 169);
             this.TxtContractor.Name = "TxtContractor";
-            this.TxtContractor.Size = new System.Drawing.Size(274, 27);
+            this.TxtContractor.Size = new System.Drawing.Size(274, 33);
             this.TxtContractor.TabIndex = 2;
             // 
             // TxtSupplier
             // 
-            this.TxtSupplier.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSupplier.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSupplier.Location = new System.Drawing.Point(349, 169);
             this.TxtSupplier.Name = "TxtSupplier";
-            this.TxtSupplier.Size = new System.Drawing.Size(298, 27);
+            this.TxtSupplier.Size = new System.Drawing.Size(298, 33);
             this.TxtSupplier.TabIndex = 3;
             // 
             // TxtGeosynthetic
             // 
-            this.TxtGeosynthetic.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtGeosynthetic.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtGeosynthetic.Location = new System.Drawing.Point(56, 239);
             this.TxtGeosynthetic.Name = "TxtGeosynthetic";
-            this.TxtGeosynthetic.Size = new System.Drawing.Size(274, 27);
+            this.TxtGeosynthetic.Size = new System.Drawing.Size(274, 33);
             this.TxtGeosynthetic.TabIndex = 4;
             // 
             // BtnSave
@@ -88,10 +88,11 @@
             this.BtnSave.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnSave.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnSave.IconColor = System.Drawing.Color.Black;
+            this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 16;
             this.BtnSave.Location = new System.Drawing.Point(222, 288);
             this.BtnSave.Name = "BtnSave";
@@ -108,10 +109,11 @@
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.No;
             this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnCancel.IconColor = System.Drawing.Color.Black;
+            this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 16;
             this.BtnCancel.Location = new System.Drawing.Point(336, 288);
             this.BtnCancel.Name = "BtnCancel";
@@ -125,45 +127,50 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(56, 141);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(92, 25);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Contractor";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.Location = new System.Drawing.Point(56, 70);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(64, 25);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Project";
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.Location = new System.Drawing.Point(349, 70);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(92, 25);
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Project No";
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel5.Location = new System.Drawing.Point(56, 212);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(109, 25);
             this.metroLabel5.TabIndex = 2;
             this.metroLabel5.Text = "Geosynthetic";
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel6.Location = new System.Drawing.Point(349, 141);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(57, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(74, 25);
             this.metroLabel6.TabIndex = 2;
             this.metroLabel6.Text = "Supplier";
             // 

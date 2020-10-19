@@ -46,15 +46,16 @@
             this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
             this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnCancel.IconColor = System.Drawing.Color.Black;
+            this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 16;
-            this.BtnCancel.Location = new System.Drawing.Point(243, 358);
+            this.BtnCancel.Location = new System.Drawing.Point(243, 382);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
-            this.BtnCancel.Size = new System.Drawing.Size(120, 30);
+            this.BtnCancel.Size = new System.Drawing.Size(120, 43);
             this.BtnCancel.TabIndex = 0;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = false;
@@ -65,15 +66,16 @@
             this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnSave.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnSave.IconColor = System.Drawing.Color.Black;
+            this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 16;
-            this.BtnSave.Location = new System.Drawing.Point(85, 358);
+            this.BtnSave.Location = new System.Drawing.Point(85, 382);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
-            this.BtnSave.Size = new System.Drawing.Size(120, 30);
+            this.BtnSave.Size = new System.Drawing.Size(120, 43);
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
@@ -84,74 +86,78 @@
             this.BtnBrowse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBrowse.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnBrowse.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBrowse.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBrowse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnBrowse.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnBrowse.IconColor = System.Drawing.Color.Black;
+            this.BtnBrowse.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnBrowse.IconSize = 16;
-            this.BtnBrowse.Location = new System.Drawing.Point(243, 255);
+            this.BtnBrowse.Location = new System.Drawing.Point(243, 280);
             this.BtnBrowse.Name = "BtnBrowse";
             this.BtnBrowse.Rotation = 0D;
-            this.BtnBrowse.Size = new System.Drawing.Size(120, 30);
+            this.BtnBrowse.Size = new System.Drawing.Size(120, 43);
             this.BtnBrowse.TabIndex = 0;
             this.BtnBrowse.Text = "Browse";
             this.BtnBrowse.UseVisualStyleBackColor = false;
             // 
             // TxtId
             // 
-            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.Location = new System.Drawing.Point(74, 98);
+            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.Location = new System.Drawing.Point(74, 104);
             this.TxtId.Name = "TxtId";
             this.TxtId.ReadOnly = true;
-            this.TxtId.Size = new System.Drawing.Size(289, 24);
+            this.TxtId.Size = new System.Drawing.Size(289, 29);
             this.TxtId.TabIndex = 1;
             // 
             // TxtCode
             // 
-            this.TxtCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCode.Location = new System.Drawing.Point(74, 154);
+            this.TxtCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCode.Location = new System.Drawing.Point(74, 169);
             this.TxtCode.Name = "TxtCode";
-            this.TxtCode.Size = new System.Drawing.Size(289, 24);
+            this.TxtCode.Size = new System.Drawing.Size(289, 29);
             this.TxtCode.TabIndex = 1;
             // 
             // TxtName
             // 
-            this.TxtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtName.Location = new System.Drawing.Point(74, 210);
+            this.TxtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtName.Location = new System.Drawing.Point(74, 229);
             this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(289, 24);
+            this.TxtName.Size = new System.Drawing.Size(289, 29);
             this.TxtName.TabIndex = 1;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(74, 76);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(20, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(26, 25);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Id";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(74, 132);
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(74, 141);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(52, 25);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Code";
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(74, 188);
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.Location = new System.Drawing.Point(74, 201);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(45, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(58, 25);
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Name";
             // 
             // PbClient
             // 
-            this.PbClient.Location = new System.Drawing.Point(74, 255);
+            this.PbClient.Location = new System.Drawing.Point(74, 280);
             this.PbClient.Name = "PbClient";
             this.PbClient.Size = new System.Drawing.Size(131, 75);
             this.PbClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

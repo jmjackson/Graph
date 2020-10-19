@@ -62,6 +62,7 @@ namespace Mine.Views
             DevForm df = new DevForm();
             df.Show();
             this.Hide();
+
         }
 
         private void BtnLogout_Click(object sender, EventArgs e)
@@ -69,6 +70,11 @@ namespace Mine.Views
             this.Hide();
             Login l = new Login();
             l.Show();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

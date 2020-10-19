@@ -14,7 +14,7 @@ using MetroFramework;
 
 namespace Mine.Views
 {
-    public partial class DevForm : MetroFramework.Forms.MetroForm
+    public partial class DevForm : Form
     {
         readonly GraphDbContext db = new GraphDbContext();
         public DevForm()
@@ -71,9 +71,11 @@ namespace Mine.Views
         {
             
             int pdId= Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
-            var pdev = db.ProjectDevs.Include(a => a.Project.Client).
-                Include(a => a.Project).Where(a => a.Id == pdId)
-                .FirstOrDefault();
+            EditDevForm ed = new EditDevForm();
+            if (ed.ShowDialog()==DialogResult.Yes)
+            {
+
+            }
             
         }
 
@@ -126,6 +128,16 @@ namespace Mine.Views
         {
             Principal p = new Principal();
             p.Show();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

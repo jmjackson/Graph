@@ -39,9 +39,9 @@
             // 
             this.CbClients.FormattingEnabled = true;
             this.CbClients.ItemHeight = 23;
-            this.CbClients.Location = new System.Drawing.Point(73, 76);
+            this.CbClients.Location = new System.Drawing.Point(61, 87);
             this.CbClients.Name = "CbClients";
-            this.CbClients.Size = new System.Drawing.Size(303, 29);
+            this.CbClients.Size = new System.Drawing.Size(351, 29);
             this.CbClients.TabIndex = 0;
             this.CbClients.UseSelectable = true;
             // 
@@ -51,7 +51,7 @@
             this.BtnYes.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnYes.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.BtnYes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnYes.Location = new System.Drawing.Point(106, 141);
+            this.BtnYes.Location = new System.Drawing.Point(106, 149);
             this.BtnYes.Name = "BtnYes";
             this.BtnYes.Size = new System.Drawing.Size(124, 36);
             this.BtnYes.TabIndex = 1;
@@ -66,7 +66,7 @@
             this.BtnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
             this.BtnNo.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnNo.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnNo.Location = new System.Drawing.Point(252, 141);
+            this.BtnNo.Location = new System.Drawing.Point(252, 149);
             this.BtnNo.Name = "BtnNo";
             this.BtnNo.Size = new System.Drawing.Size(124, 36);
             this.BtnNo.TabIndex = 1;

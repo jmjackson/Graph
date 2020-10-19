@@ -14,7 +14,7 @@ using System.IO;
 
 namespace Mine.Views
 {
-    public partial class ClientForms : MetroFramework.Forms.MetroForm
+    public partial class ClientForms : Form
     {
         readonly GraphDbContext db = new GraphDbContext();
         public ClientForms()
@@ -88,6 +88,17 @@ namespace Mine.Views
             GDVClients.Columns["CName"].DataPropertyName = "Name";
             GDVClients.DataSource = lc;
             
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+           this.Close();
+
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

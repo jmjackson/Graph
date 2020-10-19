@@ -13,7 +13,7 @@ using System.Data.Entity;
 
 namespace Mine.Views
 {
-    public partial class ProjectForm : MetroFramework.Forms.MetroForm
+    public partial class ProjectForm : Form
     {
         readonly int idClient=0;
         readonly GraphDbContext db = new GraphDbContext();
@@ -129,7 +129,17 @@ namespace Mine.Views
             p.Show();
         }
 
-        
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }
     

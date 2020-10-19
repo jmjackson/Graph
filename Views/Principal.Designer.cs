@@ -38,6 +38,7 @@
             this.TileClient = new MetroFramework.Controls.MetroTile();
             this.TileProject = new MetroFramework.Controls.MetroTile();
             this.TileInspection = new MetroFramework.Controls.MetroTile();
+            this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,15 +54,15 @@
             this.PanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLeft.Location = new System.Drawing.Point(0, 0);
             this.PanelLeft.Name = "PanelLeft";
-            this.PanelLeft.Size = new System.Drawing.Size(204, 547);
+            this.PanelLeft.Size = new System.Drawing.Size(292, 597);
             this.PanelLeft.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(43, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 112);
+            this.pictureBox1.Size = new System.Drawing.Size(263, 317);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -76,11 +77,12 @@
             this.BtnLogout.ForeColor = System.Drawing.Color.White;
             this.BtnLogout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.BtnLogout.IconColor = System.Drawing.Color.White;
+            this.BtnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnLogout.IconSize = 20;
-            this.BtnLogout.Location = new System.Drawing.Point(0, 341);
+            this.BtnLogout.Location = new System.Drawing.Point(0, 532);
             this.BtnLogout.Name = "BtnLogout";
             this.BtnLogout.Rotation = 0D;
-            this.BtnLogout.Size = new System.Drawing.Size(204, 41);
+            this.BtnLogout.Size = new System.Drawing.Size(292, 41);
             this.BtnLogout.TabIndex = 1;
             this.BtnLogout.Text = "Log Out";
             this.BtnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -97,11 +99,12 @@
             this.BtnOther.ForeColor = System.Drawing.Color.White;
             this.BtnOther.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
             this.BtnOther.IconColor = System.Drawing.Color.White;
+            this.BtnOther.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnOther.IconSize = 20;
-            this.BtnOther.Location = new System.Drawing.Point(0, 294);
+            this.BtnOther.Location = new System.Drawing.Point(0, 485);
             this.BtnOther.Name = "BtnOther";
             this.BtnOther.Rotation = 0D;
-            this.BtnOther.Size = new System.Drawing.Size(204, 41);
+            this.BtnOther.Size = new System.Drawing.Size(292, 41);
             this.BtnOther.TabIndex = 1;
             this.BtnOther.Text = "Other";
             this.BtnOther.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,11 +121,12 @@
             this.BtnConfig.ForeColor = System.Drawing.Color.White;
             this.BtnConfig.IconChar = FontAwesome.Sharp.IconChar.Sun;
             this.BtnConfig.IconColor = System.Drawing.Color.White;
+            this.BtnConfig.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnConfig.IconSize = 20;
-            this.BtnConfig.Location = new System.Drawing.Point(0, 247);
+            this.BtnConfig.Location = new System.Drawing.Point(0, 438);
             this.BtnConfig.Name = "BtnConfig";
             this.BtnConfig.Rotation = 0D;
-            this.BtnConfig.Size = new System.Drawing.Size(204, 41);
+            this.BtnConfig.Size = new System.Drawing.Size(292, 41);
             this.BtnConfig.TabIndex = 1;
             this.BtnConfig.Text = "Configuration";
             this.BtnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,11 +144,12 @@
             this.BtnClient.ForeColor = System.Drawing.Color.White;
             this.BtnClient.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.BtnClient.IconColor = System.Drawing.Color.White;
+            this.BtnClient.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnClient.IconSize = 20;
-            this.BtnClient.Location = new System.Drawing.Point(-3, 200);
+            this.BtnClient.Location = new System.Drawing.Point(-3, 391);
             this.BtnClient.Name = "BtnClient";
             this.BtnClient.Rotation = 0D;
-            this.BtnClient.Size = new System.Drawing.Size(207, 41);
+            this.BtnClient.Size = new System.Drawing.Size(295, 41);
             this.BtnClient.TabIndex = 1;
             this.BtnClient.Text = "Clients";
             this.BtnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,9 +162,9 @@
             this.TileClient.ActiveControl = null;
             this.TileClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(68)))), ((int)(((byte)(98)))));
             this.TileClient.ForeColor = System.Drawing.Color.White;
-            this.TileClient.Location = new System.Drawing.Point(249, 150);
+            this.TileClient.Location = new System.Drawing.Point(318, 170);
             this.TileClient.Name = "TileClient";
-            this.TileClient.Size = new System.Drawing.Size(246, 277);
+            this.TileClient.Size = new System.Drawing.Size(246, 345);
             this.TileClient.Style = MetroFramework.MetroColorStyle.Blue;
             this.TileClient.TabIndex = 2;
             this.TileClient.Text = "Clients";
@@ -175,9 +180,9 @@
             // TileProject
             // 
             this.TileProject.ActiveControl = null;
-            this.TileProject.Location = new System.Drawing.Point(501, 150);
+            this.TileProject.Location = new System.Drawing.Point(570, 170);
             this.TileProject.Name = "TileProject";
-            this.TileProject.Size = new System.Drawing.Size(246, 277);
+            this.TileProject.Size = new System.Drawing.Size(246, 345);
             this.TileProject.Style = MetroFramework.MetroColorStyle.Blue;
             this.TileProject.TabIndex = 2;
             this.TileProject.Text = "Project";
@@ -192,9 +197,9 @@
             // TileInspection
             // 
             this.TileInspection.ActiveControl = null;
-            this.TileInspection.Location = new System.Drawing.Point(753, 150);
+            this.TileInspection.Location = new System.Drawing.Point(822, 170);
             this.TileInspection.Name = "TileInspection";
-            this.TileInspection.Size = new System.Drawing.Size(246, 277);
+            this.TileInspection.Size = new System.Drawing.Size(246, 345);
             this.TileInspection.Style = MetroFramework.MetroColorStyle.Blue;
             this.TileInspection.TabIndex = 3;
             this.TileInspection.Text = "Inspection";
@@ -207,11 +212,31 @@
             this.TileInspection.UseTileImage = true;
             this.TileInspection.Click += new System.EventHandler(this.TileInspection_Click);
             // 
+            // BtnExit
+            // 
+            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnExit.ForeColor = System.Drawing.Color.White;
+            this.BtnExit.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.BtnExit.IconColor = System.Drawing.Color.White;
+            this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnExit.IconSize = 48;
+            this.BtnExit.Location = new System.Drawing.Point(997, 521);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Rotation = 0D;
+            this.BtnExit.Size = new System.Drawing.Size(99, 66);
+            this.BtnExit.TabIndex = 4;
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 547);
+            this.ClientSize = new System.Drawing.Size(1108, 597);
+            this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.TileInspection);
             this.Controls.Add(this.TileProject);
             this.Controls.Add(this.TileClient);
@@ -237,5 +262,6 @@
         private MetroFramework.Controls.MetroTile TileClient;
         private MetroFramework.Controls.MetroTile TileProject;
         private MetroFramework.Controls.MetroTile TileInspection;
+        private FontAwesome.Sharp.IconButton BtnExit;
     }
 }
