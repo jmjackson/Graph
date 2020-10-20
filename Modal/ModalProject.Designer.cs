@@ -37,11 +37,12 @@
             // 
             // CbClients
             // 
+            this.CbClients.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.CbClients.FormattingEnabled = true;
-            this.CbClients.ItemHeight = 23;
+            this.CbClients.ItemHeight = 29;
             this.CbClients.Location = new System.Drawing.Point(61, 87);
             this.CbClients.Name = "CbClients";
-            this.CbClients.Size = new System.Drawing.Size(351, 29);
+            this.CbClients.Size = new System.Drawing.Size(351, 35);
             this.CbClients.TabIndex = 0;
             this.CbClients.UseSelectable = true;
             // 
@@ -80,7 +81,7 @@
             // 
             this.LblClients.AutoSize = true;
             this.LblClients.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblClients.Location = new System.Drawing.Point(73, 43);
+            this.LblClients.Location = new System.Drawing.Point(61, 59);
             this.LblClients.Name = "LblClients";
             this.LblClients.Size = new System.Drawing.Size(62, 25);
             this.LblClients.TabIndex = 2;

@@ -61,6 +61,7 @@
             this.TxtId.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtId.Location = new System.Drawing.Point(53, 128);
             this.TxtId.Name = "TxtId";
+            this.TxtId.ReadOnly = true;
             this.TxtId.Size = new System.Drawing.Size(216, 33);
             this.TxtId.TabIndex = 0;
             // 
@@ -195,6 +196,7 @@
             // BtnSave
             // 
             this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnSave.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,10 +212,12 @@
             this.BtnSave.TabIndex = 2;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // BtnCancel
             // 
             this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.No;
             this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -255,6 +259,7 @@
             this.Controls.Add(this.TxtPanel);
             this.Name = "EditDeployment";
             this.Text = "Update Deployment";
+            this.Load += new System.EventHandler(this.EditDeployment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -56,10 +56,12 @@ namespace Mine.Views
         {
             try
             {
-                AddDeployment ad = new AddDeployment();
-                ad.Show();
-
-               
+                AddDeployment ad = new AddDeployment(proDevId);
+                if (ad.ShowDialog()==DialogResult.Yes)
+                {
+                    DevelopmentForm_Load(sender,e);
+                }
+                DevelopmentForm_Load(sender, e);
             }
             catch (Exception ex)
             {
@@ -93,7 +95,12 @@ namespace Mine.Views
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
-            var dev = db.Developments.Find(pdId);
+           
+            EditDeployment ed = new EditDeployment(pdId);
+            if (ed.ShowDialog()==DialogResult.Yes)
+            {
+                DevelopmentForm_Load(sender,e);
+            }
             
         }
 

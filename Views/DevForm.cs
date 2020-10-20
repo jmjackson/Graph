@@ -45,39 +45,6 @@ namespace Mine.Views
             }
         }
 
-        private void BtnAdd_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                AddDevForm addDev = new AddDevForm();
-                if (addDev.ShowDialog()==DialogResult.OK)
-                {
-                    DevForm_Load(sender, e);
-                    DGVDev.Refresh();
-                }
-                
-                
-            }
-            catch (Exception ex)
-            {
-
-                MetroMessageBox.Show(this, "Error "+ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-        }
-
-        private void BtnEdit_Click(object sender, EventArgs e)
-        {
-            
-            int pdId= Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
-            EditDevForm ed = new EditDevForm();
-            if (ed.ShowDialog()==DialogResult.Yes)
-            {
-
-            }
-            
-        }
 
         private void BtnDraw_Click(object sender, EventArgs e)
         {
@@ -86,28 +53,6 @@ namespace Mine.Views
             draw.Show();
         }
 
-        
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
-                var pd = db.ProjectDevs.Find(pdId);
-                if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    db.ProjectDevs.Remove(pd);
-                    db.SaveChanges();
-                }   
-                DevForm_Load(sender, e);
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            
-        }
 
         private void BtnDeployment_Click(object sender, EventArgs e)
         {
@@ -138,6 +83,58 @@ namespace Mine.Views
         private void BtnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                AddDevForm addDev = new AddDevForm();
+                if (addDev.ShowDialog() == DialogResult.OK)
+                {
+                    DevForm_Load(sender, e);
+                    DGVDev.Refresh();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MetroMessageBox.Show(this, "Error " + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+            EditDevForm ed = new EditDevForm(pdId);
+            if (ed.ShowDialog() == DialogResult.OK)
+            {
+                DevForm_Load(sender, e);
+                DGVDev.Refresh();
+            }
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+                var pd = db.ProjectDevs.Find(pdId);
+                if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    db.ProjectDevs.Remove(pd);
+                    db.SaveChanges();
+                }
+                DevForm_Load(sender, e);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

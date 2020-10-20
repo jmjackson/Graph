@@ -242,7 +242,7 @@
             this.LblTitle.AutoSize = true;
             this.LblTitle.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.LblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.LblTitle.Location = new System.Drawing.Point(23, 30);
+            this.LblTitle.Location = new System.Drawing.Point(15, 9);
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(123, 47);
             this.LblTitle.TabIndex = 4;

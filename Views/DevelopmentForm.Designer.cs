@@ -50,9 +50,6 @@
             this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnAdd = new MetroFramework.Controls.MetroButton();
-            this.BtnDelete = new MetroFramework.Controls.MetroButton();
-            this.BtnEdit = new MetroFramework.Controls.MetroButton();
             this.LblTotal = new MetroFramework.Controls.MetroLabel();
             this.LblInspector = new MetroFramework.Controls.MetroLabel();
             this.PanelAdd = new MetroFramework.Controls.MetroPanel();
@@ -67,6 +64,9 @@
             this.LblRInspector = new MetroFramework.Controls.MetroLabel();
             this.LblLocation = new MetroFramework.Controls.MetroLabel();
             this.LblRLocation = new MetroFramework.Controls.MetroLabel();
+            this.BtnAdd = new FontAwesome.Sharp.IconButton();
+            this.BtnEdit = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
             this.PanelAdd.SuspendLayout();
@@ -75,59 +75,66 @@
             // LblClient
             // 
             this.LblClient.AutoSize = true;
+            this.LblClient.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblClient.Location = new System.Drawing.Point(51, 48);
             this.LblClient.Name = "LblClient";
-            this.LblClient.Size = new System.Drawing.Size(42, 19);
+            this.LblClient.Size = new System.Drawing.Size(55, 25);
             this.LblClient.TabIndex = 0;
             this.LblClient.Text = "Client";
             // 
             // LblProjectNo
             // 
             this.LblProjectNo.AutoSize = true;
+            this.LblProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblProjectNo.Location = new System.Drawing.Point(20, 106);
             this.LblProjectNo.Name = "LblProjectNo";
-            this.LblProjectNo.Size = new System.Drawing.Size(72, 19);
+            this.LblProjectNo.Size = new System.Drawing.Size(92, 25);
             this.LblProjectNo.TabIndex = 0;
             this.LblProjectNo.Text = "Project No";
             // 
             // LblProject
             // 
             this.LblProject.AutoSize = true;
+            this.LblProject.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblProject.Location = new System.Drawing.Point(43, 77);
             this.LblProject.Name = "LblProject";
-            this.LblProject.Size = new System.Drawing.Size(50, 19);
+            this.LblProject.Size = new System.Drawing.Size(64, 25);
             this.LblProject.TabIndex = 0;
             this.LblProject.Text = "Project";
             // 
             // LblContractor
             // 
             this.LblContractor.AutoSize = true;
+            this.LblContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblContractor.Location = new System.Drawing.Point(353, 48);
             this.LblContractor.Name = "LblContractor";
-            this.LblContractor.Size = new System.Drawing.Size(72, 19);
+            this.LblContractor.Size = new System.Drawing.Size(92, 25);
             this.LblContractor.TabIndex = 0;
             this.LblContractor.Text = "Contractor";
             // 
             // LblGeoSynthetic
             // 
             this.LblGeoSynthetic.AutoSize = true;
+            this.LblGeoSynthetic.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblGeoSynthetic.Location = new System.Drawing.Point(343, 106);
             this.LblGeoSynthetic.Name = "LblGeoSynthetic";
-            this.LblGeoSynthetic.Size = new System.Drawing.Size(82, 19);
+            this.LblGeoSynthetic.Size = new System.Drawing.Size(109, 25);
             this.LblGeoSynthetic.TabIndex = 0;
             this.LblGeoSynthetic.Text = "Geosynthetic";
             // 
             // LblSupplier
             // 
             this.LblSupplier.AutoSize = true;
+            this.LblSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblSupplier.Location = new System.Drawing.Point(368, 77);
             this.LblSupplier.Name = "LblSupplier";
-            this.LblSupplier.Size = new System.Drawing.Size(57, 19);
+            this.LblSupplier.Size = new System.Drawing.Size(74, 25);
             this.LblSupplier.TabIndex = 0;
             this.LblSupplier.Text = "Supplier";
             // 
             // PBPicture
             // 
+            this.PBPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PBPicture.Image = ((System.Drawing.Image)(resources.GetObject("PBPicture.Image")));
             this.PBPicture.Location = new System.Drawing.Point(825, 39);
             this.PBPicture.Name = "PBPicture";
@@ -200,7 +207,7 @@
             this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVDev.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVDev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVDev.Size = new System.Drawing.Size(1007, 261);
+            this.DGVDev.Size = new System.Drawing.Size(1007, 302);
             this.DGVDev.Style = MetroFramework.MetroColorStyle.Blue;
             this.DGVDev.TabIndex = 5;
             this.DGVDev.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -266,50 +273,11 @@
             this.Remarks.HeaderText = "Remarks";
             this.Remarks.Name = "Remarks";
             // 
-            // BtnAdd
-            // 
-            this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAdd.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.BtnAdd.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnAdd.Location = new System.Drawing.Point(152, 62);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(105, 35);
-            this.BtnAdd.TabIndex = 7;
-            this.BtnAdd.Text = "Add";
-            this.BtnAdd.UseSelectable = true;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-            // 
-            // BtnDelete
-            // 
-            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.BtnDelete.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnDelete.Location = new System.Drawing.Point(434, 62);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(105, 35);
-            this.BtnDelete.TabIndex = 9;
-            this.BtnDelete.Text = "Delete";
-            this.BtnDelete.UseSelectable = true;
-            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // BtnEdit
-            // 
-            this.BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEdit.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.BtnEdit.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnEdit.Location = new System.Drawing.Point(274, 62);
-            this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(105, 35);
-            this.BtnEdit.TabIndex = 8;
-            this.BtnEdit.Text = "Edit";
-            this.BtnEdit.UseSelectable = true;
-            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
-            // 
             // LblTotal
             // 
             this.LblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(864, 9);
+            this.LblTotal.Location = new System.Drawing.Point(857, 9);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(95, 19);
             this.LblTotal.TabIndex = 14;
@@ -318,25 +286,28 @@
             // LblInspector
             // 
             this.LblInspector.AutoSize = true;
+            this.LblInspector.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblInspector.Location = new System.Drawing.Point(363, 135);
             this.LblInspector.Name = "LblInspector";
-            this.LblInspector.Size = new System.Drawing.Size(62, 19);
+            this.LblInspector.Size = new System.Drawing.Size(81, 25);
             this.LblInspector.TabIndex = 0;
             this.LblInspector.Text = "Inspector";
             // 
             // PanelAdd
             // 
+            this.PanelAdd.Controls.Add(this.iconButton3);
+            this.PanelAdd.Controls.Add(this.BtnEdit);
+            this.PanelAdd.Controls.Add(this.BtnAdd);
             this.PanelAdd.Controls.Add(this.BtnPDF);
             this.PanelAdd.Controls.Add(this.LblTotal);
-            this.PanelAdd.Controls.Add(this.BtnEdit);
-            this.PanelAdd.Controls.Add(this.BtnDelete);
-            this.PanelAdd.Controls.Add(this.BtnAdd);
+            this.PanelAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelAdd.ForeColor = System.Drawing.Color.White;
             this.PanelAdd.HorizontalScrollbarBarColor = true;
             this.PanelAdd.HorizontalScrollbarHighlightOnWheel = false;
             this.PanelAdd.HorizontalScrollbarSize = 10;
-            this.PanelAdd.Location = new System.Drawing.Point(10, 442);
+            this.PanelAdd.Location = new System.Drawing.Point(20, 502);
             this.PanelAdd.Name = "PanelAdd";
-            this.PanelAdd.Size = new System.Drawing.Size(1036, 119);
+            this.PanelAdd.Size = new System.Drawing.Size(1029, 119);
             this.PanelAdd.TabIndex = 17;
             this.PanelAdd.VerticalScrollbarBarColor = true;
             this.PanelAdd.VerticalScrollbarHighlightOnWheel = false;
@@ -345,9 +316,9 @@
             // BtnPDF
             // 
             this.BtnPDF.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnPDF.Location = new System.Drawing.Point(940, 74);
+            this.BtnPDF.Location = new System.Drawing.Point(908, 59);
             this.BtnPDF.Name = "BtnPDF";
-            this.BtnPDF.Size = new System.Drawing.Size(75, 23);
+            this.BtnPDF.Size = new System.Drawing.Size(107, 38);
             this.BtnPDF.TabIndex = 11;
             this.BtnPDF.Text = "BtnPDF";
             this.BtnPDF.UseSelectable = true;
@@ -364,8 +335,9 @@
             // LblRClient
             // 
             this.LblRClient.AutoSize = true;
+            this.LblRClient.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRClient.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRClient.Location = new System.Drawing.Point(100, 47);
+            this.LblRClient.Location = new System.Drawing.Point(128, 47);
             this.LblRClient.Name = "LblRClient";
             this.LblRClient.Size = new System.Drawing.Size(0, 0);
             this.LblRClient.TabIndex = 18;
@@ -373,8 +345,9 @@
             // LblRProject
             // 
             this.LblRProject.AutoSize = true;
+            this.LblRProject.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRProject.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRProject.Location = new System.Drawing.Point(99, 77);
+            this.LblRProject.Location = new System.Drawing.Point(127, 77);
             this.LblRProject.Name = "LblRProject";
             this.LblRProject.Size = new System.Drawing.Size(0, 0);
             this.LblRProject.TabIndex = 18;
@@ -382,8 +355,9 @@
             // LblRProjectNo
             // 
             this.LblRProjectNo.AutoSize = true;
+            this.LblRProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRProjectNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRProjectNo.Location = new System.Drawing.Point(99, 106);
+            this.LblRProjectNo.Location = new System.Drawing.Point(127, 106);
             this.LblRProjectNo.Name = "LblRProjectNo";
             this.LblRProjectNo.Size = new System.Drawing.Size(0, 0);
             this.LblRProjectNo.TabIndex = 18;
@@ -391,8 +365,9 @@
             // LblRContractor
             // 
             this.LblRContractor.AutoSize = true;
+            this.LblRContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRContractor.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRContractor.Location = new System.Drawing.Point(444, 47);
+            this.LblRContractor.Location = new System.Drawing.Point(468, 47);
             this.LblRContractor.Name = "LblRContractor";
             this.LblRContractor.Size = new System.Drawing.Size(0, 0);
             this.LblRContractor.TabIndex = 18;
@@ -400,8 +375,9 @@
             // LblRSupplier
             // 
             this.LblRSupplier.AutoSize = true;
+            this.LblRSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRSupplier.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRSupplier.Location = new System.Drawing.Point(443, 77);
+            this.LblRSupplier.Location = new System.Drawing.Point(467, 77);
             this.LblRSupplier.Name = "LblRSupplier";
             this.LblRSupplier.Size = new System.Drawing.Size(0, 0);
             this.LblRSupplier.TabIndex = 18;
@@ -409,8 +385,9 @@
             // LblRGeosyntetic
             // 
             this.LblRGeosyntetic.AutoSize = true;
+            this.LblRGeosyntetic.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRGeosyntetic.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRGeosyntetic.Location = new System.Drawing.Point(443, 106);
+            this.LblRGeosyntetic.Location = new System.Drawing.Point(467, 106);
             this.LblRGeosyntetic.Name = "LblRGeosyntetic";
             this.LblRGeosyntetic.Size = new System.Drawing.Size(0, 0);
             this.LblRGeosyntetic.TabIndex = 18;
@@ -418,8 +395,9 @@
             // LblRInspector
             // 
             this.LblRInspector.AutoSize = true;
+            this.LblRInspector.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRInspector.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRInspector.Location = new System.Drawing.Point(443, 135);
+            this.LblRInspector.Location = new System.Drawing.Point(467, 135);
             this.LblRInspector.Name = "LblRInspector";
             this.LblRInspector.Size = new System.Drawing.Size(0, 0);
             this.LblRInspector.TabIndex = 18;
@@ -427,20 +405,79 @@
             // LblLocation
             // 
             this.LblLocation.AutoSize = true;
+            this.LblLocation.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblLocation.Location = new System.Drawing.Point(23, 135);
             this.LblLocation.Name = "LblLocation";
-            this.LblLocation.Size = new System.Drawing.Size(58, 19);
+            this.LblLocation.Size = new System.Drawing.Size(76, 25);
             this.LblLocation.TabIndex = 0;
             this.LblLocation.Text = "Location";
             // 
             // LblRLocation
             // 
             this.LblRLocation.AutoSize = true;
+            this.LblRLocation.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRLocation.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRLocation.Location = new System.Drawing.Point(103, 135);
+            this.LblRLocation.Location = new System.Drawing.Point(131, 135);
             this.LblRLocation.Name = "LblRLocation";
             this.LblRLocation.Size = new System.Drawing.Size(0, 0);
             this.LblRLocation.TabIndex = 18;
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnAdd.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdd.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnAdd.IconColor = System.Drawing.Color.Black;
+            this.BtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnAdd.IconSize = 48;
+            this.BtnAdd.Location = new System.Drawing.Point(93, 48);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Rotation = 0D;
+            this.BtnAdd.Size = new System.Drawing.Size(121, 37);
+            this.BtnAdd.TabIndex = 15;
+            this.BtnAdd.Text = "Add";
+            this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEdit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnEdit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEdit.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnEdit.IconColor = System.Drawing.Color.Black;
+            this.BtnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnEdit.IconSize = 48;
+            this.BtnEdit.Location = new System.Drawing.Point(220, 48);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Rotation = 0D;
+            this.BtnEdit.Size = new System.Drawing.Size(119, 37);
+            this.BtnEdit.TabIndex = 15;
+            this.BtnEdit.Text = "Edit";
+            this.BtnEdit.UseVisualStyleBackColor = false;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 48;
+            this.iconButton3.Location = new System.Drawing.Point(345, 48);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Rotation = 0D;
+            this.iconButton3.Size = new System.Drawing.Size(115, 37);
+            this.iconButton3.TabIndex = 15;
+            this.iconButton3.Text = "Delete";
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // DevelopmentForm
             // 
@@ -469,6 +506,7 @@
             this.Controls.Add(this.LblProjectNo);
             this.Controls.Add(this.LblClient);
             this.Name = "DevelopmentForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DevelopmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).EndInit();
@@ -490,9 +528,6 @@
         private System.Windows.Forms.PictureBox PBPicture;
         private MetroFramework.Controls.MetroLabel LblTitle;
         private MetroFramework.Controls.MetroGrid DGVDev;
-        private MetroFramework.Controls.MetroButton BtnAdd;
-        private MetroFramework.Controls.MetroButton BtnDelete;
-        private MetroFramework.Controls.MetroButton BtnEdit;
         private MetroFramework.Controls.MetroLabel LblTotal;
         private MetroFramework.Controls.MetroLabel LblInspector;
         private MetroFramework.Controls.MetroPanel PanelAdd;
@@ -516,5 +551,8 @@
         private MetroFramework.Controls.MetroLabel LblRInspector;
         private MetroFramework.Controls.MetroLabel LblLocation;
         private MetroFramework.Controls.MetroLabel LblRLocation;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton BtnEdit;
+        private FontAwesome.Sharp.IconButton BtnAdd;
     }
 }

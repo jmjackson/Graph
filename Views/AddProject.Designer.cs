@@ -90,16 +90,17 @@
             this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnSave.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BtnSave.IconColor = System.Drawing.Color.Black;
+            this.BtnSave.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.BtnSave.IconColor = System.Drawing.Color.White;
             this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnSave.IconSize = 16;
+            this.BtnSave.IconSize = 25;
             this.BtnSave.Location = new System.Drawing.Point(222, 288);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
             this.BtnSave.Size = new System.Drawing.Size(108, 34);
             this.BtnSave.TabIndex = 5;
             this.BtnSave.Text = "Save";
+            this.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSave.UseVisualStyleBackColor = false;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -111,16 +112,17 @@
             this.BtnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BtnCancel.IconColor = System.Drawing.Color.Black;
+            this.BtnCancel.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.BtnCancel.IconColor = System.Drawing.Color.White;
             this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnCancel.IconSize = 16;
+            this.BtnCancel.IconSize = 25;
             this.BtnCancel.Location = new System.Drawing.Point(336, 288);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
             this.BtnCancel.Size = new System.Drawing.Size(108, 34);
             this.BtnCancel.TabIndex = 6;
             this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnCancel.UseVisualStyleBackColor = false;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 

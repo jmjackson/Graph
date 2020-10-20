@@ -32,9 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.BtnAdd = new MetroFramework.Controls.MetroButton();
-            this.BtnEdit = new MetroFramework.Controls.MetroButton();
-            this.BtnDelete = new MetroFramework.Controls.MetroButton();
             this.DGVDev = new MetroFramework.Controls.MetroGrid();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DevTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,59 +45,11 @@
             this.BtnDraw = new MetroFramework.Controls.MetroButton();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.BtnBack = new FontAwesome.Sharp.IconButton();
+            this.BtnAdd = new FontAwesome.Sharp.IconButton();
+            this.BtnEdit = new FontAwesome.Sharp.IconButton();
+            this.BtnDelete = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BtnAdd
-            // 
-            this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.BtnAdd.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.BtnAdd.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnAdd.Location = new System.Drawing.Point(774, 43);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(110, 35);
-            this.BtnAdd.TabIndex = 3;
-            this.BtnAdd.Text = "Add";
-            this.BtnAdd.UseCustomBackColor = true;
-            this.BtnAdd.UseCustomForeColor = true;
-            this.BtnAdd.UseSelectable = true;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-            // 
-            // BtnEdit
-            // 
-            this.BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.BtnEdit.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.BtnEdit.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnEdit.Location = new System.Drawing.Point(774, 84);
-            this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(110, 35);
-            this.BtnEdit.TabIndex = 3;
-            this.BtnEdit.Text = "Edit";
-            this.BtnEdit.UseCustomBackColor = true;
-            this.BtnEdit.UseCustomForeColor = true;
-            this.BtnEdit.UseSelectable = true;
-            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
-            // 
-            // BtnDelete
-            // 
-            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
-            this.BtnDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.BtnDelete.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnDelete.Location = new System.Drawing.Point(774, 134);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(110, 35);
-            this.BtnDelete.TabIndex = 5;
-            this.BtnDelete.Text = "Delete";
-            this.BtnDelete.UseCustomBackColor = true;
-            this.BtnDelete.UseCustomForeColor = true;
-            this.BtnDelete.UseSelectable = true;
-            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // DGVDev
             // 
@@ -219,7 +168,7 @@
             this.BtnGeoMembrane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnGeoMembrane.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnGeoMembrane.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnGeoMembrane.Location = new System.Drawing.Point(774, 354);
+            this.BtnGeoMembrane.Location = new System.Drawing.Point(785, 299);
             this.BtnGeoMembrane.Name = "BtnGeoMembrane";
             this.BtnGeoMembrane.Size = new System.Drawing.Size(110, 35);
             this.BtnGeoMembrane.TabIndex = 5;
@@ -233,7 +182,7 @@
             this.BtnDeployment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnDeployment.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnDeployment.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnDeployment.Location = new System.Drawing.Point(774, 305);
+            this.BtnDeployment.Location = new System.Drawing.Point(785, 250);
             this.BtnDeployment.Name = "BtnDeployment";
             this.BtnDeployment.Size = new System.Drawing.Size(110, 38);
             this.BtnDeployment.TabIndex = 5;
@@ -247,7 +196,7 @@
             this.BtnDraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnDraw.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnDraw.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnDraw.Location = new System.Drawing.Point(774, 407);
+            this.BtnDraw.Location = new System.Drawing.Point(785, 340);
             this.BtnDraw.Name = "BtnDraw";
             this.BtnDraw.Size = new System.Drawing.Size(110, 35);
             this.BtnDraw.TabIndex = 5;
@@ -295,20 +244,86 @@
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
+            // BtnAdd
+            // 
+            this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdd.ForeColor = System.Drawing.Color.White;
+            this.BtnAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.BtnAdd.IconColor = System.Drawing.Color.White;
+            this.BtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnAdd.IconSize = 25;
+            this.BtnAdd.Location = new System.Drawing.Point(785, 63);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Rotation = 0D;
+            this.BtnAdd.Size = new System.Drawing.Size(110, 35);
+            this.BtnAdd.TabIndex = 8;
+            this.BtnAdd.Text = "Add";
+            this.BtnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEdit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEdit.ForeColor = System.Drawing.Color.White;
+            this.BtnEdit.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
+            this.BtnEdit.IconColor = System.Drawing.Color.White;
+            this.BtnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnEdit.IconSize = 25;
+            this.BtnEdit.Location = new System.Drawing.Point(785, 104);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Rotation = 0D;
+            this.BtnEdit.Size = new System.Drawing.Size(110, 35);
+            this.BtnEdit.TabIndex = 8;
+            this.BtnEdit.Text = "Edit";
+            this.BtnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnEdit.UseVisualStyleBackColor = false;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDelete.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDelete.ForeColor = System.Drawing.Color.White;
+            this.BtnDelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.BtnDelete.IconColor = System.Drawing.Color.White;
+            this.BtnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnDelete.IconSize = 25;
+            this.BtnDelete.Location = new System.Drawing.Point(785, 145);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Rotation = 0D;
+            this.BtnDelete.Size = new System.Drawing.Size(110, 35);
+            this.BtnDelete.TabIndex = 8;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnDelete.UseVisualStyleBackColor = false;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
             // DevForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 545);
+            this.Controls.Add(this.BtnDelete);
+            this.Controls.Add(this.BtnEdit);
+            this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.DGVDev);
             this.Controls.Add(this.BtnDeployment);
             this.Controls.Add(this.BtnDraw);
             this.Controls.Add(this.BtnGeoMembrane);
-            this.Controls.Add(this.BtnDelete);
-            this.Controls.Add(this.BtnEdit);
-            this.Controls.Add(this.BtnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DevForm";
             this.Text = "Inspection";
@@ -321,9 +336,6 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroButton BtnAdd;
-        private MetroFramework.Controls.MetroButton BtnEdit;
-        private MetroFramework.Controls.MetroButton BtnDelete;
         private MetroFramework.Controls.MetroGrid DGVDev;
         private MetroFramework.Controls.MetroButton BtnGeoMembrane;
         private MetroFramework.Controls.MetroButton BtnDeployment;
@@ -337,5 +349,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MachineNo;
         private FontAwesome.Sharp.IconButton BtnExit;
         private FontAwesome.Sharp.IconButton BtnBack;
+        private FontAwesome.Sharp.IconButton BtnAdd;
+        private FontAwesome.Sharp.IconButton BtnEdit;
+        private FontAwesome.Sharp.IconButton BtnDelete;
     }
 }

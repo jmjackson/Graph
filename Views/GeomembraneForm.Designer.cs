@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeomembraneForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
@@ -59,29 +60,11 @@
             this.CarryOver = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksDestructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TxtSeamNo = new MetroFramework.Controls.MetroTextBox();
-            this.LblSeamNo = new MetroFramework.Controls.MetroLabel();
-            this.TxtSeamTime = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
-            this.TxtTemp = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
-            this.TxtSpeed = new MetroFramework.Controls.MetroTextBox();
-            this.TxtSeamLength = new MetroFramework.Controls.MetroTextBox();
-            this.TxtCarryOver = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
-            this.TxtDestructive = new MetroFramework.Controls.MetroTextBox();
-            this.TxtRemarks = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
             this.BtnAdd = new MetroFramework.Controls.MetroButton();
             this.BtnEdit = new MetroFramework.Controls.MetroButton();
-            this.BtnSave = new MetroFramework.Controls.MetroButton();
             this.BtnPdf = new MetroFramework.Controls.MetroButton();
             this.BtnDelete = new MetroFramework.Controls.MetroButton();
             this.DateDev = new MetroFramework.Controls.MetroDateTime();
-            this.TxtGeoId = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVGeo)).BeginInit();
             this.SuspendLayout();
@@ -89,34 +72,39 @@
             // LblClient
             // 
             this.LblClient.AutoSize = true;
+            this.LblClient.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblClient.Location = new System.Drawing.Point(23, 32);
             this.LblClient.Name = "LblClient";
-            this.LblClient.Size = new System.Drawing.Size(49, 19);
+            this.LblClient.Size = new System.Drawing.Size(64, 25);
             this.LblClient.TabIndex = 0;
             this.LblClient.Text = "Client :";
             // 
             // LblProject
             // 
             this.LblProject.AutoSize = true;
+            this.LblProject.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblProject.Location = new System.Drawing.Point(23, 60);
             this.LblProject.Name = "LblProject";
-            this.LblProject.Size = new System.Drawing.Size(57, 19);
+            this.LblProject.Size = new System.Drawing.Size(73, 25);
             this.LblProject.TabIndex = 0;
             this.LblProject.Text = "Project :";
             // 
             // LblProjectNo
             // 
             this.LblProjectNo.AutoSize = true;
+            this.LblProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblProjectNo.Location = new System.Drawing.Point(23, 88);
             this.LblProjectNo.Name = "LblProjectNo";
-            this.LblProjectNo.Size = new System.Drawing.Size(79, 19);
+            this.LblProjectNo.Size = new System.Drawing.Size(101, 25);
             this.LblProjectNo.TabIndex = 0;
             this.LblProjectNo.Text = "Project No :";
             // 
             // MetroClient
             // 
             this.MetroClient.AutoSize = true;
-            this.MetroClient.Location = new System.Drawing.Point(110, 32);
+            this.MetroClient.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.MetroClient.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.MetroClient.Location = new System.Drawing.Point(142, 32);
             this.MetroClient.Name = "MetroClient";
             this.MetroClient.Size = new System.Drawing.Size(0, 0);
             this.MetroClient.TabIndex = 0;
@@ -124,7 +112,9 @@
             // MetroProject
             // 
             this.MetroProject.AutoSize = true;
-            this.MetroProject.Location = new System.Drawing.Point(110, 60);
+            this.MetroProject.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.MetroProject.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.MetroProject.Location = new System.Drawing.Point(142, 60);
             this.MetroProject.Name = "MetroProject";
             this.MetroProject.Size = new System.Drawing.Size(0, 0);
             this.MetroProject.TabIndex = 0;
@@ -132,7 +122,9 @@
             // MetroProjectNo
             // 
             this.MetroProjectNo.AutoSize = true;
-            this.MetroProjectNo.Location = new System.Drawing.Point(110, 88);
+            this.MetroProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.MetroProjectNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.MetroProjectNo.Location = new System.Drawing.Point(142, 88);
             this.MetroProjectNo.Name = "MetroProjectNo";
             this.MetroProjectNo.Size = new System.Drawing.Size(0, 0);
             this.MetroProjectNo.TabIndex = 0;
@@ -140,34 +132,39 @@
             // LblContractor
             // 
             this.LblContractor.AutoSize = true;
+            this.LblContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblContractor.Location = new System.Drawing.Point(266, 32);
             this.LblContractor.Name = "LblContractor";
-            this.LblContractor.Size = new System.Drawing.Size(79, 19);
+            this.LblContractor.Size = new System.Drawing.Size(101, 25);
             this.LblContractor.TabIndex = 0;
             this.LblContractor.Text = "Contractor :";
             // 
             // LblSupplier
             // 
             this.LblSupplier.AutoSize = true;
+            this.LblSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblSupplier.Location = new System.Drawing.Point(266, 60);
             this.LblSupplier.Name = "LblSupplier";
-            this.LblSupplier.Size = new System.Drawing.Size(64, 19);
+            this.LblSupplier.Size = new System.Drawing.Size(83, 25);
             this.LblSupplier.TabIndex = 0;
             this.LblSupplier.Text = "Supplier :";
             // 
             // LblGeosynthetic
             // 
             this.LblGeosynthetic.AutoSize = true;
+            this.LblGeosynthetic.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblGeosynthetic.Location = new System.Drawing.Point(266, 88);
             this.LblGeosynthetic.Name = "LblGeosynthetic";
-            this.LblGeosynthetic.Size = new System.Drawing.Size(89, 19);
+            this.LblGeosynthetic.Size = new System.Drawing.Size(118, 25);
             this.LblGeosynthetic.TabIndex = 0;
             this.LblGeosynthetic.Text = "Geosynthetic :";
             // 
             // MetroContractor
             // 
             this.MetroContractor.AutoSize = true;
-            this.MetroContractor.Location = new System.Drawing.Point(353, 32);
+            this.MetroContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.MetroContractor.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.MetroContractor.Location = new System.Drawing.Point(399, 32);
             this.MetroContractor.Name = "MetroContractor";
             this.MetroContractor.Size = new System.Drawing.Size(0, 0);
             this.MetroContractor.TabIndex = 0;
@@ -175,7 +172,9 @@
             // MetroSupplier
             // 
             this.MetroSupplier.AutoSize = true;
-            this.MetroSupplier.Location = new System.Drawing.Point(353, 60);
+            this.MetroSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.MetroSupplier.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.MetroSupplier.Location = new System.Drawing.Point(399, 60);
             this.MetroSupplier.Name = "MetroSupplier";
             this.MetroSupplier.Size = new System.Drawing.Size(0, 0);
             this.MetroSupplier.TabIndex = 0;
@@ -183,7 +182,9 @@
             // MetroGeosynthetic
             // 
             this.MetroGeosynthetic.AutoSize = true;
-            this.MetroGeosynthetic.Location = new System.Drawing.Point(353, 88);
+            this.MetroGeosynthetic.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.MetroGeosynthetic.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.MetroGeosynthetic.Location = new System.Drawing.Point(399, 88);
             this.MetroGeosynthetic.Name = "MetroGeosynthetic";
             this.MetroGeosynthetic.Size = new System.Drawing.Size(0, 0);
             this.MetroGeosynthetic.TabIndex = 0;
@@ -191,25 +192,29 @@
             // LblOperator
             // 
             this.LblOperator.AutoSize = true;
+            this.LblOperator.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblOperator.Location = new System.Drawing.Point(543, 32);
             this.LblOperator.Name = "LblOperator";
-            this.LblOperator.Size = new System.Drawing.Size(71, 19);
+            this.LblOperator.Size = new System.Drawing.Size(90, 25);
             this.LblOperator.TabIndex = 0;
             this.LblOperator.Text = "Operator :";
             // 
             // LblMachine
             // 
             this.LblMachine.AutoSize = true;
+            this.LblMachine.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblMachine.Location = new System.Drawing.Point(543, 60);
             this.LblMachine.Name = "LblMachine";
-            this.LblMachine.Size = new System.Drawing.Size(73, 19);
+            this.LblMachine.Size = new System.Drawing.Size(97, 25);
             this.LblMachine.TabIndex = 0;
             this.LblMachine.Text = "Machine #:";
             // 
             // MetroOperator
             // 
             this.MetroOperator.AutoSize = true;
-            this.MetroOperator.Location = new System.Drawing.Point(630, 32);
+            this.MetroOperator.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.MetroOperator.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.MetroOperator.Location = new System.Drawing.Point(666, 32);
             this.MetroOperator.Name = "MetroOperator";
             this.MetroOperator.Size = new System.Drawing.Size(0, 0);
             this.MetroOperator.TabIndex = 0;
@@ -217,13 +222,16 @@
             // MetroMachineNo
             // 
             this.MetroMachineNo.AutoSize = true;
-            this.MetroMachineNo.Location = new System.Drawing.Point(630, 60);
+            this.MetroMachineNo.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.MetroMachineNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.MetroMachineNo.Location = new System.Drawing.Point(666, 60);
             this.MetroMachineNo.Name = "MetroMachineNo";
             this.MetroMachineNo.Size = new System.Drawing.Size(0, 0);
             this.MetroMachineNo.TabIndex = 0;
             // 
             // PbLogo
             // 
+            this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
             this.PbLogo.Location = new System.Drawing.Point(822, 32);
             this.PbLogo.Name = "PbLogo";
             this.PbLogo.Size = new System.Drawing.Size(189, 50);
@@ -234,18 +242,21 @@
             // DGVGeo
             // 
             this.DGVGeo.AllowUserToResizeRows = false;
+            this.DGVGeo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVGeo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DGVGeo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVGeo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVGeo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.DGVGeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVGeo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -258,32 +269,32 @@
             this.CarryOver,
             this.Destructive,
             this.RemarksDestructive});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVGeo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVGeo.DefaultCellStyle = dataGridViewCellStyle14;
             this.DGVGeo.EnableHeadersVisualStyles = false;
             this.DGVGeo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DGVGeo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DGVGeo.Location = new System.Drawing.Point(23, 137);
             this.DGVGeo.Name = "DGVGeo";
             this.DGVGeo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(73)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVGeo.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVGeo.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.DGVGeo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVGeo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVGeo.Size = new System.Drawing.Size(1026, 304);
-            this.DGVGeo.Style = MetroFramework.MetroColorStyle.Purple;
+            this.DGVGeo.Style = MetroFramework.MetroColorStyle.Blue;
             this.DGVGeo.TabIndex = 2;
             // 
             // Id
@@ -346,369 +357,66 @@
             this.RemarksDestructive.HeaderText = "Remarks/Destructive";
             this.RemarksDestructive.Name = "RemarksDestructive";
             // 
-            // TxtSeamNo
-            // 
-            // 
-            // 
-            // 
-            this.TxtSeamNo.CustomButton.Image = null;
-            this.TxtSeamNo.CustomButton.Location = new System.Drawing.Point(145, 1);
-            this.TxtSeamNo.CustomButton.Name = "";
-            this.TxtSeamNo.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtSeamNo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtSeamNo.CustomButton.TabIndex = 1;
-            this.TxtSeamNo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtSeamNo.CustomButton.UseSelectable = true;
-            this.TxtSeamNo.CustomButton.Visible = false;
-            this.TxtSeamNo.Lines = new string[0];
-            this.TxtSeamNo.Location = new System.Drawing.Point(110, 469);
-            this.TxtSeamNo.MaxLength = 32767;
-            this.TxtSeamNo.Name = "TxtSeamNo";
-            this.TxtSeamNo.PasswordChar = '\0';
-            this.TxtSeamNo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtSeamNo.SelectedText = "";
-            this.TxtSeamNo.SelectionLength = 0;
-            this.TxtSeamNo.SelectionStart = 0;
-            this.TxtSeamNo.ShortcutsEnabled = true;
-            this.TxtSeamNo.Size = new System.Drawing.Size(167, 23);
-            this.TxtSeamNo.TabIndex = 3;
-            this.TxtSeamNo.UseSelectable = true;
-            this.TxtSeamNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtSeamNo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // LblSeamNo
-            // 
-            this.LblSeamNo.AutoSize = true;
-            this.LblSeamNo.Location = new System.Drawing.Point(34, 466);
-            this.LblSeamNo.Name = "LblSeamNo";
-            this.LblSeamNo.Size = new System.Drawing.Size(64, 19);
-            this.LblSeamNo.TabIndex = 4;
-            this.LblSeamNo.Text = "Seam No";
-            // 
-            // TxtSeamTime
-            // 
-            // 
-            // 
-            // 
-            this.TxtSeamTime.CustomButton.Image = null;
-            this.TxtSeamTime.CustomButton.Location = new System.Drawing.Point(145, 1);
-            this.TxtSeamTime.CustomButton.Name = "";
-            this.TxtSeamTime.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtSeamTime.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtSeamTime.CustomButton.TabIndex = 1;
-            this.TxtSeamTime.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtSeamTime.CustomButton.UseSelectable = true;
-            this.TxtSeamTime.CustomButton.Visible = false;
-            this.TxtSeamTime.Lines = new string[0];
-            this.TxtSeamTime.Location = new System.Drawing.Point(110, 498);
-            this.TxtSeamTime.MaxLength = 32767;
-            this.TxtSeamTime.Name = "TxtSeamTime";
-            this.TxtSeamTime.PasswordChar = '\0';
-            this.TxtSeamTime.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtSeamTime.SelectedText = "";
-            this.TxtSeamTime.SelectionLength = 0;
-            this.TxtSeamTime.SelectionStart = 0;
-            this.TxtSeamTime.ShortcutsEnabled = true;
-            this.TxtSeamTime.Size = new System.Drawing.Size(167, 23);
-            this.TxtSeamTime.TabIndex = 3;
-            this.TxtSeamTime.UseSelectable = true;
-            this.TxtSeamTime.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtSeamTime.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel20
-            // 
-            this.metroLabel20.AutoSize = true;
-            this.metroLabel20.Location = new System.Drawing.Point(23, 498);
-            this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(75, 19);
-            this.metroLabel20.TabIndex = 4;
-            this.metroLabel20.Text = "Seam Time";
-            // 
-            // TxtTemp
-            // 
-            // 
-            // 
-            // 
-            this.TxtTemp.CustomButton.Image = null;
-            this.TxtTemp.CustomButton.Location = new System.Drawing.Point(145, 1);
-            this.TxtTemp.CustomButton.Name = "";
-            this.TxtTemp.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtTemp.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtTemp.CustomButton.TabIndex = 1;
-            this.TxtTemp.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtTemp.CustomButton.UseSelectable = true;
-            this.TxtTemp.CustomButton.Visible = false;
-            this.TxtTemp.Lines = new string[0];
-            this.TxtTemp.Location = new System.Drawing.Point(110, 527);
-            this.TxtTemp.MaxLength = 32767;
-            this.TxtTemp.Name = "TxtTemp";
-            this.TxtTemp.PasswordChar = '\0';
-            this.TxtTemp.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtTemp.SelectedText = "";
-            this.TxtTemp.SelectionLength = 0;
-            this.TxtTemp.SelectionStart = 0;
-            this.TxtTemp.ShortcutsEnabled = true;
-            this.TxtTemp.Size = new System.Drawing.Size(167, 23);
-            this.TxtTemp.TabIndex = 3;
-            this.TxtTemp.UseSelectable = true;
-            this.TxtTemp.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtTemp.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel21
-            // 
-            this.metroLabel21.AutoSize = true;
-            this.metroLabel21.Location = new System.Drawing.Point(57, 527);
-            this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(41, 19);
-            this.metroLabel21.TabIndex = 4;
-            this.metroLabel21.Text = "Temp";
-            // 
-            // TxtSpeed
-            // 
-            // 
-            // 
-            // 
-            this.TxtSpeed.CustomButton.Image = null;
-            this.TxtSpeed.CustomButton.Location = new System.Drawing.Point(131, 1);
-            this.TxtSpeed.CustomButton.Name = "";
-            this.TxtSpeed.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtSpeed.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtSpeed.CustomButton.TabIndex = 1;
-            this.TxtSpeed.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtSpeed.CustomButton.UseSelectable = true;
-            this.TxtSpeed.CustomButton.Visible = false;
-            this.TxtSpeed.Lines = new string[0];
-            this.TxtSpeed.Location = new System.Drawing.Point(377, 469);
-            this.TxtSpeed.MaxLength = 32767;
-            this.TxtSpeed.Name = "TxtSpeed";
-            this.TxtSpeed.PasswordChar = '\0';
-            this.TxtSpeed.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtSpeed.SelectedText = "";
-            this.TxtSpeed.SelectionLength = 0;
-            this.TxtSpeed.SelectionStart = 0;
-            this.TxtSpeed.ShortcutsEnabled = true;
-            this.TxtSpeed.Size = new System.Drawing.Size(153, 23);
-            this.TxtSpeed.TabIndex = 3;
-            this.TxtSpeed.UseSelectable = true;
-            this.TxtSpeed.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtSpeed.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // TxtSeamLength
-            // 
-            // 
-            // 
-            // 
-            this.TxtSeamLength.CustomButton.Image = null;
-            this.TxtSeamLength.CustomButton.Location = new System.Drawing.Point(131, 1);
-            this.TxtSeamLength.CustomButton.Name = "";
-            this.TxtSeamLength.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtSeamLength.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtSeamLength.CustomButton.TabIndex = 1;
-            this.TxtSeamLength.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtSeamLength.CustomButton.UseSelectable = true;
-            this.TxtSeamLength.CustomButton.Visible = false;
-            this.TxtSeamLength.Lines = new string[0];
-            this.TxtSeamLength.Location = new System.Drawing.Point(377, 498);
-            this.TxtSeamLength.MaxLength = 32767;
-            this.TxtSeamLength.Name = "TxtSeamLength";
-            this.TxtSeamLength.PasswordChar = '\0';
-            this.TxtSeamLength.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtSeamLength.SelectedText = "";
-            this.TxtSeamLength.SelectionLength = 0;
-            this.TxtSeamLength.SelectionStart = 0;
-            this.TxtSeamLength.ShortcutsEnabled = true;
-            this.TxtSeamLength.Size = new System.Drawing.Size(153, 23);
-            this.TxtSeamLength.TabIndex = 3;
-            this.TxtSeamLength.UseSelectable = true;
-            this.TxtSeamLength.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtSeamLength.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // TxtCarryOver
-            // 
-            // 
-            // 
-            // 
-            this.TxtCarryOver.CustomButton.Image = null;
-            this.TxtCarryOver.CustomButton.Location = new System.Drawing.Point(131, 1);
-            this.TxtCarryOver.CustomButton.Name = "";
-            this.TxtCarryOver.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtCarryOver.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtCarryOver.CustomButton.TabIndex = 1;
-            this.TxtCarryOver.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtCarryOver.CustomButton.UseSelectable = true;
-            this.TxtCarryOver.CustomButton.Visible = false;
-            this.TxtCarryOver.Lines = new string[0];
-            this.TxtCarryOver.Location = new System.Drawing.Point(377, 527);
-            this.TxtCarryOver.MaxLength = 32767;
-            this.TxtCarryOver.Name = "TxtCarryOver";
-            this.TxtCarryOver.PasswordChar = '\0';
-            this.TxtCarryOver.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtCarryOver.SelectedText = "";
-            this.TxtCarryOver.SelectionLength = 0;
-            this.TxtCarryOver.SelectionStart = 0;
-            this.TxtCarryOver.ShortcutsEnabled = true;
-            this.TxtCarryOver.Size = new System.Drawing.Size(153, 23);
-            this.TxtCarryOver.TabIndex = 3;
-            this.TxtCarryOver.UseSelectable = true;
-            this.TxtCarryOver.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtCarryOver.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel22
-            // 
-            this.metroLabel22.AutoSize = true;
-            this.metroLabel22.Location = new System.Drawing.Point(322, 469);
-            this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(46, 19);
-            this.metroLabel22.TabIndex = 4;
-            this.metroLabel22.Text = "Speed";
-            // 
-            // metroLabel23
-            // 
-            this.metroLabel23.AutoSize = true;
-            this.metroLabel23.Location = new System.Drawing.Point(283, 498);
-            this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(85, 19);
-            this.metroLabel23.TabIndex = 4;
-            this.metroLabel23.Text = "Seam Length";
-            // 
-            // metroLabel24
-            // 
-            this.metroLabel24.AutoSize = true;
-            this.metroLabel24.Location = new System.Drawing.Point(293, 527);
-            this.metroLabel24.Name = "metroLabel24";
-            this.metroLabel24.Size = new System.Drawing.Size(75, 19);
-            this.metroLabel24.TabIndex = 4;
-            this.metroLabel24.Text = "Carry Over";
-            // 
-            // TxtDestructive
-            // 
-            // 
-            // 
-            // 
-            this.TxtDestructive.CustomButton.Image = null;
-            this.TxtDestructive.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.TxtDestructive.CustomButton.Name = "";
-            this.TxtDestructive.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtDestructive.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtDestructive.CustomButton.TabIndex = 1;
-            this.TxtDestructive.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtDestructive.CustomButton.UseSelectable = true;
-            this.TxtDestructive.CustomButton.Visible = false;
-            this.TxtDestructive.Lines = new string[0];
-            this.TxtDestructive.Location = new System.Drawing.Point(669, 469);
-            this.TxtDestructive.MaxLength = 32767;
-            this.TxtDestructive.Name = "TxtDestructive";
-            this.TxtDestructive.PasswordChar = '\0';
-            this.TxtDestructive.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtDestructive.SelectedText = "";
-            this.TxtDestructive.SelectionLength = 0;
-            this.TxtDestructive.SelectionStart = 0;
-            this.TxtDestructive.ShortcutsEnabled = true;
-            this.TxtDestructive.Size = new System.Drawing.Size(137, 23);
-            this.TxtDestructive.TabIndex = 3;
-            this.TxtDestructive.UseSelectable = true;
-            this.TxtDestructive.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtDestructive.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // TxtRemarks
-            // 
-            // 
-            // 
-            // 
-            this.TxtRemarks.CustomButton.Image = null;
-            this.TxtRemarks.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.TxtRemarks.CustomButton.Name = "";
-            this.TxtRemarks.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtRemarks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtRemarks.CustomButton.TabIndex = 1;
-            this.TxtRemarks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtRemarks.CustomButton.UseSelectable = true;
-            this.TxtRemarks.CustomButton.Visible = false;
-            this.TxtRemarks.Lines = new string[0];
-            this.TxtRemarks.Location = new System.Drawing.Point(669, 498);
-            this.TxtRemarks.MaxLength = 32767;
-            this.TxtRemarks.Name = "TxtRemarks";
-            this.TxtRemarks.PasswordChar = '\0';
-            this.TxtRemarks.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtRemarks.SelectedText = "";
-            this.TxtRemarks.SelectionLength = 0;
-            this.TxtRemarks.SelectionStart = 0;
-            this.TxtRemarks.ShortcutsEnabled = true;
-            this.TxtRemarks.Size = new System.Drawing.Size(137, 23);
-            this.TxtRemarks.TabIndex = 3;
-            this.TxtRemarks.UseSelectable = true;
-            this.TxtRemarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtRemarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel25
-            // 
-            this.metroLabel25.AutoSize = true;
-            this.metroLabel25.Location = new System.Drawing.Point(591, 466);
-            this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(72, 19);
-            this.metroLabel25.TabIndex = 4;
-            this.metroLabel25.Text = "Destructive";
-            // 
-            // metroLabel26
-            // 
-            this.metroLabel26.AutoSize = true;
-            this.metroLabel26.Location = new System.Drawing.Point(536, 498);
-            this.metroLabel26.Name = "metroLabel26";
-            this.metroLabel26.Size = new System.Drawing.Size(127, 19);
-            this.metroLabel26.TabIndex = 4;
-            this.metroLabel26.Text = "Remarks/Destructive";
-            // 
             // BtnAdd
             // 
+            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnAdd.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnAdd.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnAdd.Location = new System.Drawing.Point(577, 527);
+            this.BtnAdd.ForeColor = System.Drawing.Color.White;
+            this.BtnAdd.Location = new System.Drawing.Point(245, 549);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(103, 23);
+            this.BtnAdd.Size = new System.Drawing.Size(122, 30);
             this.BtnAdd.TabIndex = 5;
             this.BtnAdd.Text = "Add";
+            this.BtnAdd.UseCustomBackColor = true;
+            this.BtnAdd.UseCustomForeColor = true;
             this.BtnAdd.UseSelectable = true;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // BtnEdit
             // 
+            this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnEdit.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnEdit.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnEdit.Location = new System.Drawing.Point(577, 556);
+            this.BtnEdit.ForeColor = System.Drawing.Color.White;
+            this.BtnEdit.Location = new System.Drawing.Point(373, 549);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(103, 23);
+            this.BtnEdit.Size = new System.Drawing.Size(122, 30);
             this.BtnEdit.TabIndex = 5;
             this.BtnEdit.Text = "Edit";
+            this.BtnEdit.UseCustomBackColor = true;
+            this.BtnEdit.UseCustomForeColor = true;
             this.BtnEdit.UseSelectable = true;
             this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
-            // BtnSave
-            // 
-            this.BtnSave.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnSave.Location = new System.Drawing.Point(686, 556);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(103, 23);
-            this.BtnSave.TabIndex = 5;
-            this.BtnSave.Text = "Save";
-            this.BtnSave.UseSelectable = true;
-            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
             // BtnPdf
             // 
-            this.BtnPdf.Location = new System.Drawing.Point(919, 539);
+            this.BtnPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnPdf.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.BtnPdf.ForeColor = System.Drawing.Color.White;
+            this.BtnPdf.Location = new System.Drawing.Point(653, 549);
             this.BtnPdf.Name = "BtnPdf";
-            this.BtnPdf.Size = new System.Drawing.Size(103, 23);
+            this.BtnPdf.Size = new System.Drawing.Size(110, 30);
             this.BtnPdf.TabIndex = 5;
             this.BtnPdf.Text = "Save PDF";
+            this.BtnPdf.UseCustomBackColor = true;
+            this.BtnPdf.UseCustomForeColor = true;
             this.BtnPdf.UseSelectable = true;
             this.BtnPdf.Click += new System.EventHandler(this.BtnPdf_Click);
             // 
             // BtnDelete
             // 
+            this.BtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.BtnDelete.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnDelete.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnDelete.Location = new System.Drawing.Point(686, 527);
+            this.BtnDelete.ForeColor = System.Drawing.Color.White;
+            this.BtnDelete.Location = new System.Drawing.Point(501, 549);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(103, 23);
+            this.BtnDelete.Size = new System.Drawing.Size(122, 30);
             this.BtnDelete.TabIndex = 5;
             this.BtnDelete.Text = "Delete";
+            this.BtnDelete.UseCustomBackColor = true;
+            this.BtnDelete.UseCustomForeColor = true;
             this.BtnDelete.UseSelectable = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
@@ -720,64 +428,16 @@
             this.DateDev.Size = new System.Drawing.Size(200, 29);
             this.DateDev.TabIndex = 6;
             // 
-            // TxtGeoId
-            // 
-            // 
-            // 
-            // 
-            this.TxtGeoId.CustomButton.Image = null;
-            this.TxtGeoId.CustomButton.Location = new System.Drawing.Point(131, 1);
-            this.TxtGeoId.CustomButton.Name = "";
-            this.TxtGeoId.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TxtGeoId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TxtGeoId.CustomButton.TabIndex = 1;
-            this.TxtGeoId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TxtGeoId.CustomButton.UseSelectable = true;
-            this.TxtGeoId.CustomButton.Visible = false;
-            this.TxtGeoId.Lines = new string[0];
-            this.TxtGeoId.Location = new System.Drawing.Point(377, 556);
-            this.TxtGeoId.MaxLength = 32767;
-            this.TxtGeoId.Name = "TxtGeoId";
-            this.TxtGeoId.PasswordChar = '\0';
-            this.TxtGeoId.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TxtGeoId.SelectedText = "";
-            this.TxtGeoId.SelectionLength = 0;
-            this.TxtGeoId.SelectionStart = 0;
-            this.TxtGeoId.ShortcutsEnabled = true;
-            this.TxtGeoId.Size = new System.Drawing.Size(153, 23);
-            this.TxtGeoId.TabIndex = 7;
-            this.TxtGeoId.UseSelectable = true;
-            this.TxtGeoId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TxtGeoId.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // GeomembraneForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 599);
-            this.Controls.Add(this.TxtGeoId);
             this.Controls.Add(this.DateDev);
             this.Controls.Add(this.BtnPdf);
-            this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnAdd);
-            this.Controls.Add(this.metroLabel24);
-            this.Controls.Add(this.metroLabel21);
-            this.Controls.Add(this.metroLabel26);
-            this.Controls.Add(this.metroLabel23);
-            this.Controls.Add(this.metroLabel20);
-            this.Controls.Add(this.metroLabel25);
-            this.Controls.Add(this.metroLabel22);
-            this.Controls.Add(this.LblSeamNo);
-            this.Controls.Add(this.TxtRemarks);
-            this.Controls.Add(this.TxtCarryOver);
-            this.Controls.Add(this.TxtSeamLength);
-            this.Controls.Add(this.TxtDestructive);
-            this.Controls.Add(this.TxtTemp);
-            this.Controls.Add(this.TxtSpeed);
-            this.Controls.Add(this.TxtSeamTime);
-            this.Controls.Add(this.TxtSeamNo);
             this.Controls.Add(this.DGVGeo);
             this.Controls.Add(this.PbLogo);
             this.Controls.Add(this.MetroMachineNo);
@@ -797,7 +457,7 @@
             this.Controls.Add(this.LblProject);
             this.Controls.Add(this.LblClient);
             this.Name = "GeomembraneForm";
-            this.Style = MetroFramework.MetroColorStyle.Purple;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GeomembraneForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVGeo)).EndInit();
@@ -826,25 +486,8 @@
         private MetroFramework.Controls.MetroLabel MetroMachineNo;
         private System.Windows.Forms.PictureBox PbLogo;
         private MetroFramework.Controls.MetroGrid DGVGeo;
-        private MetroFramework.Controls.MetroTextBox TxtSeamNo;
-        private MetroFramework.Controls.MetroLabel LblSeamNo;
-        private MetroFramework.Controls.MetroTextBox TxtSeamTime;
-        private MetroFramework.Controls.MetroLabel metroLabel20;
-        private MetroFramework.Controls.MetroTextBox TxtTemp;
-        private MetroFramework.Controls.MetroLabel metroLabel21;
-        private MetroFramework.Controls.MetroTextBox TxtSpeed;
-        private MetroFramework.Controls.MetroTextBox TxtSeamLength;
-        private MetroFramework.Controls.MetroTextBox TxtCarryOver;
-        private MetroFramework.Controls.MetroLabel metroLabel22;
-        private MetroFramework.Controls.MetroLabel metroLabel23;
-        private MetroFramework.Controls.MetroLabel metroLabel24;
-        private MetroFramework.Controls.MetroTextBox TxtDestructive;
-        private MetroFramework.Controls.MetroTextBox TxtRemarks;
-        private MetroFramework.Controls.MetroLabel metroLabel25;
-        private MetroFramework.Controls.MetroLabel metroLabel26;
         private MetroFramework.Controls.MetroButton BtnAdd;
         private MetroFramework.Controls.MetroButton BtnEdit;
-        private MetroFramework.Controls.MetroButton BtnSave;
         private MetroFramework.Controls.MetroButton BtnPdf;
         private MetroFramework.Controls.MetroButton BtnDelete;
         private MetroFramework.Controls.MetroDateTime DateDev;
@@ -858,6 +501,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CarryOver;
         private System.Windows.Forms.DataGridViewTextBoxColumn Destructive;
         private System.Windows.Forms.DataGridViewTextBoxColumn RemarksDestructive;
-        private MetroFramework.Controls.MetroTextBox TxtGeoId;
     }
 }

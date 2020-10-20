@@ -35,14 +35,14 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.BtnSave = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.BtnCancel = new FontAwesome.Sharp.IconButton();
+            this.TxtOperator = new System.Windows.Forms.TextBox();
+            this.TxtLocation = new System.Windows.Forms.TextBox();
+            this.TxtInspector = new System.Windows.Forms.TextBox();
+            this.TxtMachineNo = new System.Windows.Forms.TextBox();
+            this.TxtProject = new System.Windows.Forms.TextBox();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.DateInspection = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
@@ -72,9 +72,9 @@
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.Location = new System.Drawing.Point(44, 102);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(55, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(26, 25);
             this.metroLabel4.TabIndex = 0;
-            this.metroLabel4.Text = "Client";
+            this.metroLabel4.Text = "Id";
             // 
             // metroLabel5
             // 
@@ -109,6 +109,7 @@
             // BtnSave
             // 
             this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,82 +125,87 @@
             this.BtnSave.TabIndex = 1;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // iconButton2
+            // BtnCancel
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 48;
-            this.iconButton2.Location = new System.Drawing.Point(271, 342);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(104, 36);
-            this.iconButton2.TabIndex = 2;
-            this.iconButton2.Text = "Cancel";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.ForeColor = System.Drawing.Color.White;
+            this.BtnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnCancel.IconColor = System.Drawing.Color.Black;
+            this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnCancel.IconSize = 48;
+            this.BtnCancel.Location = new System.Drawing.Point(271, 342);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Rotation = 0D;
+            this.BtnCancel.Size = new System.Drawing.Size(104, 36);
+            this.BtnCancel.TabIndex = 2;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = false;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // textBox2
+            // TxtOperator
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(44, 284);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 33);
-            this.textBox2.TabIndex = 3;
+            this.TxtOperator.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtOperator.Location = new System.Drawing.Point(44, 284);
+            this.TxtOperator.Name = "TxtOperator";
+            this.TxtOperator.Size = new System.Drawing.Size(221, 33);
+            this.TxtOperator.TabIndex = 3;
             // 
-            // textBox5
+            // TxtLocation
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(44, 208);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(221, 33);
-            this.textBox5.TabIndex = 3;
+            this.TxtLocation.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLocation.Location = new System.Drawing.Point(44, 208);
+            this.TxtLocation.Name = "TxtLocation";
+            this.TxtLocation.Size = new System.Drawing.Size(221, 33);
+            this.TxtLocation.TabIndex = 3;
             // 
-            // textBox6
+            // TxtInspector
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(271, 208);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(221, 33);
-            this.textBox6.TabIndex = 3;
+            this.TxtInspector.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtInspector.Location = new System.Drawing.Point(271, 208);
+            this.TxtInspector.Name = "TxtInspector";
+            this.TxtInspector.Size = new System.Drawing.Size(221, 33);
+            this.TxtInspector.TabIndex = 3;
             // 
-            // textBox7
+            // TxtMachineNo
             // 
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(271, 284);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(221, 33);
-            this.textBox7.TabIndex = 3;
+            this.TxtMachineNo.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMachineNo.Location = new System.Drawing.Point(271, 284);
+            this.TxtMachineNo.Name = "TxtMachineNo";
+            this.TxtMachineNo.Size = new System.Drawing.Size(221, 33);
+            this.TxtMachineNo.TabIndex = 3;
             // 
-            // textBox1
+            // TxtProject
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(271, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 33);
-            this.textBox1.TabIndex = 4;
+            this.TxtProject.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtProject.Location = new System.Drawing.Point(271, 130);
+            this.TxtProject.Name = "TxtProject";
+            this.TxtProject.ReadOnly = true;
+            this.TxtProject.Size = new System.Drawing.Size(221, 33);
+            this.TxtProject.TabIndex = 4;
             // 
-            // textBox3
+            // TxtId
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(44, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(221, 33);
-            this.textBox3.TabIndex = 5;
+            this.TxtId.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.Location = new System.Drawing.Point(44, 130);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.ReadOnly = true;
+            this.TxtId.Size = new System.Drawing.Size(221, 33);
+            this.TxtId.TabIndex = 5;
             // 
-            // metroDateTime1
+            // DateInspection
             // 
-            this.metroDateTime1.FontSize = MetroFramework.MetroDateTimeSize.Tall;
-            this.metroDateTime1.Location = new System.Drawing.Point(160, 59);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 35);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(241, 35);
-            this.metroDateTime1.TabIndex = 6;
+            this.DateInspection.FontSize = MetroFramework.MetroDateTimeSize.Tall;
+            this.DateInspection.Location = new System.Drawing.Point(160, 59);
+            this.DateInspection.MinimumSize = new System.Drawing.Size(0, 35);
+            this.DateInspection.Name = "DateInspection";
+            this.DateInspection.Size = new System.Drawing.Size(241, 35);
+            this.DateInspection.TabIndex = 6;
             // 
             // metroLabel3
             // 
@@ -216,14 +222,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 401);
-            this.Controls.Add(this.metroDateTime1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.DateInspection);
+            this.Controls.Add(this.TxtProject);
+            this.Controls.Add(this.TxtId);
+            this.Controls.Add(this.TxtMachineNo);
+            this.Controls.Add(this.TxtInspector);
+            this.Controls.Add(this.TxtLocation);
+            this.Controls.Add(this.TxtOperator);
+            this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel5);
@@ -234,6 +240,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "EditDevForm";
             this.Text = "Update Inspection";
+            this.Load += new System.EventHandler(this.EditDevForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,14 +255,14 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private FontAwesome.Sharp.IconButton BtnSave;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private FontAwesome.Sharp.IconButton BtnCancel;
+        private System.Windows.Forms.TextBox TxtOperator;
+        private System.Windows.Forms.TextBox TxtLocation;
+        private System.Windows.Forms.TextBox TxtInspector;
+        private System.Windows.Forms.TextBox TxtMachineNo;
+        private System.Windows.Forms.TextBox TxtProject;
+        private System.Windows.Forms.TextBox TxtId;
+        private MetroFramework.Controls.MetroDateTime DateInspection;
         private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }

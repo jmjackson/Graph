@@ -33,6 +33,8 @@ namespace Mine.Views
             MetroContractor.Text = pdev.Project.Contractor;
             MetroSupplier.Text = pdev.Project.Supplier;
             MetroGeosynthetic.Text = pdev.Project.GeoSynthetic;
+            MetroMachineNo.Text = pdev.MachineNo;
+            MetroOperator.Text = pdev.Operator;
             //PbLogo.Image = Image.FromFile(pdev.Project.Client.Image);
             DateDev.Value = pdev.DevTime;
 
@@ -63,33 +65,16 @@ namespace Mine.Views
         {
             try
             {
-                GeoMembrane gm = new GeoMembrane()
+                AddGeom ag = new AddGeom(pdId);
+                if (ag.ShowDialog()==DialogResult.Yes)
                 {
-                    ProjectDevId = pdId,
-                    SeamingDate = Convert.ToDateTime(DateDev.Text),
-                    SeamNo = TxtSeamNo.Text,
-                    SeamTime = TxtSeamTime.Text,
-                    WedgeTemp = Convert.ToInt32(TxtTemp.Text),
-                    WedgeSpeed = Convert.ToDouble(TxtSpeed.Text),
-                    SeamLength = Convert.ToDouble(TxtSeamLength.Text),
-                    CarryOver = Convert.ToDouble(TxtCarryOver.Text),
-                    Destructive = TxtDestructive.Text,
-                    RemarksDestructive = TxtRemarks.Text
-                };
+                    GeomembraneForm_Load(sender,e);
+                    MetroMessageBox.Show(this, "Saved successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-                db.GeoMembranes.Add(gm);
-                db.SaveChanges();
                 
-                MetroMessageBox.Show(this, "Saved successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GeomembraneForm_Load(sender, e);
-                TxtSeamNo.Text = "";
-                TxtSeamTime.Text = "";
-                TxtTemp.Text = "";
-                TxtSpeed.Text = "";
-                TxtSeamLength.Text = "";
-                TxtCarryOver.Text = "";
-                TxtDestructive.Text = "";
-                TxtRemarks.Text = "";
+
             }
             catch (Exception ex)
             {
@@ -102,15 +87,7 @@ namespace Mine.Views
         {
             int gId = Convert.ToInt32(DGVGeo.CurrentRow.Cells[0].Value);
             var geo = db.GeoMembranes.Find(gId);
-            TxtGeoId.Text= geo.Id.ToString();
-            TxtSeamNo.Text = geo.SeamNo.ToString();
-            TxtSeamTime.Text = geo.SeamTime;
-            TxtTemp.Text = geo.WedgeTemp.ToString();
-            TxtSpeed.Text = geo.WedgeSpeed.ToString();
-            TxtSeamLength.Text = geo.SeamLength.ToString();
-            TxtCarryOver.Text = geo.CarryOver.ToString();
-            TxtDestructive.Text = geo.Destructive;
-            TxtRemarks.Text = geo.RemarksDestructive; 
+           
 
         }
 
@@ -138,33 +115,7 @@ namespace Mine.Views
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var id = Convert.ToInt32(TxtGeoId.Text);
-                var geo = db.GeoMembranes.Find(id);
-                geo.Destructive = TxtDestructive.Text;
-                geo.RemarksDestructive = TxtRemarks.Text;
-                geo.SeamLength = Convert.ToDouble(TxtSeamLength.Text);
-                geo.SeamNo = TxtSeamNo.Text;
-                geo.SeamTime = TxtSeamTime.Text;
-                geo.WedgeSpeed = Convert.ToDouble(TxtSpeed.Text);
-                geo.WedgeTemp = Convert.ToInt32(TxtTemp.Text);
-                db.SaveChanges();
-                GeomembraneForm_Load(sender, e);
-                MetroMessageBox.Show(this, "Updated successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                TxtDestructive.Text=string.Empty;
-                TxtRemarks.Text=string.Empty;
-                TxtSeamLength.Text=string.Empty;
-                TxtSeamNo.Text=string.Empty;
-                TxtSeamTime.Text=string.Empty;
-                TxtSpeed.Text=string.Empty;
-                TxtTemp.Text=string.Empty;
-            }
-            catch (Exception ex)
-            {
-
-                MetroMessageBox.Show(this, "Error in your record " + ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
             
         }
 
