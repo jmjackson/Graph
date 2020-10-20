@@ -20,8 +20,7 @@ namespace Mine.Views
 
         private void BtnClient_Click(object sender, EventArgs e)
         {
-            ClientForms c = new ClientForms();
-            c.Show();
+           
         }
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
@@ -29,29 +28,10 @@ namespace Mine.Views
             Application.Exit();
         }
 
-        private void TileClient_Click(object sender, EventArgs e)
-        {
-            ClientForms c = new ClientForms();
-            c.Show();
-            this.Hide();
-        }
 
         private void TileProject_Click(object sender, EventArgs e)
         {
-            ModalProject mp = new ModalProject();
             
-            if (mp.ShowDialog()==DialogResult.Yes)
-            {
-                var clientId = mp.Cb;
-                ProjectForm pf = new ProjectForm(clientId);
-                pf.Show();
-                this.Hide();
-
-            }
-            else
-            {
-                
-            }
             
         }
 
@@ -59,9 +39,7 @@ namespace Mine.Views
 
         private void TileInspection_Click(object sender, EventArgs e)
         {
-            DevForm df = new DevForm();
-            df.Show();
-            this.Hide();
+            
 
         }
 
@@ -75,6 +53,38 @@ namespace Mine.Views
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void TileClient_Click_1(object sender, EventArgs e)
+        {
+            ClientForms c = new ClientForms();
+            c.Show();
+            this.Hide();
+        }
+
+        private void TileProject_Click_1(object sender, EventArgs e)
+        {
+            ModalProject mp = new ModalProject();
+
+            if (mp.ShowDialog() == DialogResult.Yes)
+            {
+                var clientId = mp.Cb;
+                ProjectForm pf = new ProjectForm(clientId);
+                pf.Show();
+                this.Hide();
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private void TileInspection_Click_1(object sender, EventArgs e)
+        {
+            DevForm df = new DevForm();
+            df.Show();
+            this.Hide();
         }
     }
 }

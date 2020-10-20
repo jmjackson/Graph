@@ -37,7 +37,12 @@ namespace Mine.Views
             LblRProject.Text = pdev.Project.PName;
             LblRProjectNo.Text = pdev.Project.ProjectNo;
             LblRSupplier.Text = pdev.Project.Supplier;
-            PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
+            
+            //if (pdev.Project.Client.Image != null)
+            //{
+            //    PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
+            //}
+            
             LblRLocation.Text = pdev.Location;
             LblRInspector.Text = pdev.Inspector;
             TxtDate.Value = pdev.DevTime;
@@ -51,31 +56,10 @@ namespace Mine.Views
         {
             try
             {
-                var development = new Development()
-                {
-                    DeploymentDate = Convert.ToDateTime(TxtDate.Text),
-                    Area = Convert.ToDecimal(TxtArea.Text),
-                    Lenght = Convert.ToInt32(TxtLenght.Text),
-                    PanelNo = Convert.ToInt32(TxtPanelNo.Text),
-                    ProjectDevId = proDevId,
-                    RollNo = Convert.ToDouble(TxtRollNo.Text),
-                    Remarks = TxtRemarks.Text,
-                    Thickness = TxtThickness.Text,
-                    Width = Convert.ToDecimal(TxtWidth.Text)
-                };
+                AddDeployment ad = new AddDeployment();
+                ad.Show();
 
-                db.Developments.Add(development);
-                db.SaveChanges();
-                DevelopmentForm_Load(sender, e);
-                MetroMessageBox.Show(this,"Saved successfully","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                TxtArea.Text = string.Empty;
-                TxtLenght.Text = string.Empty;
-                TxtPanelNo.Text = string.Empty;
-                TxtRollNo.Text = string.Empty;
-                TxtWidth.Text = string.Empty;
-                TxtThickness.Text = string.Empty;
-                TxtArea.Text = string.Empty;
-                TxtRemarks.Text = string.Empty;
+               
             }
             catch (Exception ex)
             {
@@ -110,15 +94,7 @@ namespace Mine.Views
         {
             int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
             var dev = db.Developments.Find(pdId);
-            TxtDate.Text = dev.DeploymentDate.ToString();
-            TxtArea.Text = dev.Area.ToString();
-            TxtLenght.Text = dev.Lenght.ToString();
-            TxtPanelNo.Text = dev.PanelNo.ToString();
-            TxtRollNo.Text = dev.RollNo.ToString();
-            TxtRemarks.Text = dev.Remarks;
-            TxtThickness.Text = dev.Thickness;
-            TxtWidth.Text = dev.Width.ToString();
-            TxtId.Text = Convert.ToString(dev.Id);
+            
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -143,40 +119,7 @@ namespace Mine.Views
 
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int id = Convert.ToInt32(TxtId.Text);
-                var dev = db.Developments.Find(id);
-                dev.Area = Convert.ToDecimal(TxtArea.Text);
-                dev.Lenght = Convert.ToInt32(TxtLenght.Text);
-                dev.PanelNo = Convert.ToInt32(TxtPanelNo.Text);
-                dev.Remarks = TxtRemarks.Text;
-                dev.RollNo = Convert.ToDouble(TxtRollNo.Text);
-                dev.Thickness = TxtThickness.Text;
-                dev.Width = Convert.ToDecimal(TxtWidth.Text);
-                db.SaveChanges();
-                DevelopmentForm_Load(sender, e);
-                MetroMessageBox.Show(this, "Update successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                TxtArea.Text = string.Empty;
-                TxtLenght.Text = string.Empty;
-                TxtPanelNo.Text = string.Empty;
-                TxtRollNo.Text = string.Empty;
-                TxtWidth.Text = string.Empty;
-                TxtThickness.Text = string.Empty;
-                TxtArea.Text = string.Empty;
-                TxtRemarks.Text = string.Empty;
-
-            }
-            catch (Exception ex)
-            {
-                MetroMessageBox.Show(this, "Error in your record " + ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-           
-
-        }
+       
 
         private void BtnPDF_Click(object sender, EventArgs e)
         {

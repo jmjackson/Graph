@@ -33,7 +33,7 @@ namespace Mine.Views
             MetroContractor.Text = pdev.Project.Contractor;
             MetroSupplier.Text = pdev.Project.Supplier;
             MetroGeosynthetic.Text = pdev.Project.GeoSynthetic;
-            PbLogo.Image = Image.FromFile(pdev.Project.Client.Image);
+            //PbLogo.Image = Image.FromFile(pdev.Project.Client.Image);
             DateDev.Value = pdev.DevTime;
 
             DGVFill();

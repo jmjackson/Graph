@@ -28,7 +28,8 @@ namespace Mine.Views
             var client = db.Clients.Find(idClient);
 
             
-            PBLogo.Image = Image.FromFile(client.Image);
+            
+            //PBLogo.Image = Image.FromFile(client.Image);
 
             var pr = db.Projects.Include(c => c.Client).Where(a=>a.ClientId==idClient).ToList();
             if (pr.Count>0)
@@ -53,74 +54,17 @@ namespace Mine.Views
 
         }
 
-        private void BtnCreate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                AddProject ap = new AddProject(idClient);
-                if (ap.ShowDialog()==DialogResult.Yes)
-                {
-                    ProjectForm_Load(sender, e);
-                }
-        
-            }
-            catch (Exception)
-            {
-
-                
-            }
-            
-            
-
-        }
-
+      
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            try
-            {
-                
-                int cell = Convert.ToInt32(DGVProject.CurrentRow.Cells[0].Value);
-                var cdb = db.Projects.Find(cell);
-                EditProject pr = new EditProject(cell);
-                if (pr.ShowDialog()==DialogResult.Yes)
-                {
-                    
-                    ProjectForm_Load(sender, e);
-                    DGVProject.Refresh();
-                }
-                
-            }
-            catch (Exception ex)
-            {
-
-                MetroFramework.MetroMessageBox.Show(this,"Ocurred and error "+ex.ToString(),"Info");
-            }
+            
         }
 
        
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var cell = DGVProject.CurrentRow.Cells[0].Value;
-                var cdb = db.Projects.Find(cell);
-                
-                if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    db.Projects.Remove(cdb);
-                    db.SaveChanges();
-                    MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully");
-                    ProjectForm_Load(sender, e);
-                }
-                
-               
-            }
-            catch (Exception ex)
-            {
-
-                MetroFramework.MetroMessageBox.Show(this,"Have a Error :"+ex.ToString(),"Info");
-            }
+            
         }
 
         private void ProjectForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -139,7 +83,70 @@ namespace Mine.Views
             this.Close();
         }
 
-       
+        private void BtnCreate_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                AddProject ap = new AddProject(idClient);
+                if (ap.ShowDialog() == DialogResult.Yes)
+                {
+                    ProjectForm_Load(sender, e);
+                }
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
+
+        private void BtnEdit_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int cell = Convert.ToInt32(DGVProject.CurrentRow.Cells[0].Value);
+                var cdb = db.Projects.Find(cell);
+                EditProject pr = new EditProject(cell);
+                if (pr.ShowDialog() == DialogResult.Yes)
+                {
+
+                    ProjectForm_Load(sender, e);
+                    DGVProject.Refresh();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MetroFramework.MetroMessageBox.Show(this, "Ocurred and error " + ex.ToString(), "Info");
+            }
+        }
+
+        private void BtnDelete_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                var cell = DGVProject.CurrentRow.Cells[0].Value;
+                var cdb = db.Projects.Find(cell);
+
+                if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    db.Projects.Remove(cdb);
+                    db.SaveChanges();
+                    MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully");
+                    ProjectForm_Load(sender, e);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MetroFramework.MetroMessageBox.Show(this, "Have a Error :" + ex.ToString(), "Info");
+            }
+        }
     }
 }
     
