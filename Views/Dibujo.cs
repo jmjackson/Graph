@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
 using System.Drawing.Imaging;
+using System.IO;
 
 namespace Mine.Views
 {
@@ -125,8 +126,14 @@ namespace Mine.Views
 
             //PbLienzo.Image.Save(@"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images\yyyy_MM_dd_HHmmss.Jpeg", ImageFormat.Png);
 
-            string panth = @"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images";
-            PbLienzo.Image.Save(panth + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss "), ImageFormat.Png);
+            var path = @"Resources/images/draw/";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            
+            //string panth = @"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images";
+            PbLienzo.Image.Save(path + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ")+".png", ImageFormat.Png);
 
         }
 
