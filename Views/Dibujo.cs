@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
-
+using System.Drawing.Imaging;
 
 namespace Mine.Views
 {
@@ -112,17 +112,21 @@ namespace Mine.Views
 
             Bitmap bmp = (Bitmap)PbLienzo.Image;
 
-            saveFileDialog1.FileName = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
+            //saveFileDialog1.FileName = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
 
-            saveFileDialog1.Filter = "Excel files (*.jpg)|*.jpg";
+            //saveFileDialog1.Filter = "Excel files (*.jpg)|*.jpg";
 
-            saveFileDialog1.RestoreDirectory = true;
+            //saveFileDialog1.RestoreDirectory = true;
 
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                PbLienzo.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
-            }
+            //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    PbLienzo.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
+            //}
 
+            //PbLienzo.Image.Save(@"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images\yyyy_MM_dd_HHmmss.Jpeg", ImageFormat.Png);
+
+            string panth = @"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images";
+            PbLienzo.Image.Save(panth + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss "), ImageFormat.Png);
 
         }
 
