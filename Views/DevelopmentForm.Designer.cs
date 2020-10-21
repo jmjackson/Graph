@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevelopmentForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
@@ -51,8 +51,10 @@
             this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblTotal = new MetroFramework.Controls.MetroLabel();
-            this.LblInspector = new MetroFramework.Controls.MetroLabel();
             this.PanelAdd = new MetroFramework.Controls.MetroPanel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.BtnEdit = new FontAwesome.Sharp.IconButton();
+            this.BtnAdd = new FontAwesome.Sharp.IconButton();
             this.BtnPDF = new MetroFramework.Controls.MetroButton();
             this.TxtDate = new MetroFramework.Controls.MetroDateTime();
             this.LblRClient = new MetroFramework.Controls.MetroLabel();
@@ -61,12 +63,6 @@
             this.LblRContractor = new MetroFramework.Controls.MetroLabel();
             this.LblRSupplier = new MetroFramework.Controls.MetroLabel();
             this.LblRGeosyntetic = new MetroFramework.Controls.MetroLabel();
-            this.LblRInspector = new MetroFramework.Controls.MetroLabel();
-            this.LblLocation = new MetroFramework.Controls.MetroLabel();
-            this.LblRLocation = new MetroFramework.Controls.MetroLabel();
-            this.BtnAdd = new FontAwesome.Sharp.IconButton();
-            this.BtnEdit = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
             this.PanelAdd.SuspendLayout();
@@ -78,9 +74,9 @@
             this.LblClient.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblClient.Location = new System.Drawing.Point(51, 48);
             this.LblClient.Name = "LblClient";
-            this.LblClient.Size = new System.Drawing.Size(55, 25);
+            this.LblClient.Size = new System.Drawing.Size(59, 25);
             this.LblClient.TabIndex = 0;
-            this.LblClient.Text = "Client";
+            this.LblClient.Text = "Client:";
             // 
             // LblProjectNo
             // 
@@ -88,9 +84,9 @@
             this.LblProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblProjectNo.Location = new System.Drawing.Point(20, 106);
             this.LblProjectNo.Name = "LblProjectNo";
-            this.LblProjectNo.Size = new System.Drawing.Size(92, 25);
+            this.LblProjectNo.Size = new System.Drawing.Size(96, 25);
             this.LblProjectNo.TabIndex = 0;
-            this.LblProjectNo.Text = "Project No";
+            this.LblProjectNo.Text = "Project No:";
             // 
             // LblProject
             // 
@@ -98,9 +94,9 @@
             this.LblProject.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblProject.Location = new System.Drawing.Point(43, 77);
             this.LblProject.Name = "LblProject";
-            this.LblProject.Size = new System.Drawing.Size(64, 25);
+            this.LblProject.Size = new System.Drawing.Size(68, 25);
             this.LblProject.TabIndex = 0;
-            this.LblProject.Text = "Project";
+            this.LblProject.Text = "Project:";
             // 
             // LblContractor
             // 
@@ -108,9 +104,9 @@
             this.LblContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblContractor.Location = new System.Drawing.Point(353, 48);
             this.LblContractor.Name = "LblContractor";
-            this.LblContractor.Size = new System.Drawing.Size(92, 25);
+            this.LblContractor.Size = new System.Drawing.Size(97, 25);
             this.LblContractor.TabIndex = 0;
-            this.LblContractor.Text = "Contractor";
+            this.LblContractor.Text = "Contractor:";
             // 
             // LblGeoSynthetic
             // 
@@ -118,9 +114,9 @@
             this.LblGeoSynthetic.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblGeoSynthetic.Location = new System.Drawing.Point(343, 106);
             this.LblGeoSynthetic.Name = "LblGeoSynthetic";
-            this.LblGeoSynthetic.Size = new System.Drawing.Size(109, 25);
+            this.LblGeoSynthetic.Size = new System.Drawing.Size(113, 25);
             this.LblGeoSynthetic.TabIndex = 0;
-            this.LblGeoSynthetic.Text = "Geosynthetic";
+            this.LblGeoSynthetic.Text = "Geosynthetic:";
             // 
             // LblSupplier
             // 
@@ -128,9 +124,9 @@
             this.LblSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblSupplier.Location = new System.Drawing.Point(368, 77);
             this.LblSupplier.Name = "LblSupplier";
-            this.LblSupplier.Size = new System.Drawing.Size(74, 25);
+            this.LblSupplier.Size = new System.Drawing.Size(79, 25);
             this.LblSupplier.TabIndex = 0;
-            this.LblSupplier.Text = "Supplier";
+            this.LblSupplier.Text = "Supplier:";
             // 
             // PBPicture
             // 
@@ -147,9 +143,10 @@
             // 
             this.LblTitle.AutoSize = true;
             this.LblTitle.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.LblTitle.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.LblTitle.Location = new System.Drawing.Point(504, 6);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(137, 25);
+            this.LblTitle.Size = new System.Drawing.Size(152, 25);
             this.LblTitle.TabIndex = 4;
             this.LblTitle.Text = "Deployment Log";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -164,14 +161,14 @@
             this.DGVDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVDev.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVDev.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DGVDev.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVDev.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -183,28 +180,28 @@
             this.Thickness,
             this.Area,
             this.Remarks});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVDev.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDev.DefaultCellStyle = dataGridViewCellStyle8;
             this.DGVDev.EnableHeadersVisualStyles = false;
             this.DGVDev.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DGVDev.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DGVDev.Location = new System.Drawing.Point(20, 164);
             this.DGVDev.Name = "DGVDev";
             this.DGVDev.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.DGVDev.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVDev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVDev.Size = new System.Drawing.Size(1007, 302);
@@ -277,21 +274,11 @@
             // 
             this.LblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(857, 9);
+            this.LblTotal.Location = new System.Drawing.Point(725, 9);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(95, 19);
             this.LblTotal.TabIndex = 14;
             this.LblTotal.Text = "Total Area (ft2)";
-            // 
-            // LblInspector
-            // 
-            this.LblInspector.AutoSize = true;
-            this.LblInspector.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblInspector.Location = new System.Drawing.Point(363, 135);
-            this.LblInspector.Name = "LblInspector";
-            this.LblInspector.Size = new System.Drawing.Size(81, 25);
-            this.LblInspector.TabIndex = 0;
-            this.LblInspector.Text = "Inspector";
             // 
             // PanelAdd
             // 
@@ -313,133 +300,24 @@
             this.PanelAdd.VerticalScrollbarHighlightOnWheel = false;
             this.PanelAdd.VerticalScrollbarSize = 10;
             // 
-            // BtnPDF
+            // iconButton3
             // 
-            this.BtnPDF.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnPDF.Location = new System.Drawing.Point(908, 59);
-            this.BtnPDF.Name = "BtnPDF";
-            this.BtnPDF.Size = new System.Drawing.Size(107, 38);
-            this.BtnPDF.TabIndex = 11;
-            this.BtnPDF.Text = "BtnPDF";
-            this.BtnPDF.UseSelectable = true;
-            this.BtnPDF.Click += new System.EventHandler(this.BtnPDF_Click);
-            // 
-            // TxtDate
-            // 
-            this.TxtDate.Location = new System.Drawing.Point(825, 115);
-            this.TxtDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.TxtDate.Name = "TxtDate";
-            this.TxtDate.Size = new System.Drawing.Size(200, 29);
-            this.TxtDate.TabIndex = 15;
-            // 
-            // LblRClient
-            // 
-            this.LblRClient.AutoSize = true;
-            this.LblRClient.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRClient.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRClient.Location = new System.Drawing.Point(128, 47);
-            this.LblRClient.Name = "LblRClient";
-            this.LblRClient.Size = new System.Drawing.Size(0, 0);
-            this.LblRClient.TabIndex = 18;
-            // 
-            // LblRProject
-            // 
-            this.LblRProject.AutoSize = true;
-            this.LblRProject.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRProject.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRProject.Location = new System.Drawing.Point(127, 77);
-            this.LblRProject.Name = "LblRProject";
-            this.LblRProject.Size = new System.Drawing.Size(0, 0);
-            this.LblRProject.TabIndex = 18;
-            // 
-            // LblRProjectNo
-            // 
-            this.LblRProjectNo.AutoSize = true;
-            this.LblRProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRProjectNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRProjectNo.Location = new System.Drawing.Point(127, 106);
-            this.LblRProjectNo.Name = "LblRProjectNo";
-            this.LblRProjectNo.Size = new System.Drawing.Size(0, 0);
-            this.LblRProjectNo.TabIndex = 18;
-            // 
-            // LblRContractor
-            // 
-            this.LblRContractor.AutoSize = true;
-            this.LblRContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRContractor.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRContractor.Location = new System.Drawing.Point(468, 47);
-            this.LblRContractor.Name = "LblRContractor";
-            this.LblRContractor.Size = new System.Drawing.Size(0, 0);
-            this.LblRContractor.TabIndex = 18;
-            // 
-            // LblRSupplier
-            // 
-            this.LblRSupplier.AutoSize = true;
-            this.LblRSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRSupplier.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRSupplier.Location = new System.Drawing.Point(467, 77);
-            this.LblRSupplier.Name = "LblRSupplier";
-            this.LblRSupplier.Size = new System.Drawing.Size(0, 0);
-            this.LblRSupplier.TabIndex = 18;
-            // 
-            // LblRGeosyntetic
-            // 
-            this.LblRGeosyntetic.AutoSize = true;
-            this.LblRGeosyntetic.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRGeosyntetic.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRGeosyntetic.Location = new System.Drawing.Point(467, 106);
-            this.LblRGeosyntetic.Name = "LblRGeosyntetic";
-            this.LblRGeosyntetic.Size = new System.Drawing.Size(0, 0);
-            this.LblRGeosyntetic.TabIndex = 18;
-            // 
-            // LblRInspector
-            // 
-            this.LblRInspector.AutoSize = true;
-            this.LblRInspector.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRInspector.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRInspector.Location = new System.Drawing.Point(467, 135);
-            this.LblRInspector.Name = "LblRInspector";
-            this.LblRInspector.Size = new System.Drawing.Size(0, 0);
-            this.LblRInspector.TabIndex = 18;
-            // 
-            // LblLocation
-            // 
-            this.LblLocation.AutoSize = true;
-            this.LblLocation.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblLocation.Location = new System.Drawing.Point(23, 135);
-            this.LblLocation.Name = "LblLocation";
-            this.LblLocation.Size = new System.Drawing.Size(76, 25);
-            this.LblLocation.TabIndex = 0;
-            this.LblLocation.Text = "Location";
-            // 
-            // LblRLocation
-            // 
-            this.LblRLocation.AutoSize = true;
-            this.LblRLocation.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRLocation.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRLocation.Location = new System.Drawing.Point(131, 135);
-            this.LblRLocation.Name = "LblRLocation";
-            this.LblRLocation.Size = new System.Drawing.Size(0, 0);
-            this.LblRLocation.TabIndex = 18;
-            // 
-            // BtnAdd
-            // 
-            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnAdd.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdd.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BtnAdd.IconColor = System.Drawing.Color.Black;
-            this.BtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnAdd.IconSize = 48;
-            this.BtnAdd.Location = new System.Drawing.Point(93, 48);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Rotation = 0D;
-            this.BtnAdd.Size = new System.Drawing.Size(121, 37);
-            this.BtnAdd.TabIndex = 15;
-            this.BtnAdd.Text = "Add";
-            this.BtnAdd.UseVisualStyleBackColor = false;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 48;
+            this.iconButton3.Location = new System.Drawing.Point(345, 48);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Rotation = 0D;
+            this.iconButton3.Size = new System.Drawing.Size(115, 37);
+            this.iconButton3.TabIndex = 15;
+            this.iconButton3.Text = "Delete";
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnEdit
             // 
@@ -460,32 +338,115 @@
             this.BtnEdit.UseVisualStyleBackColor = false;
             this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
-            // iconButton3
+            // BtnAdd
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 48;
-            this.iconButton3.Location = new System.Drawing.Point(345, 48);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(115, 37);
-            this.iconButton3.TabIndex = 15;
-            this.iconButton3.Text = "Delete";
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.BtnDelete_Click);
+            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnAdd.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdd.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnAdd.IconColor = System.Drawing.Color.Black;
+            this.BtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnAdd.IconSize = 48;
+            this.BtnAdd.Location = new System.Drawing.Point(93, 48);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Rotation = 0D;
+            this.BtnAdd.Size = new System.Drawing.Size(121, 37);
+            this.BtnAdd.TabIndex = 15;
+            this.BtnAdd.Text = "Add";
+            this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // BtnPDF
+            // 
+            this.BtnPDF.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.BtnPDF.Location = new System.Drawing.Point(908, 59);
+            this.BtnPDF.Name = "BtnPDF";
+            this.BtnPDF.Size = new System.Drawing.Size(107, 38);
+            this.BtnPDF.TabIndex = 11;
+            this.BtnPDF.Text = "BtnPDF";
+            this.BtnPDF.UseSelectable = true;
+            this.BtnPDF.Click += new System.EventHandler(this.BtnPDF_Click);
+            // 
+            // TxtDate
+            // 
+            this.TxtDate.Location = new System.Drawing.Point(603, 102);
+            this.TxtDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.TxtDate.Name = "TxtDate";
+            this.TxtDate.Size = new System.Drawing.Size(200, 29);
+            this.TxtDate.TabIndex = 15;
+            // 
+            // LblRClient
+            // 
+            this.LblRClient.AutoSize = true;
+            this.LblRClient.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.LblRClient.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.LblRClient.Location = new System.Drawing.Point(120, 47);
+            this.LblRClient.Name = "LblRClient";
+            this.LblRClient.Size = new System.Drawing.Size(60, 25);
+            this.LblRClient.TabIndex = 18;
+            this.LblRClient.Text = "Metro";
+            // 
+            // LblRProject
+            // 
+            this.LblRProject.AutoSize = true;
+            this.LblRProject.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.LblRProject.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.LblRProject.Location = new System.Drawing.Point(119, 77);
+            this.LblRProject.Name = "LblRProject";
+            this.LblRProject.Size = new System.Drawing.Size(60, 25);
+            this.LblRProject.TabIndex = 18;
+            this.LblRProject.Text = "Metro";
+            // 
+            // LblRProjectNo
+            // 
+            this.LblRProjectNo.AutoSize = true;
+            this.LblRProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.LblRProjectNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.LblRProjectNo.Location = new System.Drawing.Point(119, 106);
+            this.LblRProjectNo.Name = "LblRProjectNo";
+            this.LblRProjectNo.Size = new System.Drawing.Size(60, 25);
+            this.LblRProjectNo.TabIndex = 18;
+            this.LblRProjectNo.Text = "Metro";
+            // 
+            // LblRContractor
+            // 
+            this.LblRContractor.AutoSize = true;
+            this.LblRContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.LblRContractor.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.LblRContractor.Location = new System.Drawing.Point(456, 47);
+            this.LblRContractor.Name = "LblRContractor";
+            this.LblRContractor.Size = new System.Drawing.Size(60, 25);
+            this.LblRContractor.TabIndex = 18;
+            this.LblRContractor.Text = "Metro";
+            // 
+            // LblRSupplier
+            // 
+            this.LblRSupplier.AutoSize = true;
+            this.LblRSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.LblRSupplier.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.LblRSupplier.Location = new System.Drawing.Point(455, 77);
+            this.LblRSupplier.Name = "LblRSupplier";
+            this.LblRSupplier.Size = new System.Drawing.Size(60, 25);
+            this.LblRSupplier.TabIndex = 18;
+            this.LblRSupplier.Text = "Metro";
+            // 
+            // LblRGeosyntetic
+            // 
+            this.LblRGeosyntetic.AutoSize = true;
+            this.LblRGeosyntetic.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.LblRGeosyntetic.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.LblRGeosyntetic.Location = new System.Drawing.Point(455, 106);
+            this.LblRGeosyntetic.Name = "LblRGeosyntetic";
+            this.LblRGeosyntetic.Size = new System.Drawing.Size(60, 25);
+            this.LblRGeosyntetic.TabIndex = 18;
+            this.LblRGeosyntetic.Text = "Metro";
             // 
             // DevelopmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 641);
-            this.Controls.Add(this.LblRLocation);
-            this.Controls.Add(this.LblRInspector);
             this.Controls.Add(this.LblRGeosyntetic);
             this.Controls.Add(this.LblRSupplier);
             this.Controls.Add(this.LblRProjectNo);
@@ -499,8 +460,6 @@
             this.Controls.Add(this.PBPicture);
             this.Controls.Add(this.LblSupplier);
             this.Controls.Add(this.LblProject);
-            this.Controls.Add(this.LblLocation);
-            this.Controls.Add(this.LblInspector);
             this.Controls.Add(this.LblGeoSynthetic);
             this.Controls.Add(this.LblContractor);
             this.Controls.Add(this.LblProjectNo);
@@ -529,7 +488,6 @@
         private MetroFramework.Controls.MetroLabel LblTitle;
         private MetroFramework.Controls.MetroGrid DGVDev;
         private MetroFramework.Controls.MetroLabel LblTotal;
-        private MetroFramework.Controls.MetroLabel LblInspector;
         private MetroFramework.Controls.MetroPanel PanelAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeploymentDate;
@@ -548,9 +506,6 @@
         private MetroFramework.Controls.MetroLabel LblRContractor;
         private MetroFramework.Controls.MetroLabel LblRSupplier;
         private MetroFramework.Controls.MetroLabel LblRGeosyntetic;
-        private MetroFramework.Controls.MetroLabel LblRInspector;
-        private MetroFramework.Controls.MetroLabel LblLocation;
-        private MetroFramework.Controls.MetroLabel LblRLocation;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton BtnEdit;
         private FontAwesome.Sharp.IconButton BtnAdd;

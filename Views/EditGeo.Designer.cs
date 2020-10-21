@@ -69,6 +69,7 @@
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // BtnCancel
             // 
@@ -184,6 +185,7 @@
             // 
             this.TxtId.Location = new System.Drawing.Point(38, 116);
             this.TxtId.Name = "TxtId";
+            this.TxtId.ReadOnly = true;
             this.TxtId.Size = new System.Drawing.Size(247, 33);
             this.TxtId.TabIndex = 3;
             // 

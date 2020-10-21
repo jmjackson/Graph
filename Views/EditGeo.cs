@@ -35,5 +35,22 @@ namespace Mine.Views
             TxtTemp.Text = gm.WedgeTemp.ToString();
 
         }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(TxtId.Text);
+            var gm = db.GeoMembranes.Find(id);
+            gm.CarryOver = Convert.ToDouble(TxtCarryOver.Text);
+            gm.Destructive = TxtDestructive.Text;
+            gm.RemarksDestructive = TxtRemark.Text;
+            gm.SeamLength = Convert.ToInt32(TxtSeamLength.Text);
+            gm.SeamNo = TxtSeamNo.Text;
+            gm.SeamTime = TxtSeamTime.Text;
+            gm.WedgeSpeed = Convert.ToDouble(TxtSpeed.Text);
+            gm.WedgeTemp = Convert.ToInt32(TxtTemp.Text);
+            db.SaveChanges();
+            this.Close();
+
+        }
     }
 }

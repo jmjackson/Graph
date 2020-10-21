@@ -43,8 +43,7 @@ namespace Mine.Views
             //    PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
             //}
             
-            LblRLocation.Text = pdev.Location;
-            LblRInspector.Text = pdev.Inspector;
+            
             TxtDate.Value = pdev.DevTime;
             DGVFill();
             

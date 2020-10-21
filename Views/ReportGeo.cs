@@ -36,6 +36,7 @@ namespace Mine.Views
 
             ProjectBindingSource.DataSource = projectdev.Project;
             ClientBindingSource.DataSource = projectdev.Project.Client;
+            ProjectDevBindingSource.DataSource = projectdev;
             GeoMembraneBindingSource.DataSource = geomm;
             this.ReportViewGeom.RefreshReport();
 

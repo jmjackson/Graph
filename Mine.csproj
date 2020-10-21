@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -394,6 +394,7 @@
     <None Include="Properties\DataSources\Mine.DataModel.Development.datasource" />
     <None Include="Properties\DataSources\Mine.DataModel.GeoMembrane.datasource" />
     <None Include="Properties\DataSources\Mine.DataModel.Project.datasource" />
+    <None Include="Properties\DataSources\Mine.DataModel.ProjectDev.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

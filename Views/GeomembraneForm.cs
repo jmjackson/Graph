@@ -86,7 +86,11 @@ namespace Mine.Views
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             int gId = Convert.ToInt32(DGVGeo.CurrentRow.Cells[0].Value);
-            var geo = db.GeoMembranes.Find(gId);
+            EditGeo eg = new EditGeo(gId);
+            if (eg.ShowDialog()==DialogResult.Yes)
+            {
+                GeomembraneForm_Load(sender, e);
+            }
            
 
         }

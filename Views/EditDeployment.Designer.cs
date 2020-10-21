@@ -51,7 +51,7 @@
             // TxtPanel
             // 
             this.TxtPanel.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPanel.Location = new System.Drawing.Point(290, 128);
+            this.TxtPanel.Location = new System.Drawing.Point(290, 100);
             this.TxtPanel.Name = "TxtPanel";
             this.TxtPanel.Size = new System.Drawing.Size(216, 33);
             this.TxtPanel.TabIndex = 0;
@@ -59,7 +59,7 @@
             // TxtId
             // 
             this.TxtId.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.Location = new System.Drawing.Point(53, 128);
+            this.TxtId.Location = new System.Drawing.Point(53, 100);
             this.TxtId.Name = "TxtId";
             this.TxtId.ReadOnly = true;
             this.TxtId.Size = new System.Drawing.Size(216, 33);
@@ -68,7 +68,7 @@
             // TxtLength
             // 
             this.TxtLength.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLength.Location = new System.Drawing.Point(290, 189);
+            this.TxtLength.Location = new System.Drawing.Point(290, 161);
             this.TxtLength.Name = "TxtLength";
             this.TxtLength.Size = new System.Drawing.Size(216, 33);
             this.TxtLength.TabIndex = 0;
@@ -76,7 +76,7 @@
             // TxtRoll
             // 
             this.TxtRoll.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRoll.Location = new System.Drawing.Point(53, 189);
+            this.TxtRoll.Location = new System.Drawing.Point(53, 161);
             this.TxtRoll.Name = "TxtRoll";
             this.TxtRoll.Size = new System.Drawing.Size(216, 33);
             this.TxtRoll.TabIndex = 0;
@@ -84,7 +84,7 @@
             // TxtThickness
             // 
             this.TxtThickness.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtThickness.Location = new System.Drawing.Point(290, 253);
+            this.TxtThickness.Location = new System.Drawing.Point(290, 225);
             this.TxtThickness.Name = "TxtThickness";
             this.TxtThickness.Size = new System.Drawing.Size(216, 33);
             this.TxtThickness.TabIndex = 0;
@@ -92,7 +92,7 @@
             // TxtWidth
             // 
             this.TxtWidth.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtWidth.Location = new System.Drawing.Point(53, 253);
+            this.TxtWidth.Location = new System.Drawing.Point(53, 225);
             this.TxtWidth.Name = "TxtWidth";
             this.TxtWidth.Size = new System.Drawing.Size(216, 33);
             this.TxtWidth.TabIndex = 0;
@@ -100,7 +100,7 @@
             // TxtRemarks
             // 
             this.TxtRemarks.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRemarks.Location = new System.Drawing.Point(290, 317);
+            this.TxtRemarks.Location = new System.Drawing.Point(290, 289);
             this.TxtRemarks.Name = "TxtRemarks";
             this.TxtRemarks.Size = new System.Drawing.Size(216, 33);
             this.TxtRemarks.TabIndex = 0;
@@ -108,7 +108,7 @@
             // TxtArea
             // 
             this.TxtArea.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtArea.Location = new System.Drawing.Point(53, 317);
+            this.TxtArea.Location = new System.Drawing.Point(53, 289);
             this.TxtArea.Name = "TxtArea";
             this.TxtArea.Size = new System.Drawing.Size(216, 33);
             this.TxtArea.TabIndex = 0;
@@ -117,7 +117,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(290, 164);
+            this.metroLabel1.Location = new System.Drawing.Point(290, 136);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(64, 25);
             this.metroLabel1.TabIndex = 1;
@@ -127,7 +127,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(53, 100);
+            this.metroLabel2.Location = new System.Drawing.Point(53, 72);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(26, 25);
             this.metroLabel2.TabIndex = 1;
@@ -137,7 +137,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(53, 161);
+            this.metroLabel3.Location = new System.Drawing.Point(53, 133);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(68, 25);
             this.metroLabel3.TabIndex = 1;
@@ -147,7 +147,7 @@
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(53, 222);
+            this.metroLabel4.Location = new System.Drawing.Point(53, 194);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(57, 25);
             this.metroLabel4.TabIndex = 1;
@@ -157,7 +157,7 @@
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(53, 289);
+            this.metroLabel5.Location = new System.Drawing.Point(53, 261);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(76, 25);
             this.metroLabel5.TabIndex = 1;
@@ -167,7 +167,7 @@
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(290, 289);
+            this.metroLabel6.Location = new System.Drawing.Point(290, 261);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(76, 25);
             this.metroLabel6.TabIndex = 1;
@@ -177,7 +177,7 @@
             // 
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel7.Location = new System.Drawing.Point(290, 100);
+            this.metroLabel7.Location = new System.Drawing.Point(290, 72);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(76, 25);
             this.metroLabel7.TabIndex = 1;
@@ -187,7 +187,7 @@
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel8.Location = new System.Drawing.Point(290, 225);
+            this.metroLabel8.Location = new System.Drawing.Point(290, 197);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(84, 25);
             this.metroLabel8.TabIndex = 1;
@@ -205,7 +205,7 @@
             this.BtnSave.IconColor = System.Drawing.Color.Black;
             this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 48;
-            this.BtnSave.Location = new System.Drawing.Point(158, 381);
+            this.BtnSave.Location = new System.Drawing.Point(158, 353);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
             this.BtnSave.Size = new System.Drawing.Size(111, 37);
@@ -226,7 +226,7 @@
             this.BtnCancel.IconColor = System.Drawing.Color.Black;
             this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 48;
-            this.BtnCancel.Location = new System.Drawing.Point(290, 381);
+            this.BtnCancel.Location = new System.Drawing.Point(290, 353);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
             this.BtnCancel.Size = new System.Drawing.Size(111, 37);
@@ -238,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 450);
+            this.ClientSize = new System.Drawing.Size(586, 405);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.metroLabel8);
