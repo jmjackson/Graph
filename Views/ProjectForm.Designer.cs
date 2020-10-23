@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblId = new MetroFramework.Controls.MetroLabel();
             this.LblName = new MetroFramework.Controls.MetroLabel();
             this.LblCode = new MetroFramework.Controls.MetroLabel();
@@ -68,7 +68,7 @@
             this.LblId.AutoSize = true;
             this.LblId.BackColor = System.Drawing.SystemColors.Control;
             this.LblId.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblId.Location = new System.Drawing.Point(163, 44);
+            this.LblId.Location = new System.Drawing.Point(279, 44);
             this.LblId.Name = "LblId";
             this.LblId.Size = new System.Drawing.Size(35, 25);
             this.LblId.TabIndex = 0;
@@ -80,7 +80,7 @@
             this.LblName.AutoSize = true;
             this.LblName.BackColor = System.Drawing.SystemColors.Control;
             this.LblName.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblName.Location = new System.Drawing.Point(587, 44);
+            this.LblName.Location = new System.Drawing.Point(739, 44);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(115, 25);
             this.LblName.TabIndex = 0;
@@ -92,7 +92,7 @@
             this.LblCode.AutoSize = true;
             this.LblCode.BackColor = System.Drawing.SystemColors.Control;
             this.LblCode.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblCode.Location = new System.Drawing.Point(339, 44);
+            this.LblCode.Location = new System.Drawing.Point(464, 44);
             this.LblCode.Name = "LblCode";
             this.LblCode.Size = new System.Drawing.Size(109, 25);
             this.LblCode.TabIndex = 0;
@@ -103,7 +103,7 @@
             // 
             this.PBLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PBLogo.Image = ((System.Drawing.Image)(resources.GetObject("PBLogo.Image")));
-            this.PBLogo.Location = new System.Drawing.Point(848, 19);
+            this.PBLogo.Location = new System.Drawing.Point(994, 19);
             this.PBLogo.Name = "PBLogo";
             this.PBLogo.Size = new System.Drawing.Size(153, 50);
             this.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,14 +117,14 @@
             this.DGVProject.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVProject.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DGVProject.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.DGVProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -133,14 +133,14 @@
             this.Contractor,
             this.Supplier,
             this.Geosynthetic});
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVProject.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVProject.DefaultCellStyle = dataGridViewCellStyle10;
             this.DGVProject.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVProject.EnableHeadersVisualStyles = false;
             this.DGVProject.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -148,20 +148,20 @@
             this.DGVProject.Location = new System.Drawing.Point(0, 0);
             this.DGVProject.Name = "DGVProject";
             this.DGVProject.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVProject.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVProject.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.DGVProject.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
-            this.DGVProject.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.DGVProject.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DGVProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVProject.Size = new System.Drawing.Size(1004, 362);
+            this.DGVProject.Size = new System.Drawing.Size(1150, 362);
             this.DGVProject.Style = MetroFramework.MetroColorStyle.Blue;
             this.DGVProject.TabIndex = 4;
             // 
@@ -206,11 +206,11 @@
             this.LblRId.AutoSize = true;
             this.LblRId.BackColor = System.Drawing.SystemColors.Control;
             this.LblRId.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRId.Location = new System.Drawing.Point(204, 44);
+            this.LblRId.Location = new System.Drawing.Point(320, 44);
             this.LblRId.Name = "LblRId";
-            this.LblRId.Size = new System.Drawing.Size(103, 25);
+            this.LblRId.Size = new System.Drawing.Size(57, 25);
             this.LblRId.TabIndex = 9;
-            this.LblRId.Text = "metroLabel1";
+            this.LblRId.Text = "Metro";
             this.LblRId.UseCustomBackColor = true;
             // 
             // LblRCode
@@ -218,7 +218,7 @@
             this.LblRCode.AutoSize = true;
             this.LblRCode.BackColor = System.Drawing.SystemColors.Control;
             this.LblRCode.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRCode.Location = new System.Drawing.Point(464, 44);
+            this.LblRCode.Location = new System.Drawing.Point(589, 44);
             this.LblRCode.Name = "LblRCode";
             this.LblRCode.Size = new System.Drawing.Size(103, 25);
             this.LblRCode.TabIndex = 9;
@@ -230,7 +230,7 @@
             this.LblRCName.AutoSize = true;
             this.LblRCName.BackColor = System.Drawing.SystemColors.Control;
             this.LblRCName.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRCName.Location = new System.Drawing.Point(718, 44);
+            this.LblRCName.Location = new System.Drawing.Point(870, 44);
             this.LblRCName.Name = "LblRCName";
             this.LblRCName.Size = new System.Drawing.Size(103, 25);
             this.LblRCName.TabIndex = 9;
@@ -250,7 +250,7 @@
             this.PanelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHead.Location = new System.Drawing.Point(0, 0);
             this.PanelHead.Name = "PanelHead";
-            this.PanelHead.Size = new System.Drawing.Size(1004, 100);
+            this.PanelHead.Size = new System.Drawing.Size(1150, 100);
             this.PanelHead.TabIndex = 10;
             // 
             // LblTitle
@@ -275,7 +275,7 @@
             this.PanelFoot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PanelFoot.Location = new System.Drawing.Point(0, 462);
             this.PanelFoot.Name = "PanelFoot";
-            this.PanelFoot.Size = new System.Drawing.Size(1004, 100);
+            this.PanelFoot.Size = new System.Drawing.Size(1150, 100);
             this.PanelFoot.TabIndex = 11;
             // 
             // BtnDelete
@@ -351,7 +351,7 @@
             this.BtnExit.IconColor = System.Drawing.Color.White;
             this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnExit.IconSize = 48;
-            this.BtnExit.Location = new System.Drawing.Point(893, 22);
+            this.BtnExit.Location = new System.Drawing.Point(1039, 22);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Rotation = 0D;
             this.BtnExit.Size = new System.Drawing.Size(99, 66);
@@ -370,7 +370,7 @@
             this.BtnBack.IconColor = System.Drawing.Color.White;
             this.BtnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnBack.IconSize = 48;
-            this.BtnBack.Location = new System.Drawing.Point(788, 22);
+            this.BtnBack.Location = new System.Drawing.Point(934, 22);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Rotation = 0D;
             this.BtnBack.Size = new System.Drawing.Size(99, 66);
@@ -384,14 +384,14 @@
             this.PanelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelBody.Location = new System.Drawing.Point(0, 100);
             this.PanelBody.Name = "PanelBody";
-            this.PanelBody.Size = new System.Drawing.Size(1004, 362);
+            this.PanelBody.Size = new System.Drawing.Size(1150, 362);
             this.PanelBody.TabIndex = 12;
             // 
             // ProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 562);
+            this.ClientSize = new System.Drawing.Size(1150, 562);
             this.Controls.Add(this.PanelBody);
             this.Controls.Add(this.PanelFoot);
             this.Controls.Add(this.PanelHead);

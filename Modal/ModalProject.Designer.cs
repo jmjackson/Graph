@@ -40,7 +40,7 @@
             this.CbClients.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.CbClients.FormattingEnabled = true;
             this.CbClients.ItemHeight = 29;
-            this.CbClients.Location = new System.Drawing.Point(61, 99);
+            this.CbClients.Location = new System.Drawing.Point(61, 129);
             this.CbClients.Name = "CbClients";
             this.CbClients.Size = new System.Drawing.Size(351, 35);
             this.CbClients.TabIndex = 0;
@@ -52,7 +52,7 @@
             this.BtnYes.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnYes.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.BtnYes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnYes.Location = new System.Drawing.Point(102, 161);
+            this.BtnYes.Location = new System.Drawing.Point(96, 244);
             this.BtnYes.Name = "BtnYes";
             this.BtnYes.Size = new System.Drawing.Size(124, 36);
             this.BtnYes.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.BtnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
             this.BtnNo.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnNo.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnNo.Location = new System.Drawing.Point(248, 161);
+            this.BtnNo.Location = new System.Drawing.Point(242, 244);
             this.BtnNo.Name = "BtnNo";
             this.BtnNo.Size = new System.Drawing.Size(124, 36);
             this.BtnNo.TabIndex = 1;
@@ -81,7 +81,7 @@
             // 
             this.LblClients.AutoSize = true;
             this.LblClients.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblClients.Location = new System.Drawing.Point(61, 49);
+            this.LblClients.Location = new System.Drawing.Point(61, 60);
             this.LblClients.Name = "LblClients";
             this.LblClients.Size = new System.Drawing.Size(62, 25);
             this.LblClients.TabIndex = 2;
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 220);
+            this.ClientSize = new System.Drawing.Size(678, 303);
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.LblClients);
             this.Controls.Add(this.BtnNo);

@@ -90,7 +90,7 @@
             // 
             this.LblProject.AutoSize = true;
             this.LblProject.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblProject.Location = new System.Drawing.Point(4, 36);
+            this.LblProject.Location = new System.Drawing.Point(4, 51);
             this.LblProject.Name = "LblProject";
             this.LblProject.Size = new System.Drawing.Size(73, 25);
             this.LblProject.TabIndex = 0;
@@ -100,7 +100,7 @@
             // 
             this.LblProjectNo.AutoSize = true;
             this.LblProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblProjectNo.Location = new System.Drawing.Point(4, 64);
+            this.LblProjectNo.Location = new System.Drawing.Point(4, 88);
             this.LblProjectNo.Name = "LblProjectNo";
             this.LblProjectNo.Size = new System.Drawing.Size(101, 25);
             this.LblProjectNo.TabIndex = 0;
@@ -111,7 +111,7 @@
             this.MetroClient.AutoSize = true;
             this.MetroClient.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.MetroClient.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.MetroClient.Location = new System.Drawing.Point(128, 8);
+            this.MetroClient.Location = new System.Drawing.Point(204, 5);
             this.MetroClient.Name = "MetroClient";
             this.MetroClient.Size = new System.Drawing.Size(60, 25);
             this.MetroClient.TabIndex = 0;
@@ -122,7 +122,7 @@
             this.MetroProject.AutoSize = true;
             this.MetroProject.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.MetroProject.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.MetroProject.Location = new System.Drawing.Point(128, 33);
+            this.MetroProject.Location = new System.Drawing.Point(204, 51);
             this.MetroProject.Name = "MetroProject";
             this.MetroProject.Size = new System.Drawing.Size(60, 25);
             this.MetroProject.TabIndex = 0;
@@ -133,7 +133,7 @@
             this.MetroProjectNo.AutoSize = true;
             this.MetroProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.MetroProjectNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.MetroProjectNo.Location = new System.Drawing.Point(128, 64);
+            this.MetroProjectNo.Location = new System.Drawing.Point(204, 85);
             this.MetroProjectNo.Name = "MetroProjectNo";
             this.MetroProjectNo.Size = new System.Drawing.Size(60, 25);
             this.MetroProjectNo.TabIndex = 0;
@@ -143,7 +143,7 @@
             // 
             this.LblContractor.AutoSize = true;
             this.LblContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblContractor.Location = new System.Drawing.Point(247, 8);
+            this.LblContractor.Location = new System.Drawing.Point(377, 8);
             this.LblContractor.Name = "LblContractor";
             this.LblContractor.Size = new System.Drawing.Size(101, 25);
             this.LblContractor.TabIndex = 0;
@@ -153,7 +153,7 @@
             // 
             this.LblSupplier.AutoSize = true;
             this.LblSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblSupplier.Location = new System.Drawing.Point(247, 36);
+            this.LblSupplier.Location = new System.Drawing.Point(377, 51);
             this.LblSupplier.Name = "LblSupplier";
             this.LblSupplier.Size = new System.Drawing.Size(83, 25);
             this.LblSupplier.TabIndex = 0;
@@ -163,7 +163,7 @@
             // 
             this.LblGeosynthetic.AutoSize = true;
             this.LblGeosynthetic.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblGeosynthetic.Location = new System.Drawing.Point(247, 64);
+            this.LblGeosynthetic.Location = new System.Drawing.Point(377, 88);
             this.LblGeosynthetic.Name = "LblGeosynthetic";
             this.LblGeosynthetic.Size = new System.Drawing.Size(118, 25);
             this.LblGeosynthetic.TabIndex = 0;
@@ -174,7 +174,7 @@
             this.MetroContractor.AutoSize = true;
             this.MetroContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.MetroContractor.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.MetroContractor.Location = new System.Drawing.Point(384, 8);
+            this.MetroContractor.Location = new System.Drawing.Point(570, 8);
             this.MetroContractor.Name = "MetroContractor";
             this.MetroContractor.Size = new System.Drawing.Size(60, 25);
             this.MetroContractor.TabIndex = 0;
@@ -185,7 +185,7 @@
             this.MetroSupplier.AutoSize = true;
             this.MetroSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.MetroSupplier.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.MetroSupplier.Location = new System.Drawing.Point(384, 36);
+            this.MetroSupplier.Location = new System.Drawing.Point(570, 51);
             this.MetroSupplier.Name = "MetroSupplier";
             this.MetroSupplier.Size = new System.Drawing.Size(60, 25);
             this.MetroSupplier.TabIndex = 0;
@@ -196,7 +196,7 @@
             this.MetroGeosynthetic.AutoSize = true;
             this.MetroGeosynthetic.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.MetroGeosynthetic.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.MetroGeosynthetic.Location = new System.Drawing.Point(384, 64);
+            this.MetroGeosynthetic.Location = new System.Drawing.Point(570, 85);
             this.MetroGeosynthetic.Name = "MetroGeosynthetic";
             this.MetroGeosynthetic.Size = new System.Drawing.Size(60, 25);
             this.MetroGeosynthetic.TabIndex = 0;
@@ -206,7 +206,7 @@
             // 
             this.LblOperator.AutoSize = true;
             this.LblOperator.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblOperator.Location = new System.Drawing.Point(524, 8);
+            this.LblOperator.Location = new System.Drawing.Point(843, 8);
             this.LblOperator.Name = "LblOperator";
             this.LblOperator.Size = new System.Drawing.Size(90, 25);
             this.LblOperator.TabIndex = 0;
@@ -216,7 +216,7 @@
             // 
             this.LblMachine.AutoSize = true;
             this.LblMachine.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblMachine.Location = new System.Drawing.Point(524, 36);
+            this.LblMachine.Location = new System.Drawing.Point(843, 51);
             this.LblMachine.Name = "LblMachine";
             this.LblMachine.Size = new System.Drawing.Size(97, 25);
             this.LblMachine.TabIndex = 0;
@@ -227,7 +227,7 @@
             this.MetroOperator.AutoSize = true;
             this.MetroOperator.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.MetroOperator.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.MetroOperator.Location = new System.Drawing.Point(650, 8);
+            this.MetroOperator.Location = new System.Drawing.Point(969, 8);
             this.MetroOperator.Name = "MetroOperator";
             this.MetroOperator.Size = new System.Drawing.Size(60, 25);
             this.MetroOperator.TabIndex = 0;
@@ -238,7 +238,7 @@
             this.MetroMachineNo.AutoSize = true;
             this.MetroMachineNo.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.MetroMachineNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.MetroMachineNo.Location = new System.Drawing.Point(650, 36);
+            this.MetroMachineNo.Location = new System.Drawing.Point(969, 51);
             this.MetroMachineNo.Name = "MetroMachineNo";
             this.MetroMachineNo.Size = new System.Drawing.Size(60, 25);
             this.MetroMachineNo.TabIndex = 0;
@@ -248,7 +248,7 @@
             // 
             this.PbLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
-            this.PbLogo.Location = new System.Drawing.Point(779, 6);
+            this.PbLogo.Location = new System.Drawing.Point(1093, 6);
             this.PbLogo.Name = "PbLogo";
             this.PbLogo.Size = new System.Drawing.Size(189, 50);
             this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -315,7 +315,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.DGVGeo.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVGeo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVGeo.Size = new System.Drawing.Size(1032, 309);
+            this.DGVGeo.Size = new System.Drawing.Size(1346, 280);
             this.DGVGeo.Style = MetroFramework.MetroColorStyle.Blue;
             this.DGVGeo.TabIndex = 2;
             // 
@@ -429,7 +429,7 @@
             this.BtnPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnPdf.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnPdf.ForeColor = System.Drawing.Color.White;
-            this.BtnPdf.Location = new System.Drawing.Point(860, 27);
+            this.BtnPdf.Location = new System.Drawing.Point(1174, 27);
             this.BtnPdf.Name = "BtnPdf";
             this.BtnPdf.Size = new System.Drawing.Size(129, 49);
             this.BtnPdf.TabIndex = 5;
@@ -458,7 +458,7 @@
             // 
             // DateDev
             // 
-            this.DateDev.Location = new System.Drawing.Point(524, 64);
+            this.DateDev.Location = new System.Drawing.Point(885, 104);
             this.DateDev.MinimumSize = new System.Drawing.Size(0, 29);
             this.DateDev.Name = "DateDev";
             this.DateDev.Size = new System.Drawing.Size(250, 29);
@@ -487,7 +487,7 @@
             this.PanelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHead.Location = new System.Drawing.Point(20, 60);
             this.PanelHead.Name = "PanelHead";
-            this.PanelHead.Size = new System.Drawing.Size(1032, 110);
+            this.PanelHead.Size = new System.Drawing.Size(1346, 139);
             this.PanelHead.TabIndex = 7;
             // 
             // PanelFoot
@@ -499,23 +499,23 @@
             this.PanelFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelFoot.Location = new System.Drawing.Point(20, 479);
             this.PanelFoot.Name = "PanelFoot";
-            this.PanelFoot.Size = new System.Drawing.Size(1032, 100);
+            this.PanelFoot.Size = new System.Drawing.Size(1346, 100);
             this.PanelFoot.TabIndex = 8;
             // 
             // PanelContent
             // 
             this.PanelContent.Controls.Add(this.DGVGeo);
             this.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContent.Location = new System.Drawing.Point(20, 170);
+            this.PanelContent.Location = new System.Drawing.Point(20, 199);
             this.PanelContent.Name = "PanelContent";
-            this.PanelContent.Size = new System.Drawing.Size(1032, 309);
+            this.PanelContent.Size = new System.Drawing.Size(1346, 280);
             this.PanelContent.TabIndex = 9;
             // 
             // GeomembraneForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 599);
+            this.ClientSize = new System.Drawing.Size(1386, 599);
             this.Controls.Add(this.PanelContent);
             this.Controls.Add(this.PanelFoot);
             this.Controls.Add(this.PanelHead);
