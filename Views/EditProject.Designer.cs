@@ -47,7 +47,7 @@
             // TxtProject
             // 
             this.TxtProject.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtProject.Location = new System.Drawing.Point(43, 105);
+            this.TxtProject.Location = new System.Drawing.Point(43, 112);
             this.TxtProject.Name = "TxtProject";
             this.TxtProject.Size = new System.Drawing.Size(233, 33);
             this.TxtProject.TabIndex = 0;
@@ -55,7 +55,7 @@
             // TxtContractor
             // 
             this.TxtContractor.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContractor.Location = new System.Drawing.Point(43, 176);
+            this.TxtContractor.Location = new System.Drawing.Point(43, 214);
             this.TxtContractor.Name = "TxtContractor";
             this.TxtContractor.Size = new System.Drawing.Size(233, 33);
             this.TxtContractor.TabIndex = 0;
@@ -63,7 +63,7 @@
             // TxtGeosynthetic
             // 
             this.TxtGeosynthetic.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtGeosynthetic.Location = new System.Drawing.Point(43, 241);
+            this.TxtGeosynthetic.Location = new System.Drawing.Point(43, 304);
             this.TxtGeosynthetic.Name = "TxtGeosynthetic";
             this.TxtGeosynthetic.Size = new System.Drawing.Size(233, 33);
             this.TxtGeosynthetic.TabIndex = 0;
@@ -71,7 +71,7 @@
             // TxtProjecNo
             // 
             this.TxtProjecNo.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtProjecNo.Location = new System.Drawing.Point(305, 105);
+            this.TxtProjecNo.Location = new System.Drawing.Point(305, 112);
             this.TxtProjecNo.Name = "TxtProjecNo";
             this.TxtProjecNo.Size = new System.Drawing.Size(251, 33);
             this.TxtProjecNo.TabIndex = 0;
@@ -79,7 +79,7 @@
             // TxtSupplier
             // 
             this.TxtSupplier.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSupplier.Location = new System.Drawing.Point(305, 176);
+            this.TxtSupplier.Location = new System.Drawing.Point(305, 214);
             this.TxtSupplier.Name = "TxtSupplier";
             this.TxtSupplier.Size = new System.Drawing.Size(251, 33);
             this.TxtSupplier.TabIndex = 0;
@@ -87,7 +87,7 @@
             // TxtClientId
             // 
             this.TxtClientId.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtClientId.Location = new System.Drawing.Point(305, 241);
+            this.TxtClientId.Location = new System.Drawing.Point(305, 304);
             this.TxtClientId.Name = "TxtClientId";
             this.TxtClientId.ReadOnly = true;
             this.TxtClientId.Size = new System.Drawing.Size(251, 33);
@@ -97,7 +97,7 @@
             // 
             this.LblId.AutoSize = true;
             this.LblId.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblId.Location = new System.Drawing.Point(305, 213);
+            this.LblId.Location = new System.Drawing.Point(305, 265);
             this.LblId.Name = "LblId";
             this.LblId.Size = new System.Drawing.Size(55, 25);
             this.LblId.TabIndex = 1;
@@ -127,7 +127,7 @@
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(43, 148);
+            this.metroLabel4.Location = new System.Drawing.Point(43, 175);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(92, 25);
             this.metroLabel4.TabIndex = 1;
@@ -137,7 +137,7 @@
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(305, 148);
+            this.metroLabel5.Location = new System.Drawing.Point(305, 175);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(74, 25);
             this.metroLabel5.TabIndex = 1;
@@ -147,7 +147,7 @@
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(43, 213);
+            this.metroLabel6.Location = new System.Drawing.Point(43, 265);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(111, 25);
             this.metroLabel6.TabIndex = 1;
@@ -199,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 464);
+            this.ClientSize = new System.Drawing.Size(658, 464);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.metroLabel6);
@@ -215,7 +215,7 @@
             this.Controls.Add(this.TxtClientId);
             this.Controls.Add(this.TxtProject);
             this.Name = "EditProject";
-            this.Text = "Edit Project";
+            this.Text = "Update Project";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditProject_FormClosed);
             this.Load += new System.EventHandler(this.EditProject_Load);
             this.ResumeLayout(false);
