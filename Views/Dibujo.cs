@@ -153,6 +153,12 @@ namespace Mine.Views
                 //var panel = item.PanelNo;
             }
 
+            //tabla de cordenadas
+            DgCordenada.Rows.Add("East to west","EW");
+            DgCordenada.Rows.Add("North to south","NS");
+            DgCordenada.Rows.Add("South to north","SN");
+            DgCordenada.Rows.Add("West to east", "WE");
+
         }
 
         private void BtnClear_Click(object sender, EventArgs e)
@@ -180,6 +186,21 @@ namespace Mine.Views
                     PbLienzo.Image = imagen;
                 }
             }
+            if (selecc_Opcion == 4)
+            {
+                //Dibujamos Cordenada y simbologia
+                if (dibujar == true)
+                {
+                    Font font2 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
+                    Graphics g = Graphics.FromImage(imagen);
+
+                    //seleciona de la tabla y lo dibuja
+                    string texto = Convert.ToString(DgCordenada.CurrentRow.Cells[1].Value);
+                    g.DrawString(texto, font2, new SolidBrush(Color.Black), e.X, e.Y);
+
+                    PbLienzo.Image = imagen;
+                }
+            }
         }
         void resetTools()
         {
@@ -201,24 +222,33 @@ namespace Mine.Views
             selecc_Opcion = 2;
         }
 
-        private void BtnEdit_Click(object sender, EventArgs e)
+        private void BtnEO_Click(object sender, EventArgs e)
         {
             resetTools();
             ((Button)sender).Enabled = false;
-            try
-            {
-                OpenFileDialog edit = new OpenFileDialog();
-                if (edit.ShowDialog() == DialogResult.OK)
-                {
-                    string imagen = edit.FileName;
-                    PbLienzo.Image = Image.FromFile(imagen);
-                    selecc_Opcion = 4;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
-            }
+            selecc_Opcion = 4;
         }
+
+        private void BtnNS_Click(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 5;
+        }
+
+        private void BtnSN_Click(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 6;
+        }
+
+        private void BtnOE_Click(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 7;
+        }
+
     }
 }
