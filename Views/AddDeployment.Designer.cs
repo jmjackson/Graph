@@ -219,7 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 450);
+            this.ClientSize = new System.Drawing.Size(690, 595);
             this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel4);

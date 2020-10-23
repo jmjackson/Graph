@@ -45,7 +45,7 @@
             // TxtProject
             // 
             this.TxtProject.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtProject.Location = new System.Drawing.Point(56, 102);
+            this.TxtProject.Location = new System.Drawing.Point(56, 117);
             this.TxtProject.Name = "TxtProject";
             this.TxtProject.Size = new System.Drawing.Size(274, 33);
             this.TxtProject.TabIndex = 0;
@@ -53,7 +53,7 @@
             // TxtProjectNo
             // 
             this.TxtProjectNo.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtProjectNo.Location = new System.Drawing.Point(349, 102);
+            this.TxtProjectNo.Location = new System.Drawing.Point(349, 117);
             this.TxtProjectNo.Name = "TxtProjectNo";
             this.TxtProjectNo.Size = new System.Drawing.Size(298, 33);
             this.TxtProjectNo.TabIndex = 1;
@@ -61,7 +61,7 @@
             // TxtContractor
             // 
             this.TxtContractor.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContractor.Location = new System.Drawing.Point(56, 169);
+            this.TxtContractor.Location = new System.Drawing.Point(56, 209);
             this.TxtContractor.Name = "TxtContractor";
             this.TxtContractor.Size = new System.Drawing.Size(274, 33);
             this.TxtContractor.TabIndex = 2;
@@ -69,7 +69,7 @@
             // TxtSupplier
             // 
             this.TxtSupplier.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSupplier.Location = new System.Drawing.Point(349, 169);
+            this.TxtSupplier.Location = new System.Drawing.Point(349, 209);
             this.TxtSupplier.Name = "TxtSupplier";
             this.TxtSupplier.Size = new System.Drawing.Size(298, 33);
             this.TxtSupplier.TabIndex = 3;
@@ -77,9 +77,9 @@
             // TxtGeosynthetic
             // 
             this.TxtGeosynthetic.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtGeosynthetic.Location = new System.Drawing.Point(56, 239);
+            this.TxtGeosynthetic.Location = new System.Drawing.Point(56, 317);
             this.TxtGeosynthetic.Name = "TxtGeosynthetic";
-            this.TxtGeosynthetic.Size = new System.Drawing.Size(274, 33);
+            this.TxtGeosynthetic.Size = new System.Drawing.Size(287, 33);
             this.TxtGeosynthetic.TabIndex = 4;
             // 
             // BtnSave
@@ -94,10 +94,10 @@
             this.BtnSave.IconColor = System.Drawing.Color.White;
             this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 25;
-            this.BtnSave.Location = new System.Drawing.Point(222, 288);
+            this.BtnSave.Location = new System.Drawing.Point(211, 389);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
-            this.BtnSave.Size = new System.Drawing.Size(108, 34);
+            this.BtnSave.Size = new System.Drawing.Size(132, 44);
             this.BtnSave.TabIndex = 5;
             this.BtnSave.Text = "Save";
             this.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -116,10 +116,10 @@
             this.BtnCancel.IconColor = System.Drawing.Color.White;
             this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 25;
-            this.BtnCancel.Location = new System.Drawing.Point(336, 288);
+            this.BtnCancel.Location = new System.Drawing.Point(349, 389);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
-            this.BtnCancel.Size = new System.Drawing.Size(108, 34);
+            this.BtnCancel.Size = new System.Drawing.Size(131, 44);
             this.BtnCancel.TabIndex = 6;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -130,7 +130,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(56, 141);
+            this.metroLabel1.Location = new System.Drawing.Point(56, 169);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(92, 25);
             this.metroLabel1.TabIndex = 2;
@@ -160,7 +160,7 @@
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(56, 212);
+            this.metroLabel5.Location = new System.Drawing.Point(56, 269);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(109, 25);
             this.metroLabel5.TabIndex = 2;
@@ -170,7 +170,7 @@
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(349, 141);
+            this.metroLabel6.Location = new System.Drawing.Point(349, 169);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(74, 25);
             this.metroLabel6.TabIndex = 2;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 356);
+            this.ClientSize = new System.Drawing.Size(686, 456);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel5);

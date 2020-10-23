@@ -81,7 +81,7 @@
             // 
             this.LblClients.AutoSize = true;
             this.LblClients.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblClients.Location = new System.Drawing.Point(61, 60);
+            this.LblClients.Location = new System.Drawing.Point(61, 82);
             this.LblClients.Name = "LblClients";
             this.LblClients.Size = new System.Drawing.Size(62, 25);
             this.LblClients.TabIndex = 2;
@@ -91,7 +91,7 @@
             // 
             this.LblTitle.AutoSize = true;
             this.LblTitle.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblTitle.Location = new System.Drawing.Point(61, 11);
+            this.LblTitle.Location = new System.Drawing.Point(61, 17);
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(351, 25);
             this.LblTitle.TabIndex = 3;
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 303);
+            this.ClientSize = new System.Drawing.Size(647, 303);
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.LblClients);
             this.Controls.Add(this.BtnNo);

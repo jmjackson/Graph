@@ -45,7 +45,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(57, 83);
+            this.metroLabel2.Location = new System.Drawing.Point(57, 69);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(52, 25);
             this.metroLabel2.TabIndex = 0;
@@ -73,10 +73,10 @@
             this.BtnSave.IconColor = System.Drawing.Color.Black;
             this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 16;
-            this.BtnSave.Location = new System.Drawing.Point(77, 359);
+            this.BtnSave.Location = new System.Drawing.Point(57, 365);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
-            this.BtnSave.Size = new System.Drawing.Size(114, 38);
+            this.BtnSave.Size = new System.Drawing.Size(134, 47);
             this.BtnSave.TabIndex = 3;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
@@ -94,10 +94,10 @@
             this.BtnCancel.IconColor = System.Drawing.Color.Black;
             this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 16;
-            this.BtnCancel.Location = new System.Drawing.Point(197, 359);
+            this.BtnCancel.Location = new System.Drawing.Point(197, 365);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
-            this.BtnCancel.Size = new System.Drawing.Size(114, 38);
+            this.BtnCancel.Size = new System.Drawing.Size(130, 47);
             this.BtnCancel.TabIndex = 4;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = false;
@@ -106,9 +106,9 @@
             // PbClient
             // 
             this.PbClient.Image = ((System.Drawing.Image)(resources.GetObject("PbClient.Image")));
-            this.PbClient.Location = new System.Drawing.Point(57, 232);
+            this.PbClient.Location = new System.Drawing.Point(57, 246);
             this.PbClient.Name = "PbClient";
-            this.PbClient.Size = new System.Drawing.Size(137, 95);
+            this.PbClient.Size = new System.Drawing.Size(122, 95);
             this.PbClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbClient.TabIndex = 3;
             this.PbClient.TabStop = false;
@@ -119,9 +119,9 @@
             this.BtnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBrowse.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBrowse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnBrowse.Location = new System.Drawing.Point(212, 232);
+            this.BtnBrowse.Location = new System.Drawing.Point(197, 246);
             this.BtnBrowse.Name = "BtnBrowse";
-            this.BtnBrowse.Size = new System.Drawing.Size(115, 39);
+            this.BtnBrowse.Size = new System.Drawing.Size(130, 48);
             this.BtnBrowse.TabIndex = 2;
             this.BtnBrowse.Text = "Browse";
             this.BtnBrowse.UseVisualStyleBackColor = false;
@@ -138,7 +138,7 @@
             // TxtName
             // 
             this.TxtName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtName.Location = new System.Drawing.Point(57, 180);
+            this.TxtName.Location = new System.Drawing.Point(57, 194);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(270, 33);
             this.TxtName.TabIndex = 1;
@@ -151,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 418);
+            this.ClientSize = new System.Drawing.Size(398, 457);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.TxtCode);
             this.Controls.Add(this.BtnBrowse);

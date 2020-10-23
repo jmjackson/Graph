@@ -52,10 +52,10 @@
             this.BtnCancel.IconColor = System.Drawing.Color.Black;
             this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 16;
-            this.BtnCancel.Location = new System.Drawing.Point(243, 382);
+            this.BtnCancel.Location = new System.Drawing.Point(243, 446);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
-            this.BtnCancel.Size = new System.Drawing.Size(120, 43);
+            this.BtnCancel.Size = new System.Drawing.Size(120, 57);
             this.BtnCancel.TabIndex = 0;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = false;
@@ -72,10 +72,10 @@
             this.BtnSave.IconColor = System.Drawing.Color.Black;
             this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 16;
-            this.BtnSave.Location = new System.Drawing.Point(85, 382);
+            this.BtnSave.Location = new System.Drawing.Point(85, 446);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
-            this.BtnSave.Size = new System.Drawing.Size(120, 43);
+            this.BtnSave.Size = new System.Drawing.Size(120, 57);
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
@@ -92,10 +92,10 @@
             this.BtnBrowse.IconColor = System.Drawing.Color.Black;
             this.BtnBrowse.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnBrowse.IconSize = 16;
-            this.BtnBrowse.Location = new System.Drawing.Point(243, 280);
+            this.BtnBrowse.Location = new System.Drawing.Point(243, 325);
             this.BtnBrowse.Name = "BtnBrowse";
             this.BtnBrowse.Rotation = 0D;
-            this.BtnBrowse.Size = new System.Drawing.Size(120, 43);
+            this.BtnBrowse.Size = new System.Drawing.Size(120, 42);
             this.BtnBrowse.TabIndex = 0;
             this.BtnBrowse.Text = "Browse";
             this.BtnBrowse.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@
             // TxtId
             // 
             this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.Location = new System.Drawing.Point(74, 104);
+            this.TxtId.Location = new System.Drawing.Point(74, 115);
             this.TxtId.Name = "TxtId";
             this.TxtId.ReadOnly = true;
             this.TxtId.Size = new System.Drawing.Size(289, 29);
@@ -112,7 +112,7 @@
             // TxtCode
             // 
             this.TxtCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCode.Location = new System.Drawing.Point(74, 169);
+            this.TxtCode.Location = new System.Drawing.Point(74, 186);
             this.TxtCode.Name = "TxtCode";
             this.TxtCode.Size = new System.Drawing.Size(289, 29);
             this.TxtCode.TabIndex = 1;
@@ -120,7 +120,7 @@
             // TxtName
             // 
             this.TxtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtName.Location = new System.Drawing.Point(74, 229);
+            this.TxtName.Location = new System.Drawing.Point(74, 270);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(289, 29);
             this.TxtName.TabIndex = 1;
@@ -139,7 +139,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(74, 141);
+            this.metroLabel2.Location = new System.Drawing.Point(74, 147);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(52, 25);
             this.metroLabel2.TabIndex = 2;
@@ -149,7 +149,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(74, 201);
+            this.metroLabel3.Location = new System.Drawing.Point(74, 229);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(58, 25);
             this.metroLabel3.TabIndex = 2;
@@ -157,9 +157,9 @@
             // 
             // PbClient
             // 
-            this.PbClient.Location = new System.Drawing.Point(74, 280);
+            this.PbClient.Location = new System.Drawing.Point(74, 325);
             this.PbClient.Name = "PbClient";
-            this.PbClient.Size = new System.Drawing.Size(131, 75);
+            this.PbClient.Size = new System.Drawing.Size(131, 84);
             this.PbClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbClient.TabIndex = 3;
             this.PbClient.TabStop = false;
@@ -168,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 450);
+            this.ClientSize = new System.Drawing.Size(474, 535);
             this.Controls.Add(this.PbClient);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
