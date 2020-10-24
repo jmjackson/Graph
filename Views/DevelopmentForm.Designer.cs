@@ -63,16 +63,20 @@
             this.LblRContractor = new MetroFramework.Controls.MetroLabel();
             this.LblRSupplier = new MetroFramework.Controls.MetroLabel();
             this.LblRGeosyntetic = new MetroFramework.Controls.MetroLabel();
+            this.PanelHeader = new MetroFramework.Controls.MetroPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
             this.PanelAdd.SuspendLayout();
+            this.PanelHeader.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblClient
             // 
             this.LblClient.AutoSize = true;
             this.LblClient.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblClient.Location = new System.Drawing.Point(51, 48);
+            this.LblClient.Location = new System.Drawing.Point(45, 13);
             this.LblClient.Name = "LblClient";
             this.LblClient.Size = new System.Drawing.Size(59, 25);
             this.LblClient.TabIndex = 0;
@@ -82,7 +86,7 @@
             // 
             this.LblProjectNo.AutoSize = true;
             this.LblProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblProjectNo.Location = new System.Drawing.Point(20, 106);
+            this.LblProjectNo.Location = new System.Drawing.Point(8, 90);
             this.LblProjectNo.Name = "LblProjectNo";
             this.LblProjectNo.Size = new System.Drawing.Size(96, 25);
             this.LblProjectNo.TabIndex = 0;
@@ -92,7 +96,7 @@
             // 
             this.LblProject.AutoSize = true;
             this.LblProject.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblProject.Location = new System.Drawing.Point(43, 77);
+            this.LblProject.Location = new System.Drawing.Point(31, 52);
             this.LblProject.Name = "LblProject";
             this.LblProject.Size = new System.Drawing.Size(68, 25);
             this.LblProject.TabIndex = 0;
@@ -102,7 +106,7 @@
             // 
             this.LblContractor.AutoSize = true;
             this.LblContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblContractor.Location = new System.Drawing.Point(353, 48);
+            this.LblContractor.Location = new System.Drawing.Point(363, 13);
             this.LblContractor.Name = "LblContractor";
             this.LblContractor.Size = new System.Drawing.Size(97, 25);
             this.LblContractor.TabIndex = 0;
@@ -112,7 +116,7 @@
             // 
             this.LblGeoSynthetic.AutoSize = true;
             this.LblGeoSynthetic.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblGeoSynthetic.Location = new System.Drawing.Point(343, 106);
+            this.LblGeoSynthetic.Location = new System.Drawing.Point(347, 90);
             this.LblGeoSynthetic.Name = "LblGeoSynthetic";
             this.LblGeoSynthetic.Size = new System.Drawing.Size(113, 25);
             this.LblGeoSynthetic.TabIndex = 0;
@@ -122,7 +126,7 @@
             // 
             this.LblSupplier.AutoSize = true;
             this.LblSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblSupplier.Location = new System.Drawing.Point(368, 77);
+            this.LblSupplier.Location = new System.Drawing.Point(381, 52);
             this.LblSupplier.Name = "LblSupplier";
             this.LblSupplier.Size = new System.Drawing.Size(79, 25);
             this.LblSupplier.TabIndex = 0;
@@ -132,7 +136,7 @@
             // 
             this.PBPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PBPicture.Image = ((System.Drawing.Image)(resources.GetObject("PBPicture.Image")));
-            this.PBPicture.Location = new System.Drawing.Point(828, 43);
+            this.PBPicture.Location = new System.Drawing.Point(918, 3);
             this.PBPicture.Name = "PBPicture";
             this.PBPicture.Size = new System.Drawing.Size(221, 57);
             this.PBPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,10 +145,12 @@
             // 
             // LblTitle
             // 
+            this.LblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTitle.AutoSize = true;
             this.LblTitle.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblTitle.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.LblTitle.Location = new System.Drawing.Point(504, 6);
+            this.LblTitle.Location = new System.Drawing.Point(558, 14);
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(152, 25);
             this.LblTitle.TabIndex = 4;
@@ -154,9 +160,6 @@
             // DGVDev
             // 
             this.DGVDev.AllowUserToResizeRows = false;
-            this.DGVDev.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVDev.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DGVDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVDev.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -188,10 +191,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVDev.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGVDev.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVDev.EnableHeadersVisualStyles = false;
             this.DGVDev.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DGVDev.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DGVDev.Location = new System.Drawing.Point(20, 164);
+            this.DGVDev.Location = new System.Drawing.Point(0, 0);
             this.DGVDev.Name = "DGVDev";
             this.DGVDev.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -204,7 +208,7 @@
             this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVDev.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVDev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVDev.Size = new System.Drawing.Size(1007, 302);
+            this.DGVDev.Size = new System.Drawing.Size(1142, 303);
             this.DGVDev.Style = MetroFramework.MetroColorStyle.Blue;
             this.DGVDev.TabIndex = 5;
             this.DGVDev.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -274,7 +278,7 @@
             // 
             this.LblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(725, 9);
+            this.LblTotal.Location = new System.Drawing.Point(760, 12);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(95, 19);
             this.LblTotal.TabIndex = 14;
@@ -294,7 +298,7 @@
             this.PanelAdd.HorizontalScrollbarSize = 10;
             this.PanelAdd.Location = new System.Drawing.Point(20, 502);
             this.PanelAdd.Name = "PanelAdd";
-            this.PanelAdd.Size = new System.Drawing.Size(1029, 119);
+            this.PanelAdd.Size = new System.Drawing.Size(1142, 119);
             this.PanelAdd.TabIndex = 17;
             this.PanelAdd.VerticalScrollbarBarColor = true;
             this.PanelAdd.VerticalScrollbarHighlightOnWheel = false;
@@ -310,10 +314,10 @@
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 48;
-            this.iconButton3.Location = new System.Drawing.Point(345, 41);
+            this.iconButton3.Location = new System.Drawing.Point(402, 34);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(115, 44);
+            this.iconButton3.Size = new System.Drawing.Size(153, 51);
             this.iconButton3.TabIndex = 15;
             this.iconButton3.Text = "Delete";
             this.iconButton3.UseVisualStyleBackColor = false;
@@ -329,10 +333,10 @@
             this.BtnEdit.IconColor = System.Drawing.Color.Black;
             this.BtnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnEdit.IconSize = 48;
-            this.BtnEdit.Location = new System.Drawing.Point(220, 41);
+            this.BtnEdit.Location = new System.Drawing.Point(234, 34);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Rotation = 0D;
-            this.BtnEdit.Size = new System.Drawing.Size(119, 44);
+            this.BtnEdit.Size = new System.Drawing.Size(153, 51);
             this.BtnEdit.TabIndex = 15;
             this.BtnEdit.Text = "Edit";
             this.BtnEdit.UseVisualStyleBackColor = false;
@@ -348,10 +352,10 @@
             this.BtnAdd.IconColor = System.Drawing.Color.Black;
             this.BtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAdd.IconSize = 48;
-            this.BtnAdd.Location = new System.Drawing.Point(93, 41);
+            this.BtnAdd.Location = new System.Drawing.Point(61, 34);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Rotation = 0D;
-            this.BtnAdd.Size = new System.Drawing.Size(121, 44);
+            this.BtnAdd.Size = new System.Drawing.Size(153, 51);
             this.BtnAdd.TabIndex = 15;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.UseVisualStyleBackColor = false;
@@ -362,7 +366,7 @@
             this.BtnPDF.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.BtnPDF.Location = new System.Drawing.Point(896, 50);
             this.BtnPDF.Name = "BtnPDF";
-            this.BtnPDF.Size = new System.Drawing.Size(119, 47);
+            this.BtnPDF.Size = new System.Drawing.Size(163, 47);
             this.BtnPDF.TabIndex = 11;
             this.BtnPDF.Text = "BtnPDF";
             this.BtnPDF.UseSelectable = true;
@@ -370,10 +374,11 @@
             // 
             // TxtDate
             // 
-            this.TxtDate.Location = new System.Drawing.Point(698, 106);
+            this.TxtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtDate.Location = new System.Drawing.Point(780, 90);
             this.TxtDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.TxtDate.Name = "TxtDate";
-            this.TxtDate.Size = new System.Drawing.Size(200, 29);
+            this.TxtDate.Size = new System.Drawing.Size(328, 29);
             this.TxtDate.TabIndex = 15;
             // 
             // LblRClient
@@ -381,7 +386,7 @@
             this.LblRClient.AutoSize = true;
             this.LblRClient.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRClient.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRClient.Location = new System.Drawing.Point(145, 47);
+            this.LblRClient.Location = new System.Drawing.Point(180, 12);
             this.LblRClient.Name = "LblRClient";
             this.LblRClient.Size = new System.Drawing.Size(60, 25);
             this.LblRClient.TabIndex = 18;
@@ -392,7 +397,7 @@
             this.LblRProject.AutoSize = true;
             this.LblRProject.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRProject.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRProject.Location = new System.Drawing.Point(144, 77);
+            this.LblRProject.Location = new System.Drawing.Point(180, 52);
             this.LblRProject.Name = "LblRProject";
             this.LblRProject.Size = new System.Drawing.Size(60, 25);
             this.LblRProject.TabIndex = 18;
@@ -403,7 +408,7 @@
             this.LblRProjectNo.AutoSize = true;
             this.LblRProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRProjectNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRProjectNo.Location = new System.Drawing.Point(144, 106);
+            this.LblRProjectNo.Location = new System.Drawing.Point(179, 90);
             this.LblRProjectNo.Name = "LblRProjectNo";
             this.LblRProjectNo.Size = new System.Drawing.Size(60, 25);
             this.LblRProjectNo.TabIndex = 18;
@@ -414,7 +419,7 @@
             this.LblRContractor.AutoSize = true;
             this.LblRContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRContractor.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRContractor.Location = new System.Drawing.Point(505, 47);
+            this.LblRContractor.Location = new System.Drawing.Point(566, 13);
             this.LblRContractor.Name = "LblRContractor";
             this.LblRContractor.Size = new System.Drawing.Size(60, 25);
             this.LblRContractor.TabIndex = 18;
@@ -425,7 +430,7 @@
             this.LblRSupplier.AutoSize = true;
             this.LblRSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRSupplier.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRSupplier.Location = new System.Drawing.Point(504, 77);
+            this.LblRSupplier.Location = new System.Drawing.Point(566, 52);
             this.LblRSupplier.Name = "LblRSupplier";
             this.LblRSupplier.Size = new System.Drawing.Size(60, 25);
             this.LblRSupplier.TabIndex = 18;
@@ -436,34 +441,58 @@
             this.LblRGeosyntetic.AutoSize = true;
             this.LblRGeosyntetic.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.LblRGeosyntetic.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRGeosyntetic.Location = new System.Drawing.Point(504, 106);
+            this.LblRGeosyntetic.Location = new System.Drawing.Point(566, 90);
             this.LblRGeosyntetic.Name = "LblRGeosyntetic";
             this.LblRGeosyntetic.Size = new System.Drawing.Size(60, 25);
             this.LblRGeosyntetic.TabIndex = 18;
             this.LblRGeosyntetic.Text = "Metro";
             // 
+            // PanelHeader
+            // 
+            this.PanelHeader.Controls.Add(this.LblRGeosyntetic);
+            this.PanelHeader.Controls.Add(this.LblRContractor);
+            this.PanelHeader.Controls.Add(this.TxtDate);
+            this.PanelHeader.Controls.Add(this.LblRSupplier);
+            this.PanelHeader.Controls.Add(this.PBPicture);
+            this.PanelHeader.Controls.Add(this.LblClient);
+            this.PanelHeader.Controls.Add(this.LblRProjectNo);
+            this.PanelHeader.Controls.Add(this.LblProjectNo);
+            this.PanelHeader.Controls.Add(this.LblProject);
+            this.PanelHeader.Controls.Add(this.LblRProject);
+            this.PanelHeader.Controls.Add(this.LblRClient);
+            this.PanelHeader.Controls.Add(this.LblContractor);
+            this.PanelHeader.Controls.Add(this.LblSupplier);
+            this.PanelHeader.Controls.Add(this.LblGeoSynthetic);
+            this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelHeader.HorizontalScrollbarBarColor = true;
+            this.PanelHeader.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelHeader.HorizontalScrollbarSize = 10;
+            this.PanelHeader.Location = new System.Drawing.Point(20, 60);
+            this.PanelHeader.Name = "PanelHeader";
+            this.PanelHeader.Size = new System.Drawing.Size(1142, 139);
+            this.PanelHeader.TabIndex = 19;
+            this.PanelHeader.VerticalScrollbarBarColor = true;
+            this.PanelHeader.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelHeader.VerticalScrollbarSize = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.DGVDev);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(20, 199);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1142, 303);
+            this.panel1.TabIndex = 20;
+            // 
             // DevelopmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 641);
-            this.Controls.Add(this.LblRGeosyntetic);
-            this.Controls.Add(this.LblRSupplier);
-            this.Controls.Add(this.LblRProjectNo);
-            this.Controls.Add(this.LblRContractor);
-            this.Controls.Add(this.LblRProject);
-            this.Controls.Add(this.LblRClient);
+            this.ClientSize = new System.Drawing.Size(1182, 641);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelHeader);
             this.Controls.Add(this.PanelAdd);
-            this.Controls.Add(this.TxtDate);
-            this.Controls.Add(this.DGVDev);
             this.Controls.Add(this.LblTitle);
-            this.Controls.Add(this.PBPicture);
-            this.Controls.Add(this.LblSupplier);
-            this.Controls.Add(this.LblProject);
-            this.Controls.Add(this.LblGeoSynthetic);
-            this.Controls.Add(this.LblContractor);
-            this.Controls.Add(this.LblProjectNo);
-            this.Controls.Add(this.LblClient);
             this.Name = "DevelopmentForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DevelopmentForm_Load);
@@ -471,6 +500,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).EndInit();
             this.PanelAdd.ResumeLayout(false);
             this.PanelAdd.PerformLayout();
+            this.PanelHeader.ResumeLayout(false);
+            this.PanelHeader.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,5 +541,7 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton BtnEdit;
         private FontAwesome.Sharp.IconButton BtnAdd;
+        private MetroFramework.Controls.MetroPanel PanelHeader;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -47,7 +47,7 @@
             // TxtProject
             // 
             this.TxtProject.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtProject.Location = new System.Drawing.Point(43, 112);
+            this.TxtProject.Location = new System.Drawing.Point(43, 121);
             this.TxtProject.Name = "TxtProject";
             this.TxtProject.Size = new System.Drawing.Size(233, 33);
             this.TxtProject.TabIndex = 0;
@@ -63,7 +63,7 @@
             // TxtGeosynthetic
             // 
             this.TxtGeosynthetic.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtGeosynthetic.Location = new System.Drawing.Point(43, 304);
+            this.TxtGeosynthetic.Location = new System.Drawing.Point(43, 313);
             this.TxtGeosynthetic.Name = "TxtGeosynthetic";
             this.TxtGeosynthetic.Size = new System.Drawing.Size(233, 33);
             this.TxtGeosynthetic.TabIndex = 0;
@@ -71,7 +71,7 @@
             // TxtProjecNo
             // 
             this.TxtProjecNo.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtProjecNo.Location = new System.Drawing.Point(305, 112);
+            this.TxtProjecNo.Location = new System.Drawing.Point(305, 121);
             this.TxtProjecNo.Name = "TxtProjecNo";
             this.TxtProjecNo.Size = new System.Drawing.Size(251, 33);
             this.TxtProjecNo.TabIndex = 0;
@@ -87,7 +87,7 @@
             // TxtClientId
             // 
             this.TxtClientId.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtClientId.Location = new System.Drawing.Point(305, 304);
+            this.TxtClientId.Location = new System.Drawing.Point(305, 313);
             this.TxtClientId.Name = "TxtClientId";
             this.TxtClientId.ReadOnly = true;
             this.TxtClientId.Size = new System.Drawing.Size(251, 33);
@@ -165,10 +165,10 @@
             this.BtnSave.IconColor = System.Drawing.Color.Black;
             this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 16;
-            this.BtnSave.Location = new System.Drawing.Point(163, 384);
+            this.BtnSave.Location = new System.Drawing.Point(144, 384);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
-            this.BtnSave.Size = new System.Drawing.Size(135, 42);
+            this.BtnSave.Size = new System.Drawing.Size(154, 42);
             this.BtnSave.TabIndex = 2;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
@@ -189,7 +189,7 @@
             this.BtnCancel.Location = new System.Drawing.Point(314, 384);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
-            this.BtnCancel.Size = new System.Drawing.Size(135, 42);
+            this.BtnCancel.Size = new System.Drawing.Size(156, 42);
             this.BtnCancel.TabIndex = 2;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = false;

@@ -94,10 +94,10 @@
             this.BtnSave.IconColor = System.Drawing.Color.White;
             this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 25;
-            this.BtnSave.Location = new System.Drawing.Point(211, 389);
+            this.BtnSave.Location = new System.Drawing.Point(187, 389);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
-            this.BtnSave.Size = new System.Drawing.Size(132, 44);
+            this.BtnSave.Size = new System.Drawing.Size(156, 44);
             this.BtnSave.TabIndex = 5;
             this.BtnSave.Text = "Save";
             this.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -116,10 +116,10 @@
             this.BtnCancel.IconColor = System.Drawing.Color.White;
             this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 25;
-            this.BtnCancel.Location = new System.Drawing.Point(349, 389);
+            this.BtnCancel.Location = new System.Drawing.Point(359, 389);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
-            this.BtnCancel.Size = new System.Drawing.Size(131, 44);
+            this.BtnCancel.Size = new System.Drawing.Size(156, 44);
             this.BtnCancel.TabIndex = 6;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

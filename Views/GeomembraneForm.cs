@@ -128,5 +128,10 @@ namespace Mine.Views
             ReportGeo rg = new ReportGeo(pdId);
             rg.Show();
         }
+
+        private void PanelHead_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
