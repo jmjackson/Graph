@@ -20827,4 +20827,10 @@
         4rzzzysuv/yK4pZbby34Hj958pT/aPpeb8zAecU//f8BzxBpuVRA+G4AAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="BElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="DragControl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>107, 17</value>
+  </metadata>
 </root>

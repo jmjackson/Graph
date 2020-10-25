@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Mine
 {
-    public partial class Login : MetroFramework.Forms.MetroForm
+    public partial class Login : Form
     {
         public Login()
         {
@@ -20,7 +20,7 @@ namespace Mine
 
         private void BtnAccess_Click(object sender, EventArgs e)
         {
-            if (TxtUser.Text=="admin" && TxtPassword.Text=="123")
+            if (TxtUser.Text == "admin" && TxtPassword.Text == "123")
             {
                 Principal p = new Principal();
                 p.Show();
@@ -28,13 +28,18 @@ namespace Mine
             }
             else
             {
-                LblError.Text= "User and Password  incorrect";
+                LblError.Text = "User and Password  incorrect";
             }
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

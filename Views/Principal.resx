@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PbLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAACREAAAkRCAYAAADVuDysAAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s
         3Qd8FEX/x3FAxN67IEVQEJAmKgoq3a74PPaKvWMviB1RsZfnb1dQBAUBKyD2joh06WDopJLeE37/+c3e
@@ -21064,4 +21064,10 @@
         EXeJT4lviV+Gv+X5beL6sKg0z2OP/Q+psVo+TgusRwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="BElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>70</value>
+  </metadata>
 </root>

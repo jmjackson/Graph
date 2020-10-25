@@ -28,64 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.PanelLeft = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnLogout = new FontAwesome.Sharp.IconButton();
             this.BtnOther = new FontAwesome.Sharp.IconButton();
+            this.BtnLogout = new FontAwesome.Sharp.IconButton();
             this.BtnConfig = new FontAwesome.Sharp.IconButton();
+            this.PbLogo = new System.Windows.Forms.PictureBox();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.TileClient = new ns1.BunifuTileButton();
             this.TileProject = new ns1.BunifuTileButton();
             this.TileInspection = new ns1.BunifuTileButton();
+            this.BElipse = new ns1.BunifuElipse(this.components);
+            this.PanelHead = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PanelLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
+            this.PanelHead.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelLeft
             // 
+            this.PanelLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.PanelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(219)))));
-            this.PanelLeft.Controls.Add(this.pictureBox1);
-            this.PanelLeft.Controls.Add(this.BtnLogout);
             this.PanelLeft.Controls.Add(this.BtnOther);
+            this.PanelLeft.Controls.Add(this.BtnLogout);
             this.PanelLeft.Controls.Add(this.BtnConfig);
-            this.PanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelLeft.Location = new System.Drawing.Point(0, 0);
+            this.PanelLeft.Location = new System.Drawing.Point(0, 306);
             this.PanelLeft.Name = "PanelLeft";
-            this.PanelLeft.Size = new System.Drawing.Size(292, 597);
+            this.PanelLeft.Size = new System.Drawing.Size(292, 339);
             this.PanelLeft.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(263, 346);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // BtnLogout
-            // 
-            this.BtnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(229)))));
-            this.BtnLogout.FlatAppearance.BorderSize = 0;
-            this.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLogout.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnLogout.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogout.ForeColor = System.Drawing.Color.White;
-            this.BtnLogout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.BtnLogout.IconColor = System.Drawing.Color.White;
-            this.BtnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnLogout.IconSize = 20;
-            this.BtnLogout.Location = new System.Drawing.Point(0, 532);
-            this.BtnLogout.Name = "BtnLogout";
-            this.BtnLogout.Rotation = 0D;
-            this.BtnLogout.Size = new System.Drawing.Size(292, 41);
-            this.BtnLogout.TabIndex = 1;
-            this.BtnLogout.Text = "Log Out";
-            this.BtnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnLogout.UseVisualStyleBackColor = false;
             // 
             // BtnOther
             // 
@@ -99,15 +73,37 @@
             this.BtnOther.IconColor = System.Drawing.Color.White;
             this.BtnOther.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnOther.IconSize = 20;
-            this.BtnOther.Location = new System.Drawing.Point(0, 485);
+            this.BtnOther.Location = new System.Drawing.Point(-3, 143);
             this.BtnOther.Name = "BtnOther";
             this.BtnOther.Rotation = 0D;
-            this.BtnOther.Size = new System.Drawing.Size(292, 41);
+            this.BtnOther.Size = new System.Drawing.Size(292, 60);
             this.BtnOther.TabIndex = 1;
             this.BtnOther.Text = "Other";
             this.BtnOther.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnOther.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnOther.UseVisualStyleBackColor = false;
+            // 
+            // BtnLogout
+            // 
+            this.BtnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(229)))));
+            this.BtnLogout.FlatAppearance.BorderSize = 0;
+            this.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogout.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnLogout.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogout.ForeColor = System.Drawing.Color.White;
+            this.BtnLogout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.BtnLogout.IconColor = System.Drawing.Color.White;
+            this.BtnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnLogout.IconSize = 20;
+            this.BtnLogout.Location = new System.Drawing.Point(-3, 222);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Rotation = 0D;
+            this.BtnLogout.Size = new System.Drawing.Size(292, 61);
+            this.BtnLogout.TabIndex = 1;
+            this.BtnLogout.Text = "Log Out";
+            this.BtnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnLogout.UseVisualStyleBackColor = false;
             // 
             // BtnConfig
             // 
@@ -121,15 +117,25 @@
             this.BtnConfig.IconColor = System.Drawing.Color.White;
             this.BtnConfig.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnConfig.IconSize = 20;
-            this.BtnConfig.Location = new System.Drawing.Point(0, 438);
+            this.BtnConfig.Location = new System.Drawing.Point(0, 66);
             this.BtnConfig.Name = "BtnConfig";
             this.BtnConfig.Rotation = 0D;
-            this.BtnConfig.Size = new System.Drawing.Size(292, 41);
+            this.BtnConfig.Size = new System.Drawing.Size(289, 59);
             this.BtnConfig.TabIndex = 1;
             this.BtnConfig.Text = "Configuration";
             this.BtnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnConfig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnConfig.UseVisualStyleBackColor = false;
+            // 
+            // PbLogo
+            // 
+            this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
+            this.PbLogo.Location = new System.Drawing.Point(12, 9);
+            this.PbLogo.Name = "PbLogo";
+            this.PbLogo.Size = new System.Drawing.Size(264, 288);
+            this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbLogo.TabIndex = 1;
+            this.PbLogo.TabStop = false;
             // 
             // BtnExit
             // 
@@ -142,7 +148,7 @@
             this.BtnExit.IconColor = System.Drawing.Color.White;
             this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnExit.IconSize = 48;
-            this.BtnExit.Location = new System.Drawing.Point(1204, 521);
+            this.BtnExit.Location = new System.Drawing.Point(922, 567);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Rotation = 0D;
             this.BtnExit.Size = new System.Drawing.Size(99, 66);
@@ -163,7 +169,7 @@
             this.TileClient.ImageZoom = 50;
             this.TileClient.LabelPosition = 55;
             this.TileClient.LabelText = "Clients";
-            this.TileClient.Location = new System.Drawing.Point(368, 149);
+            this.TileClient.Location = new System.Drawing.Point(67, 99);
             this.TileClient.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.TileClient.Name = "TileClient";
             this.TileClient.Size = new System.Drawing.Size(293, 352);
@@ -183,7 +189,7 @@
             this.TileProject.ImageZoom = 50;
             this.TileProject.LabelPosition = 55;
             this.TileProject.LabelText = "Project";
-            this.TileProject.Location = new System.Drawing.Point(687, 149);
+            this.TileProject.Location = new System.Drawing.Point(388, 99);
             this.TileProject.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.TileProject.Name = "TileProject";
             this.TileProject.Size = new System.Drawing.Size(293, 352);
@@ -203,29 +209,58 @@
             this.TileInspection.ImageZoom = 50;
             this.TileInspection.LabelPosition = 55;
             this.TileInspection.LabelText = "Inspection";
-            this.TileInspection.Location = new System.Drawing.Point(994, 149);
+            this.TileInspection.Location = new System.Drawing.Point(708, 99);
             this.TileInspection.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.TileInspection.Name = "TileInspection";
             this.TileInspection.Size = new System.Drawing.Size(293, 352);
             this.TileInspection.TabIndex = 7;
             this.TileInspection.Click += new System.EventHandler(this.TileInspection_Click_1);
             // 
+            // BElipse
+            // 
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
+            // 
+            // PanelHead
+            // 
+            this.PanelHead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.PanelHead.Controls.Add(this.PbLogo);
+            this.PanelHead.Location = new System.Drawing.Point(0, 0);
+            this.PanelHead.Name = "PanelHead";
+            this.PanelHead.Size = new System.Drawing.Size(292, 306);
+            this.PanelHead.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.TileProject);
+            this.panel1.Controls.Add(this.TileClient);
+            this.panel1.Controls.Add(this.BtnExit);
+            this.panel1.Controls.Add(this.TileInspection);
+            this.panel1.Location = new System.Drawing.Point(282, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1034, 645);
+            this.panel1.TabIndex = 9;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1315, 597);
-            this.Controls.Add(this.TileInspection);
-            this.Controls.Add(this.TileProject);
-            this.Controls.Add(this.TileClient);
-            this.Controls.Add(this.BtnExit);
+            this.ClientSize = new System.Drawing.Size(1315, 645);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelHead);
             this.Controls.Add(this.PanelLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.PanelLeft.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
+            this.PanelHead.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -236,10 +271,13 @@
         private FontAwesome.Sharp.IconButton BtnLogout;
         private FontAwesome.Sharp.IconButton BtnOther;
         private FontAwesome.Sharp.IconButton BtnConfig;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PbLogo;
         private FontAwesome.Sharp.IconButton BtnExit;
         private ns1.BunifuTileButton TileClient;
         private ns1.BunifuTileButton TileProject;
         private ns1.BunifuTileButton TileInspection;
+        private ns1.BunifuElipse BElipse;
+        private System.Windows.Forms.Panel PanelHead;
+        private System.Windows.Forms.Panel panel1;
     }
 }
