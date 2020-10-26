@@ -47,14 +47,7 @@ namespace Mine.Views
             
         }
 
-        private void BtnEdit_Click(object sender, EventArgs e)
-        {   
-            int id = Convert.ToInt32(GDVClients.CurrentRow.Cells[0].Value);
-            EditClient edit = new EditClient(id);
-            edit.Show();
-            ClientForms_Load(sender,e);
-        }
-
+        
        
 
         private void BtnDelete_Click(object sender, EventArgs e)

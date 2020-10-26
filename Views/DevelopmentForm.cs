@@ -77,17 +77,24 @@ namespace Mine.Views
             var devdata = db.Developments.Where(a=>a.ProjectDevId==proDevId).ToList();
             if (devdata.Count>0)
             {
-                DGVDev.AutoGenerateColumns = false;
-                DGVDev.Columns["Id"].DataPropertyName = "Id";
-                DGVDev.Columns["DeploymentDate"].DataPropertyName = "DeploymentDate";
-                DGVDev.Columns["PanelNo"].DataPropertyName = "PanelNo";
-                DGVDev.Columns["RollNo"].DataPropertyName = "RollNo";
-                DGVDev.Columns["Length"].DataPropertyName = "Lenght";
-                DGVDev.Columns["Width"].DataPropertyName = "Width";
-                DGVDev.Columns["Thickness"].DataPropertyName = "Thickness";
-                DGVDev.Columns["Area"].DataPropertyName = "Area";
-                DGVDev.Columns["Remarks"].DataPropertyName = "Remarks";
-                DGVDev.DataSource = devdata;
+                
+                //DGVDev.Columns["Id"].DataPropertyName = "Id";
+                //DGVDev.Columns["DeploymentDate"].DataPropertyName = "DeploymentDate";
+                //DGVDev.Columns["PanelNo"].DataPropertyName = "PanelNo";
+                //DGVDev.Columns["RollNo"].DataPropertyName = "RollNo";
+                //DGVDev.Columns["Length"].DataPropertyName = "Lenght";
+                //DGVDev.Columns["Width"].DataPropertyName = "Width";
+                //DGVDev.Columns["Thickness"].DataPropertyName = "Thickness";
+                //DGVDev.Columns["Area"].DataPropertyName = "Area";
+                //DGVDev.Columns["Remarks"].DataPropertyName = "Remarks";
+                //DGVDev.DataSource = devdata;
+                DataTable dtb = new DataTable();
+                foreach (var item in devdata)
+                {
+                    dtb.Rows.Add(item);
+                }
+                DGVDev.DataSource = dtb;
+                
             }
         }
 
@@ -109,12 +116,13 @@ namespace Mine.Views
             {
                 if (MetroFramework.MetroMessageBox.Show(this, "Are you sure want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
+                    int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells["Id"].Value);
                     var dev = db.Developments.Find(pdId);
                     db.Developments.Remove(dev);
                     db.SaveChanges();
                     MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully","Info");
                     DevelopmentForm_Load(sender, e);
+                    DGVDev.Refresh();
                 }
             }
             catch (Exception ex)
@@ -137,6 +145,11 @@ namespace Mine.Views
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DGVDev_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

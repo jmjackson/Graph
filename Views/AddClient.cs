@@ -79,7 +79,7 @@ namespace Mine.Views
                     else
                     {
                         PbClient.Image.Save(path+"empresa.png");
-
+                        img = path + "empresa.png";
                     }
                 }
                 

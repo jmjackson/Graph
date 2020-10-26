@@ -129,9 +129,9 @@ namespace Mine.Views
             rg.Show();
         }
 
-        private void PanelHead_Paint(object sender, PaintEventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -44,6 +44,7 @@
             this.BElipse = new ns1.BunifuElipse(this.components);
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.DragControl = new ns1.BunifuDragControl(this.components);
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // TxtProject
@@ -219,12 +220,25 @@
             this.DragControl.TargetControl = this;
             this.DragControl.Vertical = true;
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.Location = new System.Drawing.Point(289, 22);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(105, 25);
+            this.metroLabel3.TabIndex = 8;
+            this.metroLabel3.Text = "Add Project";
+            this.metroLabel3.UseCustomBackColor = true;
+            // 
             // AddProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(686, 456);
+            this.ClientSize = new System.Drawing.Size(686, 427);
+            this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel4);
@@ -263,5 +277,6 @@
         private ns1.BunifuElipse BElipse;
         private FontAwesome.Sharp.IconButton BtnClose;
         private ns1.BunifuDragControl DragControl;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }

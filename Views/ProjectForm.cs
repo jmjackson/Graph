@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using System.IO;
 
 namespace Mine.Views
 {
@@ -47,26 +48,17 @@ namespace Mine.Views
             LblRId.Text = client.Id.ToString();
             LblRCode.Text = client.Code;
             LblRCName.Text = client.Name;
-
-
-            
-
-
+            if (client.Image!=null)
+            {
+                if (File.Exists(client.Image))
+                {
+                    PBLogo.Image = Image.FromFile(client.Image);
+                }
+               
+            }
         }
 
       
-        private void BtnEdit_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-       
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void ProjectForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Principal p = new Principal();
@@ -101,29 +93,7 @@ namespace Mine.Views
             }
         }
 
-        private void BtnEdit_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-
-                int cell = Convert.ToInt32(DGVProject.CurrentRow.Cells[0].Value);
-                var cdb = db.Projects.Find(cell);
-                EditProject pr = new EditProject(cell);
-                if (pr.ShowDialog() == DialogResult.Yes)
-                {
-
-                    ProjectForm_Load(sender, e);
-                    DGVProject.Refresh();
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                MetroFramework.MetroMessageBox.Show(this, "Ocurred and error " + ex.ToString(), "Info");
-            }
-        }
-
+      
         private void BtnDelete_Click_1(object sender, EventArgs e)
         {
             try
@@ -146,6 +116,11 @@ namespace Mine.Views
 
                 MetroFramework.MetroMessageBox.Show(this, "Have a Error :" + ex.ToString(), "Info");
             }
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
