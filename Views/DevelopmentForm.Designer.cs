@@ -53,24 +53,26 @@
             this.PanelHeader = new MetroFramework.Controls.MetroPanel();
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BElipse = new ns1.BunifuElipse(this.components);
             this.DGVDev = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectDev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BElipse = new ns1.BunifuElipse(this.components);
+            this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deploymentDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rollNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lenghtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.widthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thicknessDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projectDevIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projectDevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             this.PanelAdd.SuspendLayout();
             this.PanelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.developmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LblClient
@@ -378,26 +380,23 @@
             this.panel1.Size = new System.Drawing.Size(1386, 435);
             this.panel1.TabIndex = 20;
             // 
-            // BElipse
-            // 
-            this.BElipse.ElipseRadius = 5;
-            this.BElipse.TargetControl = this;
-            // 
             // DGVDev
             // 
+            this.DGVDev.AutoGenerateColumns = false;
             this.DGVDev.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVDev.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.DeploymentDate,
-            this.PanelNo,
-            this.RollNo,
-            this.Lenght,
-            this.Width,
-            this.Thickness,
-            this.Area,
-            this.Remarks,
-            this.ProjectDevId,
-            this.ProjectDev});
+            this.idDataGridViewTextBoxColumn,
+            this.deploymentDateDataGridViewTextBoxColumn,
+            this.panelNoDataGridViewTextBoxColumn,
+            this.rollNoDataGridViewTextBoxColumn,
+            this.lenghtDataGridViewTextBoxColumn,
+            this.widthDataGridViewTextBoxColumn,
+            this.thicknessDataGridViewTextBoxColumn,
+            this.areaDataGridViewTextBoxColumn,
+            this.remarksDataGridViewTextBoxColumn,
+            this.projectDevIdDataGridViewTextBoxColumn,
+            this.projectDevDataGridViewTextBoxColumn});
+            this.DGVDev.DataSource = this.developmentBindingSource;
             this.DGVDev.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVDev.Location = new System.Drawing.Point(0, 0);
             this.DGVDev.Name = "DGVDev";
@@ -405,83 +404,95 @@
             this.DGVDev.TabIndex = 0;
             this.DGVDev.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDev_CellValueChanged);
             // 
-            // Id
+            // BElipse
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
             // 
-            // DeploymentDate
+            // developmentBindingSource
             // 
-            this.DeploymentDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DeploymentDate.DataPropertyName = "DeploymentDate";
-            this.DeploymentDate.HeaderText = "Deployment Date";
-            this.DeploymentDate.Name = "DeploymentDate";
+            this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
             // 
-            // PanelNo
+            // idDataGridViewTextBoxColumn
             // 
-            this.PanelNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PanelNo.DataPropertyName = "PanelNo";
-            this.PanelNo.HeaderText = "Panel No";
-            this.PanelNo.Name = "PanelNo";
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // RollNo
+            // deploymentDateDataGridViewTextBoxColumn
             // 
-            this.RollNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.RollNo.DataPropertyName = "RollNo";
-            this.RollNo.HeaderText = "Roll No";
-            this.RollNo.Name = "RollNo";
-            this.RollNo.Width = 67;
+            this.deploymentDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.deploymentDateDataGridViewTextBoxColumn.DataPropertyName = "DeploymentDate";
+            this.deploymentDateDataGridViewTextBoxColumn.HeaderText = "DeploymentDate";
+            this.deploymentDateDataGridViewTextBoxColumn.Name = "deploymentDateDataGridViewTextBoxColumn";
+            this.deploymentDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Lenght
+            // panelNoDataGridViewTextBoxColumn
             // 
-            this.Lenght.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Lenght.DataPropertyName = "Lenght";
-            this.Lenght.HeaderText = "Length";
-            this.Lenght.Name = "Lenght";
+            this.panelNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.panelNoDataGridViewTextBoxColumn.DataPropertyName = "PanelNo";
+            this.panelNoDataGridViewTextBoxColumn.HeaderText = "PanelNo";
+            this.panelNoDataGridViewTextBoxColumn.Name = "panelNoDataGridViewTextBoxColumn";
             // 
-            // Width
+            // rollNoDataGridViewTextBoxColumn
             // 
-            this.Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Width.DataPropertyName = "Width";
-            this.Width.HeaderText = "Width";
-            this.Width.Name = "Width";
+            this.rollNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rollNoDataGridViewTextBoxColumn.DataPropertyName = "RollNo";
+            this.rollNoDataGridViewTextBoxColumn.HeaderText = "RollNo";
+            this.rollNoDataGridViewTextBoxColumn.Name = "rollNoDataGridViewTextBoxColumn";
             // 
-            // Thickness
+            // lenghtDataGridViewTextBoxColumn
             // 
-            this.Thickness.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Thickness.DataPropertyName = "Thickness";
-            this.Thickness.HeaderText = "Thickness";
-            this.Thickness.Name = "Thickness";
+            this.lenghtDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lenghtDataGridViewTextBoxColumn.DataPropertyName = "Lenght";
+            this.lenghtDataGridViewTextBoxColumn.HeaderText = "Lenght";
+            this.lenghtDataGridViewTextBoxColumn.Name = "lenghtDataGridViewTextBoxColumn";
             // 
-            // Area
+            // widthDataGridViewTextBoxColumn
             // 
-            this.Area.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Area.DataPropertyName = "Area";
-            this.Area.HeaderText = "Area";
-            this.Area.Name = "Area";
+            this.widthDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.widthDataGridViewTextBoxColumn.DataPropertyName = "Width";
+            this.widthDataGridViewTextBoxColumn.HeaderText = "Width";
+            this.widthDataGridViewTextBoxColumn.Name = "widthDataGridViewTextBoxColumn";
             // 
-            // Remarks
+            // thicknessDataGridViewTextBoxColumn
             // 
-            this.Remarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Remarks.DataPropertyName = "Remarks";
-            this.Remarks.HeaderText = "Remarks";
-            this.Remarks.Name = "Remarks";
+            this.thicknessDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.thicknessDataGridViewTextBoxColumn.DataPropertyName = "Thickness";
+            this.thicknessDataGridViewTextBoxColumn.HeaderText = "Thickness";
+            this.thicknessDataGridViewTextBoxColumn.Name = "thicknessDataGridViewTextBoxColumn";
             // 
-            // ProjectDevId
+            // areaDataGridViewTextBoxColumn
             // 
-            this.ProjectDevId.DataPropertyName = "ProjectDevId";
-            this.ProjectDevId.HeaderText = "ProjectDevId";
-            this.ProjectDevId.Name = "ProjectDevId";
-            this.ProjectDevId.Visible = false;
+            this.areaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.areaDataGridViewTextBoxColumn.DataPropertyName = "Area";
+            this.areaDataGridViewTextBoxColumn.HeaderText = "Area";
+            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
             // 
-            // ProjectDev
+            // remarksDataGridViewTextBoxColumn
             // 
-            this.ProjectDev.DataPropertyName = "ProjectDev";
-            this.ProjectDev.HeaderText = "projectDev";
-            this.ProjectDev.Name = "ProjectDev";
-            this.ProjectDev.Visible = false;
+            this.remarksDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
+            this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
+            this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
+            // 
+            // projectDevIdDataGridViewTextBoxColumn
+            // 
+            this.projectDevIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.projectDevIdDataGridViewTextBoxColumn.DataPropertyName = "ProjectDevId";
+            this.projectDevIdDataGridViewTextBoxColumn.HeaderText = "ProjectDevId";
+            this.projectDevIdDataGridViewTextBoxColumn.Name = "projectDevIdDataGridViewTextBoxColumn";
+            this.projectDevIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // projectDevDataGridViewTextBoxColumn
+            // 
+            this.projectDevDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.projectDevDataGridViewTextBoxColumn.DataPropertyName = "ProjectDev";
+            this.projectDevDataGridViewTextBoxColumn.HeaderText = "ProjectDev";
+            this.projectDevDataGridViewTextBoxColumn.Name = "projectDevDataGridViewTextBoxColumn";
+            this.projectDevDataGridViewTextBoxColumn.Visible = false;
             // 
             // DevelopmentForm
             // 
@@ -502,6 +513,7 @@
             this.PanelHeader.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.developmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,16 +546,17 @@
         private ns1.BunifuElipse BElipse;
         private FontAwesome.Sharp.IconButton BtnClose;
         private System.Windows.Forms.DataGridView DGVDev;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeploymentDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RollNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lenght;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Width;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Thickness;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDevId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDev;
+        private System.Windows.Forms.BindingSource developmentBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deploymentDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn panelNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rollNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lenghtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn widthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thicknessDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn areaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn remarksDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn projectDevIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn projectDevDataGridViewTextBoxColumn;
     }
 }

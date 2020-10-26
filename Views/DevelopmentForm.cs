@@ -47,54 +47,46 @@ namespace Mine.Views
             TxtDate.Value = pdev.DevTime;
             DGVFill();
             
+
         }
 
 
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            try
-            {
-                AddDeployment ad = new AddDeployment(proDevId);
-                if (ad.ShowDialog()==DialogResult.Yes)
-                {
-                    DevelopmentForm_Load(sender,e);
-                }
-                DevelopmentForm_Load(sender, e);
-            }
-            catch (Exception ex)
-            {
-                MetroMessageBox.Show(this, "Error in your record "+ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-           
+            //try
+            //{
+            //    AddDeployment ad = new AddDeployment(proDevId);
+            //    if (ad.ShowDialog()==DialogResult.Yes)
+            //    {
+            //        DevelopmentForm_Load(sender,e);
+            //    }
+            //    DevelopmentForm_Load(sender, e);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MetroMessageBox.Show(this, "Error in your record "+ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
-            
+            DataTable datatable = new DataTable();
+            datatable = DGVDev.DataSource as DataTable;
+
+            //Agregar las Filas al DataRow
+            DataRow datarow;
+            for (int i = 0; i < 5; i++)
+            {
+                datarow = datatable.NewRow();
+                datarow[i].ToString();
+                datatable.Rows.Add(datarow);
+            }
         }
 
         public void DGVFill()
         {
             var devdata = db.Developments.Where(a=>a.ProjectDevId==proDevId).ToList();
-            if (devdata.Count>0)
+            if (devdata.Count>0 || DGVDev.CurrentRow!=null)
             {
-                
-                //DGVDev.Columns["Id"].DataPropertyName = "Id";
-                //DGVDev.Columns["DeploymentDate"].DataPropertyName = "DeploymentDate";
-                //DGVDev.Columns["PanelNo"].DataPropertyName = "PanelNo";
-                //DGVDev.Columns["RollNo"].DataPropertyName = "RollNo";
-                //DGVDev.Columns["Length"].DataPropertyName = "Lenght";
-                //DGVDev.Columns["Width"].DataPropertyName = "Width";
-                //DGVDev.Columns["Thickness"].DataPropertyName = "Thickness";
-                //DGVDev.Columns["Area"].DataPropertyName = "Area";
-                //DGVDev.Columns["Remarks"].DataPropertyName = "Remarks";
-                //DGVDev.DataSource = devdata;
-                DataTable dtb = new DataTable();
-                foreach (var item in devdata)
-                {
-                    dtb.Rows.Add(item);
-                }
-                DGVDev.DataSource = dtb;
-                
+                developmentBindingSource.DataSource = devdata;
             }
         }
 
@@ -149,7 +141,15 @@ namespace Mine.Views
 
         private void DGVDev_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (DGVDev.CurrentRow!=null)
+            {
+                DataGridViewRow dgvr = DGVDev.CurrentRow;
+                Development dv = new Development();
+                
+
+            }
         }
+
+        
     }
 }
