@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddClient));
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -38,6 +39,9 @@
             this.TxtCode = new System.Windows.Forms.TextBox();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.OFDialog = new System.Windows.Forms.OpenFileDialog();
+            this.BElipse = new ns1.BunifuElipse(this.components);
+            this.BtnClose = new FontAwesome.Sharp.IconButton();
+            this.BDragControl = new ns1.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PbClient)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,11 +49,12 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(57, 69);
+            this.metroLabel2.Location = new System.Drawing.Point(57, 62);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(52, 25);
             this.metroLabel2.TabIndex = 0;
             this.metroLabel2.Text = "Code";
+            this.metroLabel2.UseCustomBackColor = true;
             // 
             // metroLabel3
             // 
@@ -60,6 +65,7 @@
             this.metroLabel3.Size = new System.Drawing.Size(58, 25);
             this.metroLabel3.TabIndex = 0;
             this.metroLabel3.Text = "Name";
+            this.metroLabel3.UseCustomBackColor = true;
             // 
             // BtnSave
             // 
@@ -130,7 +136,7 @@
             // TxtCode
             // 
             this.TxtCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCode.Location = new System.Drawing.Point(57, 111);
+            this.TxtCode.Location = new System.Drawing.Point(57, 105);
             this.TxtCode.Name = "TxtCode";
             this.TxtCode.Size = new System.Drawing.Size(270, 33);
             this.TxtCode.TabIndex = 0;
@@ -147,11 +153,46 @@
             // 
             this.OFDialog.FileName = "OFDialog";
             // 
+            // BElipse
+            // 
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClose.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnClose.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClose.ForeColor = System.Drawing.Color.White;
+            this.BtnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.BtnClose.IconColor = System.Drawing.Color.Red;
+            this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.BtnClose.IconSize = 36;
+            this.BtnClose.Location = new System.Drawing.Point(354, 9);
+            this.BtnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Rotation = 0D;
+            this.BtnClose.Size = new System.Drawing.Size(35, 32);
+            this.BtnClose.TabIndex = 5;
+            this.BtnClose.UseVisualStyleBackColor = false;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // BDragControl
+            // 
+            this.BDragControl.Fixed = true;
+            this.BDragControl.Horizontal = true;
+            this.BDragControl.TargetControl = this;
+            this.BDragControl.Vertical = true;
+            // 
             // AddClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(398, 457);
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.TxtCode);
             this.Controls.Add(this.BtnBrowse);
@@ -160,6 +201,7 @@
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddClient";
@@ -182,5 +224,8 @@
         private System.Windows.Forms.TextBox TxtCode;
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.OpenFileDialog OFDialog;
+        private ns1.BunifuElipse BElipse;
+        private FontAwesome.Sharp.IconButton BtnClose;
+        private ns1.BunifuDragControl BDragControl;
     }
 }

@@ -48,7 +48,7 @@
             this.BtnAccess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnAccess.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnAccess.ForeColor = System.Drawing.Color.White;
-            this.BtnAccess.Location = new System.Drawing.Point(305, 477);
+            this.BtnAccess.Location = new System.Drawing.Point(334, 478);
             this.BtnAccess.Name = "BtnAccess";
             this.BtnAccess.Size = new System.Drawing.Size(151, 51);
             this.BtnAccess.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(24, 335);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(51, 335);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(49, 25);
             this.bunifuCustomLabel1.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(24, 412);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(12, 412);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(88, 25);
             this.bunifuCustomLabel2.TabIndex = 5;
@@ -111,7 +111,7 @@
             this.TxtPassword.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TxtPassword.isPassword = true;
-            this.TxtPassword.Location = new System.Drawing.Point(144, 393);
+            this.TxtPassword.Location = new System.Drawing.Point(173, 393);
             this.TxtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(312, 44);
@@ -129,7 +129,7 @@
             this.TxtUser.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TxtUser.isPassword = false;
-            this.TxtUser.Location = new System.Drawing.Point(144, 316);
+            this.TxtUser.Location = new System.Drawing.Point(173, 316);
             this.TxtUser.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(312, 44);

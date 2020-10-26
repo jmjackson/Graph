@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace Mine.Views
 {
-    public partial class AddClient : MetroFramework.Forms.MetroForm
+    public partial class AddClient : Form
     {
         readonly GraphDbContext db = new GraphDbContext();
      
@@ -103,6 +103,9 @@ namespace Mine.Views
             
         }
 
-        
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Mine.Views
 {
-    public partial class EditClient : MetroFramework.Forms.MetroForm
+    public partial class EditClient : Form
     {
         readonly int cId;
         readonly GraphDbContext db = new GraphDbContext();
@@ -54,6 +54,11 @@ namespace Mine.Views
             cldb.Code = TxtCode.Text;
             db.SaveChanges();
             
+            this.Close();
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

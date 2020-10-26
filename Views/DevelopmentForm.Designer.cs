@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevelopmentForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -50,7 +51,6 @@
             this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LblTotal = new MetroFramework.Controls.MetroLabel();
             this.PanelAdd = new MetroFramework.Controls.MetroPanel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.BtnEdit = new FontAwesome.Sharp.IconButton();
@@ -65,6 +65,7 @@
             this.LblRGeosyntetic = new MetroFramework.Controls.MetroLabel();
             this.PanelHeader = new MetroFramework.Controls.MetroPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BElipse = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
             this.PanelAdd.SuspendLayout();
@@ -136,7 +137,7 @@
             // 
             this.PBPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PBPicture.Image = ((System.Drawing.Image)(resources.GetObject("PBPicture.Image")));
-            this.PBPicture.Location = new System.Drawing.Point(918, 3);
+            this.PBPicture.Location = new System.Drawing.Point(1055, 14);
             this.PBPicture.Name = "PBPicture";
             this.PBPicture.Size = new System.Drawing.Size(221, 57);
             this.PBPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +209,7 @@
             this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVDev.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGVDev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVDev.Size = new System.Drawing.Size(1142, 303);
+            this.DGVDev.Size = new System.Drawing.Size(1386, 435);
             this.DGVDev.Style = MetroFramework.MetroColorStyle.Blue;
             this.DGVDev.TabIndex = 5;
             this.DGVDev.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -274,31 +275,20 @@
             this.Remarks.HeaderText = "Remarks";
             this.Remarks.Name = "Remarks";
             // 
-            // LblTotal
-            // 
-            this.LblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(760, 12);
-            this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(95, 19);
-            this.LblTotal.TabIndex = 14;
-            this.LblTotal.Text = "Total Area (ft2)";
-            // 
             // PanelAdd
             // 
             this.PanelAdd.Controls.Add(this.iconButton3);
             this.PanelAdd.Controls.Add(this.BtnEdit);
             this.PanelAdd.Controls.Add(this.BtnAdd);
             this.PanelAdd.Controls.Add(this.BtnPDF);
-            this.PanelAdd.Controls.Add(this.LblTotal);
             this.PanelAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelAdd.ForeColor = System.Drawing.Color.White;
             this.PanelAdd.HorizontalScrollbarBarColor = true;
             this.PanelAdd.HorizontalScrollbarHighlightOnWheel = false;
             this.PanelAdd.HorizontalScrollbarSize = 10;
-            this.PanelAdd.Location = new System.Drawing.Point(20, 502);
+            this.PanelAdd.Location = new System.Drawing.Point(0, 574);
             this.PanelAdd.Name = "PanelAdd";
-            this.PanelAdd.Size = new System.Drawing.Size(1142, 119);
+            this.PanelAdd.Size = new System.Drawing.Size(1386, 119);
             this.PanelAdd.TabIndex = 17;
             this.PanelAdd.VerticalScrollbarBarColor = true;
             this.PanelAdd.VerticalScrollbarHighlightOnWheel = false;
@@ -314,10 +304,10 @@
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 48;
-            this.iconButton3.Location = new System.Drawing.Point(402, 34);
+            this.iconButton3.Location = new System.Drawing.Point(402, 27);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(153, 51);
+            this.iconButton3.Size = new System.Drawing.Size(153, 58);
             this.iconButton3.TabIndex = 15;
             this.iconButton3.Text = "Delete";
             this.iconButton3.UseVisualStyleBackColor = false;
@@ -333,10 +323,10 @@
             this.BtnEdit.IconColor = System.Drawing.Color.Black;
             this.BtnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnEdit.IconSize = 48;
-            this.BtnEdit.Location = new System.Drawing.Point(234, 34);
+            this.BtnEdit.Location = new System.Drawing.Point(234, 27);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Rotation = 0D;
-            this.BtnEdit.Size = new System.Drawing.Size(153, 51);
+            this.BtnEdit.Size = new System.Drawing.Size(153, 58);
             this.BtnEdit.TabIndex = 15;
             this.BtnEdit.Text = "Edit";
             this.BtnEdit.UseVisualStyleBackColor = false;
@@ -352,10 +342,10 @@
             this.BtnAdd.IconColor = System.Drawing.Color.Black;
             this.BtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAdd.IconSize = 48;
-            this.BtnAdd.Location = new System.Drawing.Point(61, 34);
+            this.BtnAdd.Location = new System.Drawing.Point(61, 27);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Rotation = 0D;
-            this.BtnAdd.Size = new System.Drawing.Size(153, 51);
+            this.BtnAdd.Size = new System.Drawing.Size(153, 58);
             this.BtnAdd.TabIndex = 15;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.UseVisualStyleBackColor = false;
@@ -364,9 +354,9 @@
             // BtnPDF
             // 
             this.BtnPDF.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnPDF.Location = new System.Drawing.Point(896, 50);
+            this.BtnPDF.Location = new System.Drawing.Point(1055, 27);
             this.BtnPDF.Name = "BtnPDF";
-            this.BtnPDF.Size = new System.Drawing.Size(163, 47);
+            this.BtnPDF.Size = new System.Drawing.Size(163, 58);
             this.BtnPDF.TabIndex = 11;
             this.BtnPDF.Text = "BtnPDF";
             this.BtnPDF.UseSelectable = true;
@@ -375,7 +365,7 @@
             // TxtDate
             // 
             this.TxtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtDate.Location = new System.Drawing.Point(780, 90);
+            this.TxtDate.Location = new System.Drawing.Point(1024, 90);
             this.TxtDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.TxtDate.Name = "TxtDate";
             this.TxtDate.Size = new System.Drawing.Size(328, 29);
@@ -467,9 +457,9 @@
             this.PanelHeader.HorizontalScrollbarBarColor = true;
             this.PanelHeader.HorizontalScrollbarHighlightOnWheel = false;
             this.PanelHeader.HorizontalScrollbarSize = 10;
-            this.PanelHeader.Location = new System.Drawing.Point(20, 60);
+            this.PanelHeader.Location = new System.Drawing.Point(0, 0);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(1142, 139);
+            this.PanelHeader.Size = new System.Drawing.Size(1386, 139);
             this.PanelHeader.TabIndex = 19;
             this.PanelHeader.VerticalScrollbarBarColor = true;
             this.PanelHeader.VerticalScrollbarHighlightOnWheel = false;
@@ -479,27 +469,32 @@
             // 
             this.panel1.Controls.Add(this.DGVDev);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(20, 199);
+            this.panel1.Location = new System.Drawing.Point(0, 139);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1142, 303);
+            this.panel1.Size = new System.Drawing.Size(1386, 435);
             this.panel1.TabIndex = 20;
+            // 
+            // BElipse
+            // 
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
             // 
             // DevelopmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 641);
+            this.ClientSize = new System.Drawing.Size(1386, 693);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelHeader);
             this.Controls.Add(this.PanelAdd);
             this.Controls.Add(this.LblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DevelopmentForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DevelopmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).EndInit();
             this.PanelAdd.ResumeLayout(false);
-            this.PanelAdd.PerformLayout();
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -519,7 +514,6 @@
         private System.Windows.Forms.PictureBox PBPicture;
         private MetroFramework.Controls.MetroLabel LblTitle;
         private MetroFramework.Controls.MetroGrid DGVDev;
-        private MetroFramework.Controls.MetroLabel LblTotal;
         private MetroFramework.Controls.MetroPanel PanelAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeploymentDate;
@@ -543,5 +537,6 @@
         private FontAwesome.Sharp.IconButton BtnAdd;
         private MetroFramework.Controls.MetroPanel PanelHeader;
         private System.Windows.Forms.Panel panel1;
+        private ns1.BunifuElipse BElipse;
     }
 }

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Mine.Views
 {
-    public partial class AddProject : MetroFramework.Forms.MetroForm
+    public partial class AddProject : Form
     {
         readonly int idCl;
         readonly GraphDbContext db = new GraphDbContext();
@@ -52,6 +52,11 @@ namespace Mine.Views
               
             }
             
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

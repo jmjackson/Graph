@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Mine.Views
 {
-    public partial class EditProject : MetroFramework.Forms.MetroForm
+    public partial class EditProject : Form
     {
         readonly int idP;
         readonly GraphDbContext db = new GraphDbContext();
@@ -62,6 +62,11 @@ namespace Mine.Views
         private void EditProject_FormClosed(object sender, FormClosedEventArgs e)
         {
             
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

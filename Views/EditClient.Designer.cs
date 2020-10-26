@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BtnCancel = new FontAwesome.Sharp.IconButton();
             this.BtnSave = new FontAwesome.Sharp.IconButton();
             this.BtnBrowse = new FontAwesome.Sharp.IconButton();
@@ -38,6 +39,9 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.PbClient = new System.Windows.Forms.PictureBox();
+            this.BtnClose = new FontAwesome.Sharp.IconButton();
+            this.BElipse = new ns1.BunifuElipse(this.components);
+            this.DragControl = new ns1.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PbClient)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,6 +138,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(26, 25);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Id";
+            this.metroLabel1.UseCustomBackColor = true;
             // 
             // metroLabel2
             // 
@@ -144,6 +149,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(52, 25);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Code";
+            this.metroLabel2.UseCustomBackColor = true;
             // 
             // metroLabel3
             // 
@@ -154,6 +160,7 @@
             this.metroLabel3.Size = new System.Drawing.Size(58, 25);
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Name";
+            this.metroLabel3.UseCustomBackColor = true;
             // 
             // PbClient
             // 
@@ -164,11 +171,44 @@
             this.PbClient.TabIndex = 3;
             this.PbClient.TabStop = false;
             // 
+            // BtnClose
+            // 
+            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClose.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnClose.ForeColor = System.Drawing.Color.White;
+            this.BtnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.BtnClose.IconColor = System.Drawing.Color.Red;
+            this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.BtnClose.IconSize = 36;
+            this.BtnClose.Location = new System.Drawing.Point(433, 12);
+            this.BtnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Rotation = 0D;
+            this.BtnClose.Size = new System.Drawing.Size(32, 30);
+            this.BtnClose.TabIndex = 4;
+            this.BtnClose.UseVisualStyleBackColor = false;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // BElipse
+            // 
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
+            // 
+            // DragControl
+            // 
+            this.DragControl.Fixed = true;
+            this.DragControl.Horizontal = true;
+            this.DragControl.TargetControl = this;
+            this.DragControl.Vertical = true;
+            // 
             // EditClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(474, 535);
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.PbClient);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
@@ -179,6 +219,7 @@
             this.Controls.Add(this.BtnBrowse);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.BtnCancel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditClient";
             this.Text = "Update Client";
             this.Load += new System.EventHandler(this.EditClient_Load);
@@ -200,5 +241,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.PictureBox PbClient;
+        private FontAwesome.Sharp.IconButton BtnClose;
+        private ns1.BunifuElipse BElipse;
+        private ns1.BunifuDragControl DragControl;
     }
 }

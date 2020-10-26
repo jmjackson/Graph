@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TxtProject = new System.Windows.Forms.TextBox();
             this.TxtProjectNo = new System.Windows.Forms.TextBox();
             this.TxtContractor = new System.Windows.Forms.TextBox();
@@ -40,6 +41,9 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.BElipse = new ns1.BunifuElipse(this.components);
+            this.BtnClose = new FontAwesome.Sharp.IconButton();
+            this.DragControl = new ns1.BunifuDragControl(this.components);
             this.SuspendLayout();
             // 
             // TxtProject
@@ -129,58 +133,99 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(56, 169);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(92, 25);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Contractor";
+            this.metroLabel1.UseCustomBackColor = true;
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
+            this.metroLabel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.Location = new System.Drawing.Point(56, 70);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(64, 25);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Project";
+            this.metroLabel2.UseCustomBackColor = true;
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
+            this.metroLabel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.Location = new System.Drawing.Point(349, 70);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(92, 25);
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Project No";
+            this.metroLabel4.UseCustomBackColor = true;
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
+            this.metroLabel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel5.Location = new System.Drawing.Point(56, 269);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(109, 25);
             this.metroLabel5.TabIndex = 2;
             this.metroLabel5.Text = "Geosynthetic";
+            this.metroLabel5.UseCustomBackColor = true;
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
+            this.metroLabel6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel6.Location = new System.Drawing.Point(349, 169);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(74, 25);
             this.metroLabel6.TabIndex = 2;
             this.metroLabel6.Text = "Supplier";
+            this.metroLabel6.UseCustomBackColor = true;
+            // 
+            // BElipse
+            // 
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClose.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.BtnClose.IconColor = System.Drawing.Color.Red;
+            this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.BtnClose.IconSize = 36;
+            this.BtnClose.Location = new System.Drawing.Point(643, 12);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Rotation = 0D;
+            this.BtnClose.Size = new System.Drawing.Size(31, 30);
+            this.BtnClose.TabIndex = 7;
+            this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // DragControl
+            // 
+            this.DragControl.Fixed = true;
+            this.DragControl.Horizontal = true;
+            this.DragControl.TargetControl = this;
+            this.DragControl.Vertical = true;
             // 
             // AddProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(686, 456);
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel5);
@@ -193,6 +238,7 @@
             this.Controls.Add(this.TxtContractor);
             this.Controls.Add(this.TxtProjectNo);
             this.Controls.Add(this.TxtProject);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddProject";
             this.Text = "Add Project";
             this.ResumeLayout(false);
@@ -214,5 +260,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
+        private ns1.BunifuElipse BElipse;
+        private FontAwesome.Sharp.IconButton BtnClose;
+        private ns1.BunifuDragControl DragControl;
     }
 }

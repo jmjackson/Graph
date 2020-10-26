@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace Mine.Views
 {
-    public partial class DevelopmentForm : MetroFramework.Forms.MetroForm
+    public partial class DevelopmentForm : Form
     {
         readonly int proDevId;
         
