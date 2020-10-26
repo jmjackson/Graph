@@ -227,7 +227,7 @@
             this.panel1.Controls.Add(this.toolBox);
             this.panel1.Controls.Add(this.DgLpn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(562, 60);
+            this.panel1.Location = new System.Drawing.Point(1148, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(218, 370);
             this.panel1.TabIndex = 9;
@@ -297,14 +297,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(20, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(542, 370);
+            this.panel2.Size = new System.Drawing.Size(1128, 370);
             this.panel2.TabIndex = 10;
             // 
             // Dibujo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1386, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Dibujo";

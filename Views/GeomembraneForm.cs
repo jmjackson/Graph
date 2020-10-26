@@ -14,7 +14,7 @@ using MetroFramework;
 
 namespace Mine.Views
 {
-    public partial class GeomembraneForm : MetroFramework.Forms.MetroForm
+    public partial class GeomembraneForm : Form
     {
         readonly GraphDbContext db = new GraphDbContext();
         readonly int pdId = 0;

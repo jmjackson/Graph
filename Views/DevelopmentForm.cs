@@ -133,5 +133,10 @@ namespace Mine.Views
             ReportDev rd = new ReportDev(pdev.Id);
             rd.Show();
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
