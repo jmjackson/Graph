@@ -67,7 +67,6 @@ namespace Mine.Views
                 dev.Thickness = DGVDev.CurrentRow.Cells["Thickness"].Value.ToString();
                 dev.Area = Convert.ToDecimal(DGVDev.CurrentRow.Cells["Area"].Value);
                 dev.Remarks = DGVDev.CurrentRow.Cells["Remarks"].Value.ToString();
-
                 dev.ProjectDevId = pdev.ProjectId;
 
                 db.Developments.Add(dev);

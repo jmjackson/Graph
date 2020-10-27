@@ -47,8 +47,8 @@ namespace Mine.Views
                 var insp = new ProjectDev()
                 {
                     DevTime = DateInspection.Value,
-                    Inspector = TxtInspector.Text,
-                    Location = TxtLocation.Text,
+                    InspectorDev = TxtInspector.Text,
+                    LocationDev = TxtLocation.Text,
                     MachineNo = TxtMachine.Text,
                     Operator = TxtOperator.Text,
                     ProjectId = Convert.ToInt32(CbProject.SelectedValue)

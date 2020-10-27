@@ -12,11 +12,15 @@ namespace Mine.DataModel
     {
         [Key]
         public int Id { get; set; }
-        public string Inspector { get; set; }
+        public string InspectorDev { get; set; }
         public DateTime DevTime { get; set; }
-        public string Location { get; set; }
+        public string LocationDev { get; set; }
         public string Operator { get; set; }
         public string MachineNo { get; set; }
+        public string ImageMap { get; set; }
+        public byte[] ImageDev { get; set; }
+        public string InspectorGeo { get; set; }
+        public string LocationGeo { get; set; }
         public int ProjectId { get; set; }        
         [ForeignKey("ProjectId")]
         public Project Project { get; set; }

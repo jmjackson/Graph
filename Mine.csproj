@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -169,6 +169,10 @@
     <Compile Include="Migrations\202010262137134_UpdateDevelopment.designer.cs">
       <DependentUpon>202010262137134_UpdateDevelopment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010270231396_UpdateDevMig.cs" />
+    <Compile Include="Migrations\202010270231396_UpdateDevMig.designer.cs">
+      <DependentUpon>202010270231396_UpdateDevMig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modal\ModalProject.cs">
       <SubType>Form</SubType>
@@ -186,12 +190,6 @@
     </Compile>
     <Compile Include="Views\AddClient.Designer.cs">
       <DependentUpon>AddClient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AddDeployment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\AddDeployment.Designer.cs">
-      <DependentUpon>AddDeployment.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AddDevForm.cs">
       <SubType>Form</SubType>
@@ -313,6 +311,9 @@
     <EmbeddedResource Include="Migrations\202010262137134_UpdateDevelopment.resx">
       <DependentUpon>202010262137134_UpdateDevelopment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010270231396_UpdateDevMig.resx">
+      <DependentUpon>202010270231396_UpdateDevMig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalProject.resx">
       <DependentUpon>ModalProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,9 +328,6 @@
     </Compile>
     <EmbeddedResource Include="Views\AddClient.resx">
       <DependentUpon>AddClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\AddDeployment.resx">
-      <DependentUpon>AddDeployment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AddDevForm.resx">
       <DependentUpon>AddDevForm.cs</DependentUpon>
