@@ -165,6 +165,10 @@
     <Compile Include="Migrations\202010132035535_ModifyReport.designer.cs">
       <DependentUpon>202010132035535_ModifyReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010262137134_UpdateDevelopment.cs" />
+    <Compile Include="Migrations\202010262137134_UpdateDevelopment.designer.cs">
+      <DependentUpon>202010262137134_UpdateDevelopment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modal\ModalProject.cs">
       <SubType>Form</SubType>
@@ -305,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010132035535_ModifyReport.resx">
       <DependentUpon>202010132035535_ModifyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010262137134_UpdateDevelopment.resx">
+      <DependentUpon>202010262137134_UpdateDevelopment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalProject.resx">
       <DependentUpon>ModalProject.cs</DependentUpon>

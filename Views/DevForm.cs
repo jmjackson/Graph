@@ -31,7 +31,7 @@ namespace Mine.Views
         public void DGVFill()
         {
             var prodev = db.ProjectDevs.ToList();
-            if (prodev.Count > 0)
+            if (prodev.Count >= 0)
             {
                 DGVDev.AutoGenerateColumns = false;
                 DGVDev.Columns["Id"].DataPropertyName = "Id";

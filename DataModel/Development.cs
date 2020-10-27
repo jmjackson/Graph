@@ -13,12 +13,12 @@ namespace Mine.DataModel
         [Key]
         public int Id { get; set; }
         public DateTime DeploymentDate { get; set; }
-        public int PanelNo { get; set; }
+        public int? PanelNo { get; set; }
         public double RollNo { get; set; }
-        public int Lenght { get; set; }
-        public decimal Width { get; set; }
+        public int? Lenght { get; set; }
+        public decimal? Width { get; set; }
         public string Thickness { get; set; }
-        public decimal Area { get; set; }
+        public decimal? Area { get; set; }
         public string Remarks { get; set; }
         public int ProjectDevId { get; set; }
         [ForeignKey("ProjectDevId")]
