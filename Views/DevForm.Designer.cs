@@ -118,7 +118,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.DGVDev.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVDev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVDev.Size = new System.Drawing.Size(1110, 442);
+            this.DGVDev.Size = new System.Drawing.Size(1036, 442);
             this.DGVDev.Style = MetroFramework.MetroColorStyle.Blue;
             this.DGVDev.TabIndex = 6;
             // 
@@ -234,7 +234,7 @@
             this.BtnExit.IconColor = System.Drawing.Color.White;
             this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnExit.IconSize = 48;
-            this.BtnExit.Location = new System.Drawing.Point(1272, 15);
+            this.BtnExit.Location = new System.Drawing.Point(1198, 15);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Rotation = 0D;
             this.BtnExit.Size = new System.Drawing.Size(99, 66);
@@ -254,7 +254,7 @@
             this.BtnBack.IconColor = System.Drawing.Color.White;
             this.BtnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnBack.IconSize = 48;
-            this.BtnBack.Location = new System.Drawing.Point(1163, 15);
+            this.BtnBack.Location = new System.Drawing.Point(1089, 15);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Rotation = 0D;
             this.BtnBack.Size = new System.Drawing.Size(99, 66);
@@ -345,7 +345,7 @@
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(1374, 100);
+            this.PanelHeader.Size = new System.Drawing.Size(1300, 100);
             this.PanelHeader.TabIndex = 10;
             // 
             // BElipse
@@ -360,7 +360,7 @@
             this.PanelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelFooter.Location = new System.Drawing.Point(0, 550);
             this.PanelFooter.Name = "PanelFooter";
-            this.PanelFooter.Size = new System.Drawing.Size(1374, 100);
+            this.PanelFooter.Size = new System.Drawing.Size(1300, 100);
             this.PanelFooter.TabIndex = 11;
             // 
             // PanelRight
@@ -373,7 +373,7 @@
             this.PanelRight.Controls.Add(this.BtnDeployment);
             this.PanelRight.Controls.Add(this.BtnDraw);
             this.PanelRight.Controls.Add(this.BtnGeoMembrane);
-            this.PanelRight.Location = new System.Drawing.Point(1116, 102);
+            this.PanelRight.Location = new System.Drawing.Point(1042, 102);
             this.PanelRight.Name = "PanelRight";
             this.PanelRight.Size = new System.Drawing.Size(258, 442);
             this.PanelRight.TabIndex = 12;
@@ -386,7 +386,7 @@
             this.PanelContent.Controls.Add(this.DGVDev);
             this.PanelContent.Location = new System.Drawing.Point(0, 102);
             this.PanelContent.Name = "PanelContent";
-            this.PanelContent.Size = new System.Drawing.Size(1110, 442);
+            this.PanelContent.Size = new System.Drawing.Size(1036, 442);
             this.PanelContent.TabIndex = 13;
             // 
             // DevForm
@@ -394,7 +394,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1374, 650);
+            this.ClientSize = new System.Drawing.Size(1300, 650);
             this.Controls.Add(this.PanelContent);
             this.Controls.Add(this.PanelRight);
             this.Controls.Add(this.PanelFooter);

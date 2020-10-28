@@ -70,7 +70,7 @@ namespace Mine.Views
                     PbLienzo.Image = imagen;
                 }
             }
-            if (selecc_Opcion == 3)
+            if (selecc_Opcion == 4)
             {
                 if (dibujar == true)
                 {
@@ -88,54 +88,8 @@ namespace Mine.Views
                     PbLienzo.Image = imagen;
                 }
             }
-            if (selecc_Opcion == 4)
-            {
-                if (dibujar == true)
-                {
-                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
-                    //declaradas al inicio
-                    Color color2 = Color.Black;
-                    int ancho2 = 10;
-                    Graphics g = Graphics.FromImage(imagen);
-                    Pen borrador = new Pen(color2, ancho2);
-
-                    //Dibuja una linea entre el punto anterior y el actual
-                    g.DrawLine(borrador, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
-                    X = e.X;
-                    Y = e.Y;
-                    PbLienzo.Image = imagen;
-                }
-            }
         }
 
-        private void BntSave_Click(object sender, EventArgs e)
-        {
-
-            Bitmap bmp = (Bitmap)PbLienzo.Image;
-
-            //saveFileDialog1.FileName = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
-
-            //saveFileDialog1.Filter = "Excel files (*.jpg)|*.jpg";
-
-            //saveFileDialog1.RestoreDirectory = true;
-
-            //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
-            //    PbLienzo.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
-            //}
-
-            //PbLienzo.Image.Save(@"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images\yyyy_MM_dd_HHmmss.Jpeg", ImageFormat.Png);
-
-            var path = @"Resources/images/draw/";
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-            
-            //string panth = @"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images";
-            PbLienzo.Image.Save(path + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ")+".png", ImageFormat.Png);
-
-        }
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
@@ -161,13 +115,6 @@ namespace Mine.Views
 
         }
 
-        private void BtnClear_Click(object sender, EventArgs e)
-        {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 3;
-        }
-
         private void PbLienzo_MouseClick(object sender, MouseEventArgs e)
         {
             if (selecc_Opcion == 2)
@@ -186,7 +133,7 @@ namespace Mine.Views
                     PbLienzo.Image = imagen;
                 }
             }
-            if (selecc_Opcion == 4)
+            if (selecc_Opcion == 3)
             {
                 //Dibujamos Cordenada y simbologia
                 if (dibujar == true)
@@ -202,53 +149,81 @@ namespace Mine.Views
                 }
             }
         }
+        //Reset tools
         void resetTools()
         {
-            foreach (Control b in toolBox.Controls)
+            foreach (Control b in ToolsBox.Controls)
                 b.Enabled = true;
-        }
-
-        private void BtnDraw_Click(object sender, EventArgs e)
+        }  
+        //Tools button
+        private void BtnDraw_Click_1(object sender, EventArgs e)
         {
             resetTools();
             ((Button)sender).Enabled = false;
             selecc_Opcion = 1;
         }
 
-        private void BntAddPanelNo_Click(object sender, EventArgs e)
+        private void BntAddPanelNo_Click_1(object sender, EventArgs e)
         {
             resetTools();
             ((Button)sender).Enabled = false;
             selecc_Opcion = 2;
         }
 
-        private void BtnEO_Click(object sender, EventArgs e)
+        private void BntSave_Click_1(object sender, EventArgs e)
+        {
+            Bitmap bmp = (Bitmap)PbLienzo.Image;
+
+            //saveFileDialog1.FileName = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
+
+            //saveFileDialog1.Filter = "Excel files (*.jpg)|*.jpg";
+
+            //saveFileDialog1.RestoreDirectory = true;
+
+            //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    PbLienzo.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
+            //}
+
+            //PbLienzo.Image.Save(@"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images\yyyy_MM_dd_HHmmss.Jpeg", ImageFormat.Png);
+
+            var path = @"Resources/images/draw/";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            //string panth = @"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images";
+            PbLienzo.Image.Save(path + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ") + ".png", ImageFormat.Png);
+        }
+
+        private void BtnAC_Click_1(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 3;
+        }
+
+        private void BtnClear_Click_1(object sender, EventArgs e)
         {
             resetTools();
             ((Button)sender).Enabled = false;
             selecc_Opcion = 4;
         }
 
-        private void BtnNS_Click(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 5;
+
         }
 
-        private void BtnSN_Click(object sender, EventArgs e)
+        private void PBLienzo_Click(object sender, EventArgs e)
         {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 6;
+
         }
 
-        private void BtnOE_Click(object sender, EventArgs e)
+        private void ToolsBox_Enter(object sender, EventArgs e)
         {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 7;
-        }
 
+        }
     }
 }
