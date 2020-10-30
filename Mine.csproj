@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -197,12 +197,6 @@
     <Compile Include="Views\AddDevForm.Designer.cs">
       <DependentUpon>AddDevForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AddGeom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\AddGeom.Designer.cs">
-      <DependentUpon>AddGeom.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\AddProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,23 +227,11 @@
     <Compile Include="Views\Dibujo.Designer.cs">
       <DependentUpon>Dibujo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\EditDeployment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\EditDeployment.Designer.cs">
-      <DependentUpon>EditDeployment.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\EditDevForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\EditDevForm.Designer.cs">
       <DependentUpon>EditDevForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\EditGeo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\EditGeo.Designer.cs">
-      <DependentUpon>EditGeo.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\GeomembraneForm.cs">
       <SubType>Form</SubType>
@@ -332,9 +314,6 @@
     <EmbeddedResource Include="Views\AddDevForm.resx">
       <DependentUpon>AddDevForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AddGeom.resx">
-      <DependentUpon>AddGeom.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\AddProject.resx">
       <DependentUpon>AddProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -350,14 +329,8 @@
     <EmbeddedResource Include="Views\Dibujo.resx">
       <DependentUpon>Dibujo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\EditDeployment.resx">
-      <DependentUpon>EditDeployment.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\EditDevForm.resx">
       <DependentUpon>EditDevForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\EditGeo.resx">
-      <DependentUpon>EditGeo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\GeomembraneForm.resx">
       <DependentUpon>GeomembraneForm.cs</DependentUpon>

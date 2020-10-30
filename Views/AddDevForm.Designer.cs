@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDevForm));
             this.CbClients = new MetroFramework.Controls.MetroComboBox();
             this.CbProject = new MetroFramework.Controls.MetroComboBox();
             this.TxtInspector = new System.Windows.Forms.TextBox();
@@ -240,6 +241,7 @@
             this.Controls.Add(this.TxtInspector);
             this.Controls.Add(this.CbProject);
             this.Controls.Add(this.CbClients);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddDevForm";
             this.Text = "Add Inspection";
             this.Load += new System.EventHandler(this.AddDevForm_Load);

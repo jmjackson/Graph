@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using Mine.DataModel;
 using MetroFramework;
+using System.IO;
 
 namespace Mine.Views
 {
@@ -35,9 +36,15 @@ namespace Mine.Views
             MetroGeosynthetic.Text = pdev.Project.GeoSynthetic;
             MetroMachineNo.Text = pdev.MachineNo;
             MetroOperator.Text = pdev.Operator;
-            //PbLogo.Image = Image.FromFile(pdev.Project.Client.Image);
-            DateDev.Value = pdev.DevTime;
-
+            if (pdev.Project.Client.Image!=null)
+            {
+                if (File.Exists(pdev.Project.Client.Image))
+                {
+                    PbLogo.Image = Image.FromFile(pdev.Project.Client.Image);
+                }
+            }
+           
+            
             DGVFill();
         }
 
@@ -46,18 +53,7 @@ namespace Mine.Views
             var gms = db.GeoMembranes.Where(a=>a.ProjectDevId==pdId).ToList();
             if (gms.Count>0)
             {
-                DGVGeo.AutoGenerateColumns = false;
-                DGVGeo.Columns["Id"].DataPropertyName = "Id";
-                DGVGeo.Columns["SeamingDate"].DataPropertyName = "SeamingDate";
-                DGVGeo.Columns["SeamNo"].DataPropertyName = "SeamNo";
-                DGVGeo.Columns["SeamTime"].DataPropertyName = "SeamTime";
-                DGVGeo.Columns["WedgeTemp"].DataPropertyName = "WedgeTemp";
-                DGVGeo.Columns["WedgeSpeed"].DataPropertyName = "WedgeSpeed";
-                DGVGeo.Columns["SeamLength"].DataPropertyName = "SeamLength";
-                DGVGeo.Columns["CarryOver"].DataPropertyName = "CarryOver";
-                DGVGeo.Columns["Destructive"].DataPropertyName = "Destructive";
-                DGVGeo.Columns["RemarksDestructive"].DataPropertyName = "RemarksDestructive";
-                DGVGeo.DataSource = gms;
+                geoMembraneBindingSource.DataSource= gms;
             }
         }
 
@@ -65,15 +61,54 @@ namespace Mine.Views
         {
             try
             {
-                AddGeom ag = new AddGeom(pdId);
-                if (ag.ShowDialog()==DialogResult.Yes)
+                var pdev = db.ProjectDevs.Include(a => a.Project.Client).Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
+                var geo = new GeoMembrane();
+                geo.SeamingDate = Convert.ToDateTime(pdev.DevTime.ToShortDateString());
+                if (DGVGeo.CurrentRow.Cells["SeamNo"].Value!=null)
                 {
-                    GeomembraneForm_Load(sender,e);
-                    MetroMessageBox.Show(this, "Saved successfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    geo.SeamNo = DGVGeo.CurrentRow.Cells["SeamNo"].Value.ToString();
+                }
+                else
+                {
+                    geo.SeamNo = " ";
+                }
+                if (DGVGeo.CurrentRow.Cells["SeamTime"].Value!=null)
+                {
+                    geo.SeamTime = DGVGeo.CurrentRow.Cells["SeamTime"].Value.ToString();
+                }
+                else
+                {
+                    geo.SeamTime = " ";
+                }
+                
+                geo.WedgeTemp= Convert.ToInt32(DGVGeo.CurrentRow.Cells["WedgeTemp"].Value);
+                geo.WedgeSpeed = Convert.ToDouble(DGVGeo.CurrentRow.Cells["WedgeSpeed"].Value);
+                geo.SeamLength = Convert.ToDouble(DGVGeo.CurrentRow.Cells["SeamLength"].Value);
+                geo.CarryOver= Convert.ToSingle(DGVGeo.CurrentRow.Cells["CarryOver"].Value);
+
+                if (DGVGeo.CurrentRow.Cells["Destructive"].Value!=null)
+                {
+                    geo.Destructive = DGVGeo.CurrentRow.Cells["Destructive"].Value.ToString();
+                }
+                else
+                {
+                    geo.Destructive = " ";
                 }
 
+                if (DGVGeo.CurrentRow.Cells["RemarksDestructive"].Value!=null)
+                {
+                    geo.RemarksDestructive = DGVGeo.CurrentRow.Cells["RemarksDestructive"].Value.ToString();
+                }
+                else
+                {
+                    geo.RemarksDestructive = " ";
+                }
                 
-                GeomembraneForm_Load(sender, e);
+                
+                geo.ProjectDevId = pdev.Id;
+                db.GeoMembranes.Add(geo);
+                db.SaveChanges();
+                GeomembraneForm_Load(sender,e);
 
             }
             catch (Exception ex)
@@ -86,12 +121,49 @@ namespace Mine.Views
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             int gId = Convert.ToInt32(DGVGeo.CurrentRow.Cells[0].Value);
-            EditGeo eg = new EditGeo(gId);
-            if (eg.ShowDialog()==DialogResult.Yes)
+            var geo = db.GeoMembranes.Find(gId);
+            if (DGVGeo.CurrentRow.Cells["SeamNo"].Value != null)
             {
-                GeomembraneForm_Load(sender, e);
+                geo.SeamNo = DGVGeo.CurrentRow.Cells["SeamNo"].Value.ToString();
             }
-           
+            else
+            {
+                geo.SeamNo = " ";
+            }
+            if (DGVGeo.CurrentRow.Cells["SeamTime"].Value != null)
+            {
+                geo.SeamTime = DGVGeo.CurrentRow.Cells["SeamTime"].Value.ToString();
+            }
+            else
+            {
+                geo.SeamTime = " ";
+            }
+
+            geo.WedgeTemp = Convert.ToInt32(DGVGeo.CurrentRow.Cells["WedgeTemp"].Value);
+            geo.WedgeSpeed = Convert.ToDouble(DGVGeo.CurrentRow.Cells["WedgeSpeed"].Value);
+            geo.SeamLength = Convert.ToDouble(DGVGeo.CurrentRow.Cells["SeamLength"].Value);
+            geo.CarryOver = Convert.ToSingle(DGVGeo.CurrentRow.Cells["CarryOver"].Value);
+
+            if (DGVGeo.CurrentRow.Cells["Destructive"].Value != null)
+            {
+                geo.Destructive = DGVGeo.CurrentRow.Cells["Destructive"].Value.ToString();
+            }
+            else
+            {
+                geo.Destructive = " ";
+            }
+
+            if (DGVGeo.CurrentRow.Cells["RemarksDestructive"].Value != null)
+            {
+                geo.RemarksDestructive = DGVGeo.CurrentRow.Cells["RemarksDestructive"].Value.ToString();
+            }
+            else
+            {
+                geo.RemarksDestructive = " ";
+            }
+            db.SaveChanges();
+            GeomembraneForm_Load(sender, e);
+
 
         }
 

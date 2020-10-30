@@ -32,10 +32,11 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.ReportDevView = new Microsoft.Reporting.WinForms.ReportViewer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportDev));
             this.DevelopmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ClientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ReportDevView = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.DevelopmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientBindingSource)).BeginInit();
@@ -61,23 +62,16 @@
             this.ReportDevView.TabIndex = 0;
             this.ReportDevView.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
-            // DevelopmentBindingSource
-            // 
-            // 
-            // ProjectBindingSource
-            // 
-            // 
-            // ClientBindingSource
-            // 
-            // 
             // ReportDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 493);
             this.Controls.Add(this.ReportDevView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportDev";
             this.Text = "ReportDev";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ReportDev_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DevelopmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).EndInit();

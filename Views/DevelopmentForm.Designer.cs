@@ -43,7 +43,6 @@
             this.BtnEdit = new FontAwesome.Sharp.IconButton();
             this.BtnAdd = new FontAwesome.Sharp.IconButton();
             this.BtnPDF = new MetroFramework.Controls.MetroButton();
-            this.TxtDate = new MetroFramework.Controls.MetroDateTime();
             this.LblRClient = new MetroFramework.Controls.MetroLabel();
             this.LblRProject = new MetroFramework.Controls.MetroLabel();
             this.LblRProjectNo = new MetroFramework.Controls.MetroLabel();
@@ -54,8 +53,6 @@
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGVDev = new System.Windows.Forms.DataGridView();
-            this.BElipse = new ns1.BunifuElipse(this.components);
-            this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +64,8 @@
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectDev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BElipse = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             this.PanelAdd.SuspendLayout();
             this.PanelHeader.SuspendLayout();
@@ -238,23 +237,15 @@
             // 
             // BtnPDF
             // 
+            this.BtnPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPDF.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnPDF.Location = new System.Drawing.Point(1055, 27);
+            this.BtnPDF.Location = new System.Drawing.Point(1151, 27);
             this.BtnPDF.Name = "BtnPDF";
             this.BtnPDF.Size = new System.Drawing.Size(163, 58);
             this.BtnPDF.TabIndex = 11;
             this.BtnPDF.Text = "BtnPDF";
             this.BtnPDF.UseSelectable = true;
             this.BtnPDF.Click += new System.EventHandler(this.BtnPDF_Click);
-            // 
-            // TxtDate
-            // 
-            this.TxtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtDate.Location = new System.Drawing.Point(947, 86);
-            this.TxtDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.TxtDate.Name = "TxtDate";
-            this.TxtDate.Size = new System.Drawing.Size(328, 29);
-            this.TxtDate.TabIndex = 15;
             // 
             // LblRClient
             // 
@@ -327,7 +318,6 @@
             this.PanelHeader.Controls.Add(this.BtnClose);
             this.PanelHeader.Controls.Add(this.LblRGeosyntetic);
             this.PanelHeader.Controls.Add(this.LblRContractor);
-            this.PanelHeader.Controls.Add(this.TxtDate);
             this.PanelHeader.Controls.Add(this.LblRSupplier);
             this.PanelHeader.Controls.Add(this.PBPicture);
             this.PanelHeader.Controls.Add(this.LblClient);
@@ -402,15 +392,6 @@
             this.DGVDev.Name = "DGVDev";
             this.DGVDev.Size = new System.Drawing.Size(1386, 435);
             this.DGVDev.TabIndex = 0;
-            // 
-            // BElipse
-            // 
-            this.BElipse.ElipseRadius = 5;
-            this.BElipse.TargetControl = this;
-            // 
-            // developmentBindingSource
-            // 
-            this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
             // 
             // Id
             // 
@@ -493,6 +474,15 @@
             this.ProjectDev.Name = "ProjectDev";
             this.ProjectDev.Visible = false;
             // 
+            // developmentBindingSource
+            // 
+            this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
+            // 
+            // BElipse
+            // 
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
+            // 
             // DevelopmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,6 +493,7 @@
             this.Controls.Add(this.PanelAdd);
             this.Controls.Add(this.LblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DevelopmentForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DevelopmentForm_Load);
@@ -530,7 +521,6 @@
         private MetroFramework.Controls.MetroLabel LblTitle;
         private MetroFramework.Controls.MetroPanel PanelAdd;
         private MetroFramework.Controls.MetroButton BtnPDF;
-        private MetroFramework.Controls.MetroDateTime TxtDate;
         private MetroFramework.Controls.MetroLabel LblRClient;
         private MetroFramework.Controls.MetroLabel LblRProject;
         private MetroFramework.Controls.MetroLabel LblRProjectNo;

@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace Mine.Views
     public partial class DevelopmentForm : Form
     {
         readonly int proDevId;
-        Development development;
+       
 
         readonly GraphDbContext db = new GraphDbContext();
 
@@ -38,19 +39,18 @@ namespace Mine.Views
             LblRProject.Text = pdev.Project.PName;
             LblRProjectNo.Text = pdev.Project.ProjectNo;
             LblRSupplier.Text = pdev.Project.Supplier;
-            development = new Development();
-            //if (pdev.Project.Client.Image != null)
-            //{
-            //    PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
-            //}
+            
+            if (pdev.Project.Client.Image != null)
+            {
+                if (File.Exists(pdev.Project.Client.Image))
+                {
+                    PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
+                }
+            }
 
-
-            TxtDate.Value = pdev.DevTime;
             DGVFill();
 
-
         }
-
 
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -59,16 +59,30 @@ namespace Mine.Views
             {
                 var pdev = db.ProjectDevs.Include(a => a.Project.Client).Include(a => a.Project).Where(a => a.Id == proDevId).FirstOrDefault();
                 Development dev = new Development();
-                dev.DeploymentDate = pdev.DevTime;
+                dev.DeploymentDate = Convert.ToDateTime(pdev.DevTime.ToShortDateString());
                 dev.PanelNo = Convert.ToInt32(DGVDev.CurrentRow.Cells["PanelNo"].Value);
                 dev.RollNo = Convert.ToInt32(DGVDev.CurrentRow.Cells["RollNo"].Value);
                 dev.Lenght = Convert.ToInt32(DGVDev.CurrentRow.Cells["Lenght"].Value);
                 dev.Width = Convert.ToDecimal(DGVDev.CurrentRow.Cells["Width"].Value);
-                dev.Thickness = DGVDev.CurrentRow.Cells["Thickness"].Value.ToString();
+                if (DGVDev.CurrentRow.Cells["Thickness"].Value!=null)
+                {
+                    dev.Thickness = DGVDev.CurrentRow.Cells["Thickness"].Value.ToString();
+                }
+                else
+                {
+                    dev.Thickness = " ";
+                }
+                
                 dev.Area = Convert.ToDecimal(DGVDev.CurrentRow.Cells["Area"].Value);
-                dev.Remarks = DGVDev.CurrentRow.Cells["Remarks"].Value.ToString();
+                if (DGVDev.CurrentRow.Cells["Remarks"].Value!=null)
+                {
+                    dev.Remarks = DGVDev.CurrentRow.Cells["Remarks"].Value.ToString();
+                }
+                else
+                {
+                    dev.Remarks = " ";
+                }
                 dev.ProjectDevId = pdev.ProjectId;
-
                 db.Developments.Add(dev);
                 db.SaveChanges();
 
@@ -94,13 +108,30 @@ namespace Mine.Views
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             int pdId = Convert.ToInt32(DGVDev.CurrentRow.Cells[0].Value);
-
-            EditDeployment ed = new EditDeployment(pdId);
-            if (ed.ShowDialog() == DialogResult.Yes)
+            var dev = db.Developments.Find(pdId);
+            dev.PanelNo = Convert.ToInt32(DGVDev.CurrentRow.Cells["PanelNo"].Value);
+            dev.RollNo = Convert.ToInt32(DGVDev.CurrentRow.Cells["RollNo"].Value);
+            dev.Lenght = Convert.ToInt32(DGVDev.CurrentRow.Cells["Lenght"].Value);
+            dev.Width = Convert.ToDecimal(DGVDev.CurrentRow.Cells["Width"].Value);
+            if (DGVDev.CurrentRow.Cells["Thickness"].Value.ToString() == "")
             {
-                DevelopmentForm_Load(sender, e);
+                dev.Thickness = " ";
             }
-
+            else
+            {
+                dev.Thickness = DGVDev.CurrentRow.Cells["Thickness"].Value.ToString();
+            }
+            dev.Area = Convert.ToDecimal(DGVDev.CurrentRow.Cells["Area"].Value);
+            if (DGVDev.CurrentRow.Cells["Remarks"].Value.ToString() == "")
+            {
+                dev.Remarks = " ";
+            }
+            else
+            {
+                dev.Remarks = DGVDev.CurrentRow.Cells["Remarks"].Value.ToString();
+            }
+            db.SaveChanges();
+            DevelopmentForm_Load(sender, e);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -122,7 +153,6 @@ namespace Mine.Views
             {
                 MetroMessageBox.Show(this, "Error in your record " + ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
 
         }
 

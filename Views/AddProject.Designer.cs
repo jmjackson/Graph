@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProject));
             this.TxtProject = new System.Windows.Forms.TextBox();
             this.TxtProjectNo = new System.Windows.Forms.TextBox();
             this.TxtContractor = new System.Windows.Forms.TextBox();
@@ -253,6 +254,7 @@
             this.Controls.Add(this.TxtProjectNo);
             this.Controls.Add(this.TxtProject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddProject";
             this.Text = "Add Project";
             this.ResumeLayout(false);

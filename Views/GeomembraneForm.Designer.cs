@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeomembraneForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
@@ -51,7 +47,15 @@
             this.MetroOperator = new MetroFramework.Controls.MetroLabel();
             this.MetroMachineNo = new MetroFramework.Controls.MetroLabel();
             this.PbLogo = new System.Windows.Forms.PictureBox();
-            this.DGVGeo = new MetroFramework.Controls.MetroGrid();
+            this.BtnAdd = new MetroFramework.Controls.MetroButton();
+            this.BtnEdit = new MetroFramework.Controls.MetroButton();
+            this.BtnPdf = new MetroFramework.Controls.MetroButton();
+            this.BtnDelete = new MetroFramework.Controls.MetroButton();
+            this.PanelHead = new System.Windows.Forms.Panel();
+            this.BtnClose = new FontAwesome.Sharp.IconButton();
+            this.PanelFoot = new System.Windows.Forms.Panel();
+            this.PanelContent = new System.Windows.Forms.Panel();
+            this.DGVGeo = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeamingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeamNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,21 +66,16 @@
             this.CarryOver = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksDestructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnAdd = new MetroFramework.Controls.MetroButton();
-            this.BtnEdit = new MetroFramework.Controls.MetroButton();
-            this.BtnPdf = new MetroFramework.Controls.MetroButton();
-            this.BtnDelete = new MetroFramework.Controls.MetroButton();
-            this.DateDev = new MetroFramework.Controls.MetroDateTime();
-            this.PanelHead = new System.Windows.Forms.Panel();
-            this.BtnClose = new FontAwesome.Sharp.IconButton();
-            this.PanelFoot = new System.Windows.Forms.Panel();
-            this.PanelContent = new System.Windows.Forms.Panel();
+            this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjectDev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.geoMembraneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVGeo)).BeginInit();
             this.PanelHead.SuspendLayout();
             this.PanelFoot.SuspendLayout();
             this.PanelContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVGeo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.geoMembraneBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LblClient
@@ -258,140 +257,6 @@
             this.PbLogo.TabIndex = 1;
             this.PbLogo.TabStop = false;
             // 
-            // DGVGeo
-            // 
-            this.DGVGeo.AllowUserToAddRows = false;
-            this.DGVGeo.AllowUserToDeleteRows = false;
-            this.DGVGeo.AllowUserToResizeRows = false;
-            this.DGVGeo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DGVGeo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DGVGeo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DGVGeo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.DGVGeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVGeo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.SeamingDate,
-            this.SeamNo,
-            this.SeamTime,
-            this.WedgeTemp,
-            this.WedgeSpeed,
-            this.SeamLength,
-            this.CarryOver,
-            this.Destructive,
-            this.RemarksDestructive});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVGeo.DefaultCellStyle = dataGridViewCellStyle10;
-            this.DGVGeo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGVGeo.EnableHeadersVisualStyles = false;
-            this.DGVGeo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.DGVGeo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DGVGeo.Location = new System.Drawing.Point(0, 0);
-            this.DGVGeo.Name = "DGVGeo";
-            this.DGVGeo.ReadOnly = true;
-            this.DGVGeo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVGeo.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.DGVGeo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.DGVGeo.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.DGVGeo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVGeo.Size = new System.Drawing.Size(1370, 461);
-            this.DGVGeo.Style = MetroFramework.MetroColorStyle.Blue;
-            this.DGVGeo.TabIndex = 2;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Id.HeaderText = "Item";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // SeamingDate
-            // 
-            this.SeamingDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamingDate.HeaderText = "Seaming Date";
-            this.SeamingDate.Name = "SeamingDate";
-            this.SeamingDate.ReadOnly = true;
-            // 
-            // SeamNo
-            // 
-            this.SeamNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamNo.HeaderText = "Seam No";
-            this.SeamNo.Name = "SeamNo";
-            this.SeamNo.ReadOnly = true;
-            // 
-            // SeamTime
-            // 
-            this.SeamTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamTime.HeaderText = "Seam Time";
-            this.SeamTime.Name = "SeamTime";
-            this.SeamTime.ReadOnly = true;
-            // 
-            // WedgeTemp
-            // 
-            this.WedgeTemp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WedgeTemp.HeaderText = "Wedge Temp";
-            this.WedgeTemp.Name = "WedgeTemp";
-            this.WedgeTemp.ReadOnly = true;
-            // 
-            // WedgeSpeed
-            // 
-            this.WedgeSpeed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WedgeSpeed.HeaderText = "Wedge Speed";
-            this.WedgeSpeed.Name = "WedgeSpeed";
-            this.WedgeSpeed.ReadOnly = true;
-            // 
-            // SeamLength
-            // 
-            this.SeamLength.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamLength.HeaderText = "Seam Length";
-            this.SeamLength.Name = "SeamLength";
-            this.SeamLength.ReadOnly = true;
-            // 
-            // CarryOver
-            // 
-            this.CarryOver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CarryOver.HeaderText = "Carry Over";
-            this.CarryOver.Name = "CarryOver";
-            this.CarryOver.ReadOnly = true;
-            // 
-            // Destructive
-            // 
-            this.Destructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Destructive.HeaderText = "Destructive";
-            this.Destructive.Name = "Destructive";
-            this.Destructive.ReadOnly = true;
-            // 
-            // RemarksDestructive
-            // 
-            this.RemarksDestructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RemarksDestructive.HeaderText = "Remarks/Destructive";
-            this.RemarksDestructive.Name = "RemarksDestructive";
-            this.RemarksDestructive.ReadOnly = true;
-            // 
             // BtnAdd
             // 
             this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -459,21 +324,11 @@
             this.BtnDelete.UseSelectable = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // DateDev
-            // 
-            this.DateDev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DateDev.Location = new System.Drawing.Point(919, 104);
-            this.DateDev.MinimumSize = new System.Drawing.Size(0, 29);
-            this.DateDev.Name = "DateDev";
-            this.DateDev.Size = new System.Drawing.Size(250, 29);
-            this.DateDev.TabIndex = 6;
-            // 
             // PanelHead
             // 
             this.PanelHead.BackColor = System.Drawing.Color.White;
             this.PanelHead.Controls.Add(this.BtnClose);
             this.PanelHead.Controls.Add(this.LblMachine);
-            this.PanelHead.Controls.Add(this.DateDev);
             this.PanelHead.Controls.Add(this.LblClient);
             this.PanelHead.Controls.Add(this.MetroOperator);
             this.PanelHead.Controls.Add(this.LblProject);
@@ -537,6 +392,118 @@
             this.PanelContent.Size = new System.Drawing.Size(1370, 461);
             this.PanelContent.TabIndex = 9;
             // 
+            // DGVGeo
+            // 
+            this.DGVGeo.AutoGenerateColumns = false;
+            this.DGVGeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVGeo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.SeamingDate,
+            this.SeamNo,
+            this.SeamTime,
+            this.WedgeTemp,
+            this.WedgeSpeed,
+            this.SeamLength,
+            this.CarryOver,
+            this.Destructive,
+            this.RemarksDestructive,
+            this.ProjectDevId,
+            this.ProjectDev});
+            this.DGVGeo.DataSource = this.geoMembraneBindingSource;
+            this.DGVGeo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVGeo.Location = new System.Drawing.Point(0, 0);
+            this.DGVGeo.Name = "DGVGeo";
+            this.DGVGeo.Size = new System.Drawing.Size(1370, 461);
+            this.DGVGeo.TabIndex = 0;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // SeamingDate
+            // 
+            this.SeamingDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamingDate.DataPropertyName = "SeamingDate";
+            this.SeamingDate.HeaderText = "SeamingDate";
+            this.SeamingDate.Name = "SeamingDate";
+            // 
+            // SeamNo
+            // 
+            this.SeamNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamNo.DataPropertyName = "SeamNo";
+            this.SeamNo.HeaderText = "SeamNo";
+            this.SeamNo.Name = "SeamNo";
+            // 
+            // SeamTime
+            // 
+            this.SeamTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamTime.DataPropertyName = "SeamTime";
+            this.SeamTime.HeaderText = "SeamTime";
+            this.SeamTime.Name = "SeamTime";
+            // 
+            // WedgeTemp
+            // 
+            this.WedgeTemp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WedgeTemp.DataPropertyName = "WedgeTemp";
+            this.WedgeTemp.HeaderText = "WedgeTemp";
+            this.WedgeTemp.Name = "WedgeTemp";
+            // 
+            // WedgeSpeed
+            // 
+            this.WedgeSpeed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WedgeSpeed.DataPropertyName = "WedgeSpeed";
+            this.WedgeSpeed.HeaderText = "WedgeSpeed";
+            this.WedgeSpeed.Name = "WedgeSpeed";
+            // 
+            // SeamLength
+            // 
+            this.SeamLength.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamLength.DataPropertyName = "SeamLength";
+            this.SeamLength.HeaderText = "SeamLength";
+            this.SeamLength.Name = "SeamLength";
+            // 
+            // CarryOver
+            // 
+            this.CarryOver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CarryOver.DataPropertyName = "CarryOver";
+            this.CarryOver.HeaderText = "CarryOver";
+            this.CarryOver.Name = "CarryOver";
+            // 
+            // Destructive
+            // 
+            this.Destructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Destructive.DataPropertyName = "Destructive";
+            this.Destructive.HeaderText = "Destructive";
+            this.Destructive.Name = "Destructive";
+            // 
+            // RemarksDestructive
+            // 
+            this.RemarksDestructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RemarksDestructive.DataPropertyName = "RemarksDestructive";
+            this.RemarksDestructive.HeaderText = "RemarksDestructive";
+            this.RemarksDestructive.Name = "RemarksDestructive";
+            // 
+            // ProjectDevId
+            // 
+            this.ProjectDevId.DataPropertyName = "ProjectDevId";
+            this.ProjectDevId.HeaderText = "ProjectDevId";
+            this.ProjectDevId.Name = "ProjectDevId";
+            this.ProjectDevId.Visible = false;
+            // 
+            // ProjectDev
+            // 
+            this.ProjectDev.DataPropertyName = "ProjectDev";
+            this.ProjectDev.HeaderText = "ProjectDev";
+            this.ProjectDev.Name = "ProjectDev";
+            this.ProjectDev.Visible = false;
+            // 
+            // geoMembraneBindingSource
+            // 
+            this.geoMembraneBindingSource.DataSource = typeof(Mine.DataModel.GeoMembrane);
+            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
@@ -551,15 +518,17 @@
             this.Controls.Add(this.PanelFoot);
             this.Controls.Add(this.PanelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GeomembraneForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GeomembraneForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVGeo)).EndInit();
             this.PanelHead.ResumeLayout(false);
             this.PanelHead.PerformLayout();
             this.PanelFoot.ResumeLayout(false);
             this.PanelContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGVGeo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.geoMembraneBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -583,12 +552,17 @@
         private MetroFramework.Controls.MetroLabel MetroOperator;
         private MetroFramework.Controls.MetroLabel MetroMachineNo;
         private System.Windows.Forms.PictureBox PbLogo;
-        private MetroFramework.Controls.MetroGrid DGVGeo;
         private MetroFramework.Controls.MetroButton BtnAdd;
         private MetroFramework.Controls.MetroButton BtnEdit;
         private MetroFramework.Controls.MetroButton BtnPdf;
         private MetroFramework.Controls.MetroButton BtnDelete;
-        private MetroFramework.Controls.MetroDateTime DateDev;
+        private System.Windows.Forms.Panel PanelHead;
+        private System.Windows.Forms.Panel PanelFoot;
+        private System.Windows.Forms.Panel PanelContent;
+        private FontAwesome.Sharp.IconButton BtnClose;
+        private ns1.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.DataGridView DGVGeo;
+        private System.Windows.Forms.BindingSource geoMembraneBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeamingDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeamNo;
@@ -599,10 +573,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CarryOver;
         private System.Windows.Forms.DataGridViewTextBoxColumn Destructive;
         private System.Windows.Forms.DataGridViewTextBoxColumn RemarksDestructive;
-        private System.Windows.Forms.Panel PanelHead;
-        private System.Windows.Forms.Panel PanelFoot;
-        private System.Windows.Forms.Panel PanelContent;
-        private FontAwesome.Sharp.IconButton BtnClose;
-        private ns1.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDevId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDev;
     }
 }

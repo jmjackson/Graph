@@ -33,6 +33,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportGeo));
             this.ProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.GeoMembraneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ClientBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -69,6 +70,7 @@
             this.ReportViewGeom.ServerReport.BearerToken = null;
             this.ReportViewGeom.Size = new System.Drawing.Size(934, 490);
             this.ReportViewGeom.TabIndex = 0;
+            this.ReportViewGeom.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // ReportGeo
             // 
@@ -76,8 +78,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 490);
             this.Controls.Add(this.ReportViewGeom);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportGeo";
             this.Text = "ReportGeo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ReportGeo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeoMembraneBindingSource)).EndInit();
