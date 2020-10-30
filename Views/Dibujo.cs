@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using System.Drawing.Imaging;
 using System.IO;
+using Mine.DataModel;
 
 namespace Mine.Views
 {
@@ -38,104 +39,6 @@ namespace Mine.Views
         Color color = Color.Black;
         int ancho = 2;
 
-        private void PbLienzo_MouseDown(object sender, MouseEventArgs e)
-        {
-            dibujar = true;
-        }
-
-        private void PbLienzo_MouseUp(object sender, MouseEventArgs e)
-        {
-            dibujar = false;
-
-            X = null;
-            Y = null;
-        }
-
-        private void PbLienzo_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (selecc_Opcion == 1)
-            {
-                if (dibujar == true)
-                {
-                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
-                    //declaradas al inicio
-
-                    Graphics g = Graphics.FromImage(imagen);
-                    Pen pluma = new Pen(color, ancho);
-
-                    //Dibuja una linea entre el punto anterior y el actual
-                    g.DrawLine(pluma, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
-                    X = e.X;
-                    Y = e.Y;
-                    PbLienzo.Image = imagen;
-                }
-            }
-            if (selecc_Opcion == 3)
-            {
-                if (dibujar == true)
-                {
-                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
-                    //declaradas al inicio
-                    Color color2 = Color.White;
-                    int ancho2 = 10;
-                    Graphics g = Graphics.FromImage(imagen);
-                    Pen borrador = new Pen(color2, ancho2);
-
-                    //Dibuja una linea entre el punto anterior y el actual
-                    g.DrawLine(borrador, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
-                    X = e.X;
-                    Y = e.Y;
-                    PbLienzo.Image = imagen;
-                }
-            }
-            if (selecc_Opcion == 4)
-            {
-                if (dibujar == true)
-                {
-                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
-                    //declaradas al inicio
-                    Color color2 = Color.Black;
-                    int ancho2 = 10;
-                    Graphics g = Graphics.FromImage(imagen);
-                    Pen borrador = new Pen(color2, ancho2);
-
-                    //Dibuja una linea entre el punto anterior y el actual
-                    g.DrawLine(borrador, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
-                    X = e.X;
-                    Y = e.Y;
-                    PbLienzo.Image = imagen;
-                }
-            }
-        }
-
-        private void BntSave_Click(object sender, EventArgs e)
-        {
-
-            Bitmap bmp = (Bitmap)PbLienzo.Image;
-
-            //saveFileDialog1.FileName = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
-
-            //saveFileDialog1.Filter = "Excel files (*.jpg)|*.jpg";
-
-            //saveFileDialog1.RestoreDirectory = true;
-
-            //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
-            //    PbLienzo.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
-            //}
-
-            //PbLienzo.Image.Save(@"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images\yyyy_MM_dd_HHmmss.Jpeg", ImageFormat.Png);
-
-            var path = @"Resources/images/draw/";
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-            
-            //string panth = @"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images";
-            PbLienzo.Image.Save(path + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ")+".png", ImageFormat.Png);
-
-        }
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
@@ -154,21 +57,145 @@ namespace Mine.Views
             }
 
             //tabla de cordenadas
-            DgCordenada.Rows.Add("East to west","EW");
-            DgCordenada.Rows.Add("North to south","NS");
-            DgCordenada.Rows.Add("South to north","SN");
-            DgCordenada.Rows.Add("West to east", "WE");
+            DgCordenada.Rows.Add("East to west","E-W");
+            DgCordenada.Rows.Add("North to south","N-S");
+            DgCordenada.Rows.Add("South to north","S-N");
+            DgCordenada.Rows.Add("West to east", "W-E");
 
         }
 
-        private void BtnClear_Click(object sender, EventArgs e)
+        //Reset tools
+        void resetTools()
+        {
+            foreach (Control b in ToolsBox.Controls)
+                b.Enabled = true;
+        }  
+        //Tools button
+        private void BtnDraw_Click_1(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 1;
+        }
+
+        private void BntAddPanelNo_Click_1(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 2;
+        }
+
+        private void BntSave_Click_1(object sender, EventArgs e)
+        {
+            ////----------------------------------------------------------------------------------
+            //Bitmap bmp = (Bitmap)PbLienzo.Image;
+
+            ////saveFileDialog1.FileName = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
+
+            ////saveFileDialog1.Filter = "Excel files (*.jpg)|*.jpg";
+
+            ////saveFileDialog1.RestoreDirectory = true;
+
+            ////if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            ////{
+            ////    PbLienzo.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
+            ////}
+
+            ////PbLienzo.Image.Save(@"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images\yyyy_MM_dd_HHmmss.Jpeg", ImageFormat.Png);
+
+            //var path = @"Resources/images/draw/";
+            //if (!Directory.Exists(path))
+            //{
+            //    Directory.CreateDirectory(path);
+            //}
+
+            ////string panth = @"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images";
+            //PbLienzo.Image.Save(path + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ") + ".png", ImageFormat.Png);
+            ////------------------------------------------------------------------------------------------------------------------
+            ///
+
+            try
+            {
+                //Nombre del img guardada
+                var cd = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
+                //dirrecion de donde se va a guardar
+                var path = @"Resources/images/draw/";
+                //Declarado como string dirrecion y Nombre
+                string img = path + cd + "_Draw.jpg";
+                if (PbLienzo.Image != null)
+                {
+                    if (Directory.Exists(path))
+                    {
+                        //si existe se guardad 
+                        PbLienzo.Image.Save(img);
+                    }
+                    else
+                    {
+                        //si no existe se Crea
+                        Directory.CreateDirectory(path);
+                        PbLienzo.Image.Save(img);
+                    }
+
+                }
+                ////No se que hace ?????????
+                else
+                {
+                    if (File.Exists(path + "empresa.png"))
+                    {
+                        img = path + "empresa.png";
+                    }
+                    else
+                    {
+                        PbLienzo.Image.Save(path + "empresa.png");
+                        img = path + "empresa.png";
+                    }
+                }
+                //se manda a llamar la inforrmacion de bd para agregarle la informacion
+                var ig = new ProjectDev()
+                {
+                    ImageMap = img
+                };
+
+                db.ProjectDevs.Add(ig);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se guardo el Dibujo" + ex.ToString(), "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void BtnAC_Click_1(object sender, EventArgs e)
         {
             resetTools();
             ((Button)sender).Enabled = false;
             selecc_Opcion = 3;
         }
 
-        private void PbLienzo_MouseClick(object sender, MouseEventArgs e)
+        private void BtnClear_Click_1(object sender, EventArgs e)
+        {
+            resetTools();
+            ((Button)sender).Enabled = false;
+            selecc_Opcion = 4;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PBLienzo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToolsBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        //Eventos de picturebox
+        private void PbLienzo_MouseClick_1(object sender, MouseEventArgs e)
         {
             if (selecc_Opcion == 2)
             {
@@ -186,7 +213,7 @@ namespace Mine.Views
                     PbLienzo.Image = imagen;
                 }
             }
-            if (selecc_Opcion == 4)
+            if (selecc_Opcion == 3)
             {
                 //Dibujamos Cordenada y simbologia
                 if (dibujar == true)
@@ -202,53 +229,57 @@ namespace Mine.Views
                 }
             }
         }
-        void resetTools()
+
+        private void PbLienzo_MouseDown_1(object sender, MouseEventArgs e)
         {
-            foreach (Control b in toolBox.Controls)
-                b.Enabled = true;
+            dibujar = true;
         }
 
-        private void BtnDraw_Click(object sender, EventArgs e)
+        private void PbLienzo_MouseMove_1(object sender, MouseEventArgs e)
         {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 1;
+            if (selecc_Opcion == 1)
+            {
+                if (dibujar == true)
+                {
+                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
+                    //declaradas al inicio
+
+                    Graphics g = Graphics.FromImage(imagen);
+                    Pen pluma = new Pen(color, ancho);
+
+                    //Dibuja una linea entre el punto anterior y el actual
+                    g.DrawLine(pluma, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    X = e.X;
+                    Y = e.Y;
+                    PbLienzo.Image = imagen;
+                }
+            }
+            if (selecc_Opcion == 4)
+            {
+                if (dibujar == true)
+                {
+                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
+                    //declaradas al inicio
+                    Color color2 = Color.White;
+                    int ancho2 = 10;
+                    Graphics g = Graphics.FromImage(imagen);
+                    Pen borrador = new Pen(color2, ancho2);
+
+                    //Dibuja una linea entre el punto anterior y el actual
+                    g.DrawLine(borrador, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    X = e.X;
+                    Y = e.Y;
+                    PbLienzo.Image = imagen;
+                }
+            }
         }
 
-        private void BntAddPanelNo_Click(object sender, EventArgs e)
+        private void PbLienzo_MouseUp_1(object sender, MouseEventArgs e)
         {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 2;
-        }
+            dibujar = false;
 
-        private void BtnEO_Click(object sender, EventArgs e)
-        {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 4;
+            X = null;
+            Y = null;
         }
-
-        private void BtnNS_Click(object sender, EventArgs e)
-        {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 5;
-        }
-
-        private void BtnSN_Click(object sender, EventArgs e)
-        {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 6;
-        }
-
-        private void BtnOE_Click(object sender, EventArgs e)
-        {
-            resetTools();
-            ((Button)sender).Enabled = false;
-            selecc_Opcion = 7;
-        }
-
     }
 }
