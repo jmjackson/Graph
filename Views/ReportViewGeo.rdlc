@@ -30,7 +30,7 @@
               <Width>2.60877cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.81023cm</Width>
+              <Width>6.23356cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -615,7 +615,7 @@
         <Top>0.40542cm</Top>
         <Left>0.09919cm</Left>
         <Height>1.2cm</Height>
-        <Width>26.28762cm</Width>
+        <Width>26.71095cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -631,10 +631,10 @@
       </Border>
     </Style>
   </Body>
-  <Width>27.01649cm</Width>
+  <Width>27.25462cm</Width>
   <Page>
     <PageHeader>
-      <Height>3.13683cm</Height>
+      <Height>3.26953cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1141,6 +1141,22 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Image Name="Image2">
+          <Source>Database</Source>
+          <Value>=First(Fields!ImgCl.Value, "ClientBindingSource")</Value>
+          <MIMEType>image/jpeg</MIMEType>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.75461cm</Top>
+          <Left>24.07391cm</Left>
+          <Height>1.5cm</Height>
+          <Width>3.18071cm</Width>
+          <ZIndex>17</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
       </ReportItems>
       <Style>
         <Border>
@@ -1383,6 +1399,10 @@
         <Field Name="Image">
           <DataField>Image</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ImgCl">
+          <DataField>ImgCl</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
         <Field Name="Name">
           <DataField>Name</DataField>

@@ -325,7 +325,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -978,8 +977,10 @@
           </Style>
         </Textbox>
         <Image Name="Image1">
-          <Source>External</Source>
-          <Value>=First(Fields!Image.Value, "ClientBindingSource")</Value>
+          <Source>Database</Source>
+          <Value>=First(Fields!ImgCl.Value, "ClientBindingSource")</Value>
+          <MIMEType>image/jpeg</MIMEType>
+          <Sizing>FitProportional</Sizing>
           <Top>0.88195cm</Top>
           <Left>20.10516cm</Left>
           <Height>1.5cm</Height>
@@ -1161,6 +1162,10 @@
         <Field Name="Image">
           <DataField>Image</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ImgCl">
+          <DataField>ImgCl</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
         <Field Name="Name">
           <DataField>Name</DataField>
