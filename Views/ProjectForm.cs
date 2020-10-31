@@ -48,13 +48,11 @@ namespace Mine.Views
             LblRId.Text = client.Id.ToString();
             LblRCode.Text = client.Code;
             LblRCName.Text = client.Name;
-            if (client.Image!=null)
+            if (client.ImgCl!=null)
             {
-                if (File.Exists(client.Image))
-                {
-                    PBLogo.Image = Image.FromFile(client.Image);
-                }
-               
+                var bimg = Convert.ToBase64String(client.ImgCl);
+                //var img = Image.FromStream();
+                PBLogo.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(bimg)));          
             }
         }
 

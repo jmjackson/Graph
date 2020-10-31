@@ -40,13 +40,14 @@ namespace Mine.Views
             LblRProjectNo.Text = pdev.Project.ProjectNo;
             LblRSupplier.Text = pdev.Project.Supplier;
             
-            if (pdev.Project.Client.Image != null)
+            if (pdev.Project.Client.ImgCl != null)
             {
-                if (File.Exists(pdev.Project.Client.Image))
-                {
-                    PBPicture.Image = Image.FromFile(pdev.Project.Client.Image);
-                }
+                var bimg = Convert.ToBase64String(pdev.Project.Client.ImgCl);
+                //var img = Image.FromStream();
+                PBPicture.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(bimg)));
             }
+
+            
 
             DGVFill();
 

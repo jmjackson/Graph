@@ -173,6 +173,10 @@
     <Compile Include="Migrations\202010270231396_UpdateDevMig.designer.cs">
       <DependentUpon>202010270231396_UpdateDevMig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010311832528_UpdateByte.cs" />
+    <Compile Include="Migrations\202010311832528_UpdateByte.designer.cs">
+      <DependentUpon>202010311832528_UpdateByte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modal\ModalProject.cs">
       <SubType>Form</SubType>
@@ -295,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010270231396_UpdateDevMig.resx">
       <DependentUpon>202010270231396_UpdateDevMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010311832528_UpdateByte.resx">
+      <DependentUpon>202010311832528_UpdateByte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalProject.resx">
       <DependentUpon>ModalProject.cs</DependentUpon>

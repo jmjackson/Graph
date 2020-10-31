@@ -36,15 +36,15 @@ namespace Mine.Views
             MetroGeosynthetic.Text = pdev.Project.GeoSynthetic;
             MetroMachineNo.Text = pdev.MachineNo;
             MetroOperator.Text = pdev.Operator;
-            if (pdev.Project.Client.Image!=null)
-            {
-                if (File.Exists(pdev.Project.Client.Image))
-                {
-                    PbLogo.Image = Image.FromFile(pdev.Project.Client.Image);
-                }
-            }
            
-            
+
+            if (pdev.Project.Client.ImgCl != null)
+            {
+                var bimg = Convert.ToBase64String(pdev.Project.Client.ImgCl);
+                //var img = Image.FromStream();
+                PbLogo.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(bimg)));
+            }
+
             DGVFill();
         }
 

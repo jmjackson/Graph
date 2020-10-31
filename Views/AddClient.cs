@@ -55,40 +55,22 @@ namespace Mine.Views
             try
             {
                 var cd = TxtCode.Text;
-                var path = @"Resources/images/";
-                string img = path + cd + "_cliente.jpg";
-                if (PbClient.Image!=null)
-                {
-                    if (Directory.Exists(path))
-                    {
-                        PbClient.Image.Save(img);
-                    }
-                    else
-                    {
-                        Directory.CreateDirectory(path);
-                        PbClient.Image.Save(img);
-                    }
-                    
-                }
-                else
-                {
-                    if (File.Exists(path+"empresa.png"))
-                    {
-                        img = path + "empresa.png";
-                    }
-                    else
-                    {
-                        PbClient.Image.Save(path+"empresa.png");
-                        img = path + "empresa.png";
-                    }
-                }
                 
+
+                Image img = PbClient.Image as Image;
+                byte[] imgbyte;
+                using (MemoryStream m=new MemoryStream())
+                {
+                    img.Save(m,System.Drawing.Imaging.ImageFormat.Png);
+                    imgbyte = m.ToArray();
+                }
 
                 var cl = new Client()
                 {
                     Code = cd,
                     Name = TxtName.Text,
-                    Image = img,
+                    ImgCl=imgbyte,
+                    
                 };
 
                 db.Clients.Add(cl);

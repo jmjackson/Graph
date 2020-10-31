@@ -14,5 +14,6 @@ namespace Mine.DataModel
         public string Code { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
+        public byte[] ImgCl { get; set; }
     }
 }
