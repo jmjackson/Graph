@@ -58,9 +58,9 @@
             this.panel1.Controls.Add(this.DgCordenada);
             this.panel1.Controls.Add(this.DgLpn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1662, 60);
+            this.panel1.Location = new System.Drawing.Point(1108, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 1020);
+            this.panel1.Size = new System.Drawing.Size(258, 708);
             this.panel1.TabIndex = 9;
             // 
             // ToolsBox
@@ -197,7 +197,7 @@
             this.DgCordenada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cordenada,
             this.Simbolo});
-            this.DgCordenada.Location = new System.Drawing.Point(29, 787);
+            this.DgCordenada.Location = new System.Drawing.Point(39, 526);
             this.DgCordenada.Name = "DgCordenada";
             this.DgCordenada.Size = new System.Drawing.Size(205, 179);
             this.DgCordenada.TabIndex = 2;
@@ -219,7 +219,7 @@
             this.DgLpn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.PanelNo});
-            this.DgLpn.Location = new System.Drawing.Point(29, 487);
+            this.DgLpn.Location = new System.Drawing.Point(33, 229);
             this.DgLpn.Name = "DgLpn";
             this.DgLpn.Size = new System.Drawing.Size(205, 264);
             this.DgLpn.TabIndex = 1;
@@ -241,7 +241,7 @@
             this.panel2.Controls.Add(this.PbLienzo);
             this.panel2.Location = new System.Drawing.Point(14, 73);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1642, 933);
+            this.panel2.Size = new System.Drawing.Size(1064, 933);
             this.panel2.TabIndex = 10;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -262,11 +262,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Dibujo";
-            this.Text = "Dibujo";
+            this.Text = "Draw";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Dibujo_Load);
             this.panel1.ResumeLayout(false);

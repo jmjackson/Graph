@@ -74,7 +74,7 @@ namespace Mine.Views
                     dev.Thickness = " ";
                 }
                 
-                dev.Area = Convert.ToDecimal(DGVDev.CurrentRow.Cells["Area"].Value);
+                dev.Area = Convert.ToInt32(DGVDev.CurrentRow.Cells["Lenght"].Value)* Convert.ToDecimal(DGVDev.CurrentRow.Cells["Width"].Value);
                 if (DGVDev.CurrentRow.Cells["Remarks"].Value!=null)
                 {
                     dev.Remarks = DGVDev.CurrentRow.Cells["Remarks"].Value.ToString();
@@ -122,7 +122,7 @@ namespace Mine.Views
             {
                 dev.Thickness = DGVDev.CurrentRow.Cells["Thickness"].Value.ToString();
             }
-            dev.Area = Convert.ToDecimal(DGVDev.CurrentRow.Cells["Area"].Value);
+            dev.Area = Convert.ToInt32(DGVDev.CurrentRow.Cells["Lenght"].Value)* Convert.ToDecimal(DGVDev.CurrentRow.Cells["Width"].Value);
             if (DGVDev.CurrentRow.Cells["Remarks"].Value.ToString() == "")
             {
                 dev.Remarks = " ";

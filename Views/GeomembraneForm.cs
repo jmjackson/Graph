@@ -61,54 +61,73 @@ namespace Mine.Views
         {
             try
             {
-                var pdev = db.ProjectDevs.Include(a => a.Project.Client).Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
-                var geo = new GeoMembrane();
-                geo.SeamingDate = Convert.ToDateTime(pdev.DevTime.ToShortDateString());
                 if (DGVGeo.CurrentRow.Cells["SeamNo"].Value!=null)
                 {
-                    geo.SeamNo = DGVGeo.CurrentRow.Cells["SeamNo"].Value.ToString();
-                }
-                else
-                {
-                    geo.SeamNo = " ";
-                }
-                if (DGVGeo.CurrentRow.Cells["SeamTime"].Value!=null)
-                {
-                    geo.SeamTime = DGVGeo.CurrentRow.Cells["SeamTime"].Value.ToString();
-                }
-                else
-                {
-                    geo.SeamTime = " ";
-                }
-                
-                geo.WedgeTemp= Convert.ToInt32(DGVGeo.CurrentRow.Cells["WedgeTemp"].Value);
-                geo.WedgeSpeed = Convert.ToDouble(DGVGeo.CurrentRow.Cells["WedgeSpeed"].Value);
-                geo.SeamLength = Convert.ToDouble(DGVGeo.CurrentRow.Cells["SeamLength"].Value);
-                geo.CarryOver= Convert.ToSingle(DGVGeo.CurrentRow.Cells["CarryOver"].Value);
+                    var pdev = db.ProjectDevs.Include(a => a.Project.Client).Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
-                if (DGVGeo.CurrentRow.Cells["Destructive"].Value!=null)
-                {
-                    geo.Destructive = DGVGeo.CurrentRow.Cells["Destructive"].Value.ToString();
+                    var geolist = db.GeoMembranes.Where(a => a.ProjectDevId == pdev.Id).ToList();
+                    double count = 0;
+                    double seamtotal = 0;
+                    foreach (var item in geolist)
+                    {
+                        count += item.SeamLength;
+                    }
+
+                    seamtotal = count;
+                    var geo = new GeoMembrane();
+                    geo.SeamingDate = Convert.ToDateTime(pdev.DevTime.ToShortDateString());
+                    if (DGVGeo.CurrentRow.Cells["SeamNo"].Value != null)
+                    {
+                        geo.SeamNo = DGVGeo.CurrentRow.Cells["SeamNo"].Value.ToString();
+                    }
+                    else
+                    {
+                        geo.SeamNo = " ";
+                    }
+                    if (DGVGeo.CurrentRow.Cells["SeamTime"].Value != null)
+                    {
+                        geo.SeamTime = DGVGeo.CurrentRow.Cells["SeamTime"].Value.ToString();
+                    }
+                    else
+                    {
+                        geo.SeamTime = " ";
+                    }
+
+                    geo.WedgeTemp = Convert.ToInt32(DGVGeo.CurrentRow.Cells["WedgeTemp"].Value);
+                    geo.WedgeSpeed = Convert.ToDouble(DGVGeo.CurrentRow.Cells["WedgeSpeed"].Value);
+                    geo.SeamLength = Convert.ToDouble(DGVGeo.CurrentRow.Cells["SeamLength"].Value);
+                    geo.CarryOver = seamtotal + Convert.ToDouble(DGVGeo.CurrentRow.Cells["SeamLength"].Value);
+
+                    if (DGVGeo.CurrentRow.Cells["Destructive"].Value != null)
+                    {
+                        geo.Destructive = DGVGeo.CurrentRow.Cells["Destructive"].Value.ToString();
+                    }
+                    else
+                    {
+                        geo.Destructive = " ";
+                    }
+
+                    if (DGVGeo.CurrentRow.Cells["RemarksDestructive"].Value != null)
+                    {
+                        geo.RemarksDestructive = DGVGeo.CurrentRow.Cells["RemarksDestructive"].Value.ToString();
+                    }
+                    else
+                    {
+                        geo.RemarksDestructive = " ";
+                    }
+
+
+                    geo.ProjectDevId = pdev.Id;
+                    db.GeoMembranes.Add(geo);
+                    db.SaveChanges();
+                    GeomembraneForm_Load(sender, e);
                 }
                 else
                 {
-                    geo.Destructive = " ";
+                    MetroMessageBox.Show(this, "Ingrese datos a la linea" , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                if (DGVGeo.CurrentRow.Cells["RemarksDestructive"].Value!=null)
-                {
-                    geo.RemarksDestructive = DGVGeo.CurrentRow.Cells["RemarksDestructive"].Value.ToString();
-                }
-                else
-                {
-                    geo.RemarksDestructive = " ";
-                }
-                
-                
-                geo.ProjectDevId = pdev.Id;
-                db.GeoMembranes.Add(geo);
-                db.SaveChanges();
-                GeomembraneForm_Load(sender,e);
+             
 
             }
             catch (Exception ex)
@@ -122,6 +141,15 @@ namespace Mine.Views
         {
             int gId = Convert.ToInt32(DGVGeo.CurrentRow.Cells[0].Value);
             var geo = db.GeoMembranes.Find(gId);
+            var geolist = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).ToList();
+            double count = 0;
+            double seamtotal = 0;
+            foreach (var item in geolist)
+            {
+                count += item.SeamLength;
+            }
+
+            seamtotal = count-geolist.Last().SeamLength;
             if (DGVGeo.CurrentRow.Cells["SeamNo"].Value != null)
             {
                 geo.SeamNo = DGVGeo.CurrentRow.Cells["SeamNo"].Value.ToString();
@@ -142,7 +170,7 @@ namespace Mine.Views
             geo.WedgeTemp = Convert.ToInt32(DGVGeo.CurrentRow.Cells["WedgeTemp"].Value);
             geo.WedgeSpeed = Convert.ToDouble(DGVGeo.CurrentRow.Cells["WedgeSpeed"].Value);
             geo.SeamLength = Convert.ToDouble(DGVGeo.CurrentRow.Cells["SeamLength"].Value);
-            geo.CarryOver = Convert.ToSingle(DGVGeo.CurrentRow.Cells["CarryOver"].Value);
+            geo.CarryOver = seamtotal + Convert.ToDouble(DGVGeo.CurrentRow.Cells["SeamLength"].Value);
 
             if (DGVGeo.CurrentRow.Cells["Destructive"].Value != null)
             {
