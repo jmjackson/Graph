@@ -25,6 +25,7 @@ namespace Mine.Views
         private void DevForm_Load(object sender, EventArgs e)
         {
             DGVFill();
+
         }
 
        

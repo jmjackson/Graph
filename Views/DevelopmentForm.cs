@@ -83,7 +83,7 @@ namespace Mine.Views
                 {
                     dev.Remarks = " ";
                 }
-                dev.ProjectDevId = pdev.ProjectId;
+                dev.ProjectDevId = pdev.Id;
                 db.Developments.Add(dev);
                 db.SaveChanges();
 
@@ -171,7 +171,13 @@ namespace Mine.Views
             this.Close();
         }
 
-    
+        private void SeamingButton_Click(object sender, EventArgs e)
+        {
+            GeomembraneForm geo = new GeomembraneForm(proDevId);
+            geo.Show();
+            this.Close();
+
+        }
 
         
     }

@@ -233,5 +233,12 @@ namespace Mine.Views
         {
             this.Close();
         }
+
+        private void DeploymentBtn_Click(object sender, EventArgs e)
+        {
+            DevelopmentForm df = new DevelopmentForm(pdId);
+            df.Show();
+            this.Close();
+        }
     }
 }

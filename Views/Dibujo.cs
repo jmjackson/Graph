@@ -42,6 +42,7 @@ namespace Mine.Views
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
+           
 
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
@@ -62,6 +63,13 @@ namespace Mine.Views
             DgCordenada.Rows.Add("South to north","S-N");
             DgCordenada.Rows.Add("West to east", "W-E");
 
+            if (Pn.ImageDev!=null)
+            {
+                var picture = Convert.ToBase64String(Pn.ImageDev);
+                PbLienzo.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(picture)));
+            }
+
+            
         }
 
         //Reset tools
@@ -87,76 +95,19 @@ namespace Mine.Views
 
         private void BntSave_Click_1(object sender, EventArgs e)
         {
-            ////----------------------------------------------------------------------------------
-            //Bitmap bmp = (Bitmap)PbLienzo.Image;
-
-            ////saveFileDialog1.FileName = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
-
-            ////saveFileDialog1.Filter = "Excel files (*.jpg)|*.jpg";
-
-            ////saveFileDialog1.RestoreDirectory = true;
-
-            ////if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            ////{
-            ////    PbLienzo.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
-            ////}
-
-            ////PbLienzo.Image.Save(@"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images\yyyy_MM_dd_HHmmss.Jpeg", ImageFormat.Png);
-
-            //var path = @"Resources/images/draw/";
-            //if (!Directory.Exists(path))
-            //{
-            //    Directory.CreateDirectory(path);
-            //}
-
-            ////string panth = @"C:\Users\jesus\source\repos\Graph\bin\Debug\Resources\images";
-            //PbLienzo.Image.Save(path + DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ") + ".png", ImageFormat.Png);
-            ////------------------------------------------------------------------------------------------------------------------
-            ///
+            
 
             try
             {
-                //Nombre del img guardada
-                var cd = DateTime.Now.ToString(" yyyy_MM_dd_HHmmss ");
-                //dirrecion de donde se va a guardar
-                var path = @"Resources/images/draw/";
-                //Declarado como string dirrecion y Nombre
-                string img = path + cd + "_Draw.jpg";
-                if (PbLienzo.Image != null)
+                var dp = db.ProjectDevs.Find(pdId);
+                Image img = PbLienzo.Image as Image;
+                byte[] imgs;
+                using(MemoryStream m=new MemoryStream())
                 {
-                    if (Directory.Exists(path))
-                    {
-                        //si existe se guardad 
-                        PbLienzo.Image.Save(img);
-                    }
-                    else
-                    {
-                        //si no existe se Crea
-                        Directory.CreateDirectory(path);
-                        PbLienzo.Image.Save(img);
-                    }
-
+                    img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
+                    imgs = m.ToArray();
                 }
-                ////No se que hace ?????????
-                else
-                {
-                    if (File.Exists(path + "empresa.png"))
-                    {
-                        img = path + "empresa.png";
-                    }
-                    else
-                    {
-                        PbLienzo.Image.Save(path + "empresa.png");
-                        img = path + "empresa.png";
-                    }
-                }
-                //se manda a llamar la inforrmacion de bd para agregarle la informacion
-                var ig = new ProjectDev()
-                {
-                    ImageMap = img
-                };
-
-                db.ProjectDevs.Add(ig);
+                dp.ImageDev = imgs;
                 db.SaveChanges();
             }
             catch (Exception ex)

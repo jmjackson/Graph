@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevelopmentForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
@@ -41,6 +42,7 @@
             this.PBPicture = new System.Windows.Forms.PictureBox();
             this.LblTitle = new MetroFramework.Controls.MetroLabel();
             this.PanelAdd = new MetroFramework.Controls.MetroPanel();
+            this.SeamingButton = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.BtnEdit = new FontAwesome.Sharp.IconButton();
             this.BtnAdd = new FontAwesome.Sharp.IconButton();
@@ -55,6 +57,8 @@
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGVDev = new System.Windows.Forms.DataGridView();
+            this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BElipse = new ns1.BunifuElipse(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,8 +70,6 @@
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectDev = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BElipse = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             this.PanelAdd.SuspendLayout();
             this.PanelHeader.SuspendLayout();
@@ -163,6 +165,7 @@
             // 
             // PanelAdd
             // 
+            this.PanelAdd.Controls.Add(this.SeamingButton);
             this.PanelAdd.Controls.Add(this.iconButton3);
             this.PanelAdd.Controls.Add(this.BtnEdit);
             this.PanelAdd.Controls.Add(this.BtnAdd);
@@ -179,6 +182,25 @@
             this.PanelAdd.VerticalScrollbarBarColor = true;
             this.PanelAdd.VerticalScrollbarHighlightOnWheel = false;
             this.PanelAdd.VerticalScrollbarSize = 10;
+            // 
+            // SeamingButton
+            // 
+            this.SeamingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.SeamingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SeamingButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.SeamingButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeamingButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SeamingButton.IconColor = System.Drawing.Color.Black;
+            this.SeamingButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SeamingButton.IconSize = 48;
+            this.SeamingButton.Location = new System.Drawing.Point(615, 27);
+            this.SeamingButton.Name = "SeamingButton";
+            this.SeamingButton.Rotation = 0D;
+            this.SeamingButton.Size = new System.Drawing.Size(153, 58);
+            this.SeamingButton.TabIndex = 16;
+            this.SeamingButton.Text = "Seaming";
+            this.SeamingButton.UseVisualStyleBackColor = false;
+            this.SeamingButton.Click += new System.EventHandler(this.SeamingButton_Click);
             // 
             // iconButton3
             // 
@@ -398,19 +420,28 @@
             this.ProjectDevId,
             this.ProjectDev});
             this.DGVDev.DataSource = this.developmentBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVDev.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDev.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVDev.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVDev.Location = new System.Drawing.Point(0, 0);
             this.DGVDev.Name = "DGVDev";
             this.DGVDev.Size = new System.Drawing.Size(1386, 435);
             this.DGVDev.TabIndex = 0;
+            // 
+            // developmentBindingSource
+            // 
+            this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
+            // 
+            // BElipse
+            // 
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
             // 
             // Id
             // 
@@ -460,9 +491,13 @@
             // 
             this.Thickness.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Thickness.DataPropertyName = "Thickness";
+            dataGridViewCellStyle2.NullValue = "Thickness";
+            this.Thickness.DefaultCellStyle = dataGridViewCellStyle2;
             this.Thickness.HeaderText = "Thickness";
             this.Thickness.Items.AddRange(new object[] {
-            "80 mm"});
+            "80 mil",
+            "60 mil",
+            "40 mil"});
             this.Thickness.Name = "Thickness";
             this.Thickness.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Thickness.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -497,15 +532,6 @@
             this.ProjectDev.HeaderText = "ProjectDev";
             this.ProjectDev.Name = "ProjectDev";
             this.ProjectDev.Visible = false;
-            // 
-            // developmentBindingSource
-            // 
-            this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
-            // 
-            // BElipse
-            // 
-            this.BElipse.ElipseRadius = 5;
-            this.BElipse.TargetControl = this;
             // 
             // DevelopmentForm
             // 
@@ -560,6 +586,7 @@
         private FontAwesome.Sharp.IconButton BtnClose;
         private System.Windows.Forms.DataGridView DGVDev;
         private System.Windows.Forms.BindingSource developmentBindingSource;
+        private FontAwesome.Sharp.IconButton SeamingButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeploymentDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
