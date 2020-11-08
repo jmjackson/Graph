@@ -42,9 +42,9 @@
             this.CbClients.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.CbClients.FormattingEnabled = true;
             this.CbClients.ItemHeight = 29;
-            this.CbClients.Location = new System.Drawing.Point(61, 129);
+            this.CbClients.Location = new System.Drawing.Point(66, 141);
             this.CbClients.Name = "CbClients";
-            this.CbClients.Size = new System.Drawing.Size(519, 35);
+            this.CbClients.Size = new System.Drawing.Size(608, 35);
             this.CbClients.TabIndex = 0;
             this.CbClients.UseSelectable = true;
             // 
@@ -54,7 +54,7 @@
             this.BtnYes.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnYes.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.BtnYes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnYes.Location = new System.Drawing.Point(158, 223);
+            this.BtnYes.Location = new System.Drawing.Point(171, 244);
             this.BtnYes.Name = "BtnYes";
             this.BtnYes.Size = new System.Drawing.Size(156, 51);
             this.BtnYes.TabIndex = 1;
@@ -69,7 +69,7 @@
             this.BtnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
             this.BtnNo.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnNo.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnNo.Location = new System.Drawing.Point(341, 223);
+            this.BtnNo.Location = new System.Drawing.Point(354, 244);
             this.BtnNo.Name = "BtnNo";
             this.BtnNo.Size = new System.Drawing.Size(156, 51);
             this.BtnNo.TabIndex = 1;
@@ -113,11 +113,11 @@
             this.BtnClose.IconColor = System.Drawing.Color.Red;
             this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.BtnClose.IconSize = 36;
-            this.BtnClose.Location = new System.Drawing.Point(713, 9);
+            this.BtnClose.Location = new System.Drawing.Point(714, 9);
             this.BtnClose.Margin = new System.Windows.Forms.Padding(0);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Rotation = 0D;
-            this.BtnClose.Size = new System.Drawing.Size(35, 32);
+            this.BtnClose.Size = new System.Drawing.Size(34, 34);
             this.BtnClose.TabIndex = 6;
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
@@ -126,7 +126,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 303);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(759, 325);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -139,6 +140,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ModalProject";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.ModalProject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
