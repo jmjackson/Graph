@@ -82,11 +82,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(61, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(483, 32);
+            this.label1.Size = new System.Drawing.Size(429, 30);
             this.label1.TabIndex = 3;
             this.label1.Text = "Choice the Client for add or modify a project.";
             // 
@@ -113,7 +113,7 @@
             this.BtnClose.IconColor = System.Drawing.Color.Red;
             this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.BtnClose.IconSize = 36;
-            this.BtnClose.Location = new System.Drawing.Point(603, 9);
+            this.BtnClose.Location = new System.Drawing.Point(713, 9);
             this.BtnClose.Margin = new System.Windows.Forms.Padding(0);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Rotation = 0D;
@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 303);
+            this.ClientSize = new System.Drawing.Size(759, 303);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
