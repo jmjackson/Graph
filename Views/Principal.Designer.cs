@@ -41,11 +41,11 @@
             this.TileInspection = new ns1.BunifuTileButton();
             this.BElipse = new ns1.BunifuElipse(this.components);
             this.PanelHead = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.PanelContent = new System.Windows.Forms.Panel();
             this.PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.PanelHead.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.PanelContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelLeft
@@ -58,7 +58,7 @@
             this.PanelLeft.Controls.Add(this.BtnConfig);
             this.PanelLeft.Location = new System.Drawing.Point(0, 306);
             this.PanelLeft.Name = "PanelLeft";
-            this.PanelLeft.Size = new System.Drawing.Size(292, 339);
+            this.PanelLeft.Size = new System.Drawing.Size(292, 482);
             this.PanelLeft.TabIndex = 0;
             // 
             // BtnOther
@@ -148,7 +148,7 @@
             this.BtnExit.IconColor = System.Drawing.Color.White;
             this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnExit.IconSize = 48;
-            this.BtnExit.Location = new System.Drawing.Point(922, 567);
+            this.BtnExit.Location = new System.Drawing.Point(993, 710);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Rotation = 0D;
             this.BtnExit.Size = new System.Drawing.Size(99, 66);
@@ -169,10 +169,10 @@
             this.TileClient.ImageZoom = 50;
             this.TileClient.LabelPosition = 55;
             this.TileClient.LabelText = "Clients";
-            this.TileClient.Location = new System.Drawing.Point(67, 99);
+            this.TileClient.Location = new System.Drawing.Point(61, 198);
             this.TileClient.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.TileClient.Name = "TileClient";
-            this.TileClient.Size = new System.Drawing.Size(293, 352);
+            this.TileClient.Size = new System.Drawing.Size(421, 352);
             this.TileClient.TabIndex = 5;
             this.TileClient.Click += new System.EventHandler(this.TileClient_Click_1);
             // 
@@ -189,7 +189,7 @@
             this.TileProject.ImageZoom = 50;
             this.TileProject.LabelPosition = 55;
             this.TileProject.LabelText = "Project";
-            this.TileProject.Location = new System.Drawing.Point(388, 99);
+            this.TileProject.Location = new System.Drawing.Point(505, 198);
             this.TileProject.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.TileProject.Name = "TileProject";
             this.TileProject.Size = new System.Drawing.Size(293, 352);
@@ -209,7 +209,7 @@
             this.TileInspection.ImageZoom = 50;
             this.TileInspection.LabelPosition = 55;
             this.TileInspection.LabelText = "Inspection";
-            this.TileInspection.Location = new System.Drawing.Point(708, 99);
+            this.TileInspection.Location = new System.Drawing.Point(812, 198);
             this.TileInspection.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.TileInspection.Name = "TileInspection";
             this.TileInspection.Size = new System.Drawing.Size(293, 352);
@@ -230,27 +230,27 @@
             this.PanelHead.Size = new System.Drawing.Size(292, 306);
             this.PanelHead.TabIndex = 8;
             // 
-            // panel1
+            // PanelContent
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PanelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.TileProject);
-            this.panel1.Controls.Add(this.TileClient);
-            this.panel1.Controls.Add(this.BtnExit);
-            this.panel1.Controls.Add(this.TileInspection);
-            this.panel1.Location = new System.Drawing.Point(282, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1034, 645);
-            this.panel1.TabIndex = 9;
+            this.PanelContent.BackColor = System.Drawing.Color.White;
+            this.PanelContent.Controls.Add(this.TileProject);
+            this.PanelContent.Controls.Add(this.TileClient);
+            this.PanelContent.Controls.Add(this.BtnExit);
+            this.PanelContent.Controls.Add(this.TileInspection);
+            this.PanelContent.Location = new System.Drawing.Point(282, 0);
+            this.PanelContent.Name = "PanelContent";
+            this.PanelContent.Size = new System.Drawing.Size(1105, 788);
+            this.PanelContent.TabIndex = 9;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1315, 645);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.PanelContent);
             this.Controls.Add(this.PanelHead);
             this.Controls.Add(this.PanelLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -261,7 +261,7 @@
             this.PanelLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             this.PanelHead.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.PanelContent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -279,6 +279,6 @@
         private ns1.BunifuTileButton TileInspection;
         private ns1.BunifuElipse BElipse;
         private System.Windows.Forms.Panel PanelHead;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelContent;
     }
 }
