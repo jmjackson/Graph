@@ -47,7 +47,7 @@ namespace Mine.Views
 
             LblId.Text = "Id : "+client.Id.ToString();
             LblRCode.Text = "Code : " +client.Code;
-            LblRCName.Text = client.Name;
+            LblRCName.Text = "Name : "+client.Name;
             if (client.ImgCl!=null)
             {
                 var bimg = Convert.ToBase64String(client.ImgCl);
