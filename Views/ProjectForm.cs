@@ -45,7 +45,7 @@ namespace Mine.Views
                 DGVProject.DataSource = pr;
             }
 
-            LblRId.Text = client.Id.ToString();
+            LblRId.Text = "Id "+client.Id.ToString();
             LblRCode.Text = client.Code;
             LblRCName.Text = client.Name;
             if (client.ImgCl!=null)
