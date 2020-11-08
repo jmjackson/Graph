@@ -67,7 +67,7 @@
             this.BtnOther.FlatAppearance.BorderSize = 0;
             this.BtnOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOther.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnOther.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOther.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOther.ForeColor = System.Drawing.Color.White;
             this.BtnOther.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
             this.BtnOther.IconColor = System.Drawing.Color.White;
@@ -89,7 +89,7 @@
             this.BtnLogout.FlatAppearance.BorderSize = 0;
             this.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogout.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnLogout.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogout.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogout.ForeColor = System.Drawing.Color.White;
             this.BtnLogout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.BtnLogout.IconColor = System.Drawing.Color.White;
@@ -111,7 +111,7 @@
             this.BtnConfig.FlatAppearance.BorderSize = 0;
             this.BtnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfig.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnConfig.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConfig.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConfig.ForeColor = System.Drawing.Color.White;
             this.BtnConfig.IconChar = FontAwesome.Sharp.IconChar.Sun;
             this.BtnConfig.IconColor = System.Drawing.Color.White;
