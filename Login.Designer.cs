@@ -48,7 +48,7 @@
             this.BtnAccess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnAccess.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnAccess.ForeColor = System.Drawing.Color.White;
-            this.BtnAccess.Location = new System.Drawing.Point(360, 501);
+            this.BtnAccess.Location = new System.Drawing.Point(360, 550);
             this.BtnAccess.Name = "BtnAccess";
             this.BtnAccess.Size = new System.Drawing.Size(151, 51);
             this.BtnAccess.TabIndex = 2;
@@ -94,7 +94,7 @@
             // 
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(73, 371);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(73, 397);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(112, 32);
             this.bunifuCustomLabel2.TabIndex = 5;
@@ -140,7 +140,7 @@
             // TxtUser
             // 
             this.TxtUser.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUser.Location = new System.Drawing.Point(78, 317);
+            this.TxtUser.Location = new System.Drawing.Point(78, 329);
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(433, 39);
             this.TxtUser.TabIndex = 0;
@@ -148,7 +148,7 @@
             // TxtPassword
             // 
             this.TxtPassword.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPassword.Location = new System.Drawing.Point(78, 411);
+            this.TxtPassword.Location = new System.Drawing.Point(78, 444);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(433, 39);
             this.TxtPassword.TabIndex = 1;
@@ -158,7 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(598, 574);
+            this.ClientSize = new System.Drawing.Size(598, 628);
             this.Controls.Add(this.TxtPassword);
             this.Controls.Add(this.TxtUser);
             this.Controls.Add(this.BtnClose);
