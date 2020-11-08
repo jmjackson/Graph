@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Mine.Modal
 {
-    public partial class ModalProject : MetroFramework.Forms.MetroForm
+    public partial class ModalProject : Form
     {
         public  int Cb { get; set; }
         public ModalProject()
@@ -37,6 +37,11 @@ namespace Mine.Modal
         }
 
         private void BtnNo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
