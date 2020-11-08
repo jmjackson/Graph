@@ -20,7 +20,7 @@ namespace Mine
 
         private void BtnAccess_Click(object sender, EventArgs e)
         {
-            if (TxtUser.Text == "admin" && TxtPassword.Text == "123")
+            if (TxtPassword.Text == "admin" && TxtPassword.Text == "123")
             {
                 Principal p = new Principal();
                 p.Show();

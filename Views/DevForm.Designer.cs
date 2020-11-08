@@ -68,6 +68,7 @@
             this.DGVDev.AllowUserToAddRows = false;
             this.DGVDev.AllowUserToDeleteRows = false;
             this.DGVDev.AllowUserToResizeRows = false;
+            this.DGVDev.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGVDev.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DGVDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVDev.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;

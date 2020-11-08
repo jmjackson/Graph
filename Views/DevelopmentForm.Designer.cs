@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevelopmentForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
@@ -57,8 +58,8 @@
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGVDev = new System.Windows.Forms.DataGridView();
-            this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BElipse = new ns1.BunifuElipse(this.components);
+            this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -429,19 +430,28 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVDev.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVDev.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVDev.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.DGVDev.Location = new System.Drawing.Point(0, 0);
             this.DGVDev.Name = "DGVDev";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVDev.Size = new System.Drawing.Size(1386, 435);
             this.DGVDev.TabIndex = 0;
-            // 
-            // developmentBindingSource
-            // 
-            this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
             // 
             // BElipse
             // 
             this.BElipse.ElipseRadius = 5;
             this.BElipse.TargetControl = this;
+            // 
+            // developmentBindingSource
+            // 
+            this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
             // 
             // Id
             // 
@@ -491,8 +501,11 @@
             // 
             this.Thickness.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Thickness.DataPropertyName = "Thickness";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.NullValue = "Thickness";
             this.Thickness.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Thickness.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Thickness.HeaderText = "Thickness";
             this.Thickness.Items.AddRange(new object[] {
             "80 mil",

@@ -98,7 +98,7 @@ namespace Mine.Views
                     DGVDev.Refresh();
                 }
 
-
+                DevForm_Load(sender, e);
             }
             catch (Exception ex)
             {
