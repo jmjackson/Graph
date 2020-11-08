@@ -56,20 +56,22 @@
             this.ReportDevView.LocalReport.DataSources.Add(reportDataSource3);
             this.ReportDevView.LocalReport.ReportEmbeddedResource = "Mine.Views.ReportViewDeploy.rdlc";
             this.ReportDevView.Location = new System.Drawing.Point(0, 0);
+            this.ReportDevView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ReportDevView.Name = "ReportDevView";
             this.ReportDevView.ServerReport.BearerToken = null;
-            this.ReportDevView.Size = new System.Drawing.Size(928, 493);
+            this.ReportDevView.Size = new System.Drawing.Size(1392, 758);
             this.ReportDevView.TabIndex = 0;
             this.ReportDevView.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // ReportDev
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(928, 493);
+            this.ClientSize = new System.Drawing.Size(1392, 758);
             this.Controls.Add(this.ReportDevView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ReportDev";
             this.Text = "ReportDev";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
