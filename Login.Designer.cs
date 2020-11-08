@@ -143,7 +143,7 @@
             this.TxtUser.Location = new System.Drawing.Point(78, 317);
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(433, 39);
-            this.TxtUser.TabIndex = 6;
+            this.TxtUser.TabIndex = 0;
             // 
             // TxtPassword
             // 
@@ -151,7 +151,7 @@
             this.TxtPassword.Location = new System.Drawing.Point(78, 411);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(433, 39);
-            this.TxtPassword.TabIndex = 6;
+            this.TxtPassword.TabIndex = 1;
             // 
             // Login
             // 
