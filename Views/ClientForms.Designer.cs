@@ -149,7 +149,7 @@
             this.BtnAdd.IconColor = System.Drawing.Color.White;
             this.BtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAdd.IconSize = 25;
-            this.BtnAdd.Location = new System.Drawing.Point(11, 23);
+            this.BtnAdd.Location = new System.Drawing.Point(12, 7);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Rotation = 0D;
             this.BtnAdd.Size = new System.Drawing.Size(162, 65);
@@ -171,7 +171,7 @@
             this.BtnDelete.IconColor = System.Drawing.Color.White;
             this.BtnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnDelete.IconSize = 25;
-            this.BtnDelete.Location = new System.Drawing.Point(197, 23);
+            this.BtnDelete.Location = new System.Drawing.Point(198, 8);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Rotation = 0D;
             this.BtnDelete.Size = new System.Drawing.Size(153, 65);

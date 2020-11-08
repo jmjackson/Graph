@@ -79,10 +79,10 @@
             this.BtnSave.IconColor = System.Drawing.Color.Black;
             this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 16;
-            this.BtnSave.Location = new System.Drawing.Point(57, 365);
+            this.BtnSave.Location = new System.Drawing.Point(77, 424);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
-            this.BtnSave.Size = new System.Drawing.Size(134, 47);
+            this.BtnSave.Size = new System.Drawing.Size(134, 56);
             this.BtnSave.TabIndex = 3;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
@@ -100,10 +100,10 @@
             this.BtnCancel.IconColor = System.Drawing.Color.Black;
             this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 16;
-            this.BtnCancel.Location = new System.Drawing.Point(197, 365);
+            this.BtnCancel.Location = new System.Drawing.Point(229, 424);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
-            this.BtnCancel.Size = new System.Drawing.Size(130, 47);
+            this.BtnCancel.Size = new System.Drawing.Size(134, 56);
             this.BtnCancel.TabIndex = 4;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = false;
@@ -114,7 +114,7 @@
             this.PbClient.Image = ((System.Drawing.Image)(resources.GetObject("PbClient.Image")));
             this.PbClient.Location = new System.Drawing.Point(57, 246);
             this.PbClient.Name = "PbClient";
-            this.PbClient.Size = new System.Drawing.Size(122, 95);
+            this.PbClient.Size = new System.Drawing.Size(189, 124);
             this.PbClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbClient.TabIndex = 3;
             this.PbClient.TabStop = false;
@@ -125,7 +125,7 @@
             this.BtnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBrowse.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBrowse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnBrowse.Location = new System.Drawing.Point(197, 246);
+            this.BtnBrowse.Location = new System.Drawing.Point(298, 246);
             this.BtnBrowse.Name = "BtnBrowse";
             this.BtnBrowse.Size = new System.Drawing.Size(130, 48);
             this.BtnBrowse.TabIndex = 2;
@@ -138,15 +138,15 @@
             this.TxtCode.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCode.Location = new System.Drawing.Point(57, 105);
             this.TxtCode.Name = "TxtCode";
-            this.TxtCode.Size = new System.Drawing.Size(270, 33);
+            this.TxtCode.Size = new System.Drawing.Size(371, 33);
             this.TxtCode.TabIndex = 0;
             // 
             // TxtName
             // 
             this.TxtName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtName.Location = new System.Drawing.Point(57, 194);
+            this.TxtName.Location = new System.Drawing.Point(57, 189);
             this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(270, 33);
+            this.TxtName.Size = new System.Drawing.Size(371, 33);
             this.TxtName.TabIndex = 1;
             // 
             // OFDialog
@@ -170,7 +170,7 @@
             this.BtnClose.IconColor = System.Drawing.Color.Red;
             this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.BtnClose.IconSize = 36;
-            this.BtnClose.Location = new System.Drawing.Point(354, 9);
+            this.BtnClose.Location = new System.Drawing.Point(475, 9);
             this.BtnClose.Margin = new System.Windows.Forms.Padding(0);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Rotation = 0D;
@@ -191,7 +191,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(398, 457);
+            this.ClientSize = new System.Drawing.Size(519, 540);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.TxtCode);
