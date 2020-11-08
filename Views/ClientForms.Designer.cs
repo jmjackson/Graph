@@ -64,6 +64,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.GDVClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.GDVClients.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.GDVClients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.GDVClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GDVClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
