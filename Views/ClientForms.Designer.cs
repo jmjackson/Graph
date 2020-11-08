@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -60,7 +61,6 @@
             // 
             this.GDVClients.AllowUserToAddRows = false;
             this.GDVClients.AllowUserToDeleteRows = false;
-            this.GDVClients.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.GDVClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -106,6 +106,11 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.GDVClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.GDVClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.GDVClients.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.GDVClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GDVClients.Size = new System.Drawing.Size(918, 464);
             this.GDVClients.TabIndex = 0;
@@ -152,7 +157,7 @@
             this.BtnAdd.Location = new System.Drawing.Point(12, 7);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Rotation = 0D;
-            this.BtnAdd.Size = new System.Drawing.Size(162, 65);
+            this.BtnAdd.Size = new System.Drawing.Size(191, 65);
             this.BtnAdd.TabIndex = 2;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -171,10 +176,10 @@
             this.BtnDelete.IconColor = System.Drawing.Color.White;
             this.BtnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnDelete.IconSize = 25;
-            this.BtnDelete.Location = new System.Drawing.Point(198, 8);
+            this.BtnDelete.Location = new System.Drawing.Point(240, 8);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Rotation = 0D;
-            this.BtnDelete.Size = new System.Drawing.Size(153, 65);
+            this.BtnDelete.Size = new System.Drawing.Size(182, 65);
             this.BtnDelete.TabIndex = 2;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
