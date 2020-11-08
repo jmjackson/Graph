@@ -172,7 +172,7 @@
             this.TileClient.Location = new System.Drawing.Point(61, 198);
             this.TileClient.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.TileClient.Name = "TileClient";
-            this.TileClient.Size = new System.Drawing.Size(421, 352);
+            this.TileClient.Size = new System.Drawing.Size(381, 352);
             this.TileClient.TabIndex = 5;
             this.TileClient.Click += new System.EventHandler(this.TileClient_Click_1);
             // 
@@ -189,10 +189,10 @@
             this.TileProject.ImageZoom = 50;
             this.TileProject.LabelPosition = 55;
             this.TileProject.LabelText = "Project";
-            this.TileProject.Location = new System.Drawing.Point(505, 198);
+            this.TileProject.Location = new System.Drawing.Point(468, 198);
             this.TileProject.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.TileProject.Name = "TileProject";
-            this.TileProject.Size = new System.Drawing.Size(293, 352);
+            this.TileProject.Size = new System.Drawing.Size(381, 352);
             this.TileProject.TabIndex = 6;
             this.TileProject.Click += new System.EventHandler(this.TileProject_Click_1);
             // 
@@ -209,10 +209,10 @@
             this.TileInspection.ImageZoom = 50;
             this.TileInspection.LabelPosition = 55;
             this.TileInspection.LabelText = "Inspection";
-            this.TileInspection.Location = new System.Drawing.Point(812, 198);
+            this.TileInspection.Location = new System.Drawing.Point(877, 198);
             this.TileInspection.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.TileInspection.Name = "TileInspection";
-            this.TileInspection.Size = new System.Drawing.Size(293, 352);
+            this.TileInspection.Size = new System.Drawing.Size(381, 352);
             this.TileInspection.TabIndex = 7;
             this.TileInspection.Click += new System.EventHandler(this.TileInspection_Click_1);
             // 
