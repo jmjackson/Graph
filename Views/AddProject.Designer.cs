@@ -83,7 +83,7 @@
             // TxtGeosynthetic
             // 
             this.TxtGeosynthetic.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtGeosynthetic.Location = new System.Drawing.Point(56, 317);
+            this.TxtGeosynthetic.Location = new System.Drawing.Point(56, 327);
             this.TxtGeosynthetic.Name = "TxtGeosynthetic";
             this.TxtGeosynthetic.Size = new System.Drawing.Size(319, 39);
             this.TxtGeosynthetic.TabIndex = 4;
