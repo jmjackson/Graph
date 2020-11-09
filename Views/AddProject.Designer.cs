@@ -122,7 +122,7 @@
             this.BtnCancel.IconColor = System.Drawing.Color.White;
             this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 25;
-            this.BtnCancel.Location = new System.Drawing.Point(554, 434);
+            this.BtnCancel.Location = new System.Drawing.Point(515, 434);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
             this.BtnCancel.Size = new System.Drawing.Size(172, 56);
@@ -226,7 +226,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(892, 594);
+            this.ClientSize = new System.Drawing.Size(892, 533);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
