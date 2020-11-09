@@ -79,7 +79,7 @@
             this.DGVProject.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -95,7 +95,7 @@
             this.Geosynthetic});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -110,18 +110,20 @@
             this.DGVProject.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGVProject.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVProject.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.DGVProject.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVProject.Size = new System.Drawing.Size(1386, 588);
+            this.DGVProject.Size = new System.Drawing.Size(1386, 585);
             this.DGVProject.Style = MetroFramework.MetroColorStyle.Blue;
             this.DGVProject.TabIndex = 4;
             // 
@@ -195,9 +197,9 @@
             this.PanelFoot.Controls.Add(this.BtnBack);
             this.PanelFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelFoot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PanelFoot.Location = new System.Drawing.Point(0, 688);
+            this.PanelFoot.Location = new System.Drawing.Point(0, 685);
             this.PanelFoot.Name = "PanelFoot";
-            this.PanelFoot.Size = new System.Drawing.Size(1386, 100);
+            this.PanelFoot.Size = new System.Drawing.Size(1386, 103);
             this.PanelFoot.TabIndex = 11;
             // 
             // BtnDelete
@@ -210,10 +212,10 @@
             this.BtnDelete.IconColor = System.Drawing.Color.White;
             this.BtnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnDelete.IconSize = 25;
-            this.BtnDelete.Location = new System.Drawing.Point(428, 36);
+            this.BtnDelete.Location = new System.Drawing.Point(380, 19);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Rotation = 0D;
-            this.BtnDelete.Size = new System.Drawing.Size(145, 45);
+            this.BtnDelete.Size = new System.Drawing.Size(159, 56);
             this.BtnDelete.TabIndex = 10;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -231,10 +233,10 @@
             this.BtnCreate.IconColor = System.Drawing.Color.White;
             this.BtnCreate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCreate.IconSize = 25;
-            this.BtnCreate.Location = new System.Drawing.Point(251, 36);
+            this.BtnCreate.Location = new System.Drawing.Point(172, 19);
             this.BtnCreate.Name = "BtnCreate";
             this.BtnCreate.Rotation = 0D;
-            this.BtnCreate.Size = new System.Drawing.Size(146, 45);
+            this.BtnCreate.Size = new System.Drawing.Size(160, 56);
             this.BtnCreate.TabIndex = 10;
             this.BtnCreate.Text = "Add";
             this.BtnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -252,7 +254,7 @@
             this.BtnExit.IconColor = System.Drawing.Color.White;
             this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnExit.IconSize = 48;
-            this.BtnExit.Location = new System.Drawing.Point(1275, 22);
+            this.BtnExit.Location = new System.Drawing.Point(1275, 25);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Rotation = 0D;
             this.BtnExit.Size = new System.Drawing.Size(99, 66);
@@ -271,7 +273,7 @@
             this.BtnBack.IconColor = System.Drawing.Color.White;
             this.BtnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnBack.IconSize = 48;
-            this.BtnBack.Location = new System.Drawing.Point(1170, 22);
+            this.BtnBack.Location = new System.Drawing.Point(1170, 25);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Rotation = 0D;
             this.BtnBack.Size = new System.Drawing.Size(99, 66);
@@ -285,7 +287,7 @@
             this.PanelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelBody.Location = new System.Drawing.Point(0, 100);
             this.PanelBody.Name = "PanelBody";
-            this.PanelBody.Size = new System.Drawing.Size(1386, 588);
+            this.PanelBody.Size = new System.Drawing.Size(1386, 585);
             this.PanelBody.TabIndex = 12;
             // 
             // LblId
