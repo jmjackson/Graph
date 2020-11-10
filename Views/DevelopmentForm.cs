@@ -33,12 +33,12 @@ namespace Mine.Views
         private void DevelopmentForm_Load(object sender, EventArgs e)
         {
             var pdev = db.ProjectDevs.Include(a => a.Project.Client).Include(a => a.Project).Where(a => a.Id == proDevId).FirstOrDefault();
-            LblRClient.Text = pdev.Project.Client.Name;
-            LblRContractor.Text = pdev.Project.Contractor;
-            LblRGeosyntetic.Text = pdev.Project.GeoSynthetic;
-            LblRProject.Text = pdev.Project.PName;
-            LblRProjectNo.Text = pdev.Project.ProjectNo;
-            LblRSupplier.Text = pdev.Project.Supplier;
+            LblClient.Text = "Client : "+ pdev.Project.Client.Name;
+            LblContractor.Text = "Contractor : "+pdev.Project.Contractor;
+            LblGeoSynthetic.Text ="Geosynthetic : "+ pdev.Project.GeoSynthetic;
+            LblProject.Text = "Project : "+ pdev.Project.PName;
+            LblProjectNo.Text = "Project No : "+ pdev.Project.ProjectNo;
+            LblSupplier.Text = "Supplier : "+ pdev.Project.Supplier;
             
             if (pdev.Project.Client.ImgCl != null)
             {

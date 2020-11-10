@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevelopmentForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
@@ -48,29 +47,12 @@
             this.BtnEdit = new FontAwesome.Sharp.IconButton();
             this.BtnAdd = new FontAwesome.Sharp.IconButton();
             this.BtnPDF = new MetroFramework.Controls.MetroButton();
-            this.LblRClient = new MetroFramework.Controls.MetroLabel();
-            this.LblRProject = new MetroFramework.Controls.MetroLabel();
-            this.LblRProjectNo = new MetroFramework.Controls.MetroLabel();
-            this.LblRContractor = new MetroFramework.Controls.MetroLabel();
-            this.LblRSupplier = new MetroFramework.Controls.MetroLabel();
-            this.LblRGeosyntetic = new MetroFramework.Controls.MetroLabel();
             this.PanelHeader = new MetroFramework.Controls.MetroPanel();
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGVDev = new System.Windows.Forms.DataGridView();
-            this.BElipse = new ns1.BunifuElipse(this.components);
             this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thickness = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectDev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BElipse = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             this.PanelAdd.SuspendLayout();
             this.PanelHeader.SuspendLayout();
@@ -113,7 +95,7 @@
             // 
             this.LblContractor.AutoSize = true;
             this.LblContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblContractor.Location = new System.Drawing.Point(363, 13);
+            this.LblContractor.Location = new System.Drawing.Point(458, 13);
             this.LblContractor.Name = "LblContractor";
             this.LblContractor.Size = new System.Drawing.Size(97, 25);
             this.LblContractor.TabIndex = 0;
@@ -123,7 +105,7 @@
             // 
             this.LblGeoSynthetic.AutoSize = true;
             this.LblGeoSynthetic.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblGeoSynthetic.Location = new System.Drawing.Point(347, 90);
+            this.LblGeoSynthetic.Location = new System.Drawing.Point(442, 90);
             this.LblGeoSynthetic.Name = "LblGeoSynthetic";
             this.LblGeoSynthetic.Size = new System.Drawing.Size(113, 25);
             this.LblGeoSynthetic.TabIndex = 0;
@@ -133,7 +115,7 @@
             // 
             this.LblSupplier.AutoSize = true;
             this.LblSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblSupplier.Location = new System.Drawing.Point(381, 52);
+            this.LblSupplier.Location = new System.Drawing.Point(476, 52);
             this.LblSupplier.Name = "LblSupplier";
             this.LblSupplier.Size = new System.Drawing.Size(79, 25);
             this.LblSupplier.TabIndex = 0;
@@ -272,85 +254,13 @@
             this.BtnPDF.UseSelectable = true;
             this.BtnPDF.Click += new System.EventHandler(this.BtnPDF_Click);
             // 
-            // LblRClient
-            // 
-            this.LblRClient.AutoSize = true;
-            this.LblRClient.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRClient.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRClient.Location = new System.Drawing.Point(180, 12);
-            this.LblRClient.Name = "LblRClient";
-            this.LblRClient.Size = new System.Drawing.Size(60, 25);
-            this.LblRClient.TabIndex = 18;
-            this.LblRClient.Text = "Metro";
-            // 
-            // LblRProject
-            // 
-            this.LblRProject.AutoSize = true;
-            this.LblRProject.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRProject.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRProject.Location = new System.Drawing.Point(180, 52);
-            this.LblRProject.Name = "LblRProject";
-            this.LblRProject.Size = new System.Drawing.Size(60, 25);
-            this.LblRProject.TabIndex = 18;
-            this.LblRProject.Text = "Metro";
-            // 
-            // LblRProjectNo
-            // 
-            this.LblRProjectNo.AutoSize = true;
-            this.LblRProjectNo.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRProjectNo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRProjectNo.Location = new System.Drawing.Point(179, 90);
-            this.LblRProjectNo.Name = "LblRProjectNo";
-            this.LblRProjectNo.Size = new System.Drawing.Size(60, 25);
-            this.LblRProjectNo.TabIndex = 18;
-            this.LblRProjectNo.Text = "Metro";
-            // 
-            // LblRContractor
-            // 
-            this.LblRContractor.AutoSize = true;
-            this.LblRContractor.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRContractor.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRContractor.Location = new System.Drawing.Point(566, 13);
-            this.LblRContractor.Name = "LblRContractor";
-            this.LblRContractor.Size = new System.Drawing.Size(60, 25);
-            this.LblRContractor.TabIndex = 18;
-            this.LblRContractor.Text = "Metro";
-            // 
-            // LblRSupplier
-            // 
-            this.LblRSupplier.AutoSize = true;
-            this.LblRSupplier.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRSupplier.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRSupplier.Location = new System.Drawing.Point(566, 52);
-            this.LblRSupplier.Name = "LblRSupplier";
-            this.LblRSupplier.Size = new System.Drawing.Size(60, 25);
-            this.LblRSupplier.TabIndex = 18;
-            this.LblRSupplier.Text = "Metro";
-            // 
-            // LblRGeosyntetic
-            // 
-            this.LblRGeosyntetic.AutoSize = true;
-            this.LblRGeosyntetic.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.LblRGeosyntetic.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.LblRGeosyntetic.Location = new System.Drawing.Point(566, 90);
-            this.LblRGeosyntetic.Name = "LblRGeosyntetic";
-            this.LblRGeosyntetic.Size = new System.Drawing.Size(60, 25);
-            this.LblRGeosyntetic.TabIndex = 18;
-            this.LblRGeosyntetic.Text = "Metro";
-            // 
             // PanelHeader
             // 
             this.PanelHeader.Controls.Add(this.BtnClose);
-            this.PanelHeader.Controls.Add(this.LblRGeosyntetic);
-            this.PanelHeader.Controls.Add(this.LblRContractor);
-            this.PanelHeader.Controls.Add(this.LblRSupplier);
             this.PanelHeader.Controls.Add(this.PBPicture);
             this.PanelHeader.Controls.Add(this.LblClient);
-            this.PanelHeader.Controls.Add(this.LblRProjectNo);
             this.PanelHeader.Controls.Add(this.LblProjectNo);
             this.PanelHeader.Controls.Add(this.LblProject);
-            this.PanelHeader.Controls.Add(this.LblRProject);
-            this.PanelHeader.Controls.Add(this.LblRClient);
             this.PanelHeader.Controls.Add(this.LblContractor);
             this.PanelHeader.Controls.Add(this.LblSupplier);
             this.PanelHeader.Controls.Add(this.LblGeoSynthetic);
@@ -399,48 +309,36 @@
             // 
             this.DGVDev.AutoGenerateColumns = false;
             this.DGVDev.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVDev.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVDev.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.DeploymentDate,
-            this.PanelNo,
-            this.RollNo,
-            this.Lenght,
-            this.Width,
-            this.Thickness,
-            this.Area,
-            this.Remarks,
-            this.ProjectDevId,
-            this.ProjectDev});
             this.DGVDev.DataSource = this.developmentBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVDev.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDev.DefaultCellStyle = dataGridViewCellStyle5;
             this.DGVDev.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVDev.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.DGVDev.Location = new System.Drawing.Point(0, 0);
             this.DGVDev.Name = "DGVDev";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DGVDev.Size = new System.Drawing.Size(1386, 435);
             this.DGVDev.TabIndex = 0;
             // 
@@ -448,103 +346,6 @@
             // 
             this.BElipse.ElipseRadius = 5;
             this.BElipse.TargetControl = this;
-            // 
-            // developmentBindingSource
-            // 
-            
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // DeploymentDate
-            // 
-            this.DeploymentDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DeploymentDate.DataPropertyName = "DeploymentDate";
-            this.DeploymentDate.HeaderText = "DeploymentDate";
-            this.DeploymentDate.Name = "DeploymentDate";
-            this.DeploymentDate.ReadOnly = true;
-            // 
-            // PanelNo
-            // 
-            this.PanelNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PanelNo.DataPropertyName = "PanelNo";
-            this.PanelNo.HeaderText = "PanelNo";
-            this.PanelNo.Name = "PanelNo";
-            // 
-            // RollNo
-            // 
-            this.RollNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RollNo.DataPropertyName = "RollNo";
-            this.RollNo.HeaderText = "RollNo";
-            this.RollNo.Name = "RollNo";
-            // 
-            // Lenght
-            // 
-            this.Lenght.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Lenght.DataPropertyName = "Lenght";
-            this.Lenght.HeaderText = "Lenght";
-            this.Lenght.Name = "Lenght";
-            // 
-            // Width
-            // 
-            this.Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Width.DataPropertyName = "Width";
-            this.Width.HeaderText = "Width";
-            this.Width.Name = "Width";
-            // 
-            // Thickness
-            // 
-            this.Thickness.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Thickness.DataPropertyName = "Thickness";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.NullValue = "Thickness";
-            this.Thickness.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Thickness.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Thickness.HeaderText = "Thickness";
-            this.Thickness.Items.AddRange(new object[] {
-            "80 mil",
-            "60 mil",
-            "40 mil"});
-            this.Thickness.Name = "Thickness";
-            this.Thickness.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Thickness.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Area
-            // 
-            this.Area.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Area.DataPropertyName = "Area";
-            this.Area.HeaderText = "Area";
-            this.Area.Name = "Area";
-            this.Area.ReadOnly = true;
-            // 
-            // Remarks
-            // 
-            this.Remarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Remarks.DataPropertyName = "Remarks";
-            this.Remarks.HeaderText = "Remarks";
-            this.Remarks.Name = "Remarks";
-            // 
-            // ProjectDevId
-            // 
-            this.ProjectDevId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProjectDevId.DataPropertyName = "ProjectDevId";
-            this.ProjectDevId.HeaderText = "ProjectDevId";
-            this.ProjectDevId.Name = "ProjectDevId";
-            this.ProjectDevId.Visible = false;
-            // 
-            // ProjectDev
-            // 
-            this.ProjectDev.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProjectDev.DataPropertyName = "ProjectDev";
-            this.ProjectDev.HeaderText = "ProjectDev";
-            this.ProjectDev.Name = "ProjectDev";
-            this.ProjectDev.Visible = false;
             // 
             // DevelopmentForm
             // 
@@ -584,12 +385,6 @@
         private MetroFramework.Controls.MetroLabel LblTitle;
         private MetroFramework.Controls.MetroPanel PanelAdd;
         private MetroFramework.Controls.MetroButton BtnPDF;
-        private MetroFramework.Controls.MetroLabel LblRClient;
-        private MetroFramework.Controls.MetroLabel LblRProject;
-        private MetroFramework.Controls.MetroLabel LblRProjectNo;
-        private MetroFramework.Controls.MetroLabel LblRContractor;
-        private MetroFramework.Controls.MetroLabel LblRSupplier;
-        private MetroFramework.Controls.MetroLabel LblRGeosyntetic;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton BtnEdit;
         private FontAwesome.Sharp.IconButton BtnAdd;
