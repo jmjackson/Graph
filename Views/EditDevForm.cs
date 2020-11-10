@@ -26,8 +26,6 @@ namespace Mine.Views
         {
             var pdev = db.ProjectDevs.Find(pdId);
             TxtId.Text = pdev.Id.ToString();
-            TxtInspector.Text = pdev.InspectorDev;
-            TxtLocation.Text = pdev.LocationDev;
             TxtMachineNo.Text = pdev.MachineNo;
             TxtOperator.Text = pdev.Operator;
             TxtProject.Text = pdev.ProjectId.ToString();
@@ -43,8 +41,6 @@ namespace Mine.Views
                 int id = Convert.ToInt32(TxtId.Text);
                 var pdev = db.ProjectDevs.Find(id);
                 pdev.DevTime = Convert.ToDateTime(DateInspection.Text);
-                pdev.InspectorDev = TxtInspector.Text;
-                pdev.LocationDev = TxtLocation.Text;
                 pdev.MachineNo = TxtMachineNo.Text;
                 pdev.Operator = TxtOperator.Text;
                 db.SaveChanges();
