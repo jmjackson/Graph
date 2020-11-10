@@ -981,8 +981,8 @@
           <Value>=First(Fields!ImgCl.Value, "ClientBindingSource")</Value>
           <MIMEType>image/jpeg</MIMEType>
           <Sizing>FitProportional</Sizing>
-          <Top>0.88195cm</Top>
-          <Left>20.10516cm</Left>
+          <Top>0.85549cm</Top>
+          <Left>19.81412cm</Left>
           <Height>1.5cm</Height>
           <Width>3.09881cm</Width>
           <ZIndex>13</ZIndex>
