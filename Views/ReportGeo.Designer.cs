@@ -48,6 +48,7 @@
             // ReportViewGeom
             // 
             this.ReportViewGeom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportViewGeom.DocumentMapWidth = 75;
             reportDataSource1.Name = "ProjectBinding";
             reportDataSource1.Value = this.ProjectBindingSource;
             reportDataSource2.Name = "GeoMemBinding";
@@ -66,7 +67,7 @@
             this.ReportViewGeom.ServerReport.BearerToken = null;
             this.ReportViewGeom.Size = new System.Drawing.Size(1370, 749);
             this.ReportViewGeom.TabIndex = 0;
-            this.ReportViewGeom.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            this.ReportViewGeom.ZoomPercent = 75;
             // 
             // ProjectDevBindingSource
             // 
