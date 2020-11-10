@@ -16,7 +16,7 @@ using Mine.DataModel;
 
 namespace Mine.Views
 {
-    public partial class Dibujo : MetroFramework.Forms.MetroForm
+    public partial class Dibujo : Form
     {
         //conexion bd o consulta 
         readonly GraphDbContext db = new GraphDbContext();
@@ -231,6 +231,11 @@ namespace Mine.Views
 
             X = null;
             Y = null;
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
