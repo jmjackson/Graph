@@ -37,8 +37,6 @@ namespace Mine.Views
                 DGVDev.AutoGenerateColumns = false;
                 DGVDev.Columns["Id"].DataPropertyName = "Id";
                 DGVDev.Columns["Project"].DataPropertyName = "ProjectId";
-                DGVDev.Columns["Inspector"].DataPropertyName = "Inspector";
-                DGVDev.Columns["Location"].DataPropertyName = "Location";
                 DGVDev.Columns["DevTime"].DataPropertyName = "DevTime";
                 DGVDev.Columns["Operator"].DataPropertyName = "Operator";
                 DGVDev.Columns["MachineNo"].DataPropertyName = "MachineNo";
