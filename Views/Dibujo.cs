@@ -56,10 +56,7 @@ namespace Mine.Views
             }
 
             //tabla de cordenadas
-            DgCordenada.Rows.Add("East to west","E-W");
-            DgCordenada.Rows.Add("North to south","N-S");
-            DgCordenada.Rows.Add("South to north","S-N");
-            DgCordenada.Rows.Add("West to east", "W-E");
+     
 
             if (Pn.ImageDev!=null)
             {
@@ -171,8 +168,8 @@ namespace Mine.Views
                     Graphics g = Graphics.FromImage(imagen);
 
                     //seleciona de la tabla y lo dibuja
-                    string texto = Convert.ToString(DgCordenada.CurrentRow.Cells[1].Value);
-                    g.DrawString(texto, font2, new SolidBrush(Color.Black), e.X, e.Y);
+                    //string texto = Convert.ToString(DgCordenada.CurrentRow.Cells[1].Value);
+                    g.DrawString(" ", font2, new SolidBrush(Color.Black), e.X, e.Y);
 
                     PbLienzo.Image = imagen;
                 }
