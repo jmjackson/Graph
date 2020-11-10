@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace Mine.Views
 {
-    public partial class AddDevForm : MetroFramework.Forms.MetroForm
+    public partial class AddDevForm : Form
     {
         readonly GraphDbContext db = new GraphDbContext();
         public AddDevForm()
