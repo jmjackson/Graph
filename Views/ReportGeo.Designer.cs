@@ -37,17 +37,13 @@
             this.ProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.GeoMembraneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ClientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ProjectDevBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ReportViewGeom = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ProjectDevBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeoMembraneBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectDevBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ProjectDevBindingSource
-            // 
-            this.ProjectDevBindingSource.DataSource = typeof(Mine.DataModel.ProjectDev);
             // 
             // ReportViewGeom
             // 
@@ -68,15 +64,19 @@
             this.ReportViewGeom.Location = new System.Drawing.Point(0, 0);
             this.ReportViewGeom.Name = "ReportViewGeom";
             this.ReportViewGeom.ServerReport.BearerToken = null;
-            this.ReportViewGeom.Size = new System.Drawing.Size(934, 490);
+            this.ReportViewGeom.Size = new System.Drawing.Size(1370, 749);
             this.ReportViewGeom.TabIndex = 0;
             this.ReportViewGeom.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            // 
+            // ProjectDevBindingSource
+            // 
+            this.ProjectDevBindingSource.DataSource = typeof(Mine.DataModel.ProjectDev);
             // 
             // ReportGeo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 490);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.ReportViewGeom);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportGeo";

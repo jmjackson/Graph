@@ -32,7 +32,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.9175cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -293,7 +293,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.9175cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -566,7 +566,7 @@
         <DataSetName>DevelopmentBindinSource</DataSetName>
         <Top>0.44565cm</Top>
         <Left>0.29104cm</Left>
-        <Height>1.2cm</Height>
+        <Height>1.835cm</Height>
         <Width>21.85535cm</Width>
         <Style>
           <Border>
@@ -586,7 +586,7 @@
   <Width>9.13542in</Width>
   <Page>
     <PageHeader>
-      <Height>3.33472cm</Height>
+      <Height>3.86389cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -604,8 +604,8 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>1.04083cm</Top>
-          <Height>0.6cm</Height>
+          <Top>0.88195cm</Top>
+          <Height>0.75888cm</Height>
           <Width>2.5cm</Width>
           <Style>
             <Border>
@@ -689,9 +689,9 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>1.01437cm</Top>
+          <Top>0.88195cm</Top>
           <Left>2.82775cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.73242cm</Height>
           <Width>4.85479cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
