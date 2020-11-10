@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevelopmentForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
@@ -53,6 +53,8 @@
             this.DGVDev = new System.Windows.Forms.DataGridView();
             this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BElipse = new ns1.BunifuElipse(this.components);
+            this.BtnDrawing = new FontAwesome.Sharp.IconButton();
+            this.BtnData = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             this.PanelAdd.SuspendLayout();
             this.PanelHeader.SuspendLayout();
@@ -148,6 +150,8 @@
             // 
             // PanelAdd
             // 
+            this.PanelAdd.Controls.Add(this.BtnData);
+            this.PanelAdd.Controls.Add(this.BtnDrawing);
             this.PanelAdd.Controls.Add(this.SeamingButton);
             this.PanelAdd.Controls.Add(this.iconButton3);
             this.PanelAdd.Controls.Add(this.BtnEdit);
@@ -168,7 +172,7 @@
             // 
             // SeamingButton
             // 
-            this.SeamingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(69)))), ((int)(((byte)(51)))));
+            this.SeamingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.SeamingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeamingButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.SeamingButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -176,7 +180,7 @@
             this.SeamingButton.IconColor = System.Drawing.Color.Black;
             this.SeamingButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SeamingButton.IconSize = 48;
-            this.SeamingButton.Location = new System.Drawing.Point(615, 27);
+            this.SeamingButton.Location = new System.Drawing.Point(661, 27);
             this.SeamingButton.Name = "SeamingButton";
             this.SeamingButton.Rotation = 0D;
             this.SeamingButton.Size = new System.Drawing.Size(153, 58);
@@ -247,7 +251,7 @@
             this.BtnPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPDF.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnPDF.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.BtnPDF.Location = new System.Drawing.Point(1151, 27);
+            this.BtnPDF.Location = new System.Drawing.Point(1190, 27);
             this.BtnPDF.Name = "BtnPDF";
             this.BtnPDF.Size = new System.Drawing.Size(163, 58);
             this.BtnPDF.TabIndex = 11;
@@ -310,36 +314,36 @@
             // 
             this.DGVDev.AutoGenerateColumns = false;
             this.DGVDev.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DGVDev.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVDev.DataSource = this.developmentBindingSource;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVDev.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDev.DefaultCellStyle = dataGridViewCellStyle8;
             this.DGVDev.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVDev.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.DGVDev.Location = new System.Drawing.Point(0, 0);
             this.DGVDev.Name = "DGVDev";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.DGVDev.Size = new System.Drawing.Size(1386, 435);
             this.DGVDev.TabIndex = 0;
             // 
@@ -347,6 +351,44 @@
             // 
             this.BElipse.ElipseRadius = 5;
             this.BElipse.TargetControl = this;
+            // 
+            // BtnDrawing
+            // 
+            this.BtnDrawing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnDrawing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDrawing.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnDrawing.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDrawing.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnDrawing.IconColor = System.Drawing.Color.Black;
+            this.BtnDrawing.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnDrawing.IconSize = 48;
+            this.BtnDrawing.Location = new System.Drawing.Point(832, 27);
+            this.BtnDrawing.Name = "BtnDrawing";
+            this.BtnDrawing.Rotation = 0D;
+            this.BtnDrawing.Size = new System.Drawing.Size(153, 58);
+            this.BtnDrawing.TabIndex = 16;
+            this.BtnDrawing.Text = "Drawing";
+            this.BtnDrawing.UseVisualStyleBackColor = false;
+            this.BtnDrawing.Click += new System.EventHandler(this.SeamingButton_Click);
+            // 
+            // BtnData
+            // 
+            this.BtnData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnData.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnData.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnData.IconColor = System.Drawing.Color.Black;
+            this.BtnData.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnData.IconSize = 48;
+            this.BtnData.Location = new System.Drawing.Point(991, 27);
+            this.BtnData.Name = "BtnData";
+            this.BtnData.Rotation = 0D;
+            this.BtnData.Size = new System.Drawing.Size(153, 58);
+            this.BtnData.TabIndex = 16;
+            this.BtnData.Text = "Inspector";
+            this.BtnData.UseVisualStyleBackColor = false;
+            this.BtnData.Click += new System.EventHandler(this.SeamingButton_Click);
             // 
             // DevelopmentForm
             // 
@@ -407,5 +449,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDevId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDev;
+        private FontAwesome.Sharp.IconButton BtnDrawing;
+        private FontAwesome.Sharp.IconButton BtnData;
     }
 }
