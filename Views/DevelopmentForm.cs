@@ -179,6 +179,11 @@ namespace Mine.Views
 
         }
 
-        
+        private void BtnDrawing_Click(object sender, EventArgs e)
+        {
+            Dibujo d = new Dibujo(proDevId);
+            d.Show();
+            this.Close();
+        }
     }
 }

@@ -240,5 +240,12 @@ namespace Mine.Views
             df.Show();
             this.Close();
         }
+
+        private void BtnDrawing_Click(object sender, EventArgs e)
+        {
+            Dibujo d = new Dibujo(pdId);
+            d.Show();
+            this.Close();
+        }
     }
 }

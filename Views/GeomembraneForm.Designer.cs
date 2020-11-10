@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeomembraneForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
@@ -56,13 +56,13 @@
             this.PanelHead = new System.Windows.Forms.Panel();
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.PanelFoot = new System.Windows.Forms.Panel();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.BtnDrawing = new MetroFramework.Controls.MetroButton();
             this.DeploymentBtn = new MetroFramework.Controls.MetroButton();
             this.PanelContent = new System.Windows.Forms.Panel();
             this.DGVGeo = new System.Windows.Forms.DataGridView();
             this.geoMembraneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
-            this.BtnDrawing = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.PanelHead.SuspendLayout();
             this.PanelFoot.SuspendLayout();
@@ -379,6 +379,40 @@
             this.PanelFoot.Size = new System.Drawing.Size(1370, 109);
             this.PanelFoot.TabIndex = 8;
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton2.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.metroButton2.ForeColor = System.Drawing.Color.White;
+            this.metroButton2.Location = new System.Drawing.Point(894, 15);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(153, 58);
+            this.metroButton2.TabIndex = 5;
+            this.metroButton2.Text = "Inspector";
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseCustomForeColor = true;
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.DeploymentBtn_Click);
+            // 
+            // BtnDrawing
+            // 
+            this.BtnDrawing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnDrawing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnDrawing.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.BtnDrawing.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.BtnDrawing.ForeColor = System.Drawing.Color.White;
+            this.BtnDrawing.Location = new System.Drawing.Point(722, 15);
+            this.BtnDrawing.Name = "BtnDrawing";
+            this.BtnDrawing.Size = new System.Drawing.Size(153, 58);
+            this.BtnDrawing.TabIndex = 5;
+            this.BtnDrawing.Text = "Drawing";
+            this.BtnDrawing.UseCustomBackColor = true;
+            this.BtnDrawing.UseCustomForeColor = true;
+            this.BtnDrawing.UseSelectable = true;
+            this.BtnDrawing.Click += new System.EventHandler(this.BtnDrawing_Click);
+            // 
             // DeploymentBtn
             // 
             this.DeploymentBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -409,24 +443,24 @@
             // 
             this.DGVGeo.AutoGenerateColumns = false;
             this.DGVGeo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVGeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVGeo.DataSource = this.geoMembraneBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVGeo.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVGeo.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGVGeo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVGeo.Location = new System.Drawing.Point(0, 0);
             this.DGVGeo.Name = "DGVGeo";
@@ -437,40 +471,6 @@
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // BtnDrawing
-            // 
-            this.BtnDrawing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnDrawing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.BtnDrawing.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.BtnDrawing.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.BtnDrawing.ForeColor = System.Drawing.Color.White;
-            this.BtnDrawing.Location = new System.Drawing.Point(722, 15);
-            this.BtnDrawing.Name = "BtnDrawing";
-            this.BtnDrawing.Size = new System.Drawing.Size(153, 58);
-            this.BtnDrawing.TabIndex = 5;
-            this.BtnDrawing.Text = "Drawing";
-            this.BtnDrawing.UseCustomBackColor = true;
-            this.BtnDrawing.UseCustomForeColor = true;
-            this.BtnDrawing.UseSelectable = true;
-            this.BtnDrawing.Click += new System.EventHandler(this.DeploymentBtn_Click);
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton2.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.metroButton2.ForeColor = System.Drawing.Color.White;
-            this.metroButton2.Location = new System.Drawing.Point(894, 15);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(153, 58);
-            this.metroButton2.TabIndex = 5;
-            this.metroButton2.Text = "Inspector";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseCustomForeColor = true;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.DeploymentBtn_Click);
             // 
             // GeomembraneForm
             // 
