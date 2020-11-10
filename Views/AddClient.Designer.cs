@@ -169,12 +169,12 @@
             this.BtnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.BtnClose.IconColor = System.Drawing.Color.Red;
             this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.BtnClose.IconSize = 36;
-            this.BtnClose.Location = new System.Drawing.Point(475, 9);
+            this.BtnClose.IconSize = 42;
+            this.BtnClose.Location = new System.Drawing.Point(471, 9);
             this.BtnClose.Margin = new System.Windows.Forms.Padding(0);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Rotation = 0D;
-            this.BtnClose.Size = new System.Drawing.Size(35, 32);
+            this.BtnClose.Size = new System.Drawing.Size(39, 39);
             this.BtnClose.TabIndex = 5;
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);

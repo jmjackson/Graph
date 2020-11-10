@@ -152,6 +152,7 @@
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(433, 39);
             this.TxtPassword.TabIndex = 1;
+            this.TxtPassword.UseSystemPasswordChar = true;
             // 
             // Login
             // 
