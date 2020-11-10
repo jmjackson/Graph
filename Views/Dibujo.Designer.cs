@@ -30,8 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.ToolsBox = new System.Windows.Forms.GroupBox();
@@ -40,17 +38,13 @@
             this.BntSave = new FontAwesome.Sharp.IconButton();
             this.BntAddPanelNo = new FontAwesome.Sharp.IconButton();
             this.BtnDraw = new FontAwesome.Sharp.IconButton();
-            this.DgCordenada = new System.Windows.Forms.DataGridView();
-            this.Cordenada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Simbolo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DgLpn = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbLienzo = new System.Windows.Forms.PictureBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.ToolsBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgCordenada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgLpn)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbLienzo)).BeginInit();
@@ -61,7 +55,6 @@
             this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
             this.panel1.Controls.Add(this.BtnClose);
             this.panel1.Controls.Add(this.ToolsBox);
-            this.panel1.Controls.Add(this.DgCordenada);
             this.panel1.Controls.Add(this.DgLpn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(1128, 0);
@@ -218,11 +211,11 @@
             this.BtnDraw.UseVisualStyleBackColor = false;
             this.BtnDraw.Click += new System.EventHandler(this.BtnDraw_Click_1);
             // 
-            // DgCordenada
+            // DgLpn
             // 
-            this.DgCordenada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgCordenada.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DgCordenada.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DgLpn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgLpn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DgLpn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -230,11 +223,11 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgCordenada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DgCordenada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgCordenada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cordenada,
-            this.Simbolo});
+            this.DgLpn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgLpn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgLpn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.PanelNo});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -242,65 +235,11 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgCordenada.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DgCordenada.Location = new System.Drawing.Point(39, 613);
-            this.DgCordenada.Name = "DgCordenada";
-            this.DgCordenada.Size = new System.Drawing.Size(205, 163);
-            this.DgCordenada.TabIndex = 2;
-            // 
-            // Cordenada
-            // 
-            this.Cordenada.HeaderText = "Cordenada";
-            this.Cordenada.Name = "Cordenada";
-            this.Cordenada.Width = 129;
-            // 
-            // Simbolo
-            // 
-            this.Simbolo.HeaderText = "Simbolo";
-            this.Simbolo.Name = "Simbolo";
-            this.Simbolo.Width = 104;
-            // 
-            // DgLpn
-            // 
-            this.DgLpn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgLpn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DgLpn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgLpn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DgLpn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgLpn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.PanelNo});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgLpn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.DgLpn.Location = new System.Drawing.Point(39, 435);
+            this.DgLpn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DgLpn.Location = new System.Drawing.Point(39, 549);
             this.DgLpn.Name = "DgLpn";
-            this.DgLpn.Size = new System.Drawing.Size(205, 153);
+            this.DgLpn.Size = new System.Drawing.Size(162, 153);
             this.DgLpn.TabIndex = 1;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Item";
-            this.Id.Name = "Id";
-            this.Id.Width = 70;
-            // 
-            // PanelNo
-            // 
-            this.PanelNo.HeaderText = "Panel No";
-            this.PanelNo.Name = "PanelNo";
-            this.PanelNo.Width = 113;
             // 
             // panel2
             // 
@@ -329,6 +268,19 @@
             this.PbLienzo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PbLienzo_MouseMove_1);
             this.PbLienzo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PbLienzo_MouseUp_1);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Item";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            this.Id.Width = 70;
+            // 
+            // PanelNo
+            // 
+            this.PanelNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PanelNo.HeaderText = "Panel No";
+            this.PanelNo.Name = "PanelNo";
+            // 
             // Dibujo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,7 +296,6 @@
             this.Load += new System.EventHandler(this.Dibujo_Load);
             this.panel1.ResumeLayout(false);
             this.ToolsBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgCordenada)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgLpn)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbLienzo)).EndInit();
@@ -356,11 +307,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView DgLpn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
-        private System.Windows.Forms.DataGridView DgCordenada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cordenada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Simbolo;
         private System.Windows.Forms.GroupBox ToolsBox;
         private FontAwesome.Sharp.IconButton BtnClear;
         private FontAwesome.Sharp.IconButton BtnAC;
@@ -369,5 +315,7 @@
         private FontAwesome.Sharp.IconButton BtnDraw;
         private System.Windows.Forms.PictureBox PbLienzo;
         private FontAwesome.Sharp.IconButton BtnClose;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PanelNo;
     }
 }
