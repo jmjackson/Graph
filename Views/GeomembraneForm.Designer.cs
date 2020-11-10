@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeomembraneForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
@@ -56,23 +56,11 @@
             this.PanelHead = new System.Windows.Forms.Panel();
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.PanelFoot = new System.Windows.Forms.Panel();
+            this.DeploymentBtn = new MetroFramework.Controls.MetroButton();
             this.PanelContent = new System.Windows.Forms.Panel();
             this.DGVGeo = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeamingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeamNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeamTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WedgeTemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WedgeSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeamLength = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CarryOver = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RemarksDestructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjectDev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.geoMembraneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
-            this.DeploymentBtn = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.PanelHead.SuspendLayout();
             this.PanelFoot.SuspendLayout();
@@ -297,9 +285,10 @@
             // BtnPdf
             // 
             this.BtnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnPdf.BackColor = System.Drawing.SystemColors.Control;
             this.BtnPdf.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.BtnPdf.ForeColor = System.Drawing.Color.White;
+            this.BtnPdf.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.BtnPdf.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BtnPdf.Location = new System.Drawing.Point(1198, 27);
             this.BtnPdf.Name = "BtnPdf";
             this.BtnPdf.Size = new System.Drawing.Size(129, 49);
@@ -387,150 +376,6 @@
             this.PanelFoot.Size = new System.Drawing.Size(1370, 100);
             this.PanelFoot.TabIndex = 8;
             // 
-            // PanelContent
-            // 
-            this.PanelContent.Controls.Add(this.DGVGeo);
-            this.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContent.Location = new System.Drawing.Point(0, 139);
-            this.PanelContent.Name = "PanelContent";
-            this.PanelContent.Size = new System.Drawing.Size(1370, 461);
-            this.PanelContent.TabIndex = 9;
-            // 
-            // DGVGeo
-            // 
-            this.DGVGeo.AutoGenerateColumns = false;
-            this.DGVGeo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DGVGeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVGeo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.SeamingDate,
-            this.SeamNo,
-            this.SeamTime,
-            this.WedgeTemp,
-            this.WedgeSpeed,
-            this.SeamLength,
-            this.CarryOver,
-            this.Destructive,
-            this.RemarksDestructive,
-            this.ProjectDevId,
-            this.ProjectDev});
-            this.DGVGeo.DataSource = this.geoMembraneBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVGeo.DefaultCellStyle = dataGridViewCellStyle4;
-            this.DGVGeo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGVGeo.Location = new System.Drawing.Point(0, 0);
-            this.DGVGeo.Name = "DGVGeo";
-            this.DGVGeo.Size = new System.Drawing.Size(1370, 461);
-            this.DGVGeo.TabIndex = 0;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // SeamingDate
-            // 
-            this.SeamingDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamingDate.DataPropertyName = "SeamingDate";
-            this.SeamingDate.HeaderText = "SeamingDate";
-            this.SeamingDate.Name = "SeamingDate";
-            // 
-            // SeamNo
-            // 
-            this.SeamNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamNo.DataPropertyName = "SeamNo";
-            this.SeamNo.HeaderText = "SeamNo";
-            this.SeamNo.Name = "SeamNo";
-            // 
-            // SeamTime
-            // 
-            this.SeamTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamTime.DataPropertyName = "SeamTime";
-            this.SeamTime.HeaderText = "SeamTime";
-            this.SeamTime.Name = "SeamTime";
-            // 
-            // WedgeTemp
-            // 
-            this.WedgeTemp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WedgeTemp.DataPropertyName = "WedgeTemp";
-            this.WedgeTemp.HeaderText = "WedgeTemp";
-            this.WedgeTemp.Name = "WedgeTemp";
-            // 
-            // WedgeSpeed
-            // 
-            this.WedgeSpeed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WedgeSpeed.DataPropertyName = "WedgeSpeed";
-            this.WedgeSpeed.HeaderText = "WedgeSpeed";
-            this.WedgeSpeed.Name = "WedgeSpeed";
-            // 
-            // SeamLength
-            // 
-            this.SeamLength.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SeamLength.DataPropertyName = "SeamLength";
-            this.SeamLength.HeaderText = "SeamLength";
-            this.SeamLength.Name = "SeamLength";
-            // 
-            // CarryOver
-            // 
-            this.CarryOver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CarryOver.DataPropertyName = "CarryOver";
-            this.CarryOver.HeaderText = "CarryOver";
-            this.CarryOver.Name = "CarryOver";
-            this.CarryOver.ReadOnly = true;
-            // 
-            // Destructive
-            // 
-            this.Destructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Destructive.DataPropertyName = "Destructive";
-            this.Destructive.HeaderText = "Destructive";
-            this.Destructive.Name = "Destructive";
-            // 
-            // RemarksDestructive
-            // 
-            this.RemarksDestructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RemarksDestructive.DataPropertyName = "RemarksDestructive";
-            this.RemarksDestructive.HeaderText = "RemarksDestructive";
-            this.RemarksDestructive.Name = "RemarksDestructive";
-            // 
-            // ProjectDevId
-            // 
-            this.ProjectDevId.DataPropertyName = "ProjectDevId";
-            this.ProjectDevId.HeaderText = "ProjectDevId";
-            this.ProjectDevId.Name = "ProjectDevId";
-            this.ProjectDevId.Visible = false;
-            // 
-            // ProjectDev
-            // 
-            this.ProjectDev.DataPropertyName = "ProjectDev";
-            this.ProjectDev.HeaderText = "ProjectDev";
-            this.ProjectDev.Name = "ProjectDev";
-            this.ProjectDev.Visible = false;
-            // 
-            // geoMembraneBindingSource
-            // 
-            
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // DeploymentBtn
             // 
             this.DeploymentBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -547,6 +392,48 @@
             this.DeploymentBtn.UseCustomForeColor = true;
             this.DeploymentBtn.UseSelectable = true;
             this.DeploymentBtn.Click += new System.EventHandler(this.DeploymentBtn_Click);
+            // 
+            // PanelContent
+            // 
+            this.PanelContent.Controls.Add(this.DGVGeo);
+            this.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContent.Location = new System.Drawing.Point(0, 139);
+            this.PanelContent.Name = "PanelContent";
+            this.PanelContent.Size = new System.Drawing.Size(1370, 461);
+            this.PanelContent.TabIndex = 9;
+            // 
+            // DGVGeo
+            // 
+            this.DGVGeo.AutoGenerateColumns = false;
+            this.DGVGeo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.DGVGeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVGeo.DataSource = this.geoMembraneBindingSource;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVGeo.DefaultCellStyle = dataGridViewCellStyle10;
+            this.DGVGeo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DGVGeo.Location = new System.Drawing.Point(0, 0);
+            this.DGVGeo.Name = "DGVGeo";
+            this.DGVGeo.Size = new System.Drawing.Size(1370, 461);
+            this.DGVGeo.TabIndex = 0;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // GeomembraneForm
             // 
