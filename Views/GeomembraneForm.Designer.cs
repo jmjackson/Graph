@@ -524,7 +524,7 @@
             // 
             // geoMembraneBindingSource
             // 
-            this.geoMembraneBindingSource.DataSource = typeof(Mine.DataModel.GeoMembrane);
+            
             // 
             // bunifuElipse1
             // 

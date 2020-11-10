@@ -57,7 +57,7 @@
             this.BtnSave.IconColor = System.Drawing.Color.Black;
             this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSave.IconSize = 48;
-            this.BtnSave.Location = new System.Drawing.Point(185, 411);
+            this.BtnSave.Location = new System.Drawing.Point(212, 411);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
             this.BtnSave.Size = new System.Drawing.Size(164, 59);
@@ -78,7 +78,7 @@
             this.BtnCancel.IconColor = System.Drawing.Color.Black;
             this.BtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCancel.IconSize = 48;
-            this.BtnCancel.Location = new System.Drawing.Point(412, 411);
+            this.BtnCancel.Location = new System.Drawing.Point(445, 411);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
             this.BtnCancel.Size = new System.Drawing.Size(174, 59);
@@ -89,36 +89,36 @@
             // 
             // TxtOperator
             // 
-            this.TxtOperator.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtOperator.Location = new System.Drawing.Point(53, 283);
+            this.TxtOperator.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtOperator.Location = new System.Drawing.Point(54, 283);
             this.TxtOperator.Name = "TxtOperator";
-            this.TxtOperator.Size = new System.Drawing.Size(296, 33);
+            this.TxtOperator.Size = new System.Drawing.Size(322, 35);
             this.TxtOperator.TabIndex = 3;
             // 
             // TxtMachineNo
             // 
-            this.TxtMachineNo.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMachineNo.Location = new System.Drawing.Point(412, 283);
+            this.TxtMachineNo.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMachineNo.Location = new System.Drawing.Point(445, 283);
             this.TxtMachineNo.Name = "TxtMachineNo";
-            this.TxtMachineNo.Size = new System.Drawing.Size(324, 33);
+            this.TxtMachineNo.Size = new System.Drawing.Size(324, 35);
             this.TxtMachineNo.TabIndex = 3;
             // 
             // TxtProject
             // 
-            this.TxtProject.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtProject.Location = new System.Drawing.Point(412, 161);
+            this.TxtProject.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtProject.Location = new System.Drawing.Point(445, 161);
             this.TxtProject.Name = "TxtProject";
             this.TxtProject.ReadOnly = true;
-            this.TxtProject.Size = new System.Drawing.Size(324, 33);
+            this.TxtProject.Size = new System.Drawing.Size(324, 35);
             this.TxtProject.TabIndex = 4;
             // 
             // TxtId
             // 
-            this.TxtId.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtId.Location = new System.Drawing.Point(54, 161);
             this.TxtId.Name = "TxtId";
             this.TxtId.ReadOnly = true;
-            this.TxtId.Size = new System.Drawing.Size(297, 33);
+            this.TxtId.Size = new System.Drawing.Size(322, 35);
             this.TxtId.TabIndex = 5;
             // 
             // DateInspection
@@ -176,7 +176,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(407, 114);
+            this.label3.Location = new System.Drawing.Point(440, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 30);
             this.label3.TabIndex = 8;
@@ -196,7 +196,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(407, 235);
+            this.label7.Location = new System.Drawing.Point(440, 235);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 30);
             this.label7.TabIndex = 8;
