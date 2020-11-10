@@ -52,7 +52,7 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DevTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Project = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inspector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Operator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MachineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDev)).BeginInit();
             this.PanelHeader.SuspendLayout();
@@ -86,7 +86,7 @@
             this.Id,
             this.DevTime,
             this.Project,
-            this.Inspector,
+            this.Operator,
             this.MachineNo});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -361,12 +361,12 @@
             this.Project.Name = "Project";
             this.Project.ReadOnly = true;
             // 
-            // Inspector
+            // Operator
             // 
-            this.Inspector.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Inspector.HeaderText = "Inspector";
-            this.Inspector.Name = "Inspector";
-            this.Inspector.ReadOnly = true;
+            this.Operator.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Operator.HeaderText = "Operator";
+            this.Operator.Name = "Operator";
+            this.Operator.ReadOnly = true;
             // 
             // MachineNo
             // 
@@ -421,7 +421,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn DevTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Project;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Inspector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Operator;
         private System.Windows.Forms.DataGridViewTextBoxColumn MachineNo;
     }
 }
