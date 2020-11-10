@@ -48,40 +48,46 @@
             // CbClients
             // 
             this.CbClients.FontSize = MetroFramework.MetroComboBoxSize.Tall;
+            this.CbClients.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CbClients.FormattingEnabled = true;
             this.CbClients.ItemHeight = 29;
             this.CbClients.Location = new System.Drawing.Point(68, 211);
             this.CbClients.Name = "CbClients";
             this.CbClients.Size = new System.Drawing.Size(321, 35);
             this.CbClients.TabIndex = 0;
+            this.CbClients.UseCustomBackColor = true;
+            this.CbClients.UseCustomForeColor = true;
             this.CbClients.UseSelectable = true;
             this.CbClients.SelectedIndexChanged += new System.EventHandler(this.CbClients_SelectedIndexChanged);
             // 
             // CbProject
             // 
             this.CbProject.FontSize = MetroFramework.MetroComboBoxSize.Tall;
+            this.CbProject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CbProject.FormattingEnabled = true;
             this.CbProject.ItemHeight = 29;
             this.CbProject.Location = new System.Drawing.Point(437, 211);
             this.CbProject.Name = "CbProject";
             this.CbProject.Size = new System.Drawing.Size(321, 35);
             this.CbProject.TabIndex = 0;
+            this.CbProject.UseCustomBackColor = true;
+            this.CbProject.UseCustomForeColor = true;
             this.CbProject.UseSelectable = true;
             // 
             // TxtOperator
             // 
-            this.TxtOperator.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtOperator.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtOperator.Location = new System.Drawing.Point(68, 344);
             this.TxtOperator.Name = "TxtOperator";
-            this.TxtOperator.Size = new System.Drawing.Size(321, 33);
+            this.TxtOperator.Size = new System.Drawing.Size(321, 35);
             this.TxtOperator.TabIndex = 1;
             // 
             // TxtMachine
             // 
-            this.TxtMachine.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMachine.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMachine.Location = new System.Drawing.Point(439, 344);
             this.TxtMachine.Name = "TxtMachine";
-            this.TxtMachine.Size = new System.Drawing.Size(319, 33);
+            this.TxtMachine.Size = new System.Drawing.Size(319, 35);
             this.TxtMachine.TabIndex = 1;
             // 
             // BtnCancel
@@ -128,12 +134,17 @@
             // DateInspection
             // 
             this.DateInspection.CalendarFont = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateInspection.CalendarMonthBackground = System.Drawing.SystemColors.ButtonHighlight;
+            this.DateInspection.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DateInspection.FontSize = MetroFramework.MetroDateTimeSize.Tall;
             this.DateInspection.Location = new System.Drawing.Point(297, 82);
             this.DateInspection.MinimumSize = new System.Drawing.Size(0, 35);
             this.DateInspection.Name = "DateInspection";
             this.DateInspection.Size = new System.Drawing.Size(393, 35);
             this.DateInspection.TabIndex = 4;
+            this.DateInspection.UseCustomBackColor = true;
+            this.DateInspection.UseCustomForeColor = true;
+            this.DateInspection.UseStyleColors = true;
             // 
             // label1
             // 

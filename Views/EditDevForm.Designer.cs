@@ -105,6 +105,7 @@
             // 
             // TxtProject
             // 
+            this.TxtProject.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TxtProject.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtProject.Location = new System.Drawing.Point(445, 161);
             this.TxtProject.Name = "TxtProject";
@@ -114,6 +115,7 @@
             // 
             // TxtId
             // 
+            this.TxtId.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TxtId.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtId.Location = new System.Drawing.Point(54, 161);
             this.TxtId.Name = "TxtId";
