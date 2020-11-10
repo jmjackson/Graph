@@ -47,7 +47,9 @@
             this.ReportDevView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ReportDevView.AutoSize = true;
             this.ReportDevView.DocumentMapWidth = 150;
+            this.ReportDevView.IsDocumentMapWidthFixed = true;
             reportDataSource1.Name = "DevelopmentBindinSource";
             reportDataSource1.Value = this.DevelopmentBindingSource;
             reportDataSource2.Name = "ProjectBindingSource";
@@ -64,6 +66,7 @@
             this.ReportDevView.Size = new System.Drawing.Size(1370, 749);
             this.ReportDevView.TabIndex = 0;
             this.ReportDevView.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            this.ReportDevView.ZoomPercent = 75;
             // 
             // ReportDev
             // 
@@ -81,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
