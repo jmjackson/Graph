@@ -238,6 +238,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddDevForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Inspection";
             this.Load += new System.EventHandler(this.AddDevForm_Load);
             this.ResumeLayout(false);

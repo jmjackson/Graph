@@ -12,7 +12,7 @@ using System.Data.Entity;
 
 namespace Mine.Views
 {
-    public partial class EditDevForm : MetroFramework.Forms.MetroForm
+    public partial class EditDevForm : Form
     {
         readonly int pdId;
         readonly GraphDbContext db = new GraphDbContext();
@@ -59,6 +59,11 @@ namespace Mine.Views
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
