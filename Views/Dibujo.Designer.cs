@@ -101,7 +101,7 @@
             this.ToolsBox.Controls.Add(this.BtnDraw);
             this.ToolsBox.Location = new System.Drawing.Point(18, 54);
             this.ToolsBox.Name = "ToolsBox";
-            this.ToolsBox.Size = new System.Drawing.Size(226, 407);
+            this.ToolsBox.Size = new System.Drawing.Size(226, 387);
             this.ToolsBox.TabIndex = 1;
             this.ToolsBox.TabStop = false;
             this.ToolsBox.Text = "Tools";
@@ -243,7 +243,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgCordenada.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DgCordenada.Location = new System.Drawing.Point(39, 625);
+            this.DgCordenada.Location = new System.Drawing.Point(39, 613);
             this.DgCordenada.Name = "DgCordenada";
             this.DgCordenada.Size = new System.Drawing.Size(205, 163);
             this.DgCordenada.TabIndex = 2;
@@ -285,9 +285,9 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgLpn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.DgLpn.Location = new System.Drawing.Point(39, 467);
+            this.DgLpn.Location = new System.Drawing.Point(39, 435);
             this.DgLpn.Name = "DgLpn";
-            this.DgLpn.Size = new System.Drawing.Size(205, 133);
+            this.DgLpn.Size = new System.Drawing.Size(205, 153);
             this.DgLpn.TabIndex = 1;
             // 
             // Id
