@@ -18,6 +18,19 @@ namespace Mine.Views
     {
         //conexion bd o consulta 
         readonly GraphDbContext db = new GraphDbContext();
+
+        //
+        Bitmap btm;
+
+        private Graphics myPaint;
+        private Boolean draw = false;
+        private double diffxy;
+        private int curX, curY, x, y, diffx, diffy;
+        private int a = 0, b = 0;
+        private Color pintura;
+
+
+
         //Graphics g;
         //private Bitmap imagen;
         int pdId;
@@ -40,7 +53,7 @@ namespace Mine.Views
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
-           
+            myPaint = PbDraw.CreateGraphics();
 
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
@@ -181,6 +194,76 @@ namespace Mine.Views
         private void PbLienzo_MouseDown_1(object sender, MouseEventArgs e)
         {
             //dibujar = true;
+
+        }
+
+        private void BtnRectangulo_Click(object sender, EventArgs e)
+        {
+            a = 1;
+        }
+
+        private void BtnCuadrado_Click(object sender, EventArgs e)
+        {
+            a = 2;
+        }
+
+        private void BtnCirculo_Click(object sender, EventArgs e)
+        {
+            a = 3;
+        }
+
+        private void BtnTriangulo_Click(object sender, EventArgs e)
+        {
+            a = 4;
+        }
+
+        private void PbDraw_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button==MouseButtons.Left)
+            {
+                draw = true;
+                b++;
+            }
+            curX = e.X;
+            curY = e.Y;
+        }
+
+        private void PbDraw_MouseMove(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = Convert.ToString(diffx);
+            textBox2.Text = Convert.ToString(diffy);
+            diffxy = Math.Sqrt((diffx * diffx) + (diffy * diffy));
+            textBox3.Text = Convert.ToString(diffxy);
+        }
+
+        private void PbDraw_MouseUp(object sender, MouseEventArgs e)
+        {
+            //btm = new Bitmap(PbDraw.Width, PbDraw.Height);
+            //PbDraw.Image = (Image)btm;
+            //diffx = e.X - x;
+            //diffy = e.Y - y;
+            //Graphics g = Graphics.FromImage(btm);
+            //Rectangle shape = new Rectangle(x, y, diffx, diffy);
+            //if (a==1)
+            //{
+            //    g.DrawRectangle(new Pen(color),shape);
+            //}
+        }
+
+        private void PbDraw_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (draw == true)
+            {
+                x = e.X;
+                y = e.Y;
+                diffx = e.X - curX;
+                diffy = curY - e.Y;
+                if (a==1)
+                {
+                    myPaint.DrawLine(new Pen(Color.Black), curX, curY, e.X, e.Y);
+                    myPaint.DrawLine(new Pen(Color.Black),curX,curY,e.X,e.Y);
+                }
+            }
         }
 
         private void PbLienzo_MouseMove_1(object sender, MouseEventArgs e)
