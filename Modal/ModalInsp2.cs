@@ -27,6 +27,7 @@ namespace Mine.Modal
             pd.InspectorGeo = TxtInspector.Text;
             pd.LocationGeo = TxtLocation.Text;
             db.SaveChanges();
+            this.Close();
         }
     }
 }

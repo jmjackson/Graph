@@ -27,6 +27,7 @@ namespace Mine.Modal
             pd.InspectorDev = TxtInspection.Text;
             pd.LocationDev = TxtLocation.Text;
             db.SaveChanges();
+            this.Close();
         }
     }
 }
