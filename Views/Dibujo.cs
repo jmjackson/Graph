@@ -68,7 +68,7 @@ namespace Mine.Views
 
             }
 
-            //tabla de cordenadas
+           
 
 
             //if (Pn.ImageDev!=null)

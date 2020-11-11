@@ -288,7 +288,7 @@
             // 
             // BtnSet
             // 
-            this.BtnSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.BtnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSet.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
