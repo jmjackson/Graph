@@ -86,25 +86,30 @@
             this.PanelLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.PanelLeft.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PanelLeft.Location = new System.Drawing.Point(2, 55);
+            this.PanelLeft.Location = new System.Drawing.Point(0, 55);
             this.PanelLeft.Name = "PanelLeft";
-            this.PanelLeft.Size = new System.Drawing.Size(188, 644);
+            this.PanelLeft.Size = new System.Drawing.Size(190, 644);
             this.PanelLeft.TabIndex = 1;
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(372, 52);
+            this.panel1.Location = new System.Drawing.Point(1186, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 736);
+            this.panel1.Size = new System.Drawing.Size(200, 647);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Location = new System.Drawing.Point(673, 124);
+            this.panel2.Location = new System.Drawing.Point(196, 58);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.Size = new System.Drawing.Size(984, 635);
             this.panel2.TabIndex = 3;
             // 
             // panel3
