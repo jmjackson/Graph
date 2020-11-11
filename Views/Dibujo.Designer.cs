@@ -176,12 +176,12 @@
             // 
             this.ListBoxData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ListBoxData.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListBoxData.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListBoxData.FormattingEnabled = true;
-            this.ListBoxData.ItemHeight = 25;
-            this.ListBoxData.Location = new System.Drawing.Point(27, 423);
+            this.ListBoxData.ItemHeight = 32;
+            this.ListBoxData.Location = new System.Drawing.Point(27, 430);
             this.ListBoxData.Name = "ListBoxData";
-            this.ListBoxData.Size = new System.Drawing.Size(161, 204);
+            this.ListBoxData.Size = new System.Drawing.Size(161, 196);
             this.ListBoxData.TabIndex = 0;
             // 
             // label2
