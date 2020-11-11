@@ -21,7 +21,7 @@ namespace Mine.Views
 
         //
         Bitmap btm;
-
+        
         private Graphics myPaint;
         private Boolean draw = false;
         private double diffxy;
