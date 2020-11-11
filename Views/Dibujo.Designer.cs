@@ -42,12 +42,9 @@
             this.GbTools = new System.Windows.Forms.GroupBox();
             this.BtnColor = new System.Windows.Forms.Button();
             this.BtnTexto = new System.Windows.Forms.Button();
-            this.BtnBorrador = new System.Windows.Forms.Button();
-            this.BtnPluma = new System.Windows.Forms.Button();
             this.BtnRectangulo = new System.Windows.Forms.Button();
-            this.BtnLinia = new FontAwesome.Sharp.IconButton();
+            this.BtnLine = new FontAwesome.Sharp.IconButton();
             this.BtnTriangulo = new System.Windows.Forms.Button();
-            this.BtnCirculo = new System.Windows.Forms.Button();
             this.BtnCuadrado = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +55,9 @@
             this.DeployButton = new FontAwesome.Sharp.IconButton();
             this.SeamingButton = new FontAwesome.Sharp.IconButton();
             this.BtnErase = new FontAwesome.Sharp.IconButton();
+            this.BtnPen = new FontAwesome.Sharp.IconButton();
+            this.BtnCircle = new FontAwesome.Sharp.IconButton();
+            this.BtnSet = new FontAwesome.Sharp.IconButton();
             this.PanelHeader.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -191,13 +191,12 @@
             // 
             this.GbTools.Controls.Add(this.BtnColor);
             this.GbTools.Controls.Add(this.BtnTexto);
-            this.GbTools.Controls.Add(this.BtnBorrador);
-            this.GbTools.Controls.Add(this.BtnPluma);
             this.GbTools.Controls.Add(this.BtnRectangulo);
+            this.GbTools.Controls.Add(this.BtnCircle);
+            this.GbTools.Controls.Add(this.BtnPen);
             this.GbTools.Controls.Add(this.BtnErase);
-            this.GbTools.Controls.Add(this.BtnLinia);
+            this.GbTools.Controls.Add(this.BtnLine);
             this.GbTools.Controls.Add(this.BtnTriangulo);
-            this.GbTools.Controls.Add(this.BtnCirculo);
             this.GbTools.Controls.Add(this.BtnCuadrado);
             this.GbTools.Location = new System.Drawing.Point(12, 34);
             this.GbTools.Name = "GbTools";
@@ -225,29 +224,9 @@
             this.BtnTexto.UseVisualStyleBackColor = true;
             this.BtnTexto.Click += new System.EventHandler(this.BtnTexto_Click);
             // 
-            // BtnBorrador
-            // 
-            this.BtnBorrador.Location = new System.Drawing.Point(87, 232);
-            this.BtnBorrador.Name = "BtnBorrador";
-            this.BtnBorrador.Size = new System.Drawing.Size(75, 65);
-            this.BtnBorrador.TabIndex = 6;
-            this.BtnBorrador.Text = "Borrador";
-            this.BtnBorrador.UseVisualStyleBackColor = true;
-            this.BtnBorrador.Click += new System.EventHandler(this.BtnBorrador_Click);
-            // 
-            // BtnPluma
-            // 
-            this.BtnPluma.Location = new System.Drawing.Point(6, 232);
-            this.BtnPluma.Name = "BtnPluma";
-            this.BtnPluma.Size = new System.Drawing.Size(75, 65);
-            this.BtnPluma.TabIndex = 5;
-            this.BtnPluma.Text = "Lapiz";
-            this.BtnPluma.UseVisualStyleBackColor = true;
-            this.BtnPluma.Click += new System.EventHandler(this.BtnPluma_Click);
-            // 
             // BtnRectangulo
             // 
-            this.BtnRectangulo.Location = new System.Drawing.Point(87, 90);
+            this.BtnRectangulo.Location = new System.Drawing.Point(6, 161);
             this.BtnRectangulo.Name = "BtnRectangulo";
             this.BtnRectangulo.Size = new System.Drawing.Size(75, 65);
             this.BtnRectangulo.TabIndex = 4;
@@ -255,24 +234,24 @@
             this.BtnRectangulo.UseVisualStyleBackColor = true;
             this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
             // 
-            // BtnLinia
+            // BtnLine
             // 
-            this.BtnLinia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.BtnLinia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLinia.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnLinia.ForeColor = System.Drawing.Color.White;
-            this.BtnLinia.IconChar = FontAwesome.Sharp.IconChar.GripLinesVertical;
-            this.BtnLinia.IconColor = System.Drawing.Color.White;
-            this.BtnLinia.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnLinia.IconSize = 48;
-            this.BtnLinia.Location = new System.Drawing.Point(10, 19);
-            this.BtnLinia.Name = "BtnLinia";
-            this.BtnLinia.Rotation = 0D;
-            this.BtnLinia.Size = new System.Drawing.Size(58, 55);
-            this.BtnLinia.TabIndex = 1;
-            this.BtnLinia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnLinia.UseVisualStyleBackColor = false;
-            this.BtnLinia.Click += new System.EventHandler(this.BtnLinia_Click);
+            this.BtnLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnLine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLine.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnLine.ForeColor = System.Drawing.Color.White;
+            this.BtnLine.IconChar = FontAwesome.Sharp.IconChar.GripLinesVertical;
+            this.BtnLine.IconColor = System.Drawing.Color.White;
+            this.BtnLine.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnLine.IconSize = 48;
+            this.BtnLine.Location = new System.Drawing.Point(87, 90);
+            this.BtnLine.Name = "BtnLine";
+            this.BtnLine.Rotation = 0D;
+            this.BtnLine.Size = new System.Drawing.Size(58, 55);
+            this.BtnLine.TabIndex = 1;
+            this.BtnLine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnLine.UseVisualStyleBackColor = false;
+            this.BtnLine.Click += new System.EventHandler(this.BtnLinia_Click);
             // 
             // BtnTriangulo
             // 
@@ -284,19 +263,9 @@
             this.BtnTriangulo.UseVisualStyleBackColor = true;
             this.BtnTriangulo.Click += new System.EventHandler(this.BtnTriangulo_Click);
             // 
-            // BtnCirculo
-            // 
-            this.BtnCirculo.Location = new System.Drawing.Point(6, 161);
-            this.BtnCirculo.Name = "BtnCirculo";
-            this.BtnCirculo.Size = new System.Drawing.Size(75, 65);
-            this.BtnCirculo.TabIndex = 2;
-            this.BtnCirculo.Text = "Circulo";
-            this.BtnCirculo.UseVisualStyleBackColor = true;
-            this.BtnCirculo.Click += new System.EventHandler(this.BtnCirculo_Click);
-            // 
             // BtnCuadrado
             // 
-            this.BtnCuadrado.Location = new System.Drawing.Point(6, 90);
+            this.BtnCuadrado.Location = new System.Drawing.Point(6, 237);
             this.BtnCuadrado.Name = "BtnCuadrado";
             this.BtnCuadrado.Size = new System.Drawing.Size(75, 65);
             this.BtnCuadrado.TabIndex = 1;
@@ -306,9 +275,9 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.BtnSet);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.ListBoxData);
             this.panel1.Location = new System.Drawing.Point(1186, 52);
@@ -422,10 +391,10 @@
             this.BtnErase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnErase.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnErase.ForeColor = System.Drawing.Color.White;
-            this.BtnErase.IconChar = FontAwesome.Sharp.IconChar.GripLinesVertical;
+            this.BtnErase.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.BtnErase.IconColor = System.Drawing.Color.White;
             this.BtnErase.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnErase.IconSize = 48;
+            this.BtnErase.IconSize = 36;
             this.BtnErase.Location = new System.Drawing.Point(87, 19);
             this.BtnErase.Name = "BtnErase";
             this.BtnErase.Rotation = 0D;
@@ -434,6 +403,64 @@
             this.BtnErase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnErase.UseVisualStyleBackColor = false;
             this.BtnErase.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
+            // BtnPen
+            // 
+            this.BtnPen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnPen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPen.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnPen.ForeColor = System.Drawing.Color.White;
+            this.BtnPen.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
+            this.BtnPen.IconColor = System.Drawing.Color.White;
+            this.BtnPen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnPen.IconSize = 36;
+            this.BtnPen.Location = new System.Drawing.Point(23, 19);
+            this.BtnPen.Name = "BtnPen";
+            this.BtnPen.Rotation = 0D;
+            this.BtnPen.Size = new System.Drawing.Size(58, 55);
+            this.BtnPen.TabIndex = 1;
+            this.BtnPen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnPen.UseVisualStyleBackColor = false;
+            this.BtnPen.Click += new System.EventHandler(this.BtnPluma_Click);
+            // 
+            // BtnCircle
+            // 
+            this.BtnCircle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnCircle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCircle.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnCircle.ForeColor = System.Drawing.Color.White;
+            this.BtnCircle.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            this.BtnCircle.IconColor = System.Drawing.Color.White;
+            this.BtnCircle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnCircle.IconSize = 36;
+            this.BtnCircle.Location = new System.Drawing.Point(23, 90);
+            this.BtnCircle.Name = "BtnCircle";
+            this.BtnCircle.Rotation = 0D;
+            this.BtnCircle.Size = new System.Drawing.Size(58, 55);
+            this.BtnCircle.TabIndex = 1;
+            this.BtnCircle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnCircle.UseVisualStyleBackColor = false;
+            this.BtnCircle.Click += new System.EventHandler(this.BtnCirculo_Click);
+            // 
+            // BtnSet
+            // 
+            this.BtnSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSet.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnSet.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSet.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnSet.IconColor = System.Drawing.Color.Black;
+            this.BtnSet.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnSet.IconSize = 48;
+            this.BtnSet.Location = new System.Drawing.Point(42, 292);
+            this.BtnSet.Name = "BtnSet";
+            this.BtnSet.Rotation = 0D;
+            this.BtnSet.Size = new System.Drawing.Size(112, 56);
+            this.BtnSet.TabIndex = 2;
+            this.BtnSet.Text = "Set";
+            this.BtnSet.UseVisualStyleBackColor = false;
             // 
             // Dibujo
             // 
@@ -481,7 +508,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox GbTools;
         private System.Windows.Forms.Button BtnTriangulo;
-        private System.Windows.Forms.Button BtnCirculo;
         private System.Windows.Forms.Button BtnCuadrado;
         private System.Windows.Forms.PictureBox PbDraw;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -491,12 +517,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton BtnLinia;
+        private FontAwesome.Sharp.IconButton BtnLine;
         private System.Windows.Forms.Button BtnRectangulo;
-        private System.Windows.Forms.Button BtnPluma;
         private System.Windows.Forms.Button BtnColor;
         private System.Windows.Forms.Button BtnTexto;
-        private System.Windows.Forms.Button BtnBorrador;
         private FontAwesome.Sharp.IconButton BtnErase;
+        private FontAwesome.Sharp.IconButton BtnPen;
+        private FontAwesome.Sharp.IconButton BtnCircle;
+        private FontAwesome.Sharp.IconButton BtnSet;
     }
 }
