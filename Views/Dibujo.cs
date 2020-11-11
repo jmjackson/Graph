@@ -196,12 +196,14 @@ namespace Mine.Views
             //dibujar = true;
 
         }
-
-        private void BtnRectangulo_Click(object sender, EventArgs e)
+        private void BtnPluma_Click(object sender, EventArgs e)
+        {
+            a = 0;
+        }
+        private void BtnLinia_Click(object sender, EventArgs e)
         {
             a = 1;
         }
-
         private void BtnCuadrado_Click(object sender, EventArgs e)
         {
             a = 2;
@@ -216,7 +218,10 @@ namespace Mine.Views
         {
             a = 4;
         }
-
+        private void BtnRectangulo_Click(object sender, EventArgs e)
+        {
+            a = 5;
+        }
         private void PbDraw_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button==MouseButtons.Left)
@@ -234,6 +239,19 @@ namespace Mine.Views
             textBox2.Text = Convert.ToString(diffy);
             diffxy = Math.Sqrt((diffx * diffx) + (diffy * diffy));
             textBox3.Text = Convert.ToString(diffxy);
+
+            if (draw == true)
+            {
+                x = e.X;
+                y = e.Y;
+                diffx = e.X - curX;
+                diffy = curY - e.Y;
+                if (a==0)
+                {
+                    myPaint.DrawLine(new Pen(Color.Black), new Point(e.X,e.Y),e.Location);
+                }
+            }
+
         }
 
         private void PbDraw_MouseUp(object sender, MouseEventArgs e)
@@ -258,13 +276,40 @@ namespace Mine.Views
                 y = e.Y;
                 diffx = e.X - curX;
                 diffy = curY - e.Y;
+                Rectangle shape = new Rectangle(e.X, e.Y, diffx, diffy);
+
+                int w = 100,h=100;
+
                 if (a==1)
                 {
+                    //Linia
                     myPaint.DrawLine(new Pen(Color.Black), curX, curY, e.X, e.Y);
                     myPaint.DrawLine(new Pen(Color.Black),curX,curY,e.X,e.Y);
                 }
+                if (a == 2)
+                {
+                    //Cuadrado
+                    Rectangle cuadrado = new Rectangle(e.X, e.Y,w,h);
+                    myPaint.DrawRectangle(new Pen(Color.Black),shape);
+                }
+                if (a == 3)
+                {
+                    //Circulo
+                    myPaint.DrawEllipse(new Pen(Color.Black), shape);
+                }
+                if (a == 4)
+                {
+                    //Triangulo
+                    myPaint.DrawEllipse(new Pen(Color.Black), shape);
+                }
+                if (a == 5)
+                {
+                    //Rectangulo
+                    myPaint.DrawRectangle(new Pen(Color.Black),shape);
+                }
             }
         }
+
 
         private void PbLienzo_MouseMove_1(object sender, MouseEventArgs e)
         {

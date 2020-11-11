@@ -40,6 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.GbTools = new System.Windows.Forms.GroupBox();
+            this.BtnRectangulo = new System.Windows.Forms.Button();
+            this.BtnLinia = new FontAwesome.Sharp.IconButton();
             this.BtnTriangulo = new System.Windows.Forms.Button();
             this.BtnCirculo = new System.Windows.Forms.Button();
             this.BtnCuadrado = new System.Windows.Forms.Button();
@@ -51,7 +53,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.DeployButton = new FontAwesome.Sharp.IconButton();
             this.SeamingButton = new FontAwesome.Sharp.IconButton();
-            this.BtnRectangulo = new FontAwesome.Sharp.IconButton();
+            this.BtnPluma = new System.Windows.Forms.Button();
             this.PanelHeader.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -126,7 +128,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(22, 378);
+            this.groupBox1.Location = new System.Drawing.Point(22, 456);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(143, 170);
             this.groupBox1.TabIndex = 1;
@@ -183,16 +185,47 @@
             // 
             // GbTools
             // 
+            this.GbTools.Controls.Add(this.BtnPluma);
             this.GbTools.Controls.Add(this.BtnRectangulo);
+            this.GbTools.Controls.Add(this.BtnLinia);
             this.GbTools.Controls.Add(this.BtnTriangulo);
             this.GbTools.Controls.Add(this.BtnCirculo);
             this.GbTools.Controls.Add(this.BtnCuadrado);
             this.GbTools.Location = new System.Drawing.Point(12, 34);
             this.GbTools.Name = "GbTools";
-            this.GbTools.Size = new System.Drawing.Size(170, 325);
+            this.GbTools.Size = new System.Drawing.Size(170, 390);
             this.GbTools.TabIndex = 0;
             this.GbTools.TabStop = false;
             this.GbTools.Text = "Tools";
+            // 
+            // BtnRectangulo
+            // 
+            this.BtnRectangulo.Location = new System.Drawing.Point(6, 303);
+            this.BtnRectangulo.Name = "BtnRectangulo";
+            this.BtnRectangulo.Size = new System.Drawing.Size(75, 65);
+            this.BtnRectangulo.TabIndex = 4;
+            this.BtnRectangulo.Text = "button4";
+            this.BtnRectangulo.UseVisualStyleBackColor = true;
+            this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
+            // 
+            // BtnLinia
+            // 
+            this.BtnLinia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnLinia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLinia.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnLinia.ForeColor = System.Drawing.Color.White;
+            this.BtnLinia.IconChar = FontAwesome.Sharp.IconChar.GripLinesVertical;
+            this.BtnLinia.IconColor = System.Drawing.Color.White;
+            this.BtnLinia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnLinia.IconSize = 48;
+            this.BtnLinia.Location = new System.Drawing.Point(10, 19);
+            this.BtnLinia.Name = "BtnLinia";
+            this.BtnLinia.Rotation = 0D;
+            this.BtnLinia.Size = new System.Drawing.Size(58, 55);
+            this.BtnLinia.TabIndex = 1;
+            this.BtnLinia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnLinia.UseVisualStyleBackColor = false;
+            this.BtnLinia.Click += new System.EventHandler(this.BtnLinia_Click);
             // 
             // BtnTriangulo
             // 
@@ -336,24 +369,15 @@
             this.SeamingButton.UseVisualStyleBackColor = false;
             this.SeamingButton.Click += new System.EventHandler(this.SeamingButton_Click);
             // 
-            // BtnRectangulo
+            // BtnPluma
             // 
-            this.BtnRectangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.BtnRectangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRectangulo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnRectangulo.ForeColor = System.Drawing.Color.White;
-            this.BtnRectangulo.IconChar = FontAwesome.Sharp.IconChar.GripLinesVertical;
-            this.BtnRectangulo.IconColor = System.Drawing.Color.White;
-            this.BtnRectangulo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnRectangulo.IconSize = 48;
-            this.BtnRectangulo.Location = new System.Drawing.Point(10, 19);
-            this.BtnRectangulo.Name = "BtnRectangulo";
-            this.BtnRectangulo.Rotation = 0D;
-            this.BtnRectangulo.Size = new System.Drawing.Size(58, 55);
-            this.BtnRectangulo.TabIndex = 1;
-            this.BtnRectangulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnRectangulo.UseVisualStyleBackColor = false;
-            this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
+            this.BtnPluma.Location = new System.Drawing.Point(87, 303);
+            this.BtnPluma.Name = "BtnPluma";
+            this.BtnPluma.Size = new System.Drawing.Size(75, 65);
+            this.BtnPluma.TabIndex = 5;
+            this.BtnPluma.Text = "button4";
+            this.BtnPluma.UseVisualStyleBackColor = true;
+            this.BtnPluma.Click += new System.EventHandler(this.BtnPluma_Click);
             // 
             // Dibujo
             // 
@@ -411,6 +435,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton BtnRectangulo;
+        private FontAwesome.Sharp.IconButton BtnLinia;
+        private System.Windows.Forms.Button BtnRectangulo;
+        private System.Windows.Forms.Button BtnPluma;
     }
 }
