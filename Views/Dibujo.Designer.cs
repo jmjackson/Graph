@@ -466,6 +466,7 @@
             this.BtnSet.TabIndex = 2;
             this.BtnSet.Text = "Set";
             this.BtnSet.UseVisualStyleBackColor = false;
+            this.BtnSet.Click += new System.EventHandler(this.BtnTexto_Click);
             // 
             // iconButton1
             // 

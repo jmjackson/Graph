@@ -247,7 +247,7 @@ namespace Mine.Views
                 }
                 if (a == 8)
                 {
-                    myPaint.DrawLine(new Pen(Color.White,30), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    myPaint.DrawLine(new Pen(Color.White,50), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
                     X = e.X;
                     Y = e.Y;
                 }
@@ -306,13 +306,18 @@ namespace Mine.Views
                 }
                 if (a == 7)
                 {
-                    string text1 = "Draw text in a rectangle by passing a RectF to the DrawString method.";
-                    using (Font font1 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point))
+                    var select = Convert.ToInt32(ListBoxData.SelectedItem.ToString());
+                    var tdev = db.Developments.Where(a => a.ProjectDevId == pdId).Where(a=>a.PanelNo==select).FirstOrDefault();
+                    //var tgeo = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).FirstOrDefault();
+
+                    string text1 = "PNo:"+tdev.PanelNo.ToString()+", RNo.: "+tdev.RollNo+"\nL:"+tdev.Lenght+", W:"+tdev.Width+
+                        "\nT:"+tdev.Thickness+", Date:"+tdev.DeploymentDate.ToShortDateString();
+                    using (Font font1 = new Font("Arial", 8, FontStyle.Regular, GraphicsUnit.Point))
                     {
                         //RectangleF rectF1 = new RectangleF(e.X, e.Y, diffx, diffy);
-                        RectangleF rectF1 = new RectangleF(e.X, e.Y, 100, 122);//cordenadas primero y luego tamano
-                        myPaint.DrawString(text1, font1, Brushes.Blue, rectF1);
-                        myPaint.DrawRectangle(Pens.Black, Rectangle.Round(rectF1));
+                        RectangleF rectF1 = new RectangleF(e.X, e.Y, 150, 50);//cordenadas primero y luego tamano
+                        myPaint.DrawString(text1, font1, Brushes.DarkGray, rectF1);
+                        myPaint.DrawRectangle(Pens.White, Rectangle.Round(rectF1));
                     }
                 }
             }
