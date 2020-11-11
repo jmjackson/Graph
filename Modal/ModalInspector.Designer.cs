@@ -96,18 +96,18 @@
             // 
             // TxtInspector
             // 
-            this.TxtInspector.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtInspector.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtInspector.Location = new System.Drawing.Point(191, 69);
             this.TxtInspector.Name = "TxtInspector";
-            this.TxtInspector.Size = new System.Drawing.Size(307, 31);
+            this.TxtInspector.Size = new System.Drawing.Size(307, 35);
             this.TxtInspector.TabIndex = 5;
             // 
             // TxtLocation
             // 
-            this.TxtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLocation.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLocation.Location = new System.Drawing.Point(191, 162);
             this.TxtLocation.Name = "TxtLocation";
-            this.TxtLocation.Size = new System.Drawing.Size(307, 31);
+            this.TxtLocation.Size = new System.Drawing.Size(307, 35);
             this.TxtLocation.TabIndex = 5;
             // 
             // BtnClose
