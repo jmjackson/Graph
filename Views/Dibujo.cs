@@ -142,20 +142,7 @@ namespace Mine.Views
             //selecc_Opcion = 4;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void PBLienzo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ToolsBox_Enter(object sender, EventArgs e)
-        {
-
-        }
+       
 
         //Eventos de picturebox
         private void PbLienzo_MouseClick_1(object sender, MouseEventArgs e)
@@ -331,6 +318,10 @@ namespace Mine.Views
             }
         }
 
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            a = 8;
+        }
 
         private void PbLienzo_MouseMove_1(object sender, MouseEventArgs e)
         {

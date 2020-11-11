@@ -57,6 +57,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.DeployButton = new FontAwesome.Sharp.IconButton();
             this.SeamingButton = new FontAwesome.Sharp.IconButton();
+            this.BtnErase = new FontAwesome.Sharp.IconButton();
             this.PanelHeader.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -193,6 +194,7 @@
             this.GbTools.Controls.Add(this.BtnBorrador);
             this.GbTools.Controls.Add(this.BtnPluma);
             this.GbTools.Controls.Add(this.BtnRectangulo);
+            this.GbTools.Controls.Add(this.BtnErase);
             this.GbTools.Controls.Add(this.BtnLinia);
             this.GbTools.Controls.Add(this.BtnTriangulo);
             this.GbTools.Controls.Add(this.BtnCirculo);
@@ -414,6 +416,25 @@
             this.SeamingButton.UseVisualStyleBackColor = false;
             this.SeamingButton.Click += new System.EventHandler(this.SeamingButton_Click);
             // 
+            // BtnErase
+            // 
+            this.BtnErase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnErase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnErase.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnErase.ForeColor = System.Drawing.Color.White;
+            this.BtnErase.IconChar = FontAwesome.Sharp.IconChar.GripLinesVertical;
+            this.BtnErase.IconColor = System.Drawing.Color.White;
+            this.BtnErase.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnErase.IconSize = 48;
+            this.BtnErase.Location = new System.Drawing.Point(87, 19);
+            this.BtnErase.Name = "BtnErase";
+            this.BtnErase.Rotation = 0D;
+            this.BtnErase.Size = new System.Drawing.Size(58, 55);
+            this.BtnErase.TabIndex = 1;
+            this.BtnErase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnErase.UseVisualStyleBackColor = false;
+            this.BtnErase.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // Dibujo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,5 +497,6 @@
         private System.Windows.Forms.Button BtnColor;
         private System.Windows.Forms.Button BtnTexto;
         private System.Windows.Forms.Button BtnBorrador;
+        private FontAwesome.Sharp.IconButton BtnErase;
     }
 }
