@@ -33,8 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.BtnClose = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtInspection = new System.Windows.Forms.TextBox();
+            this.TxtLocation = new System.Windows.Forms.TextBox();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -87,41 +87,49 @@
             this.BtnClose.TabIndex = 8;
             this.BtnClose.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // TxtInspection
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(229, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(363, 35);
-            this.textBox1.TabIndex = 9;
+            this.TxtInspection.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtInspection.Location = new System.Drawing.Point(229, 109);
+            this.TxtInspection.Name = "TxtInspection";
+            this.TxtInspection.Size = new System.Drawing.Size(363, 35);
+            this.TxtInspection.TabIndex = 9;
             // 
-            // textBox2
+            // TxtLocation
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(229, 219);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(363, 35);
-            this.textBox2.TabIndex = 9;
+            this.TxtLocation.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLocation.Location = new System.Drawing.Point(229, 219);
+            this.TxtLocation.Name = "TxtLocation";
+            this.TxtLocation.Size = new System.Drawing.Size(363, 35);
+            this.TxtLocation.TabIndex = 9;
             // 
             // BtnSave
             // 
+            this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSave.Location = new System.Drawing.Point(170, 344);
+            this.BtnSave.ForeColor = System.Drawing.Color.White;
+            this.BtnSave.Location = new System.Drawing.Point(229, 344);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(134, 53);
             this.BtnSave.TabIndex = 10;
-            this.BtnSave.Text = "button1";
-            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = false;
             // 
             // BtnCancel
             // 
+            this.BtnCancel.BackColor = System.Drawing.Color.Red;
+            this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancel.Location = new System.Drawing.Point(367, 344);
+            this.BtnCancel.ForeColor = System.Drawing.Color.White;
+            this.BtnCancel.Location = new System.Drawing.Point(458, 344);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(134, 53);
             this.BtnCancel.TabIndex = 10;
-            this.BtnCancel.Text = "button1";
-            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = false;
             // 
             // ModalInsp
             // 
@@ -130,8 +138,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtLocation);
+            this.Controls.Add(this.TxtInspection);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -151,8 +159,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton BtnClose;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtInspection;
+        private System.Windows.Forms.TextBox TxtLocation;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnCancel;
     }

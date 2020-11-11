@@ -32,10 +32,11 @@
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtLocation = new System.Windows.Forms.TextBox();
+            this.TxtInspector = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnClose
@@ -58,39 +59,47 @@
             // 
             // BtnCancel
             // 
+            this.BtnCancel.BackColor = System.Drawing.Color.Red;
+            this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnCancel.Location = new System.Drawing.Point(428, 316);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(134, 53);
             this.BtnCancel.TabIndex = 15;
-            this.BtnCancel.Text = "button1";
-            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = false;
             // 
             // BtnSave
             // 
+            this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnSave.Location = new System.Drawing.Point(231, 316);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(134, 53);
             this.BtnSave.TabIndex = 16;
-            this.BtnSave.Text = "button1";
-            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // TxtLocation
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(199, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(363, 35);
-            this.textBox2.TabIndex = 13;
+            this.TxtLocation.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLocation.Location = new System.Drawing.Point(199, 209);
+            this.TxtLocation.Name = "TxtLocation";
+            this.TxtLocation.Size = new System.Drawing.Size(363, 35);
+            this.TxtLocation.TabIndex = 13;
             // 
-            // textBox1
+            // TxtInspector
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(199, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(363, 35);
-            this.textBox1.TabIndex = 14;
+            this.TxtInspector.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtInspector.Location = new System.Drawing.Point(199, 99);
+            this.TxtInspector.Name = "TxtInspector";
+            this.TxtInspector.Size = new System.Drawing.Size(363, 35);
+            this.TxtInspector.TabIndex = 14;
             // 
             // label4
             // 
@@ -112,6 +121,16 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Inspector";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(329, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 30);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Inspector";
+            // 
             // ModalInsp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,9 +138,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtLocation);
+            this.Controls.Add(this.TxtInspector);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BtnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -137,9 +157,10 @@
         private FontAwesome.Sharp.IconButton BtnClose;
         private System.Windows.Forms.Button BtnCancel;
         private System.Windows.Forms.Button BtnSave;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtLocation;
+        private System.Windows.Forms.TextBox TxtInspector;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
     }
 }
