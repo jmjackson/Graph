@@ -188,11 +188,11 @@ namespace Mine.Views
 
         private void BtnData_Click(object sender, EventArgs e)
         {
-            //ModalInspector mi = new ModalInspector();
-            //if (mi.ShowDialog() == DialogResult.Yes)
-            //{
-
-            //}
+            var mi = new ModalInsp(proDevId);
+            if (mi.ShowDialog()==DialogResult.Yes)
+            {
+                DevelopmentForm_Load(sender,e);
+            }
         }
     }
 }
