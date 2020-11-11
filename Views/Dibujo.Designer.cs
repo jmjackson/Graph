@@ -40,6 +40,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.GbTools = new System.Windows.Forms.GroupBox();
+            this.BtnColor = new System.Windows.Forms.Button();
+            this.BtnTexto = new System.Windows.Forms.Button();
+            this.BtnBorrador = new System.Windows.Forms.Button();
+            this.BtnPluma = new System.Windows.Forms.Button();
             this.BtnRectangulo = new System.Windows.Forms.Button();
             this.BtnLinia = new FontAwesome.Sharp.IconButton();
             this.BtnTriangulo = new System.Windows.Forms.Button();
@@ -53,7 +57,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.DeployButton = new FontAwesome.Sharp.IconButton();
             this.SeamingButton = new FontAwesome.Sharp.IconButton();
-            this.BtnPluma = new System.Windows.Forms.Button();
             this.PanelHeader.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -185,6 +188,9 @@
             // 
             // GbTools
             // 
+            this.GbTools.Controls.Add(this.BtnColor);
+            this.GbTools.Controls.Add(this.BtnTexto);
+            this.GbTools.Controls.Add(this.BtnBorrador);
             this.GbTools.Controls.Add(this.BtnPluma);
             this.GbTools.Controls.Add(this.BtnRectangulo);
             this.GbTools.Controls.Add(this.BtnLinia);
@@ -198,13 +204,52 @@
             this.GbTools.TabStop = false;
             this.GbTools.Text = "Tools";
             // 
+            // BtnColor
+            // 
+            this.BtnColor.Location = new System.Drawing.Point(87, 303);
+            this.BtnColor.Name = "BtnColor";
+            this.BtnColor.Size = new System.Drawing.Size(75, 65);
+            this.BtnColor.TabIndex = 8;
+            this.BtnColor.Text = "Color";
+            this.BtnColor.UseVisualStyleBackColor = true;
+            // 
+            // BtnTexto
+            // 
+            this.BtnTexto.Location = new System.Drawing.Point(6, 303);
+            this.BtnTexto.Name = "BtnTexto";
+            this.BtnTexto.Size = new System.Drawing.Size(75, 65);
+            this.BtnTexto.TabIndex = 7;
+            this.BtnTexto.Text = "Texto";
+            this.BtnTexto.UseVisualStyleBackColor = true;
+            this.BtnTexto.Click += new System.EventHandler(this.BtnTexto_Click);
+            // 
+            // BtnBorrador
+            // 
+            this.BtnBorrador.Location = new System.Drawing.Point(87, 232);
+            this.BtnBorrador.Name = "BtnBorrador";
+            this.BtnBorrador.Size = new System.Drawing.Size(75, 65);
+            this.BtnBorrador.TabIndex = 6;
+            this.BtnBorrador.Text = "Borrador";
+            this.BtnBorrador.UseVisualStyleBackColor = true;
+            this.BtnBorrador.Click += new System.EventHandler(this.BtnBorrador_Click);
+            // 
+            // BtnPluma
+            // 
+            this.BtnPluma.Location = new System.Drawing.Point(6, 232);
+            this.BtnPluma.Name = "BtnPluma";
+            this.BtnPluma.Size = new System.Drawing.Size(75, 65);
+            this.BtnPluma.TabIndex = 5;
+            this.BtnPluma.Text = "Lapiz";
+            this.BtnPluma.UseVisualStyleBackColor = true;
+            this.BtnPluma.Click += new System.EventHandler(this.BtnPluma_Click);
+            // 
             // BtnRectangulo
             // 
-            this.BtnRectangulo.Location = new System.Drawing.Point(6, 303);
+            this.BtnRectangulo.Location = new System.Drawing.Point(87, 90);
             this.BtnRectangulo.Name = "BtnRectangulo";
             this.BtnRectangulo.Size = new System.Drawing.Size(75, 65);
             this.BtnRectangulo.TabIndex = 4;
-            this.BtnRectangulo.Text = "button4";
+            this.BtnRectangulo.Text = "Rectangulo";
             this.BtnRectangulo.UseVisualStyleBackColor = true;
             this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
             // 
@@ -229,31 +274,31 @@
             // 
             // BtnTriangulo
             // 
-            this.BtnTriangulo.Location = new System.Drawing.Point(33, 232);
+            this.BtnTriangulo.Location = new System.Drawing.Point(87, 161);
             this.BtnTriangulo.Name = "BtnTriangulo";
             this.BtnTriangulo.Size = new System.Drawing.Size(75, 65);
             this.BtnTriangulo.TabIndex = 3;
-            this.BtnTriangulo.Text = "button4";
+            this.BtnTriangulo.Text = "Triangulo";
             this.BtnTriangulo.UseVisualStyleBackColor = true;
             this.BtnTriangulo.Click += new System.EventHandler(this.BtnTriangulo_Click);
             // 
             // BtnCirculo
             // 
-            this.BtnCirculo.Location = new System.Drawing.Point(33, 161);
+            this.BtnCirculo.Location = new System.Drawing.Point(6, 161);
             this.BtnCirculo.Name = "BtnCirculo";
             this.BtnCirculo.Size = new System.Drawing.Size(75, 65);
             this.BtnCirculo.TabIndex = 2;
-            this.BtnCirculo.Text = "button3";
+            this.BtnCirculo.Text = "Circulo";
             this.BtnCirculo.UseVisualStyleBackColor = true;
             this.BtnCirculo.Click += new System.EventHandler(this.BtnCirculo_Click);
             // 
             // BtnCuadrado
             // 
-            this.BtnCuadrado.Location = new System.Drawing.Point(33, 90);
+            this.BtnCuadrado.Location = new System.Drawing.Point(6, 90);
             this.BtnCuadrado.Name = "BtnCuadrado";
             this.BtnCuadrado.Size = new System.Drawing.Size(75, 65);
             this.BtnCuadrado.TabIndex = 1;
-            this.BtnCuadrado.Text = "button2";
+            this.BtnCuadrado.Text = "Cuadrado";
             this.BtnCuadrado.UseVisualStyleBackColor = true;
             this.BtnCuadrado.Click += new System.EventHandler(this.BtnCuadrado_Click);
             // 
@@ -369,16 +414,6 @@
             this.SeamingButton.UseVisualStyleBackColor = false;
             this.SeamingButton.Click += new System.EventHandler(this.SeamingButton_Click);
             // 
-            // BtnPluma
-            // 
-            this.BtnPluma.Location = new System.Drawing.Point(87, 303);
-            this.BtnPluma.Name = "BtnPluma";
-            this.BtnPluma.Size = new System.Drawing.Size(75, 65);
-            this.BtnPluma.TabIndex = 5;
-            this.BtnPluma.Text = "button4";
-            this.BtnPluma.UseVisualStyleBackColor = true;
-            this.BtnPluma.Click += new System.EventHandler(this.BtnPluma_Click);
-            // 
             // Dibujo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,5 +473,8 @@
         private FontAwesome.Sharp.IconButton BtnLinia;
         private System.Windows.Forms.Button BtnRectangulo;
         private System.Windows.Forms.Button BtnPluma;
+        private System.Windows.Forms.Button BtnColor;
+        private System.Windows.Forms.Button BtnTexto;
+        private System.Windows.Forms.Button BtnBorrador;
     }
 }

@@ -25,10 +25,12 @@ namespace Mine.Views
         private Graphics myPaint;
         private Boolean draw = false;
         private double diffxy;
-        private int curX, curY, x, y, diffx, diffy;
+        private int curX, curY,x,y, diffx, diffy;
         private int a = 0, b = 0;
         private Color pintura;
 
+        int? X = null;
+        int? Y = null;
 
 
         //Graphics g;
@@ -222,6 +224,14 @@ namespace Mine.Views
         {
             a = 5;
         }
+        private void BtnTexto_Click(object sender, EventArgs e)
+        {
+            a = 7;
+        }
+        private void BtnBorrador_Click(object sender, EventArgs e)
+        {
+            a = 8;
+        }
         private void PbDraw_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button==MouseButtons.Left)
@@ -235,20 +245,24 @@ namespace Mine.Views
 
         private void PbDraw_MouseMove(object sender, MouseEventArgs e)
         {
-            textBox1.Text = Convert.ToString(diffx);
-            textBox2.Text = Convert.ToString(diffy);
-            diffxy = Math.Sqrt((diffx * diffx) + (diffy * diffy));
-            textBox3.Text = Convert.ToString(diffxy);
+            //textBox1.Text = Convert.ToString(diffx);
+            //textBox2.Text = Convert.ToString(diffy);
+            //diffxy = Math.Sqrt((diffx * diffx) + (diffy * diffy));
+            //textBox3.Text = Convert.ToString(diffxy);
 
             if (draw == true)
             {
-                x = e.X;
-                y = e.Y;
-                diffx = e.X - curX;
-                diffy = curY - e.Y;
                 if (a==0)
                 {
-                    myPaint.DrawLine(new Pen(Color.Black), new Point(e.X,e.Y),e.Location);
+                    myPaint.DrawLine(new Pen(Color.Black), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    X = e.X;
+                    Y = e.Y;
+                }
+                if (a == 8)
+                {
+                    myPaint.DrawLine(new Pen(Color.White,30), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    X = e.X;
+                    Y = e.Y;
                 }
             }
 
@@ -256,16 +270,10 @@ namespace Mine.Views
 
         private void PbDraw_MouseUp(object sender, MouseEventArgs e)
         {
-            //btm = new Bitmap(PbDraw.Width, PbDraw.Height);
-            //PbDraw.Image = (Image)btm;
-            //diffx = e.X - x;
-            //diffy = e.Y - y;
-            //Graphics g = Graphics.FromImage(btm);
-            //Rectangle shape = new Rectangle(x, y, diffx, diffy);
-            //if (a==1)
-            //{
-            //    g.DrawRectangle(new Pen(color),shape);
-            //}
+            draw = false;
+
+            X = null;
+            Y = null;
         }
 
         private void PbDraw_MouseClick(object sender, MouseEventArgs e)
@@ -276,10 +284,9 @@ namespace Mine.Views
                 y = e.Y;
                 diffx = e.X - curX;
                 diffy = curY - e.Y;
-                Rectangle shape = new Rectangle(e.X, e.Y, diffx, diffy);
 
                 int w = 100,h=100;
-
+                Rectangle rect = new Rectangle(e.X, e.Y, diffx, diffy);
                 if (a==1)
                 {
                     //Linia
@@ -289,23 +296,37 @@ namespace Mine.Views
                 if (a == 2)
                 {
                     //Cuadrado
-                    Rectangle cuadrado = new Rectangle(e.X, e.Y,w,h);
-                    myPaint.DrawRectangle(new Pen(Color.Black),shape);
+                    //Rectangle cuadrado = new Rectangle(e.X, e.Y,w,h);
+                    //myPaint.DrawRectangle(new Pen(Color.Black),shape);
+
                 }
                 if (a == 3)
                 {
                     //Circulo
-                    myPaint.DrawEllipse(new Pen(Color.Black), shape);
+                    //myPaint.DrawEllipse(new Pen(Color.Black), rect);
+                    myPaint.DrawEllipse(new Pen(Color.Black), e.X, e.Y, diffx, diffy);
                 }
                 if (a == 4)
                 {
                     //Triangulo
-                    myPaint.DrawEllipse(new Pen(Color.Black), shape);
+                    //myPaint.DrawEllipse(new Pen(Color.Black), shape);
                 }
                 if (a == 5)
                 {
-                    //Rectangulo
-                    myPaint.DrawRectangle(new Pen(Color.Black),shape);
+                    // Draw rectangle to screen.
+                    //myPaint.DrawRectangle(new Pen(Color.Black), rect);
+                    myPaint.DrawRectangle(new Pen(Color.Black), e.X, e.Y, diffx, diffy);
+                }
+                if (a == 7)
+                {
+                    string text1 = "Draw text in a rectangle by passing a RectF to the DrawString method.";
+                    using (Font font1 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point))
+                    {
+                        //RectangleF rectF1 = new RectangleF(e.X, e.Y, diffx, diffy);
+                        RectangleF rectF1 = new RectangleF(e.X, e.Y, 100, 122);//cordenadas primero y luego tamano
+                        myPaint.DrawString(text1, font1, Brushes.Blue, rectF1);
+                        myPaint.DrawRectangle(Pens.Black, Rectangle.Round(rectF1));
+                    }
                 }
             }
         }
@@ -352,7 +373,7 @@ namespace Mine.Views
 
         private void PbLienzo_MouseUp_1(object sender, MouseEventArgs e)
         {
-            //dibujar = false;
+            //draw = false;
 
             //X = null;
             //Y = null;
