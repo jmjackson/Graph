@@ -63,6 +63,18 @@
             this.DGVGeo = new System.Windows.Forms.DataGridView();
             this.geoMembraneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeamingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeamNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeamTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WedgeTemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WedgeSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeamLength = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CarryOver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemarksDestructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Projectdev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.PanelHead.SuspendLayout();
             this.PanelFoot.SuspendLayout();
@@ -452,6 +464,19 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVGeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVGeo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.SeamingDate,
+            this.SeamNo,
+            this.SeamTime,
+            this.WedgeTemp,
+            this.WedgeSpeed,
+            this.SeamLength,
+            this.CarryOver,
+            this.Destructive,
+            this.RemarksDestructive,
+            this.ProjectDevId,
+            this.Projectdev});
             this.DGVGeo.DataSource = this.geoMembraneBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -467,10 +492,101 @@
             this.DGVGeo.Size = new System.Drawing.Size(1370, 540);
             this.DGVGeo.TabIndex = 0;
             // 
+            // geoMembraneBindingSource
+            // 
+            this.geoMembraneBindingSource.DataSource = typeof(Mine.DataModel.GeoMembrane);
+            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // SeamingDate
+            // 
+            this.SeamingDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamingDate.DataPropertyName = "SeamingDate";
+            this.SeamingDate.HeaderText = "SeamingDate";
+            this.SeamingDate.Name = "SeamingDate";
+            this.SeamingDate.ReadOnly = true;
+            // 
+            // SeamNo
+            // 
+            this.SeamNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamNo.DataPropertyName = "SeamNo";
+            this.SeamNo.HeaderText = "SeamNo";
+            this.SeamNo.Name = "SeamNo";
+            // 
+            // SeamTime
+            // 
+            this.SeamTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamTime.DataPropertyName = "SeamTime";
+            this.SeamTime.HeaderText = "SeamTime";
+            this.SeamTime.Name = "SeamTime";
+            // 
+            // WedgeTemp
+            // 
+            this.WedgeTemp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WedgeTemp.DataPropertyName = "WedgeTemp";
+            this.WedgeTemp.HeaderText = "WedgeTemp";
+            this.WedgeTemp.Name = "WedgeTemp";
+            // 
+            // WedgeSpeed
+            // 
+            this.WedgeSpeed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WedgeSpeed.DataPropertyName = "WedgeSpeed";
+            this.WedgeSpeed.HeaderText = "WedgeSpeed";
+            this.WedgeSpeed.Name = "WedgeSpeed";
+            // 
+            // SeamLength
+            // 
+            this.SeamLength.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SeamLength.DataPropertyName = "SeamLength";
+            this.SeamLength.HeaderText = "SeamLength";
+            this.SeamLength.Name = "SeamLength";
+            // 
+            // CarryOver
+            // 
+            this.CarryOver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CarryOver.DataPropertyName = "CarryOver";
+            this.CarryOver.HeaderText = "CarryOver";
+            this.CarryOver.Name = "CarryOver";
+            this.CarryOver.ReadOnly = true;
+            // 
+            // Destructive
+            // 
+            this.Destructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Destructive.DataPropertyName = "Destructive";
+            this.Destructive.HeaderText = "Destructive";
+            this.Destructive.Name = "Destructive";
+            // 
+            // RemarksDestructive
+            // 
+            this.RemarksDestructive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RemarksDestructive.DataPropertyName = "RemarksDestructive";
+            this.RemarksDestructive.HeaderText = "RemarksDestructive";
+            this.RemarksDestructive.Name = "RemarksDestructive";
+            // 
+            // ProjectDevId
+            // 
+            this.ProjectDevId.DataPropertyName = "ProjectDevId";
+            this.ProjectDevId.HeaderText = "ProjectDevId";
+            this.ProjectDevId.Name = "ProjectDevId";
+            this.ProjectDevId.Visible = false;
+            // 
+            // Projectdev
+            // 
+            this.Projectdev.DataPropertyName = "ProjectDev";
+            this.Projectdev.HeaderText = "ProjectDev";
+            this.Projectdev.Name = "Projectdev";
+            this.Projectdev.Visible = false;
             // 
             // GeomembraneForm
             // 
@@ -525,6 +641,9 @@
         private FontAwesome.Sharp.IconButton BtnClose;
         private ns1.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.DataGridView DGVGeo;
+        private MetroFramework.Controls.MetroButton DeploymentBtn;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton BtnDrawing;
         private System.Windows.Forms.BindingSource geoMembraneBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeamingDate;
@@ -537,9 +656,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Destructive;
         private System.Windows.Forms.DataGridViewTextBoxColumn RemarksDestructive;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDevId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDev;
-        private MetroFramework.Controls.MetroButton DeploymentBtn;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton BtnDrawing;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Projectdev;
     }
 }
