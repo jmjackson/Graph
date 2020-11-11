@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeomembraneForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LblClient = new MetroFramework.Controls.MetroLabel();
             this.LblProject = new MetroFramework.Controls.MetroLabel();
             this.LblProjectNo = new MetroFramework.Controls.MetroLabel();
@@ -56,13 +56,11 @@
             this.PanelHead = new System.Windows.Forms.Panel();
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.PanelFoot = new System.Windows.Forms.Panel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.BtnData = new MetroFramework.Controls.MetroButton();
             this.BtnDrawing = new MetroFramework.Controls.MetroButton();
             this.DeploymentBtn = new MetroFramework.Controls.MetroButton();
             this.PanelContent = new System.Windows.Forms.Panel();
             this.DGVGeo = new System.Windows.Forms.DataGridView();
-            this.geoMembraneBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeamingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeamNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +73,8 @@
             this.RemarksDestructive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Projectdev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.geoMembraneBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.PanelHead.SuspendLayout();
             this.PanelFoot.SuspendLayout();
@@ -381,7 +381,7 @@
             this.PanelFoot.Controls.Add(this.BtnPdf);
             this.PanelFoot.Controls.Add(this.BtnAdd);
             this.PanelFoot.Controls.Add(this.BtnEdit);
-            this.PanelFoot.Controls.Add(this.metroButton2);
+            this.PanelFoot.Controls.Add(this.BtnData);
             this.PanelFoot.Controls.Add(this.BtnDrawing);
             this.PanelFoot.Controls.Add(this.DeploymentBtn);
             this.PanelFoot.Controls.Add(this.BtnDelete);
@@ -391,22 +391,22 @@
             this.PanelFoot.Size = new System.Drawing.Size(1370, 109);
             this.PanelFoot.TabIndex = 8;
             // 
-            // metroButton2
+            // BtnData
             // 
-            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton2.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.metroButton2.ForeColor = System.Drawing.Color.White;
-            this.metroButton2.Location = new System.Drawing.Point(894, 15);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(153, 58);
-            this.metroButton2.TabIndex = 5;
-            this.metroButton2.Text = "Inspector";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseCustomForeColor = true;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.DeploymentBtn_Click);
+            this.BtnData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnData.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.BtnData.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.BtnData.ForeColor = System.Drawing.Color.White;
+            this.BtnData.Location = new System.Drawing.Point(894, 15);
+            this.BtnData.Name = "BtnData";
+            this.BtnData.Size = new System.Drawing.Size(153, 58);
+            this.BtnData.TabIndex = 5;
+            this.BtnData.Text = "Inspector";
+            this.BtnData.UseCustomBackColor = true;
+            this.BtnData.UseCustomForeColor = true;
+            this.BtnData.UseSelectable = true;
+            this.BtnData.Click += new System.EventHandler(this.BtnData_Click);
             // 
             // BtnDrawing
             // 
@@ -455,14 +455,14 @@
             // 
             this.DGVGeo.AutoGenerateColumns = false;
             this.DGVGeo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVGeo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVGeo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVGeo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -478,28 +478,19 @@
             this.ProjectDevId,
             this.Projectdev});
             this.DGVGeo.DataSource = this.geoMembraneBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVGeo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVGeo.DefaultCellStyle = dataGridViewCellStyle4;
             this.DGVGeo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVGeo.Location = new System.Drawing.Point(0, 0);
             this.DGVGeo.Name = "DGVGeo";
             this.DGVGeo.Size = new System.Drawing.Size(1370, 540);
             this.DGVGeo.TabIndex = 0;
-            // 
-            // geoMembraneBindingSource
-            // 
-            this.geoMembraneBindingSource.DataSource = typeof(Mine.DataModel.GeoMembrane);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // Id
             // 
@@ -588,6 +579,15 @@
             this.Projectdev.Name = "Projectdev";
             this.Projectdev.Visible = false;
             // 
+            // geoMembraneBindingSource
+            // 
+            this.geoMembraneBindingSource.DataSource = typeof(Mine.DataModel.GeoMembrane);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // GeomembraneForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,7 +642,7 @@
         private ns1.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.DataGridView DGVGeo;
         private MetroFramework.Controls.MetroButton DeploymentBtn;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton BtnData;
         private MetroFramework.Controls.MetroButton BtnDrawing;
         private System.Windows.Forms.BindingSource geoMembraneBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;

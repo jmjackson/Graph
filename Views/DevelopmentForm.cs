@@ -186,6 +186,13 @@ namespace Mine.Views
             this.Close();
         }
 
-        
+        private void BtnData_Click(object sender, EventArgs e)
+        {
+            ModalInspector mi = new ModalInspector();
+            if (mi.ShowDialog()==DialogResult.Yes)
+            {
+
+            }
+        }
     }
 }

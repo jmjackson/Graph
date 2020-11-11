@@ -53,8 +53,6 @@
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGVDev = new System.Windows.Forms.DataGridView();
-            this.BElipse = new ns1.BunifuElipse(this.components);
-            this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +64,8 @@
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectDev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BElipse = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             this.PanelAdd.SuspendLayout();
             this.PanelHeader.SuspendLayout();
@@ -198,7 +198,7 @@
             this.BtnData.TabIndex = 16;
             this.BtnData.Text = "Inspector";
             this.BtnData.UseVisualStyleBackColor = false;
-            this.BtnData.Click += new System.EventHandler(this.SeamingButton_Click);
+            this.BtnData.Click += new System.EventHandler(this.BtnData_Click);
             // 
             // BtnDrawing
             // 
@@ -408,15 +408,6 @@
             this.DGVDev.Size = new System.Drawing.Size(1386, 435);
             this.DGVDev.TabIndex = 0;
             // 
-            // BElipse
-            // 
-            this.BElipse.ElipseRadius = 5;
-            this.BElipse.TargetControl = this;
-            // 
-            // developmentBindingSource
-            // 
-            this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
@@ -503,6 +494,15 @@
             this.ProjectDev.HeaderText = "ProjectDev";
             this.ProjectDev.Name = "ProjectDev";
             this.ProjectDev.Visible = false;
+            // 
+            // developmentBindingSource
+            // 
+            this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
+            // 
+            // BElipse
+            // 
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
             // 
             // DevelopmentForm
             // 
