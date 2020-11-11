@@ -50,6 +50,7 @@
             // 
             // BtnClose
             // 
+            this.BtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnClose.BackColor = System.Drawing.Color.Transparent;
             this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -107,9 +108,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Location = new System.Drawing.Point(196, 58);
+            this.panel2.Location = new System.Drawing.Point(188, 52);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(984, 635);
+            this.panel2.Size = new System.Drawing.Size(1003, 647);
             this.panel2.TabIndex = 3;
             // 
             // panel3
