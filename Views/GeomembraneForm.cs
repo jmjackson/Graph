@@ -12,6 +12,7 @@ using System.Data.Entity;
 using Mine.DataModel;
 using MetroFramework;
 using System.IO;
+using Mine.Modal;
 
 namespace Mine.Views
 {

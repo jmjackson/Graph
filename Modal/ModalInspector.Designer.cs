@@ -76,7 +76,7 @@
             this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnSave.Location = new System.Drawing.Point(137, 256);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(125, 48);
+            this.BtnSave.Size = new System.Drawing.Size(125, 62);
             this.BtnSave.TabIndex = 3;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
@@ -89,7 +89,7 @@
             this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnCancel.Location = new System.Drawing.Point(284, 256);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(125, 48);
+            this.BtnCancel.Size = new System.Drawing.Size(125, 62);
             this.BtnCancel.TabIndex = 4;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = false;
@@ -144,6 +144,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModalInspector";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ModalInspector";
             this.ResumeLayout(false);
             this.PerformLayout();
