@@ -20,7 +20,7 @@ namespace Mine.Views
         readonly GraphDbContext db = new GraphDbContext();
 
         //
-        Bitmap btm;
+        Bitmap imagen;
         
         private Graphics myPaint;
         private Boolean draw = false;
@@ -41,7 +41,7 @@ namespace Mine.Views
         {
             InitializeComponent();
             //g = PbLienzo.CreateGraphics();
-            //imagen = new Bitmap(PbLienzo.Width, PbLienzo.Height);
+            imagen= new Bitmap(PbDraw.Width,PbDraw.Height);
             pdId = dev;
             //BtnDraw.Enabled = false;
         }
@@ -235,11 +235,19 @@ namespace Mine.Views
 
             if (draw == true)
             {
+                
                 if (a==0)
                 {
-                    myPaint.DrawLine(new Pen(Color.Black), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
+                    //declaradas al inicio
+
+                    Graphics g = Graphics.FromImage(imagen);
+
+                    //Dibuja una linea entre el punto anterior y el actual
+                    g.DrawLine(new Pen(Color.Black), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
                     X = e.X;
                     Y = e.Y;
+                    PbDraw.Image = imagen;
                 }
                 if (a == 8)
                 {
