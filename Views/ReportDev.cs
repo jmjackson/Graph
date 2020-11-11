@@ -41,6 +41,7 @@ namespace Mine.Views
            ProjectBindingSource.DataSource = projectdev.Project;
             DevelopmentBindingSource.DataSource = developmentlist;
             ClientBindingSource.DataSource = projectdev.Project.Client;
+            ProjectDevBindingSource.DataSource = projectdev;
             ReportDevView.LocalReport.EnableExternalImages = true;
             this.ReportDevView.RefreshReport();
         }

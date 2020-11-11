@@ -1027,15 +1027,15 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Machine #:</Value>
+                  <Value>Location :</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>1.65461cm</Top>
-          <Left>15.12093cm</Left>
+          <Top>2.44836cm</Top>
+          <Left>15.2003cm</Left>
           <Height>0.6cm</Height>
           <Width>2.02375cm</Width>
           <ZIndex>13</ZIndex>
@@ -1157,6 +1157,65 @@
             </Border>
           </Style>
         </Image>
+        <Textbox Name="LblSupplier3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Machine #:</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>1.67197cm</Top>
+          <Left>15.2003cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.02375cm</Width>
+          <ZIndex>18</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!LocationGeo.Value, "InspectionBinding")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>2.431cm</Top>
+          <Left>17.32107cm</Left>
+          <Height>0.6cm</Height>
+          <Width>4.90771cm</Width>
+          <ZIndex>19</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -1205,7 +1264,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!Inspector.Value, "InspectionBinding")</Value>
+                  <Value>=First(Fields!InspectorGeo.Value, "InspectionBinding")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -1429,12 +1488,28 @@
           <DataField>Id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Inspector">
-          <DataField>Inspector</DataField>
+        <Field Name="ImageDev">
+          <DataField>ImageDev</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="ImageMap">
+          <DataField>ImageMap</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Location">
-          <DataField>Location</DataField>
+        <Field Name="InspectorDev">
+          <DataField>InspectorDev</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InspectorGeo">
+          <DataField>InspectorGeo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LocationDev">
+          <DataField>LocationDev</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LocationGeo">
+          <DataField>LocationGeo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="MachineNo">
