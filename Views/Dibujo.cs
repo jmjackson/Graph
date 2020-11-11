@@ -17,7 +17,7 @@ namespace Mine.Views
     public partial class Dibujo : Form
     {
         //conexion bd o consulta 
-        //readonly GraphDbContext db = new GraphDbContext();
+        readonly GraphDbContext db = new GraphDbContext();
         //Graphics g;
         //private Bitmap imagen;
         int pdId;
@@ -42,21 +42,23 @@ namespace Mine.Views
         {
            
 
-            //var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
+            var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
-            //var projectno = (from d in db.Developments where d.ProjectDevId == Pn.Id select d).ToList();
+            var projectno = (from d in db.Developments where d.ProjectDevId == Pn.Id select d).ToList();
 
-            //foreach (var item in projectno)
-            //{
-            //    DgLpn.AutoGenerateColumns = false;
-            //    DgLpn.Columns["Id"].DataPropertyName = "Id";
-            //    DgLpn.Columns["PanelNo"].DataPropertyName = "PanelNo";
-            //    DgLpn.DataSource = projectno;
-            //    //var panel = item.PanelNo;
-            //}
+            foreach (var item in projectno)
+            {
+                //DgLpn.AutoGenerateColumns = false;
+                //DgLpn.Columns["Id"].DataPropertyName = "Id";
+                //DgLpn.Columns["PanelNo"].DataPropertyName = "PanelNo";
+                //DgLpn.DataSource = projectno;
+                //var panel = item.PanelNo;
+                ListBoxData.Items.Add(item.PanelNo);
+
+            }
 
             //tabla de cordenadas
-     
+
 
             //if (Pn.ImageDev!=null)
             //{
@@ -64,7 +66,7 @@ namespace Mine.Views
             //    PbLienzo.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(picture)));
             //}
 
-            
+
         }
 
         //Reset tools
