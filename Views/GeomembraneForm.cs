@@ -254,7 +254,7 @@ namespace Mine.Views
             ModalInsp2 mi = new ModalInsp2();
             if (mi.ShowDialog() == DialogResult.Yes)
             {
-
+                GeomembraneForm_Load(sender, e);
             }
         }
     }

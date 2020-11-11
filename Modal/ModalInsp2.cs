@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mine.DataContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace Mine.Modal
 {
     public partial class ModalInsp2 : Form
     {
-        public ModalInsp2()
+        int pdId;
+        GraphDbContext db = new GraphDbContext();
+        public ModalInsp2(int id)
         {
             InitializeComponent();
+            pdId = id;
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            var pd = db.ProjectDevs.Find(pdId);
+            pd.InspectorGeo = TxtInspector.Text;
+            pd.LocationGeo = TxtLocation.Text;
+            db.SaveChanges();
         }
     }
 }
