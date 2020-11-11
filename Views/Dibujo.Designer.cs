@@ -40,12 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.GbTools = new System.Windows.Forms.GroupBox();
-            this.BtnColor = new System.Windows.Forms.Button();
-            this.BtnTexto = new System.Windows.Forms.Button();
-            this.BtnRectangulo = new System.Windows.Forms.Button();
             this.BtnLine = new FontAwesome.Sharp.IconButton();
-            this.BtnTriangulo = new System.Windows.Forms.Button();
-            this.BtnCuadrado = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.ListBoxData = new System.Windows.Forms.ListBox();
@@ -191,50 +186,16 @@
             // 
             // GbTools
             // 
-            this.GbTools.Controls.Add(this.BtnColor);
-            this.GbTools.Controls.Add(this.BtnTexto);
-            this.GbTools.Controls.Add(this.BtnRectangulo);
             this.GbTools.Controls.Add(this.BtnCircle);
             this.GbTools.Controls.Add(this.BtnPen);
             this.GbTools.Controls.Add(this.BtnErase);
             this.GbTools.Controls.Add(this.BtnLine);
-            this.GbTools.Controls.Add(this.BtnTriangulo);
-            this.GbTools.Controls.Add(this.BtnCuadrado);
             this.GbTools.Location = new System.Drawing.Point(12, 34);
             this.GbTools.Name = "GbTools";
             this.GbTools.Size = new System.Drawing.Size(170, 390);
             this.GbTools.TabIndex = 0;
             this.GbTools.TabStop = false;
             this.GbTools.Text = "Tools";
-            // 
-            // BtnColor
-            // 
-            this.BtnColor.Location = new System.Drawing.Point(87, 303);
-            this.BtnColor.Name = "BtnColor";
-            this.BtnColor.Size = new System.Drawing.Size(75, 65);
-            this.BtnColor.TabIndex = 8;
-            this.BtnColor.Text = "Color";
-            this.BtnColor.UseVisualStyleBackColor = true;
-            // 
-            // BtnTexto
-            // 
-            this.BtnTexto.Location = new System.Drawing.Point(6, 303);
-            this.BtnTexto.Name = "BtnTexto";
-            this.BtnTexto.Size = new System.Drawing.Size(75, 65);
-            this.BtnTexto.TabIndex = 7;
-            this.BtnTexto.Text = "Texto";
-            this.BtnTexto.UseVisualStyleBackColor = true;
-            this.BtnTexto.Click += new System.EventHandler(this.BtnTexto_Click);
-            // 
-            // BtnRectangulo
-            // 
-            this.BtnRectangulo.Location = new System.Drawing.Point(6, 161);
-            this.BtnRectangulo.Name = "BtnRectangulo";
-            this.BtnRectangulo.Size = new System.Drawing.Size(75, 65);
-            this.BtnRectangulo.TabIndex = 4;
-            this.BtnRectangulo.Text = "Rectangulo";
-            this.BtnRectangulo.UseVisualStyleBackColor = true;
-            this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
             // 
             // BtnLine
             // 
@@ -254,26 +215,6 @@
             this.BtnLine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnLine.UseVisualStyleBackColor = false;
             this.BtnLine.Click += new System.EventHandler(this.BtnLinia_Click);
-            // 
-            // BtnTriangulo
-            // 
-            this.BtnTriangulo.Location = new System.Drawing.Point(87, 161);
-            this.BtnTriangulo.Name = "BtnTriangulo";
-            this.BtnTriangulo.Size = new System.Drawing.Size(75, 65);
-            this.BtnTriangulo.TabIndex = 3;
-            this.BtnTriangulo.Text = "Triangulo";
-            this.BtnTriangulo.UseVisualStyleBackColor = true;
-            this.BtnTriangulo.Click += new System.EventHandler(this.BtnTriangulo_Click);
-            // 
-            // BtnCuadrado
-            // 
-            this.BtnCuadrado.Location = new System.Drawing.Point(6, 237);
-            this.BtnCuadrado.Name = "BtnCuadrado";
-            this.BtnCuadrado.Size = new System.Drawing.Size(75, 65);
-            this.BtnCuadrado.TabIndex = 1;
-            this.BtnCuadrado.Text = "Cuadrado";
-            this.BtnCuadrado.UseVisualStyleBackColor = true;
-            this.BtnCuadrado.Click += new System.EventHandler(this.BtnCuadrado_Click);
             // 
             // panel1
             // 
@@ -302,8 +243,7 @@
             // 
             // ListBoxData
             // 
-            this.ListBoxData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListBoxData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ListBoxData.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListBoxData.FormattingEnabled = true;
             this.ListBoxData.ItemHeight = 32;
@@ -449,7 +389,7 @@
             // 
             // BtnSet
             // 
-            this.BtnSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.BtnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSet.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
@@ -553,8 +493,6 @@
         private System.Windows.Forms.ListBox ListBoxData;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox GbTools;
-        private System.Windows.Forms.Button BtnTriangulo;
-        private System.Windows.Forms.Button BtnCuadrado;
         private System.Windows.Forms.PictureBox PbDraw;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox3;
@@ -564,9 +502,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton BtnLine;
-        private System.Windows.Forms.Button BtnRectangulo;
-        private System.Windows.Forms.Button BtnColor;
-        private System.Windows.Forms.Button BtnTexto;
         private FontAwesome.Sharp.IconButton BtnErase;
         private FontAwesome.Sharp.IconButton BtnPen;
         private FontAwesome.Sharp.IconButton BtnCircle;
