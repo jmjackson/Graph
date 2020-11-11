@@ -40,21 +40,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.GbTools = new System.Windows.Forms.GroupBox();
+            this.BtnCircle = new FontAwesome.Sharp.IconButton();
+            this.BtnPen = new FontAwesome.Sharp.IconButton();
+            this.BtnErase = new FontAwesome.Sharp.IconButton();
             this.BtnLine = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnSet = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.ListBoxData = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PbDraw = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.DeployButton = new FontAwesome.Sharp.IconButton();
+            this.BtnExport = new FontAwesome.Sharp.IconButton();
+            this.BtnSave = new FontAwesome.Sharp.IconButton();
             this.SeamingButton = new FontAwesome.Sharp.IconButton();
-            this.BtnErase = new FontAwesome.Sharp.IconButton();
-            this.BtnPen = new FontAwesome.Sharp.IconButton();
-            this.BtnCircle = new FontAwesome.Sharp.IconButton();
-            this.BtnSet = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.PanelHeader.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -197,6 +197,63 @@
             this.GbTools.TabStop = false;
             this.GbTools.Text = "Tools";
             // 
+            // BtnCircle
+            // 
+            this.BtnCircle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnCircle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCircle.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnCircle.ForeColor = System.Drawing.Color.White;
+            this.BtnCircle.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            this.BtnCircle.IconColor = System.Drawing.Color.White;
+            this.BtnCircle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnCircle.IconSize = 36;
+            this.BtnCircle.Location = new System.Drawing.Point(23, 90);
+            this.BtnCircle.Name = "BtnCircle";
+            this.BtnCircle.Rotation = 0D;
+            this.BtnCircle.Size = new System.Drawing.Size(58, 55);
+            this.BtnCircle.TabIndex = 1;
+            this.BtnCircle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnCircle.UseVisualStyleBackColor = false;
+            this.BtnCircle.Click += new System.EventHandler(this.BtnCirculo_Click);
+            // 
+            // BtnPen
+            // 
+            this.BtnPen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnPen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPen.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnPen.ForeColor = System.Drawing.Color.White;
+            this.BtnPen.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
+            this.BtnPen.IconColor = System.Drawing.Color.White;
+            this.BtnPen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnPen.IconSize = 36;
+            this.BtnPen.Location = new System.Drawing.Point(23, 19);
+            this.BtnPen.Name = "BtnPen";
+            this.BtnPen.Rotation = 0D;
+            this.BtnPen.Size = new System.Drawing.Size(58, 55);
+            this.BtnPen.TabIndex = 1;
+            this.BtnPen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnPen.UseVisualStyleBackColor = false;
+            this.BtnPen.Click += new System.EventHandler(this.BtnPluma_Click);
+            // 
+            // BtnErase
+            // 
+            this.BtnErase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnErase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnErase.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnErase.ForeColor = System.Drawing.Color.White;
+            this.BtnErase.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.BtnErase.IconColor = System.Drawing.Color.White;
+            this.BtnErase.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnErase.IconSize = 36;
+            this.BtnErase.Location = new System.Drawing.Point(87, 19);
+            this.BtnErase.Name = "BtnErase";
+            this.BtnErase.Rotation = 0D;
+            this.BtnErase.Size = new System.Drawing.Size(58, 55);
+            this.BtnErase.TabIndex = 1;
+            this.BtnErase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnErase.UseVisualStyleBackColor = false;
+            this.BtnErase.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // BtnLine
             // 
             this.BtnLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
@@ -228,6 +285,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 647);
             this.panel1.TabIndex = 2;
+            // 
+            // BtnSet
+            // 
+            this.BtnSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSet.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnSet.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSet.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnSet.IconColor = System.Drawing.Color.Black;
+            this.BtnSet.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnSet.IconSize = 48;
+            this.BtnSet.Location = new System.Drawing.Point(42, 292);
+            this.BtnSet.Name = "BtnSet";
+            this.BtnSet.Rotation = 0D;
+            this.BtnSet.Size = new System.Drawing.Size(112, 56);
+            this.BtnSet.TabIndex = 2;
+            this.BtnSet.Text = "Set";
+            this.BtnSet.UseVisualStyleBackColor = false;
+            this.BtnSet.Click += new System.EventHandler(this.BtnTexto_Click);
             // 
             // label2
             // 
@@ -281,8 +359,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.DeployButton);
-            this.panel3.Controls.Add(this.iconButton2);
-            this.panel3.Controls.Add(this.iconButton1);
+            this.panel3.Controls.Add(this.BtnExport);
+            this.panel3.Controls.Add(this.BtnSave);
             this.panel3.Controls.Add(this.SeamingButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 699);
@@ -310,6 +388,46 @@
             this.DeployButton.UseVisualStyleBackColor = false;
             this.DeployButton.Click += new System.EventHandler(this.DeployButton_Click);
             // 
+            // BtnExport
+            // 
+            this.BtnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExport.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnExport.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnExport.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnExport.IconColor = System.Drawing.Color.Black;
+            this.BtnExport.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnExport.IconSize = 48;
+            this.BtnExport.Location = new System.Drawing.Point(899, 19);
+            this.BtnExport.Name = "BtnExport";
+            this.BtnExport.Rotation = 0D;
+            this.BtnExport.Size = new System.Drawing.Size(191, 58);
+            this.BtnExport.TabIndex = 17;
+            this.BtnExport.Text = "Export";
+            this.BtnExport.UseVisualStyleBackColor = false;
+            this.BtnExport.Click += new System.EventHandler(this.BtnExport_Click);
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnSave.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSave.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnSave.IconColor = System.Drawing.Color.Black;
+            this.BtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnSave.IconSize = 48;
+            this.BtnSave.Location = new System.Drawing.Point(696, 19);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Rotation = 0D;
+            this.BtnSave.Size = new System.Drawing.Size(172, 58);
+            this.BtnSave.TabIndex = 17;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
             // SeamingButton
             // 
             this.SeamingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
@@ -329,124 +447,6 @@
             this.SeamingButton.Text = "Seaming";
             this.SeamingButton.UseVisualStyleBackColor = false;
             this.SeamingButton.Click += new System.EventHandler(this.SeamingButton_Click);
-            // 
-            // BtnErase
-            // 
-            this.BtnErase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.BtnErase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnErase.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnErase.ForeColor = System.Drawing.Color.White;
-            this.BtnErase.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.BtnErase.IconColor = System.Drawing.Color.White;
-            this.BtnErase.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnErase.IconSize = 36;
-            this.BtnErase.Location = new System.Drawing.Point(87, 19);
-            this.BtnErase.Name = "BtnErase";
-            this.BtnErase.Rotation = 0D;
-            this.BtnErase.Size = new System.Drawing.Size(58, 55);
-            this.BtnErase.TabIndex = 1;
-            this.BtnErase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnErase.UseVisualStyleBackColor = false;
-            this.BtnErase.Click += new System.EventHandler(this.BtnClear_Click);
-            // 
-            // BtnPen
-            // 
-            this.BtnPen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.BtnPen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPen.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnPen.ForeColor = System.Drawing.Color.White;
-            this.BtnPen.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
-            this.BtnPen.IconColor = System.Drawing.Color.White;
-            this.BtnPen.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnPen.IconSize = 36;
-            this.BtnPen.Location = new System.Drawing.Point(23, 19);
-            this.BtnPen.Name = "BtnPen";
-            this.BtnPen.Rotation = 0D;
-            this.BtnPen.Size = new System.Drawing.Size(58, 55);
-            this.BtnPen.TabIndex = 1;
-            this.BtnPen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnPen.UseVisualStyleBackColor = false;
-            this.BtnPen.Click += new System.EventHandler(this.BtnPluma_Click);
-            // 
-            // BtnCircle
-            // 
-            this.BtnCircle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.BtnCircle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCircle.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnCircle.ForeColor = System.Drawing.Color.White;
-            this.BtnCircle.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.BtnCircle.IconColor = System.Drawing.Color.White;
-            this.BtnCircle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnCircle.IconSize = 36;
-            this.BtnCircle.Location = new System.Drawing.Point(23, 90);
-            this.BtnCircle.Name = "BtnCircle";
-            this.BtnCircle.Rotation = 0D;
-            this.BtnCircle.Size = new System.Drawing.Size(58, 55);
-            this.BtnCircle.TabIndex = 1;
-            this.BtnCircle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnCircle.UseVisualStyleBackColor = false;
-            this.BtnCircle.Click += new System.EventHandler(this.BtnCirculo_Click);
-            // 
-            // BtnSet
-            // 
-            this.BtnSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.BtnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSet.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnSet.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnSet.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BtnSet.IconColor = System.Drawing.Color.Black;
-            this.BtnSet.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnSet.IconSize = 48;
-            this.BtnSet.Location = new System.Drawing.Point(42, 292);
-            this.BtnSet.Name = "BtnSet";
-            this.BtnSet.Rotation = 0D;
-            this.BtnSet.Size = new System.Drawing.Size(112, 56);
-            this.BtnSet.TabIndex = 2;
-            this.BtnSet.Text = "Set";
-            this.BtnSet.UseVisualStyleBackColor = false;
-            this.BtnSet.Click += new System.EventHandler(this.BtnTexto_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 48;
-            this.iconButton1.Location = new System.Drawing.Point(696, 19);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(172, 58);
-            this.iconButton1.TabIndex = 17;
-            this.iconButton1.Text = "Save";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.SeamingButton_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 48;
-            this.iconButton2.Location = new System.Drawing.Point(899, 19);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(191, 58);
-            this.iconButton2.TabIndex = 17;
-            this.iconButton2.Text = "Export";
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.SeamingButton_Click);
             // 
             // Dibujo
             // 
@@ -506,7 +506,7 @@
         private FontAwesome.Sharp.IconButton BtnPen;
         private FontAwesome.Sharp.IconButton BtnCircle;
         private FontAwesome.Sharp.IconButton BtnSet;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BtnExport;
+        private FontAwesome.Sharp.IconButton BtnSave;
     }
 }

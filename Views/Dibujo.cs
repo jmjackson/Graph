@@ -40,7 +40,7 @@ namespace Mine.Views
         public Dibujo(int dev)
         {
             InitializeComponent();
-            //g = PbLienzo.CreateGraphics();
+            myPaint = PbDraw.CreateGraphics();
             //imagen = new Bitmap(PbLienzo.Width, PbLienzo.Height);
             pdId = dev;
             //BtnDraw.Enabled = false;
@@ -55,7 +55,7 @@ namespace Mine.Views
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
-            myPaint = PbDraw.CreateGraphics();
+            
 
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
@@ -63,11 +63,7 @@ namespace Mine.Views
 
             foreach (var item in projectno)
             {
-                //DgLpn.AutoGenerateColumns = false;
-                //DgLpn.Columns["Id"].DataPropertyName = "Id";
-                //DgLpn.Columns["PanelNo"].DataPropertyName = "PanelNo";
-                //DgLpn.DataSource = projectno;
-                //var panel = item.PanelNo;
+                
                 ListBoxData.Items.Add(item.PanelNo);
 
             }
@@ -326,6 +322,43 @@ namespace Mine.Views
         private void BtnClear_Click(object sender, EventArgs e)
         {
             a = 8;
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            var dp = db.ProjectDevs.Find(pdId);
+            
+            Image img = PbDraw.Image as Image;
+            byte[] imgs;
+            using(MemoryStream m=new MemoryStream())
+            {
+               img.Save(m, System.Drawing.Imaging.ImageFormat.Jpeg);
+               imgs = m.ToArray();
+            }
+            dp.ImageDev = imgs;
+            db.SaveChanges();
+
+        }
+
+        private void BtnExport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Images|*.png;*.bmp;*.jpg";
+            ImageFormat format = ImageFormat.Png;
+            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string ext = System.IO.Path.GetExtension(sfd.FileName);
+                switch (ext)
+                {
+                    case ".jpg":
+                        format = ImageFormat.Jpeg;
+                        break;
+                    case ".bmp":
+                        format = ImageFormat.Bmp;
+                        break;
+                }
+                PbDraw.Image.Save(sfd.FileName, format);
+            }
         }
 
         private void PbLienzo_MouseMove_1(object sender, MouseEventArgs e)
