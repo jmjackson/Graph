@@ -43,7 +43,6 @@
             this.BtnTriangulo = new System.Windows.Forms.Button();
             this.BtnCirculo = new System.Windows.Forms.Button();
             this.BtnCuadrado = new System.Windows.Forms.Button();
-            this.BtnRectangulo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.ListBoxData = new System.Windows.Forms.ListBox();
@@ -52,6 +51,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.DeployButton = new FontAwesome.Sharp.IconButton();
             this.SeamingButton = new FontAwesome.Sharp.IconButton();
+            this.BtnRectangulo = new FontAwesome.Sharp.IconButton();
             this.PanelHeader.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -183,13 +183,13 @@
             // 
             // GbTools
             // 
+            this.GbTools.Controls.Add(this.BtnRectangulo);
             this.GbTools.Controls.Add(this.BtnTriangulo);
             this.GbTools.Controls.Add(this.BtnCirculo);
             this.GbTools.Controls.Add(this.BtnCuadrado);
-            this.GbTools.Controls.Add(this.BtnRectangulo);
-            this.GbTools.Location = new System.Drawing.Point(22, 34);
+            this.GbTools.Location = new System.Drawing.Point(12, 34);
             this.GbTools.Name = "GbTools";
-            this.GbTools.Size = new System.Drawing.Size(145, 325);
+            this.GbTools.Size = new System.Drawing.Size(170, 325);
             this.GbTools.TabIndex = 0;
             this.GbTools.TabStop = false;
             this.GbTools.Text = "Tools";
@@ -223,16 +223,6 @@
             this.BtnCuadrado.Text = "button2";
             this.BtnCuadrado.UseVisualStyleBackColor = true;
             this.BtnCuadrado.Click += new System.EventHandler(this.BtnCuadrado_Click);
-            // 
-            // BtnRectangulo
-            // 
-            this.BtnRectangulo.Location = new System.Drawing.Point(33, 19);
-            this.BtnRectangulo.Name = "BtnRectangulo";
-            this.BtnRectangulo.Size = new System.Drawing.Size(75, 65);
-            this.BtnRectangulo.TabIndex = 0;
-            this.BtnRectangulo.Text = "button1";
-            this.BtnRectangulo.UseVisualStyleBackColor = true;
-            this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
             // 
             // panel1
             // 
@@ -346,6 +336,25 @@
             this.SeamingButton.UseVisualStyleBackColor = false;
             this.SeamingButton.Click += new System.EventHandler(this.SeamingButton_Click);
             // 
+            // BtnRectangulo
+            // 
+            this.BtnRectangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnRectangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRectangulo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnRectangulo.ForeColor = System.Drawing.Color.White;
+            this.BtnRectangulo.IconChar = FontAwesome.Sharp.IconChar.GripLinesVertical;
+            this.BtnRectangulo.IconColor = System.Drawing.Color.White;
+            this.BtnRectangulo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnRectangulo.IconSize = 48;
+            this.BtnRectangulo.Location = new System.Drawing.Point(10, 19);
+            this.BtnRectangulo.Name = "BtnRectangulo";
+            this.BtnRectangulo.Rotation = 0D;
+            this.BtnRectangulo.Size = new System.Drawing.Size(58, 55);
+            this.BtnRectangulo.TabIndex = 1;
+            this.BtnRectangulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnRectangulo.UseVisualStyleBackColor = false;
+            this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
+            // 
             // Dibujo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,7 +403,6 @@
         private System.Windows.Forms.Button BtnTriangulo;
         private System.Windows.Forms.Button BtnCirculo;
         private System.Windows.Forms.Button BtnCuadrado;
-        private System.Windows.Forms.Button BtnRectangulo;
         private System.Windows.Forms.PictureBox PbDraw;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox3;
@@ -403,5 +411,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconButton BtnRectangulo;
     }
 }
