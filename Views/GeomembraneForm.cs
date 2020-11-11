@@ -251,7 +251,7 @@ namespace Mine.Views
 
         private void BtnData_Click(object sender, EventArgs e)
         {
-            ModalInsp mi = new ModalInsp();
+            ModalInsp2 mi = new ModalInsp2();
             if (mi.ShowDialog() == DialogResult.Yes)
             {
 
