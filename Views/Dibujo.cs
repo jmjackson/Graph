@@ -40,7 +40,7 @@ namespace Mine.Views
         public Dibujo(int dev)
         {
             InitializeComponent();
-            myPaint = PbDraw.CreateGraphics();
+            //g = PbLienzo.CreateGraphics();
             //imagen = new Bitmap(PbLienzo.Width, PbLienzo.Height);
             pdId = dev;
             //BtnDraw.Enabled = false;
@@ -55,7 +55,7 @@ namespace Mine.Views
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
-            
+            myPaint = PbDraw.CreateGraphics();
 
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
