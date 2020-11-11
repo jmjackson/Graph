@@ -33,12 +33,12 @@
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.PanelLeft = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ListBoxData = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.DeployButton = new FontAwesome.Sharp.IconButton();
             this.SeamingButton = new FontAwesome.Sharp.IconButton();
-            this.ListBoxData = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.PanelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -110,6 +110,30 @@
             this.panel1.Size = new System.Drawing.Size(200, 647);
             this.panel1.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(37, 378);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 30);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Panel No";
+            // 
+            // ListBoxData
+            // 
+            this.ListBoxData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListBoxData.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListBoxData.FormattingEnabled = true;
+            this.ListBoxData.ItemHeight = 32;
+            this.ListBoxData.Location = new System.Drawing.Point(27, 430);
+            this.ListBoxData.Name = "ListBoxData";
+            this.ListBoxData.Size = new System.Drawing.Size(161, 196);
+            this.ListBoxData.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -172,28 +196,6 @@
             this.SeamingButton.UseVisualStyleBackColor = false;
             this.SeamingButton.Click += new System.EventHandler(this.SeamingButton_Click);
             // 
-            // ListBoxData
-            // 
-            this.ListBoxData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ListBoxData.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListBoxData.FormattingEnabled = true;
-            this.ListBoxData.ItemHeight = 32;
-            this.ListBoxData.Location = new System.Drawing.Point(27, 430);
-            this.ListBoxData.Name = "ListBoxData";
-            this.ListBoxData.Size = new System.Drawing.Size(161, 196);
-            this.ListBoxData.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 377);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Panel No";
-            // 
             // Dibujo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,7 +209,7 @@
             this.Controls.Add(this.PanelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dibujo";
-            this.Text = "Draw";
+            this.Text = "b ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Dibujo_Load);
             this.PanelHeader.ResumeLayout(false);

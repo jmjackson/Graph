@@ -61,7 +61,7 @@
             this.RollNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lenght = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thickness = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thickness = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -464,8 +464,16 @@
             // 
             this.Thickness.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Thickness.DataPropertyName = "Thickness";
+            this.Thickness.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.Thickness.HeaderText = "Thickness";
+            this.Thickness.Items.AddRange(new object[] {
+            "40 mil",
+            "60 mil",
+            "80 mil"});
             this.Thickness.Name = "Thickness";
+            this.Thickness.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Thickness.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Thickness.ToolTipText = "Thickness";
             // 
             // Area
             // 
@@ -552,7 +560,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RollNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lenght;
         private System.Windows.Forms.DataGridViewTextBoxColumn Width;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Thickness;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Thickness;
         private System.Windows.Forms.DataGridViewTextBoxColumn Area;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProjectDevId;
