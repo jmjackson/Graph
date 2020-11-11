@@ -20,14 +20,14 @@ namespace Mine.Views
         //readonly GraphDbContext db = new GraphDbContext();
         //Graphics g;
         //private Bitmap imagen;
-        //int pdId;
+        int pdId;
         //int selecc_Opcion=1;
         public Dibujo(int dev)
         {
             InitializeComponent();
             //g = PbLienzo.CreateGraphics();
             //imagen = new Bitmap(PbLienzo.Width, PbLienzo.Height);
-            //pdId = dev;
+            pdId = dev;
             //BtnDraw.Enabled = false;
         }
 
@@ -235,6 +235,21 @@ namespace Mine.Views
 
         private void BtnClose_Click_1(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void SeamingButton_Click(object sender, EventArgs e)
+        {
+            GeomembraneForm gf = new GeomembraneForm(pdId);
+            gf.Show();
+            this.Close();
+
+        }
+
+        private void DeployButton_Click(object sender, EventArgs e)
+        {
+            DevelopmentForm df = new DevelopmentForm(pdId);
+            df.Show();
             this.Close();
         }
     }
