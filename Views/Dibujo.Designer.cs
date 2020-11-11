@@ -138,10 +138,10 @@
             this.SeamingButton.IconColor = System.Drawing.Color.Black;
             this.SeamingButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SeamingButton.IconSize = 48;
-            this.SeamingButton.Location = new System.Drawing.Point(280, 19);
+            this.SeamingButton.Location = new System.Drawing.Point(464, 19);
             this.SeamingButton.Name = "SeamingButton";
             this.SeamingButton.Rotation = 0D;
-            this.SeamingButton.Size = new System.Drawing.Size(153, 58);
+            this.SeamingButton.Size = new System.Drawing.Size(209, 58);
             this.SeamingButton.TabIndex = 17;
             this.SeamingButton.Text = "Seaming";
             this.SeamingButton.UseVisualStyleBackColor = false;
@@ -158,10 +158,10 @@
             this.DeployButton.IconColor = System.Drawing.Color.Black;
             this.DeployButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.DeployButton.IconSize = 48;
-            this.DeployButton.Location = new System.Drawing.Point(464, 19);
+            this.DeployButton.Location = new System.Drawing.Point(230, 19);
             this.DeployButton.Name = "DeployButton";
             this.DeployButton.Rotation = 0D;
-            this.DeployButton.Size = new System.Drawing.Size(153, 58);
+            this.DeployButton.Size = new System.Drawing.Size(209, 58);
             this.DeployButton.TabIndex = 17;
             this.DeployButton.Text = "Deployment";
             this.DeployButton.UseVisualStyleBackColor = false;

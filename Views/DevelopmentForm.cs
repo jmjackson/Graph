@@ -185,5 +185,7 @@ namespace Mine.Views
             d.Show();
             this.Close();
         }
+
+        
     }
 }
