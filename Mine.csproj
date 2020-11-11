@@ -178,6 +178,12 @@
       <DependentUpon>202010311832528_UpdateByte.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Modal\ModalInspector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modal\ModalInspector.Designer.cs">
+      <DependentUpon>ModalInspector.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modal\ModalProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010311832528_UpdateByte.resx">
       <DependentUpon>202010311832528_UpdateByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modal\ModalInspector.resx">
+      <DependentUpon>ModalInspector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modal\ModalProject.resx">
       <DependentUpon>ModalProject.cs</DependentUpon>

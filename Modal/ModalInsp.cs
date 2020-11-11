@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Mine.Modal
 {
-    public partial class ModalInspector : Form
+    public partial class ModalInsp : Form
     {
-        public ModalInspector()
+        public ModalInsp()
         {
             InitializeComponent();
-        }
-
-        private void BtnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
