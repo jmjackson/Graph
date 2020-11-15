@@ -20,18 +20,15 @@ namespace Mine.Views
         readonly GraphDbContext db = new GraphDbContext();
 
         //
-        Bitmap imagen;
         
         private Graphics myPaint;
         private Boolean draw = false;
         private double diffxy;
         private int curX, curY,x,y, diffx, diffy;
         private int a = 0, b = 0;
-        private Color pintura;
-
+        private Color colors;
         int? X = null;
         int? Y = null;
-
 
         //Graphics g;
         //private Bitmap imagen;
@@ -41,7 +38,6 @@ namespace Mine.Views
         {
             InitializeComponent();
             //g = PbLienzo.CreateGraphics();
-            imagen= new Bitmap(PbDraw.Width,PbDraw.Height);
             pdId = dev;
             //BtnDraw.Enabled = false;
         }
@@ -55,7 +51,7 @@ namespace Mine.Views
 
         private void Dibujo_Load(object sender, EventArgs e)
         {
-            myPaint = PbDraw.CreateGraphics();
+            myPaint = Pdibujo.CreateGraphics();
 
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
 
@@ -68,15 +64,11 @@ namespace Mine.Views
 
             }
 
-           
-
-
             //if (Pn.ImageDev!=null)
             //{
             //    var picture = Convert.ToBase64String(Pn.ImageDev);
             //    PbLienzo.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(picture)));
             //}
-
 
         }
 
@@ -138,48 +130,52 @@ namespace Mine.Views
             //selecc_Opcion = 4;
         }
 
-       
+
 
         //Eventos de picturebox
-        private void PbLienzo_MouseClick_1(object sender, MouseEventArgs e)
+        //private void PbLienzo_MouseClick_1(object sender, MouseEventArgs e)
+        //{
+        //    //if (selecc_Opcion == 2)
+        //    //{
+        //    //    if (dibujar == true)
+        //    //    {
+        //    //        Font font2 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
+        //    //        Graphics g = Graphics.FromImage(imagen);
+
+        //    //        //seleciona de la tabla y lo dibuja
+        //    //        int projecn = Convert.ToInt32(DgLpn.CurrentRow.Cells[1].Value);
+        //    //        string texto = Convert.ToString(projecn);
+
+        //    //        g.DrawString(texto, font2, new SolidBrush(Color.Black), e.X, e.Y);
+
+        //    //        PbLienzo.Image = imagen;
+        //    //    }
+        //    //}
+        //    //if (selecc_Opcion == 3)
+        //    //{
+        //    //    //Dibujamos Cordenada y simbologia
+        //    //    if (dibujar == true)
+        //    //    {
+        //    //        Font font2 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
+        //    //        Graphics g = Graphics.FromImage(imagen);
+
+        //    //        //seleciona de la tabla y lo dibuja
+        //    //        //string texto = Convert.ToString(DgCordenada.CurrentRow.Cells[1].Value);
+        //    //        g.DrawString(" ", font2, new SolidBrush(Color.Black), e.X, e.Y);
+
+        //    //        PbLienzo.Image = imagen;
+        //    //    }
+        //    //}
+        //}
+
+        //private void PbLienzo_MouseDown_1(object sender, MouseEventArgs e)
+        //{
+        //    //dibujar = true;
+
+        //}
+        private void BtnClear_Click(object sender, EventArgs e)
         {
-            //if (selecc_Opcion == 2)
-            //{
-            //    if (dibujar == true)
-            //    {
-            //        Font font2 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
-            //        Graphics g = Graphics.FromImage(imagen);
-
-            //        //seleciona de la tabla y lo dibuja
-            //        int projecn = Convert.ToInt32(DgLpn.CurrentRow.Cells[1].Value);
-            //        string texto = Convert.ToString(projecn);
-
-            //        g.DrawString(texto, font2, new SolidBrush(Color.Black), e.X, e.Y);
-
-            //        PbLienzo.Image = imagen;
-            //    }
-            //}
-            //if (selecc_Opcion == 3)
-            //{
-            //    //Dibujamos Cordenada y simbologia
-            //    if (dibujar == true)
-            //    {
-            //        Font font2 = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point);
-            //        Graphics g = Graphics.FromImage(imagen);
-
-            //        //seleciona de la tabla y lo dibuja
-            //        //string texto = Convert.ToString(DgCordenada.CurrentRow.Cells[1].Value);
-            //        g.DrawString(" ", font2, new SolidBrush(Color.Black), e.X, e.Y);
-
-            //        PbLienzo.Image = imagen;
-            //    }
-            //}
-        }
-
-        private void PbLienzo_MouseDown_1(object sender, MouseEventArgs e)
-        {
-            //dibujar = true;
-
+            a = -1;
         }
         private void BtnPluma_Click(object sender, EventArgs e)
         {
@@ -189,35 +185,17 @@ namespace Mine.Views
         {
             a = 1;
         }
-        private void BtnCuadrado_Click(object sender, EventArgs e)
+        private void BtnRectangulo_Click(object sender, EventArgs e)
         {
             a = 2;
         }
-
-        private void BtnCirculo_Click(object sender, EventArgs e)
+        private void BtnCircle_Click(object sender, EventArgs e)
         {
             a = 3;
         }
-
-        private void BtnTriangulo_Click(object sender, EventArgs e)
+        private void Pdibujo_MouseDown(object sender, MouseEventArgs e)
         {
-            a = 4;
-        }
-        private void BtnRectangulo_Click(object sender, EventArgs e)
-        {
-            a = 5;
-        }
-        private void BtnTexto_Click(object sender, EventArgs e)
-        {
-            a = 7;
-        }
-        private void BtnBorrador_Click(object sender, EventArgs e)
-        {
-            a = 8;
-        }
-        private void PbDraw_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button==MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 draw = true;
                 b++;
@@ -226,32 +204,33 @@ namespace Mine.Views
             curY = e.Y;
         }
 
-        private void PbDraw_MouseMove(object sender, MouseEventArgs e)
+        private void Pdibujo_MouseUp(object sender, MouseEventArgs e)
         {
-            //textBox1.Text = Convert.ToString(diffx);
-            //textBox2.Text = Convert.ToString(diffy);
-            //diffxy = Math.Sqrt((diffx * diffx) + (diffy * diffy));
-            //textBox3.Text = Convert.ToString(diffxy);
+            draw = false;
+            X = null;
+            Y = null;
+        }
+
+        private void Pdibujo_MouseMove(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = Convert.ToString(diffx);
+            textBox2.Text = Convert.ToString(diffy);
+            diffxy = Math.Sqrt((diffx * diffx) + (diffy * diffy));
+            textBox3.Text = Convert.ToString(diffxy);
 
             if (draw == true)
             {
-                
-                if (a==0)
+                x = e.X;
+                y = e.Y;
+                if (a == 0)
                 {
-                    //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
-                    //declaradas al inicio
-
-                    Graphics g = Graphics.FromImage(imagen);
-
-                    //Dibuja una linea entre el punto anterior y el actual
-                    g.DrawLine(new Pen(Color.Black), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    myPaint.DrawLine(new Pen(Color.Black), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
                     X = e.X;
                     Y = e.Y;
-                    PbDraw.Image = imagen;
                 }
-                if (a == 8)
+                if (a == -1)
                 {
-                    myPaint.DrawLine(new Pen(Color.White,50), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    myPaint.DrawLine(new Pen(Color.White,30), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
                     X = e.X;
                     Y = e.Y;
                 }
@@ -259,15 +238,7 @@ namespace Mine.Views
 
         }
 
-        private void PbDraw_MouseUp(object sender, MouseEventArgs e)
-        {
-            draw = false;
-
-            X = null;
-            Y = null;
-        }
-
-        private void PbDraw_MouseClick(object sender, MouseEventArgs e)
+        private void Pdibujo_MouseClick(object sender, MouseEventArgs e)
         {
             if (draw == true)
             {
@@ -276,46 +247,34 @@ namespace Mine.Views
                 diffx = e.X - curX;
                 diffy = curY - e.Y;
 
-                int w = 100,h=100;
+                int w = 100, h = 100;
                 Rectangle rect = new Rectangle(e.X, e.Y, diffx, diffy);
-                if (a==1)
+                if (a == 1)
                 {
                     //Linia
                     myPaint.DrawLine(new Pen(Color.Black), curX, curY, e.X, e.Y);
-                    myPaint.DrawLine(new Pen(Color.Black),curX,curY,e.X,e.Y);
+                    myPaint.DrawLine(new Pen(Color.Black), curX, curY, e.X, e.Y);
                 }
                 if (a == 2)
                 {
-                    //Cuadrado
-                    //Rectangle cuadrado = new Rectangle(e.X, e.Y,w,h);
-                    //myPaint.DrawRectangle(new Pen(Color.Black),shape);
-
+                    //Rectangulo
+                    myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, -diffy);
+                    myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, -diffy);
                 }
                 if (a == 3)
                 {
                     //Circulo
-                    //myPaint.DrawEllipse(new Pen(Color.Black), rect);
-                    myPaint.DrawEllipse(new Pen(Color.Black), e.X, e.Y, diffx, diffy);
-                }
-                if (a == 4)
-                {
-                    //Triangulo
-                    //myPaint.DrawEllipse(new Pen(Color.Black), shape);
-                }
-                if (a == 5)
-                {
-                    // Draw rectangle to screen.
-                    //myPaint.DrawRectangle(new Pen(Color.Black), rect);
-                    myPaint.DrawRectangle(new Pen(Color.Black), e.X, e.Y, diffx, diffy);
+                    myPaint.DrawEllipse(new Pen(Color.Black),curX,curY,diffx,-diffy);
+                    myPaint.DrawEllipse(new Pen(Color.Black), curX, curY, diffx, -diffy);
                 }
                 if (a == 7)
                 {
                     var select = Convert.ToInt32(ListBoxData.SelectedItem.ToString());
-                    var tdev = db.Developments.Where(a => a.ProjectDevId == pdId).Where(a=>a.PanelNo==select).FirstOrDefault();
+                    var tdev = db.Developments.Where(a => a.ProjectDevId == pdId).Where(a => a.PanelNo == select).FirstOrDefault();
                     //var tgeo = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).FirstOrDefault();
 
-                    string text1 = "PNo:"+tdev.PanelNo.ToString()+", RNo.: "+tdev.RollNo+"\nL:"+tdev.Lenght+", W:"+tdev.Width+
-                        "\nT:"+tdev.Thickness+", Date:"+tdev.DeploymentDate.ToShortDateString();
+                    string text1 = "PNo:" + tdev.PanelNo.ToString() + ", RNo.: " + tdev.RollNo + "\nL:" + tdev.Lenght + ", W:" + tdev.Width +
+                        "\nT:" + tdev.Thickness + ", Date:" + tdev.DeploymentDate.ToShortDateString();
                     using (Font font1 = new Font("Arial", 8, FontStyle.Regular, GraphicsUnit.Point))
                     {
                         //RectangleF rectF1 = new RectangleF(e.X, e.Y, diffx, diffy);
@@ -327,94 +286,81 @@ namespace Mine.Views
             }
         }
 
-        private void BtnClear_Click(object sender, EventArgs e)
-        {
-            a = 8;
-        }
-
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            var dp = db.ProjectDevs.Find(pdId);
+            //var dp = db.ProjectDevs.Find(pdId);
             
-            Image img = PbDraw.Image as Image;
-            byte[] imgs;
-            using(MemoryStream m=new MemoryStream())
-            {
-               img.Save(m, System.Drawing.Imaging.ImageFormat.Jpeg);
-               imgs = m.ToArray();
-            }
-            dp.ImageDev = imgs;
-            db.SaveChanges();
+            //Image img = Pdraw.Image as Image;
+            //byte[] imgs;
+            //using(MemoryStream m=new MemoryStream())
+            //{
+            //   img.Save(m, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //   imgs = m.ToArray();
+            //}
+            //dp.ImageDev = imgs;
+            //db.SaveChanges();
 
         }
 
         private void BtnExport_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Images|*.png;*.bmp;*.jpg";
-            ImageFormat format = ImageFormat.Png;
-            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                string ext = System.IO.Path.GetExtension(sfd.FileName);
-                switch (ext)
-                {
-                    case ".jpg":
-                        format = ImageFormat.Jpeg;
-                        break;
-                    case ".bmp":
-                        format = ImageFormat.Bmp;
-                        break;
-                }
-                PbDraw.Image.Save(sfd.FileName, format);
-            }
-        }
-
-        private void PbLienzo_MouseMove_1(object sender, MouseEventArgs e)
-        {
-            //if (selecc_Opcion == 1)
+            //SaveFileDialog sfd = new SaveFileDialog();
+            //sfd.Filter = "Images|*.png;*.bmp;*.jpg";
+            //ImageFormat format = ImageFormat.Png;
+            //if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             //{
-            //    if (dibujar == true)
+            //    string ext = System.IO.Path.GetExtension(sfd.FileName);
+            //    switch (ext)
             //    {
-            //        //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
-            //        //declaradas al inicio
-
-            //        Graphics g = Graphics.FromImage(imagen);
-            //        Pen pluma = new Pen(color, ancho);
-
-            //        //Dibuja una linea entre el punto anterior y el actual
-            //        g.DrawLine(pluma, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
-            //        X = e.X;
-            //        Y = e.Y;
-            //        PbLienzo.Image = imagen;
+            //        case ".jpg":
+            //            format = ImageFormat.Jpeg;
+            //            break;
+            //        case ".bmp":
+            //            format = ImageFormat.Bmp;
+            //            break;
             //    }
-            //}
-            //if (selecc_Opcion == 4)
-            //{
-            //    if (dibujar == true)
-            //    {
-            //        //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
-            //        //declaradas al inicio
-            //        Color color2 = Color.White;
-            //        int ancho2 = 10;
-            //        Graphics g = Graphics.FromImage(imagen);
-            //        Pen borrador = new Pen(color2, ancho2);
-
-            //        //Dibuja una linea entre el punto anterior y el actual
-            //        g.DrawLine(borrador, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
-            //        X = e.X;
-            //        Y = e.Y;
-            //        PbLienzo.Image = imagen;
-            //    }
+            //    Pdraw.Image.Save(sfd.FileName, format);
             //}
         }
 
-        private void PbLienzo_MouseUp_1(object sender, MouseEventArgs e)
-        {
-            //draw = false;
+        //private void PbLienzo_MouseMove_1(object sender, MouseEventArgs e)
+        //{
+        //    //if (selecc_Opcion == 1)
+        //    //{
+        //    //    if (dibujar == true)
+        //    //    {
+        //    //        //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
+        //    //        //declaradas al inicio
 
-            //X = null;
-            //Y = null;
-        }
+        //    //        Graphics g = Graphics.FromImage(imagen);
+        //    //        Pen pluma = new Pen(color, ancho);
+
+        //    //        //Dibuja una linea entre el punto anterior y el actual
+        //    //        g.DrawLine(pluma, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+        //    //        X = e.X;
+        //    //        Y = e.Y;
+        //    //        PbLienzo.Image = imagen;
+        //    //    }
+        //    //}
+        //    //if (selecc_Opcion == 4)
+        //    //{
+        //    //    if (dibujar == true)
+        //    //    {
+        //    //        //Herramienta cuyas propiedades son cambiadas de acuerdo al valor de las variables 
+        //    //        //declaradas al inicio
+        //    //        Color color2 = Color.White;
+        //    //        int ancho2 = 10;
+        //    //        Graphics g = Graphics.FromImage(imagen);
+        //    //        Pen borrador = new Pen(color2, ancho2);
+
+        //    //        //Dibuja una linea entre el punto anterior y el actual
+        //    //        g.DrawLine(borrador, new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+        //    //        X = e.X;
+        //    //        Y = e.Y;
+        //    //        PbLienzo.Image = imagen;
+        //    //    }
+        //    //}
+        //}
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
