@@ -213,10 +213,9 @@ namespace Mine.Views
 
         private void Pdibujo_MouseMove(object sender, MouseEventArgs e)
         {
-            textBox1.Text = Convert.ToString(diffx);
-            textBox2.Text = Convert.ToString(diffy);
+           
             diffxy = Math.Sqrt((diffx * diffx) + (diffy * diffy));
-            textBox3.Text = Convert.ToString(diffxy);
+            
 
             if (draw == true)
             {

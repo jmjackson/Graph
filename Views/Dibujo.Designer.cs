@@ -32,21 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.PanelLeft = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.Pdraw = new System.Windows.Forms.Panel();
-            this.Pdibujo = new System.Windows.Forms.Panel();
             this.GbTools = new System.Windows.Forms.GroupBox();
+            this.BtnRectangulo = new FontAwesome.Sharp.IconButton();
             this.BtnCircle = new FontAwesome.Sharp.IconButton();
             this.BtnPen = new FontAwesome.Sharp.IconButton();
             this.BtnErase = new FontAwesome.Sharp.IconButton();
             this.BtnLine = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Pdibujo = new System.Windows.Forms.Panel();
+            this.PanelRight = new System.Windows.Forms.Panel();
             this.BtnSet = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.ListBoxData = new System.Windows.Forms.ListBox();
@@ -55,12 +49,10 @@
             this.BtnExport = new FontAwesome.Sharp.IconButton();
             this.BtnSave = new FontAwesome.Sharp.IconButton();
             this.SeamingButton = new FontAwesome.Sharp.IconButton();
-            this.BtnRectangulo = new FontAwesome.Sharp.IconButton();
             this.PanelHeader.SuspendLayout();
             this.PanelLeft.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.GbTools.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.PanelRight.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +63,7 @@
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(1940, 52);
+            this.PanelHeader.Size = new System.Drawing.Size(1386, 52);
             this.PanelHeader.TabIndex = 0;
             // 
             // label1
@@ -99,7 +91,7 @@
             this.BtnClose.IconColor = System.Drawing.Color.Red;
             this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.BtnClose.IconSize = 42;
-            this.BtnClose.Location = new System.Drawing.Point(1892, 9);
+            this.BtnClose.Location = new System.Drawing.Point(1338, 9);
             this.BtnClose.Margin = new System.Windows.Forms.Padding(0);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Rotation = 0D;
@@ -110,79 +102,14 @@
             // 
             // PanelLeft
             // 
-            this.PanelLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.PanelLeft.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PanelLeft.Controls.Add(this.groupBox1);
             this.PanelLeft.Controls.Add(this.Pdraw);
             this.PanelLeft.Controls.Add(this.GbTools);
+            this.PanelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLeft.Location = new System.Drawing.Point(0, 52);
             this.PanelLeft.Name = "PanelLeft";
-            this.PanelLeft.Size = new System.Drawing.Size(190, 959);
+            this.PanelLeft.Size = new System.Drawing.Size(190, 736);
             this.PanelLeft.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(22, 456);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(143, 170);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(64, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(63, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(64, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(63, 20);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(64, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(63, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "L";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Y";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "X";
             // 
             // Pdraw
             // 
@@ -192,20 +119,8 @@
             this.Pdraw.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Pdraw.Location = new System.Drawing.Point(188, 0);
             this.Pdraw.Name = "Pdraw";
-            this.Pdraw.Size = new System.Drawing.Size(1003, 959);
+            this.Pdraw.Size = new System.Drawing.Size(1003, 736);
             this.Pdraw.TabIndex = 3;
-            // 
-            // Pdibujo
-            // 
-            this.Pdibujo.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Pdibujo.Location = new System.Drawing.Point(196, 55);
-            this.Pdibujo.Name = "Pdibujo";
-            this.Pdibujo.Size = new System.Drawing.Size(1523, 950);
-            this.Pdibujo.TabIndex = 5;
-            this.Pdibujo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseClick);
-            this.Pdibujo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseDown);
-            this.Pdibujo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseMove);
-            this.Pdibujo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseUp);
             // 
             // GbTools
             // 
@@ -220,6 +135,25 @@
             this.GbTools.TabIndex = 0;
             this.GbTools.TabStop = false;
             this.GbTools.Text = "Tools";
+            // 
+            // BtnRectangulo
+            // 
+            this.BtnRectangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnRectangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRectangulo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnRectangulo.ForeColor = System.Drawing.Color.White;
+            this.BtnRectangulo.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.BtnRectangulo.IconColor = System.Drawing.Color.White;
+            this.BtnRectangulo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnRectangulo.IconSize = 36;
+            this.BtnRectangulo.Location = new System.Drawing.Point(23, 151);
+            this.BtnRectangulo.Name = "BtnRectangulo";
+            this.BtnRectangulo.Rotation = 0D;
+            this.BtnRectangulo.Size = new System.Drawing.Size(58, 55);
+            this.BtnRectangulo.TabIndex = 2;
+            this.BtnRectangulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnRectangulo.UseVisualStyleBackColor = false;
+            this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
             // 
             // BtnCircle
             // 
@@ -297,18 +231,30 @@
             this.BtnLine.UseVisualStyleBackColor = false;
             this.BtnLine.Click += new System.EventHandler(this.BtnLinia_Click);
             // 
-            // panel1
+            // Pdibujo
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.BtnSet);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.ListBoxData);
-            this.panel1.Location = new System.Drawing.Point(1740, 52);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 959);
-            this.panel1.TabIndex = 2;
+            this.Pdibujo.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Pdibujo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pdibujo.Location = new System.Drawing.Point(190, 52);
+            this.Pdibujo.Name = "Pdibujo";
+            this.Pdibujo.Size = new System.Drawing.Size(996, 647);
+            this.Pdibujo.TabIndex = 5;
+            this.Pdibujo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseClick);
+            this.Pdibujo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseDown);
+            this.Pdibujo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseMove);
+            this.Pdibujo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseUp);
+            // 
+            // PanelRight
+            // 
+            this.PanelRight.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelRight.Controls.Add(this.BtnSet);
+            this.PanelRight.Controls.Add(this.label2);
+            this.PanelRight.Controls.Add(this.ListBoxData);
+            this.PanelRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.PanelRight.Location = new System.Drawing.Point(1186, 52);
+            this.PanelRight.Name = "PanelRight";
+            this.PanelRight.Size = new System.Drawing.Size(200, 736);
+            this.PanelRight.TabIndex = 2;
             // 
             // BtnSet
             // 
@@ -322,7 +268,7 @@
             this.BtnSet.IconColor = System.Drawing.Color.Black;
             this.BtnSet.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSet.IconSize = 48;
-            this.BtnSet.Location = new System.Drawing.Point(42, 604);
+            this.BtnSet.Location = new System.Drawing.Point(42, 381);
             this.BtnSet.Name = "BtnSet";
             this.BtnSet.Rotation = 0D;
             this.BtnSet.Size = new System.Drawing.Size(112, 56);
@@ -348,7 +294,7 @@
             this.ListBoxData.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListBoxData.FormattingEnabled = true;
             this.ListBoxData.ItemHeight = 32;
-            this.ListBoxData.Location = new System.Drawing.Point(27, 742);
+            this.ListBoxData.Location = new System.Drawing.Point(27, 519);
             this.ListBoxData.Name = "ListBoxData";
             this.ListBoxData.Size = new System.Drawing.Size(161, 196);
             this.ListBoxData.TabIndex = 0;
@@ -361,9 +307,9 @@
             this.panel3.Controls.Add(this.BtnSave);
             this.panel3.Controls.Add(this.SeamingButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 1011);
+            this.panel3.Location = new System.Drawing.Point(190, 699);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1940, 89);
+            this.panel3.Size = new System.Drawing.Size(996, 89);
             this.panel3.TabIndex = 4;
             // 
             // DeployButton
@@ -446,34 +392,15 @@
             this.SeamingButton.UseVisualStyleBackColor = false;
             this.SeamingButton.Click += new System.EventHandler(this.SeamingButton_Click);
             // 
-            // BtnRectangulo
-            // 
-            this.BtnRectangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.BtnRectangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRectangulo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnRectangulo.ForeColor = System.Drawing.Color.White;
-            this.BtnRectangulo.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.BtnRectangulo.IconColor = System.Drawing.Color.White;
-            this.BtnRectangulo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnRectangulo.IconSize = 36;
-            this.BtnRectangulo.Location = new System.Drawing.Point(23, 151);
-            this.BtnRectangulo.Name = "BtnRectangulo";
-            this.BtnRectangulo.Rotation = 0D;
-            this.BtnRectangulo.Size = new System.Drawing.Size(58, 55);
-            this.BtnRectangulo.TabIndex = 2;
-            this.BtnRectangulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnRectangulo.UseVisualStyleBackColor = false;
-            this.BtnRectangulo.Click += new System.EventHandler(this.BtnRectangulo_Click);
-            // 
             // Dibujo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.Pdibujo);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelRight);
             this.Controls.Add(this.PanelLeft);
             this.Controls.Add(this.PanelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -484,11 +411,9 @@
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             this.PanelLeft.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.GbTools.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.PanelRight.ResumeLayout(false);
+            this.PanelRight.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -500,7 +425,7 @@
         private FontAwesome.Sharp.IconButton BtnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PanelLeft;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelRight;
         private System.Windows.Forms.Panel Pdraw;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton SeamingButton;
@@ -508,13 +433,6 @@
         private System.Windows.Forms.ListBox ListBoxData;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox GbTools;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton BtnLine;
         private FontAwesome.Sharp.IconButton BtnErase;
         private FontAwesome.Sharp.IconButton BtnPen;
