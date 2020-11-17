@@ -34,6 +34,8 @@
             this.PanelLeft = new System.Windows.Forms.Panel();
             this.Pdraw = new System.Windows.Forms.Panel();
             this.GbTools = new System.Windows.Forms.GroupBox();
+            this.BtnTriangulo = new FontAwesome.Sharp.IconButton();
+            this.BtnCuadrado = new FontAwesome.Sharp.IconButton();
             this.BtnRectangulo = new FontAwesome.Sharp.IconButton();
             this.BtnCircle = new FontAwesome.Sharp.IconButton();
             this.BtnPen = new FontAwesome.Sharp.IconButton();
@@ -124,6 +126,8 @@
             // 
             // GbTools
             // 
+            this.GbTools.Controls.Add(this.BtnTriangulo);
+            this.GbTools.Controls.Add(this.BtnCuadrado);
             this.GbTools.Controls.Add(this.BtnRectangulo);
             this.GbTools.Controls.Add(this.BtnCircle);
             this.GbTools.Controls.Add(this.BtnPen);
@@ -135,6 +139,44 @@
             this.GbTools.TabIndex = 0;
             this.GbTools.TabStop = false;
             this.GbTools.Text = "Tools";
+            // 
+            // BtnTriangulo
+            // 
+            this.BtnTriangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnTriangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnTriangulo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnTriangulo.ForeColor = System.Drawing.Color.White;
+            this.BtnTriangulo.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.BtnTriangulo.IconColor = System.Drawing.Color.White;
+            this.BtnTriangulo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnTriangulo.IconSize = 36;
+            this.BtnTriangulo.Location = new System.Drawing.Point(23, 212);
+            this.BtnTriangulo.Name = "BtnTriangulo";
+            this.BtnTriangulo.Rotation = 0D;
+            this.BtnTriangulo.Size = new System.Drawing.Size(58, 55);
+            this.BtnTriangulo.TabIndex = 4;
+            this.BtnTriangulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnTriangulo.UseVisualStyleBackColor = false;
+            this.BtnTriangulo.Click += new System.EventHandler(this.BtnTriangulo_Click);
+            // 
+            // BtnCuadrado
+            // 
+            this.BtnCuadrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnCuadrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCuadrado.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnCuadrado.ForeColor = System.Drawing.Color.White;
+            this.BtnCuadrado.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.BtnCuadrado.IconColor = System.Drawing.Color.White;
+            this.BtnCuadrado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnCuadrado.IconSize = 36;
+            this.BtnCuadrado.Location = new System.Drawing.Point(87, 151);
+            this.BtnCuadrado.Name = "BtnCuadrado";
+            this.BtnCuadrado.Rotation = 0D;
+            this.BtnCuadrado.Size = new System.Drawing.Size(58, 55);
+            this.BtnCuadrado.TabIndex = 3;
+            this.BtnCuadrado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnCuadrado.UseVisualStyleBackColor = false;
+            this.BtnCuadrado.Click += new System.EventHandler(this.BtnCuadrado_Click);
             // 
             // BtnRectangulo
             // 
@@ -442,5 +484,7 @@
         private FontAwesome.Sharp.IconButton BtnSave;
         private System.Windows.Forms.Panel Pdibujo;
         private FontAwesome.Sharp.IconButton BtnRectangulo;
+        private FontAwesome.Sharp.IconButton BtnCuadrado;
+        private FontAwesome.Sharp.IconButton BtnTriangulo;
     }
 }
