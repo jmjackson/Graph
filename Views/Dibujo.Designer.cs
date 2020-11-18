@@ -34,6 +34,11 @@
             this.PanelLeft = new System.Windows.Forms.Panel();
             this.Pdraw = new System.Windows.Forms.Panel();
             this.GbTools = new System.Windows.Forms.GroupBox();
+            this.TxtGrosor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblGrosor = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TbGrosor = new System.Windows.Forms.TrackBar();
             this.BtnTriangulo = new FontAwesome.Sharp.IconButton();
             this.BtnCuadrado = new FontAwesome.Sharp.IconButton();
             this.BtnRectangulo = new FontAwesome.Sharp.IconButton();
@@ -54,6 +59,7 @@
             this.PanelHeader.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             this.GbTools.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TbGrosor)).BeginInit();
             this.PanelRight.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +132,11 @@
             // 
             // GbTools
             // 
+            this.GbTools.Controls.Add(this.TxtGrosor);
+            this.GbTools.Controls.Add(this.label4);
+            this.GbTools.Controls.Add(this.lblGrosor);
+            this.GbTools.Controls.Add(this.label3);
+            this.GbTools.Controls.Add(this.TbGrosor);
             this.GbTools.Controls.Add(this.BtnTriangulo);
             this.GbTools.Controls.Add(this.BtnCuadrado);
             this.GbTools.Controls.Add(this.BtnRectangulo);
@@ -135,10 +146,61 @@
             this.GbTools.Controls.Add(this.BtnLine);
             this.GbTools.Location = new System.Drawing.Point(12, 34);
             this.GbTools.Name = "GbTools";
-            this.GbTools.Size = new System.Drawing.Size(170, 390);
+            this.GbTools.Size = new System.Drawing.Size(170, 434);
             this.GbTools.TabIndex = 0;
             this.GbTools.TabStop = false;
             this.GbTools.Text = "Tools";
+            // 
+            // TxtGrosor
+            // 
+            this.TxtGrosor.Location = new System.Drawing.Point(81, 357);
+            this.TxtGrosor.Name = "TxtGrosor";
+            this.TxtGrosor.Size = new System.Drawing.Size(39, 20);
+            this.TxtGrosor.TabIndex = 39;
+            this.TxtGrosor.Text = "1";
+            this.TxtGrosor.TextChanged += new System.EventHandler(this.TxtGrosor_TextChanged);
+            this.TxtGrosor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGrosor_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 359);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 15);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Grosor:";
+            // 
+            // lblGrosor
+            // 
+            this.lblGrosor.AutoSize = true;
+            this.lblGrosor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrosor.Location = new System.Drawing.Point(78, 290);
+            this.lblGrosor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGrosor.Name = "lblGrosor";
+            this.lblGrosor.Size = new System.Drawing.Size(15, 15);
+            this.lblGrosor.TabIndex = 37;
+            this.lblGrosor.Text = "1";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 288);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 15);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Grosor:";
+            // 
+            // TbGrosor
+            // 
+            this.TbGrosor.Location = new System.Drawing.Point(6, 306);
+            this.TbGrosor.Name = "TbGrosor";
+            this.TbGrosor.Size = new System.Drawing.Size(141, 45);
+            this.TbGrosor.TabIndex = 5;
+            this.TbGrosor.Scroll += new System.EventHandler(this.TbGrosor_Scroll);
             // 
             // BtnTriangulo
             // 
@@ -454,6 +516,8 @@
             this.PanelHeader.PerformLayout();
             this.PanelLeft.ResumeLayout(false);
             this.GbTools.ResumeLayout(false);
+            this.GbTools.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TbGrosor)).EndInit();
             this.PanelRight.ResumeLayout(false);
             this.PanelRight.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -486,5 +550,10 @@
         private FontAwesome.Sharp.IconButton BtnRectangulo;
         private FontAwesome.Sharp.IconButton BtnCuadrado;
         private FontAwesome.Sharp.IconButton BtnTriangulo;
+        private System.Windows.Forms.TrackBar TbGrosor;
+        private System.Windows.Forms.Label lblGrosor;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TxtGrosor;
+        private System.Windows.Forms.Label label4;
     }
 }

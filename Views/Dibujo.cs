@@ -30,6 +30,7 @@ namespace Mine.Views
         Point medio = new Point(0, 0);
         int? X = null;
         int? Y = null;
+        int ancho;
 
         //Graphics g;
         //private Bitmap imagen;
@@ -246,7 +247,7 @@ namespace Mine.Views
                 }
                 if (a == -1)
                 {
-                    myPaint.DrawLine(new Pen(Color.White,30), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    myPaint.DrawLine(new Pen(Color.White,ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
                     X = e.X;
                     Y = e.Y;
                 }
@@ -320,6 +321,40 @@ namespace Mine.Views
                 }
             }
         }
+
+        private void TbGrosor_Scroll(object sender, EventArgs e)
+        {
+            //TrackBar Modificador = new TrackBar();
+            //lblGrosor.Text = TbGrosor.Value.ToString();
+            //ancho = Convert.ToInt32(lblGrosor.Text);
+        }
+
+        private void TxtGrosor_TextChanged(object sender, EventArgs e)
+        {
+                ancho = Convert.ToInt32(TxtGrosor.Text);
+        }
+
+        private void TxtGrosor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //evita ingresar teto en el cuadro de texto de grosor
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
         private void BtnSave_Click(object sender, EventArgs e)
         {
             //var dp = db.ProjectDevs.Find(pdId);
