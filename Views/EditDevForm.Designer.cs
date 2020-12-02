@@ -61,7 +61,7 @@
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
             this.BtnSave.Size = new System.Drawing.Size(164, 59);
-            this.BtnSave.TabIndex = 1;
+            this.BtnSave.TabIndex = 5;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -82,7 +82,7 @@
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
             this.BtnCancel.Size = new System.Drawing.Size(174, 59);
-            this.BtnCancel.TabIndex = 2;
+            this.BtnCancel.TabIndex = 6;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = false;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -93,7 +93,7 @@
             this.TxtOperator.Location = new System.Drawing.Point(54, 283);
             this.TxtOperator.Name = "TxtOperator";
             this.TxtOperator.Size = new System.Drawing.Size(322, 35);
-            this.TxtOperator.TabIndex = 3;
+            this.TxtOperator.TabIndex = 4;
             // 
             // TxtMachineNo
             // 
@@ -111,7 +111,7 @@
             this.TxtProject.Name = "TxtProject";
             this.TxtProject.ReadOnly = true;
             this.TxtProject.Size = new System.Drawing.Size(324, 35);
-            this.TxtProject.TabIndex = 4;
+            this.TxtProject.TabIndex = 2;
             // 
             // TxtId
             // 
@@ -121,7 +121,7 @@
             this.TxtId.Name = "TxtId";
             this.TxtId.ReadOnly = true;
             this.TxtId.Size = new System.Drawing.Size(322, 35);
-            this.TxtId.TabIndex = 5;
+            this.TxtId.TabIndex = 1;
             // 
             // DateInspection
             // 
@@ -131,7 +131,7 @@
             this.DateInspection.MinimumSize = new System.Drawing.Size(0, 35);
             this.DateInspection.Name = "DateInspection";
             this.DateInspection.Size = new System.Drawing.Size(508, 35);
-            this.DateInspection.TabIndex = 6;
+            this.DateInspection.TabIndex = 0;
             // 
             // BtnClose
             // 

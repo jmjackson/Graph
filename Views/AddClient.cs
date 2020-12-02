@@ -43,6 +43,7 @@ namespace Mine.Views
                 {
                     PbClient.Image = Image.FromFile(OFDialog.FileName);
                 }
+
             }
             catch (Exception ex)
             {

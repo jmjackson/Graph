@@ -46,9 +46,9 @@ namespace Mine.Views
                 db.SaveChanges();
                 this.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MetroFramework.MetroMessageBox.Show(this, "An Error has ocurred: "+ex.Message.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 
             }
             
