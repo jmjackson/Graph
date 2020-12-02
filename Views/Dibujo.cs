@@ -27,8 +27,10 @@ namespace Mine.Views
         private int curX, curY,x,y, diffx, diffy;
         private int a = 0, b = 0;
         private Color colors;
+        Point medio = new Point(0, 0);
         int? X = null;
         int? Y = null;
+        int ancho;
 
         //Graphics g;
         //private Bitmap imagen;
@@ -175,24 +177,40 @@ namespace Mine.Views
         //}
         private void BtnClear_Click(object sender, EventArgs e)
         {
+            //borrador
             a = -1;
         }
         private void BtnPluma_Click(object sender, EventArgs e)
         {
+            //lapiz
             a = 0;
         }
         private void BtnLinia_Click(object sender, EventArgs e)
         {
+            // linia
             a = 1;
         }
         private void BtnRectangulo_Click(object sender, EventArgs e)
         {
+            //rectangulo
             a = 2;
         }
         private void BtnCircle_Click(object sender, EventArgs e)
         {
+            //circulo
             a = 3;
         }
+        private void BtnCuadrado_Click(object sender, EventArgs e)
+        {
+            //cuadrado
+            a = 4;
+        }
+        private void BtnTriangulo_Click(object sender, EventArgs e)
+        {
+            //triangulo
+            a = 5;
+        }
+
         private void Pdibujo_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -229,7 +247,7 @@ namespace Mine.Views
                 }
                 if (a == -1)
                 {
-                    myPaint.DrawLine(new Pen(Color.White,30), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    myPaint.DrawLine(new Pen(Color.White,ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
                     X = e.X;
                     Y = e.Y;
                 }
@@ -245,6 +263,11 @@ namespace Mine.Views
                 y = e.Y;
                 diffx = e.X - curX;
                 diffy = curY - e.Y;
+
+                // medio.X = x - (cx - x);
+                medio.X = curX - (x - curX);
+                // medio.Y = cy;//cx, cy, en este caso se usan como puntos iniciales
+                medio.Y = y;
 
                 int w = 100, h = 100;
                 Rectangle rect = new Rectangle(e.X, e.Y, diffx, diffy);
@@ -266,8 +289,22 @@ namespace Mine.Views
                     myPaint.DrawEllipse(new Pen(Color.Black),curX,curY,diffx,-diffy);
                     myPaint.DrawEllipse(new Pen(Color.Black), curX, curY, diffx, -diffy);
                 }
+                if (a == 4)
+                {
+                    //Cuadrado
+                    myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, diffx);
+                    myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, diffx);
+                }
+                if (a == 5)
+                {
+                    //Triangulo
+                    myPaint.DrawLine(new Pen(Color.Black), x, y, curX, curY);
+                    myPaint.DrawLine(new Pen(Color.Black), x, y, medio.X, medio.Y);
+                    myPaint.DrawLine(new Pen(Color.Black), medio.X, medio.Y, curX, curY);
+                }
                 if (a == 7)
                 {
+                    //texto
                     var select = Convert.ToInt32(ListBoxData.SelectedItem.ToString());
                     var tdev = db.Developments.Where(a => a.ProjectDevId == pdId).Where(a => a.PanelNo == select).FirstOrDefault();
                     //var tgeo = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).FirstOrDefault();
@@ -282,6 +319,39 @@ namespace Mine.Views
                         myPaint.DrawRectangle(Pens.White, Rectangle.Round(rectF1));
                     }
                 }
+            }
+        }
+
+        private void TbGrosor_Scroll(object sender, EventArgs e)
+        {
+            //TrackBar Modificador = new TrackBar();
+            //lblGrosor.Text = TbGrosor.Value.ToString();
+            //ancho = Convert.ToInt32(lblGrosor.Text);
+        }
+
+        private void TxtGrosor_TextChanged(object sender, EventArgs e)
+        {
+                ancho = Convert.ToInt32(TxtGrosor.Text);
+        }
+
+        private void TxtGrosor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //evita ingresar teto en el cuadro de texto de grosor
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
 
