@@ -28,6 +28,7 @@ namespace Mine.Views
             AddClient ac = new AddClient();
             if (ac.ShowDialog()==DialogResult.OK)
             {
+                MetroFramework.MetroMessageBox.Show(this,"Save Successfull","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 UpdateDGV();
             }
         }
@@ -53,7 +54,7 @@ namespace Mine.Views
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             var id = Convert.ToInt32(GDVClients.CurrentRow.Cells[0].Value);
-            if (MetroFramework.MetroMessageBox.Show(this,"Are you sure want to delete this record?","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            if (MetroFramework.MetroMessageBox.Show(this,"Are you sure want to delete this record?","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
                 {
                     var cdb=db.Clients.Find(id);
                     db.Entry<Client>(cdb).State = EntityState.Deleted;

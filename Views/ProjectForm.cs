@@ -80,6 +80,7 @@ namespace Mine.Views
                 AddProject ap = new AddProject(idClient);
                 if (ap.ShowDialog() == DialogResult.Yes)
                 {
+                    MetroFramework.MetroMessageBox.Show(this,"Sace Successfully","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     ProjectForm_Load(sender, e);
                 }
 
@@ -103,10 +104,10 @@ namespace Mine.Views
                 {
                     db.Projects.Remove(cdb);
                     db.SaveChanges();
-                    MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully");
-                    ProjectForm_Load(sender, e);
+                    MetroFramework.MetroMessageBox.Show(this, "Deleted Successfully","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    
                 }
-
+                ProjectForm_Load(sender, e);
 
             }
             catch (Exception ex)

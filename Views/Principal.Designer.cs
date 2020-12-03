@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.PanelLeft = new System.Windows.Forms.Panel();
-            this.BtnOther = new FontAwesome.Sharp.IconButton();
-            this.BtnLogout = new FontAwesome.Sharp.IconButton();
-            this.BtnConfig = new FontAwesome.Sharp.IconButton();
             this.PbLogo = new System.Windows.Forms.PictureBox();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.TileClient = new ns1.BunifuTileButton();
@@ -42,7 +39,6 @@
             this.BElipse = new ns1.BunifuElipse(this.components);
             this.PanelHead = new System.Windows.Forms.Panel();
             this.PanelContent = new System.Windows.Forms.Panel();
-            this.PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.PanelHead.SuspendLayout();
             this.PanelContent.SuspendLayout();
@@ -53,79 +49,10 @@
             this.PanelLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.PanelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(219)))));
-            this.PanelLeft.Controls.Add(this.BtnOther);
-            this.PanelLeft.Controls.Add(this.BtnLogout);
-            this.PanelLeft.Controls.Add(this.BtnConfig);
             this.PanelLeft.Location = new System.Drawing.Point(0, 306);
             this.PanelLeft.Name = "PanelLeft";
             this.PanelLeft.Size = new System.Drawing.Size(292, 482);
             this.PanelLeft.TabIndex = 0;
-            // 
-            // BtnOther
-            // 
-            this.BtnOther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(229)))));
-            this.BtnOther.FlatAppearance.BorderSize = 0;
-            this.BtnOther.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnOther.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnOther.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOther.ForeColor = System.Drawing.Color.White;
-            this.BtnOther.IconChar = FontAwesome.Sharp.IconChar.FolderOpen;
-            this.BtnOther.IconColor = System.Drawing.Color.White;
-            this.BtnOther.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnOther.IconSize = 20;
-            this.BtnOther.Location = new System.Drawing.Point(-3, 143);
-            this.BtnOther.Name = "BtnOther";
-            this.BtnOther.Rotation = 0D;
-            this.BtnOther.Size = new System.Drawing.Size(292, 60);
-            this.BtnOther.TabIndex = 1;
-            this.BtnOther.Text = "Other";
-            this.BtnOther.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnOther.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnOther.UseVisualStyleBackColor = false;
-            // 
-            // BtnLogout
-            // 
-            this.BtnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(229)))));
-            this.BtnLogout.FlatAppearance.BorderSize = 0;
-            this.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLogout.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnLogout.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogout.ForeColor = System.Drawing.Color.White;
-            this.BtnLogout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.BtnLogout.IconColor = System.Drawing.Color.White;
-            this.BtnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnLogout.IconSize = 20;
-            this.BtnLogout.Location = new System.Drawing.Point(-3, 222);
-            this.BtnLogout.Name = "BtnLogout";
-            this.BtnLogout.Rotation = 0D;
-            this.BtnLogout.Size = new System.Drawing.Size(292, 61);
-            this.BtnLogout.TabIndex = 1;
-            this.BtnLogout.Text = "Log Out";
-            this.BtnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnLogout.UseVisualStyleBackColor = false;
-            // 
-            // BtnConfig
-            // 
-            this.BtnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(178)))), ((int)(((byte)(229)))));
-            this.BtnConfig.FlatAppearance.BorderSize = 0;
-            this.BtnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnConfig.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnConfig.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnConfig.ForeColor = System.Drawing.Color.White;
-            this.BtnConfig.IconChar = FontAwesome.Sharp.IconChar.Sun;
-            this.BtnConfig.IconColor = System.Drawing.Color.White;
-            this.BtnConfig.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnConfig.IconSize = 20;
-            this.BtnConfig.Location = new System.Drawing.Point(0, 66);
-            this.BtnConfig.Name = "BtnConfig";
-            this.BtnConfig.Rotation = 0D;
-            this.BtnConfig.Size = new System.Drawing.Size(289, 59);
-            this.BtnConfig.TabIndex = 1;
-            this.BtnConfig.Text = "Configuration";
-            this.BtnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnConfig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnConfig.UseVisualStyleBackColor = false;
             // 
             // PbLogo
             // 
@@ -258,7 +185,6 @@
             this.Name = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
-            this.PanelLeft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             this.PanelHead.ResumeLayout(false);
             this.PanelContent.ResumeLayout(false);
@@ -269,9 +195,6 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelLeft;
-        private FontAwesome.Sharp.IconButton BtnLogout;
-        private FontAwesome.Sharp.IconButton BtnOther;
-        private FontAwesome.Sharp.IconButton BtnConfig;
         private System.Windows.Forms.PictureBox PbLogo;
         private FontAwesome.Sharp.IconButton BtnExit;
         private ns1.BunifuTileButton TileClient;

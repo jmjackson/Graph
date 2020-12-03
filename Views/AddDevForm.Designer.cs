@@ -54,7 +54,7 @@
             this.CbClients.Location = new System.Drawing.Point(68, 211);
             this.CbClients.Name = "CbClients";
             this.CbClients.Size = new System.Drawing.Size(321, 35);
-            this.CbClients.TabIndex = 0;
+            this.CbClients.TabIndex = 1;
             this.CbClients.UseCustomBackColor = true;
             this.CbClients.UseCustomForeColor = true;
             this.CbClients.UseSelectable = true;
@@ -69,7 +69,7 @@
             this.CbProject.Location = new System.Drawing.Point(437, 211);
             this.CbProject.Name = "CbProject";
             this.CbProject.Size = new System.Drawing.Size(321, 35);
-            this.CbProject.TabIndex = 0;
+            this.CbProject.TabIndex = 2;
             this.CbProject.UseCustomBackColor = true;
             this.CbProject.UseCustomForeColor = true;
             this.CbProject.UseSelectable = true;
@@ -80,7 +80,7 @@
             this.TxtOperator.Location = new System.Drawing.Point(68, 344);
             this.TxtOperator.Name = "TxtOperator";
             this.TxtOperator.Size = new System.Drawing.Size(321, 35);
-            this.TxtOperator.TabIndex = 1;
+            this.TxtOperator.TabIndex = 3;
             // 
             // TxtMachine
             // 
@@ -88,7 +88,7 @@
             this.TxtMachine.Location = new System.Drawing.Point(439, 344);
             this.TxtMachine.Name = "TxtMachine";
             this.TxtMachine.Size = new System.Drawing.Size(319, 35);
-            this.TxtMachine.TabIndex = 1;
+            this.TxtMachine.TabIndex = 4;
             // 
             // BtnCancel
             // 
@@ -106,7 +106,7 @@
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Rotation = 0D;
             this.BtnCancel.Size = new System.Drawing.Size(169, 62);
-            this.BtnCancel.TabIndex = 3;
+            this.BtnCancel.TabIndex = 6;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = false;
             // 
@@ -126,7 +126,7 @@
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Rotation = 0D;
             this.BtnSave.Size = new System.Drawing.Size(160, 62);
-            this.BtnSave.TabIndex = 3;
+            this.BtnSave.TabIndex = 5;
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = false;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -141,7 +141,7 @@
             this.DateInspection.MinimumSize = new System.Drawing.Size(0, 35);
             this.DateInspection.Name = "DateInspection";
             this.DateInspection.Size = new System.Drawing.Size(393, 35);
-            this.DateInspection.TabIndex = 4;
+            this.DateInspection.TabIndex = 0;
             this.DateInspection.UseCustomBackColor = true;
             this.DateInspection.UseCustomForeColor = true;
             this.DateInspection.UseStyleColors = true;

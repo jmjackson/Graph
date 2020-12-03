@@ -92,6 +92,7 @@ namespace Mine.Views
                 AddDevForm addDev = new AddDevForm();
                 if (addDev.ShowDialog() == DialogResult.OK)
                 {
+                   MetroFramework.MetroMessageBox.Show(this,"Save Successfully","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     DevForm_Load(sender, e);
                     DGVDev.Refresh();
                 }
@@ -111,9 +112,11 @@ namespace Mine.Views
             EditDevForm ed = new EditDevForm(pdId);
             if (ed.ShowDialog() == DialogResult.OK)
             {
-                DevForm_Load(sender, e);
+                MetroFramework.MetroMessageBox.Show(this,"Update Successfully","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
                 DGVDev.Refresh();
             }
+            DevForm_Load(sender,e);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -127,12 +130,13 @@ namespace Mine.Views
                     db.ProjectDevs.Remove(pd);
                     db.SaveChanges();
                 }
+                MetroMessageBox.Show(this,"Delete Success ","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 DevForm_Load(sender, e);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MetroMessageBox.Show(this,"An Error Ocurred "+ex.Message.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
     }
