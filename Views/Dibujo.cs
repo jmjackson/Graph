@@ -210,6 +210,14 @@ namespace Mine.Views
             //triangulo
             a = 5;
         }
+        private void BtnSet_Click(object sender, EventArgs e)
+        {
+            a = 7;
+        }
+        private void BtnTrianguloRectangulo_Click(object sender, EventArgs e)
+        {
+            a = 8;
+        }
 
         private void Pdibujo_MouseDown(object sender, MouseEventArgs e)
         {
@@ -264,6 +272,7 @@ namespace Mine.Views
                 diffx = e.X - curX;
                 diffy = curY - e.Y;
 
+                //Medidas para el trinagulo Normal
                 // medio.X = x - (cx - x);
                 medio.X = curX - (x - curX);
                 // medio.Y = cy;//cx, cy, en este caso se usan como puntos iniciales
@@ -319,40 +328,82 @@ namespace Mine.Views
                         myPaint.DrawRectangle(Pens.White, Rectangle.Round(rectF1));
                     }
                 }
+                if (a == 8)
+                {
+                    int posx1 = x;
+                    int posy1 = y;
+
+                    int posx2 = curX;
+                    int posy2 = curY;
+
+                    int altura = posy2 - posy1;
+                    int base_ = posx2 - posx1;
+
+                    int posx = posx1;
+                    int posy = posy2;
+
+
+                    // Base
+                    myPaint.DrawLine(new Pen(Color.Black), posx, posy, posx + base_, posy);
+                    // Altura
+                    myPaint.DrawLine(new Pen(Color.Black), posx, posy, posx, posy - altura);
+                    // Hipotenusa
+                    myPaint.DrawLine(new Pen(Color.Black), posx, posy - altura, posx + base_, posy);
+
+
+                }
             }
         }
 
         private void TbGrosor_Scroll(object sender, EventArgs e)
         {
-            //TrackBar Modificador = new TrackBar();
-            //lblGrosor.Text = TbGrosor.Value.ToString();
-            //ancho = Convert.ToInt32(lblGrosor.Text);
+            TrackBar Modificador = new TrackBar();
+            lblGrosor.Text = TbGrosor.Value.ToString();
+            ancho = Convert.ToInt32(lblGrosor.Text);
         }
 
         private void TxtGrosor_TextChanged(object sender, EventArgs e)
         {
-                ancho = Convert.ToInt32(TxtGrosor.Text);
+            ////if (Convert.ToInt32(TxtGrosor.Text)<0)
+            ////{
+            ////    ancho = Convert.ToInt32(TxtGrosor.Text);
+            ////}
         }
 
         private void TxtGrosor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //evita ingresar teto en el cuadro de texto de grosor
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
+            ////evita ingresar teto en el cuadro de texto de grosor
+            //if (Char.IsDigit(e.KeyChar))
+            //{
+            //    e.Handled = false;
+            //}
+            //else if (Char.IsControl(e.KeyChar))
+            //{
+            //    e.Handled = false;
+            //}
+            //else if (Char.IsSeparator(e.KeyChar))
+            //{
+            //    e.Handled = false;
+            //}
+            //else
+            //{
+            //    e.Handled = true;
+            //}
+        }
+
+        private void PanelRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -388,7 +439,7 @@ namespace Mine.Views
             //            format = ImageFormat.Bmp;
             //            break;
             //    }
-            //    Pdraw.Image.Save(sfd.FileName, format);
+            //    //Pdraw.Image.Save(sfd.FileName, format);
             //}
         }
 

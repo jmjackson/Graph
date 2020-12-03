@@ -34,8 +34,7 @@
             this.PanelLeft = new System.Windows.Forms.Panel();
             this.Pdraw = new System.Windows.Forms.Panel();
             this.GbTools = new System.Windows.Forms.GroupBox();
-            this.TxtGrosor = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.BtnTrianguloRectangulo = new FontAwesome.Sharp.IconButton();
             this.lblGrosor = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TbGrosor = new System.Windows.Forms.TrackBar();
@@ -48,6 +47,9 @@
             this.BtnLine = new FontAwesome.Sharp.IconButton();
             this.Pdibujo = new System.Windows.Forms.Panel();
             this.PanelRight = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.SNO = new System.Windows.Forms.ListBox();
             this.BtnSet = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.ListBoxData = new System.Windows.Forms.ListBox();
@@ -132,8 +134,7 @@
             // 
             // GbTools
             // 
-            this.GbTools.Controls.Add(this.TxtGrosor);
-            this.GbTools.Controls.Add(this.label4);
+            this.GbTools.Controls.Add(this.BtnTrianguloRectangulo);
             this.GbTools.Controls.Add(this.lblGrosor);
             this.GbTools.Controls.Add(this.label3);
             this.GbTools.Controls.Add(this.TbGrosor);
@@ -151,26 +152,24 @@
             this.GbTools.TabStop = false;
             this.GbTools.Text = "Tools";
             // 
-            // TxtGrosor
+            // BtnTrianguloRectangulo
             // 
-            this.TxtGrosor.Location = new System.Drawing.Point(81, 357);
-            this.TxtGrosor.Name = "TxtGrosor";
-            this.TxtGrosor.Size = new System.Drawing.Size(39, 20);
-            this.TxtGrosor.TabIndex = 39;
-            this.TxtGrosor.Text = "1";
-            this.TxtGrosor.TextChanged += new System.EventHandler(this.TxtGrosor_TextChanged);
-            this.TxtGrosor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGrosor_KeyPress);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 359);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 15);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "Grosor:";
+            this.BtnTrianguloRectangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnTrianguloRectangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnTrianguloRectangulo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnTrianguloRectangulo.ForeColor = System.Drawing.Color.White;
+            this.BtnTrianguloRectangulo.IconChar = FontAwesome.Sharp.IconChar.CaretUp;
+            this.BtnTrianguloRectangulo.IconColor = System.Drawing.Color.White;
+            this.BtnTrianguloRectangulo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnTrianguloRectangulo.IconSize = 36;
+            this.BtnTrianguloRectangulo.Location = new System.Drawing.Point(87, 212);
+            this.BtnTrianguloRectangulo.Name = "BtnTrianguloRectangulo";
+            this.BtnTrianguloRectangulo.Rotation = 0D;
+            this.BtnTrianguloRectangulo.Size = new System.Drawing.Size(58, 55);
+            this.BtnTrianguloRectangulo.TabIndex = 40;
+            this.BtnTrianguloRectangulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnTrianguloRectangulo.UseVisualStyleBackColor = false;
+            this.BtnTrianguloRectangulo.Click += new System.EventHandler(this.BtnTrianguloRectangulo_Click);
             // 
             // lblGrosor
             // 
@@ -197,6 +196,7 @@
             // TbGrosor
             // 
             this.TbGrosor.Location = new System.Drawing.Point(6, 306);
+            this.TbGrosor.Maximum = 200;
             this.TbGrosor.Name = "TbGrosor";
             this.TbGrosor.Size = new System.Drawing.Size(141, 45);
             this.TbGrosor.TabIndex = 5;
@@ -208,7 +208,7 @@
             this.BtnTriangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTriangulo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnTriangulo.ForeColor = System.Drawing.Color.White;
-            this.BtnTriangulo.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.BtnTriangulo.IconChar = FontAwesome.Sharp.IconChar.CaretUp;
             this.BtnTriangulo.IconColor = System.Drawing.Color.White;
             this.BtnTriangulo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnTriangulo.IconSize = 36;
@@ -227,7 +227,7 @@
             this.BtnCuadrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCuadrado.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnCuadrado.ForeColor = System.Drawing.Color.White;
-            this.BtnCuadrado.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.BtnCuadrado.IconChar = FontAwesome.Sharp.IconChar.Square;
             this.BtnCuadrado.IconColor = System.Drawing.Color.White;
             this.BtnCuadrado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnCuadrado.IconSize = 36;
@@ -246,7 +246,7 @@
             this.BtnRectangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRectangulo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.BtnRectangulo.ForeColor = System.Drawing.Color.White;
-            this.BtnRectangulo.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.BtnRectangulo.IconChar = FontAwesome.Sharp.IconChar.VectorSquare;
             this.BtnRectangulo.IconColor = System.Drawing.Color.White;
             this.BtnRectangulo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnRectangulo.IconSize = 36;
@@ -337,7 +337,7 @@
             // 
             // Pdibujo
             // 
-            this.Pdibujo.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Pdibujo.BackColor = System.Drawing.Color.White;
             this.Pdibujo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pdibujo.Location = new System.Drawing.Point(190, 52);
             this.Pdibujo.Name = "Pdibujo";
@@ -351,6 +351,9 @@
             // PanelRight
             // 
             this.PanelRight.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelRight.Controls.Add(this.iconButton2);
+            this.PanelRight.Controls.Add(this.label5);
+            this.PanelRight.Controls.Add(this.SNO);
             this.PanelRight.Controls.Add(this.BtnSet);
             this.PanelRight.Controls.Add(this.label2);
             this.PanelRight.Controls.Add(this.ListBoxData);
@@ -359,6 +362,49 @@
             this.PanelRight.Name = "PanelRight";
             this.PanelRight.Size = new System.Drawing.Size(200, 736);
             this.PanelRight.TabIndex = 2;
+            this.PanelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelRight_Paint);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 48;
+            this.iconButton2.Location = new System.Drawing.Point(52, 22);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Rotation = 0D;
+            this.iconButton2.Size = new System.Drawing.Size(112, 56);
+            this.iconButton2.TabIndex = 5;
+            this.iconButton2.Text = "Set";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(59, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 30);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "No";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // SNO
+            // 
+            this.SNO.FormattingEnabled = true;
+            this.SNO.Location = new System.Drawing.Point(27, 138);
+            this.SNO.Name = "SNO";
+            this.SNO.Size = new System.Drawing.Size(161, 199);
+            this.SNO.TabIndex = 3;
             // 
             // BtnSet
             // 
@@ -372,13 +418,14 @@
             this.BtnSet.IconColor = System.Drawing.Color.Black;
             this.BtnSet.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSet.IconSize = 48;
-            this.BtnSet.Location = new System.Drawing.Point(42, 381);
+            this.BtnSet.Location = new System.Drawing.Point(52, 391);
             this.BtnSet.Name = "BtnSet";
             this.BtnSet.Rotation = 0D;
             this.BtnSet.Size = new System.Drawing.Size(112, 56);
             this.BtnSet.TabIndex = 2;
             this.BtnSet.Text = "Set";
             this.BtnSet.UseVisualStyleBackColor = false;
+            this.BtnSet.Click += new System.EventHandler(this.BtnSet_Click);
             // 
             // label2
             // 
@@ -386,7 +433,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 378);
+            this.label2.Location = new System.Drawing.Point(59, 464);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 30);
             this.label2.TabIndex = 1;
@@ -553,7 +600,9 @@
         private System.Windows.Forms.TrackBar TbGrosor;
         private System.Windows.Forms.Label lblGrosor;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtGrosor;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox SNO;
+        private FontAwesome.Sharp.IconButton BtnTrianguloRectangulo;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Label label5;
     }
 }
