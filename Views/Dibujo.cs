@@ -26,7 +26,7 @@ namespace Mine.Views
         private double diffxy;
         private int curX, curY,x,y, diffx, diffy;
         private int a = 0, b = 0;
-        private Color colors;
+        readonly private Color colors;
         Point medio = new Point(0, 0);
         int? X = null;
         int? Y = null;
@@ -34,7 +34,7 @@ namespace Mine.Views
 
         //Graphics g;
         //private Bitmap imagen;
-        int pdId;
+        readonly int pdId;
         //int selecc_Opcion=1;
         public Dibujo(int dev)
         {
@@ -56,14 +56,20 @@ namespace Mine.Views
             myPaint = Pdibujo.CreateGraphics();
 
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
+            
 
             var projectno = (from d in db.Developments where d.ProjectDevId == Pn.Id select d).ToList();
+            var seamno = (from s in db.GeoMembranes where s.ProjectDevId == Pn.Id select s).ToList();
 
             foreach (var item in projectno)
             {
                 
                 ListBoxData.Items.Add(item.PanelNo);
 
+            }
+            foreach (var item in seamno)
+            {
+                SNOList.Items.Add(item.SeamNo);
             }
 
             //if (Pn.ImageDev!=null)
@@ -396,12 +402,11 @@ namespace Mine.Views
 
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
+       
 
-        }
+        
 
-        private void label5_Click(object sender, EventArgs e)
+        private void BtnSeamNo_Click(object sender, EventArgs e)
         {
 
         }

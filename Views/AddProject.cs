@@ -48,7 +48,7 @@ namespace Mine.Views
             }
             catch (Exception ex)
             {
-
+                MetroFramework.MetroMessageBox.Show(this, "Error :"+ex.Message.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error) ;
               
             }
             

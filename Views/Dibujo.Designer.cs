@@ -47,9 +47,9 @@
             this.BtnLine = new FontAwesome.Sharp.IconButton();
             this.Pdibujo = new System.Windows.Forms.Panel();
             this.PanelRight = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.BtnSeamNo = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.SNO = new System.Windows.Forms.ListBox();
+            this.SNOList = new System.Windows.Forms.ListBox();
             this.BtnSet = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.ListBoxData = new System.Windows.Forms.ListBox();
@@ -68,6 +68,7 @@
             // 
             // PanelHeader
             // 
+            this.PanelHeader.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelHeader.Controls.Add(this.label1);
             this.PanelHeader.Controls.Add(this.BtnClose);
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -79,7 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
@@ -351,9 +352,9 @@
             // PanelRight
             // 
             this.PanelRight.BackColor = System.Drawing.SystemColors.Control;
-            this.PanelRight.Controls.Add(this.iconButton2);
+            this.PanelRight.Controls.Add(this.BtnSeamNo);
             this.PanelRight.Controls.Add(this.label5);
-            this.PanelRight.Controls.Add(this.SNO);
+            this.PanelRight.Controls.Add(this.SNOList);
             this.PanelRight.Controls.Add(this.BtnSet);
             this.PanelRight.Controls.Add(this.label2);
             this.PanelRight.Controls.Add(this.ListBoxData);
@@ -364,26 +365,26 @@
             this.PanelRight.TabIndex = 2;
             this.PanelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelRight_Paint);
             // 
-            // iconButton2
+            // BtnSeamNo
             // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 48;
-            this.iconButton2.Location = new System.Drawing.Point(52, 22);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(112, 56);
-            this.iconButton2.TabIndex = 5;
-            this.iconButton2.Text = "Set";
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.BtnSeamNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSeamNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(219)))));
+            this.BtnSeamNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSeamNo.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnSeamNo.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSeamNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSeamNo.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnSeamNo.IconColor = System.Drawing.Color.Black;
+            this.BtnSeamNo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnSeamNo.IconSize = 48;
+            this.BtnSeamNo.Location = new System.Drawing.Point(52, 22);
+            this.BtnSeamNo.Name = "BtnSeamNo";
+            this.BtnSeamNo.Rotation = 0D;
+            this.BtnSeamNo.Size = new System.Drawing.Size(112, 56);
+            this.BtnSeamNo.TabIndex = 5;
+            this.BtnSeamNo.Text = "Set";
+            this.BtnSeamNo.UseVisualStyleBackColor = false;
+            this.BtnSeamNo.Click += new System.EventHandler(this.BtnSeamNo_Click);
             // 
             // label5
             // 
@@ -393,18 +394,20 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(59, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 30);
+            this.label5.Size = new System.Drawing.Size(97, 30);
             this.label5.TabIndex = 4;
-            this.label5.Text = "No";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Text = "Seam No";
+            
             // 
-            // SNO
+            // SNOList
             // 
-            this.SNO.FormattingEnabled = true;
-            this.SNO.Location = new System.Drawing.Point(27, 138);
-            this.SNO.Name = "SNO";
-            this.SNO.Size = new System.Drawing.Size(161, 199);
-            this.SNO.TabIndex = 3;
+            this.SNOList.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SNOList.FormattingEnabled = true;
+            this.SNOList.ItemHeight = 30;
+            this.SNOList.Location = new System.Drawing.Point(27, 138);
+            this.SNOList.Name = "SNOList";
+            this.SNOList.Size = new System.Drawing.Size(161, 184);
+            this.SNOList.TabIndex = 3;
             // 
             // BtnSet
             // 
@@ -600,9 +603,9 @@
         private System.Windows.Forms.TrackBar TbGrosor;
         private System.Windows.Forms.Label lblGrosor;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox SNO;
+        private System.Windows.Forms.ListBox SNOList;
         private FontAwesome.Sharp.IconButton BtnTrianguloRectangulo;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton BtnSeamNo;
         private System.Windows.Forms.Label label5;
     }
 }
