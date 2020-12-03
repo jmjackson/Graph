@@ -194,5 +194,12 @@ namespace Mine.Views
                 DevelopmentForm_Load(sender,e);
             }
         }
+
+       
+
+        private void DGVDev_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
