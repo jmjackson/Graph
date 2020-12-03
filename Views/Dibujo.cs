@@ -69,7 +69,7 @@ namespace Mine.Views
             }
             foreach (var item in seamno)
             {
-                SNOList.Items.Add(item.SeamNo);
+                SNOList.Items.Add(item.Id+"-"+item.SeamNo);
             }
 
             //if (Pn.ImageDev!=null)
@@ -358,12 +358,14 @@ namespace Mine.Views
                 if (a==9)
                 {
                     //texto
-                    var select = Convert.ToInt32(ListBoxData.SelectedItem.ToString());
-                    var tdev = db.Developments.Where(a => a.ProjectDevId == pdId).Where(a => a.PanelNo == select).FirstOrDefault();
-                    //var tgeo = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).FirstOrDefault();
+                    var select = SNOList.SelectedItem.ToString();
+                    string[] data = select.Split('-');
+                    var sel = Convert.ToInt32(data[0]);
+                    var tgeo = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).Where(a => a.Id == sel).FirstOrDefault();
+                    
 
-                    string text1 = "PNo:" + tdev.PanelNo.ToString() + ", RNo.: " + tdev.RollNo + "\nL:" + tdev.Lenght + ", W:" + tdev.Width +
-                        "\nT:" + tdev.Thickness + ", Date:" + tdev.DeploymentDate.ToShortDateString();
+                    string text1 = "SN:" + tgeo.SeamNo.ToString() + ", SL.: " + tgeo.SeamLength.ToString() + "\nST:" + tgeo.SeamTime + ", WT:" + tgeo.WedgeTemp +
+                        "\nWS:" + tgeo.WedgeSpeed + ", D:" + tgeo.Destructive.ToString()+"R:"+tgeo.RemarksDestructive;
                     using (Font font1 = new Font("Arial", 8, FontStyle.Regular, GraphicsUnit.Point))
                     {
                         //RectangleF rectF1 = new RectangleF(e.X, e.Y, diffx, diffy);
