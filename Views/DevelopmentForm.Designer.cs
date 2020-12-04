@@ -53,7 +53,6 @@
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGVDev = new System.Windows.Forms.DataGridView();
-            this.BElipse = new ns1.BunifuElipse(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeploymentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +65,7 @@
             this.ProjectDevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectDev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.developmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BElipse = new ns1.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBPicture)).BeginInit();
             this.PanelAdd.SuspendLayout();
             this.PanelHeader.SuspendLayout();
@@ -407,12 +407,8 @@
             this.DGVDev.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGVDev.Size = new System.Drawing.Size(1386, 435);
             this.DGVDev.TabIndex = 0;
-            this.DGVDev.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVDev_CellValidated);
-            // 
-            // BElipse
-            // 
-            this.BElipse.ElipseRadius = 5;
-            this.BElipse.TargetControl = this;
+            this.DGVDev.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DGVDev_CellValidating);
+            this.DGVDev.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DGVDev_DataError);
             // 
             // Id
             // 
@@ -504,6 +500,11 @@
             // developmentBindingSource
             // 
             this.developmentBindingSource.DataSource = typeof(Mine.DataModel.Development);
+            // 
+            // BElipse
+            // 
+            this.BElipse.ElipseRadius = 5;
+            this.BElipse.TargetControl = this;
             // 
             // DevelopmentForm
             // 

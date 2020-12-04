@@ -195,11 +195,74 @@ namespace Mine.Views
             }
         }
 
-       
-
-        private void DGVDev_CellValidated(object sender, DataGridViewCellEventArgs e)
+        private void DGVDev_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
+            if (DGVDev.IsCurrentCellDirty)
+            {
+                int number;
+                if (e.ColumnIndex==2)
+                {
+                    
+                    var data=DGVDev[e.ColumnIndex,e.RowIndex].EditedFormattedValue.ToString();
+                    var validate= int.TryParse(data, out number);
+                    if (!validate)
+                    {
+                        MetroMessageBox.Show(this, "Error input Data","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    }
 
+                }
+                if (e.ColumnIndex == 3)
+                {
+
+                    var data = DGVDev[e.ColumnIndex, e.RowIndex].EditedFormattedValue.ToString();
+                    var validate = int.TryParse(data, out number);
+                    if (!validate)
+                    {
+                        MetroMessageBox.Show(this, "Error input Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                if (e.ColumnIndex == 4)
+                {
+
+                    var data = DGVDev[e.ColumnIndex, e.RowIndex].EditedFormattedValue.ToString();
+                    var validate = int.TryParse(data, out number);
+                    if (!validate)
+                    {
+                        MetroMessageBox.Show(this, "Error input Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                if (e.ColumnIndex == 5)
+                {
+
+                    var data = DGVDev[e.ColumnIndex, e.RowIndex].EditedFormattedValue.ToString();
+                    var validate = int.TryParse(data, out number);
+                    if (!validate)
+                    {
+                        MetroMessageBox.Show(this, "Error input Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                if (e.ColumnIndex == 6)
+                {
+
+                    var data = DGVDev[e.ColumnIndex, e.RowIndex].EditedFormattedValue.ToString();
+                    
+                    if (data=="")
+                    {
+                        MetroMessageBox.Show(this, "Select Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+
+            }
+        }
+
+        private void DGVDev_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            //MetroFramework.MetroMessageBox.Show(this,"Error ","Data Input error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            
         }
     }
 }

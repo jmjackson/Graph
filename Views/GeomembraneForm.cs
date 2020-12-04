@@ -257,5 +257,51 @@ namespace Mine.Views
                 GeomembraneForm_Load(sender, e);
             }
         }
+
+        private void DGVGeo_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (DGVGeo.IsCurrentCellDirty)
+            {
+                int number;
+                if (e.ColumnIndex == 4)
+                {
+
+                    var data = DGVGeo[e.ColumnIndex, e.RowIndex].EditedFormattedValue.ToString();
+                    var validate = int.TryParse(data, out number);
+                    if (!validate)
+                    {
+                        MetroMessageBox.Show(this, "Error input Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                if (e.ColumnIndex == 5)
+                {
+
+                    var data = DGVGeo[e.ColumnIndex, e.RowIndex].EditedFormattedValue.ToString();
+                    var validate = int.TryParse(data, out number);
+                    if (!validate)
+                    {
+                        MetroMessageBox.Show(this, "Error input Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                if (e.ColumnIndex == 6)
+                {
+
+                    var data = DGVGeo[e.ColumnIndex, e.RowIndex].EditedFormattedValue.ToString();
+                    var validate = int.TryParse(data, out number);
+                    if (!validate)
+                    {
+                        MetroMessageBox.Show(this, "Error input Data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+            }
+        }
+
+        private void DGVGeo_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
     }
 }
