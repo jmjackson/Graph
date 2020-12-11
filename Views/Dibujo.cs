@@ -56,7 +56,7 @@ namespace Mine.Views
             myPaint = Pdibujo.CreateGraphics();
 
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
-            bmp = new Bitmap(Pdibujo.Width,Pdibujo.Height);
+            
 
             var projectno = (from d in db.Developments where d.ProjectDevId == Pn.Id select d).ToList();
             var seamno = (from s in db.GeoMembranes where s.ProjectDevId == Pn.Id select s).ToList();
@@ -451,6 +451,7 @@ namespace Mine.Views
             saveFileDialog.Filter = "Bitmap files|*.bmp";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
+                bmp = new Bitmap(Pdibujo.Width, Pdibujo.Height);
                 bmp.Save(saveFileDialog.FileName);
             }
         }
