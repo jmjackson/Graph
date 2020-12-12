@@ -338,12 +338,13 @@
             // 
             // Pdibujo
             // 
-            this.Pdibujo.BackColor = System.Drawing.Color.White;
+            this.Pdibujo.BackColor = System.Drawing.Color.Gray;
             this.Pdibujo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pdibujo.Location = new System.Drawing.Point(190, 52);
             this.Pdibujo.Name = "Pdibujo";
             this.Pdibujo.Size = new System.Drawing.Size(996, 647);
             this.Pdibujo.TabIndex = 5;
+            this.Pdibujo.Paint += new System.Windows.Forms.PaintEventHandler(this.Pdibujo_Paint);
             this.Pdibujo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseClick);
             this.Pdibujo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseDown);
             this.Pdibujo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pdibujo_MouseMove);

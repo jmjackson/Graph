@@ -50,9 +50,9 @@ namespace Mine.Views
         //Color color = Color.Black;
         //int ancho = 2;
         Bitmap bmp;
-
         private void Dibujo_Load(object sender, EventArgs e)
         {
+
             myPaint = Pdibujo.CreateGraphics();
 
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
@@ -255,7 +255,7 @@ namespace Mine.Views
                 y = e.Y;
                 if (a == 0)
                 {
-                    myPaint.DrawLine(new Pen(Color.Black), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                    myPaint.DrawLine(new Pen(Color.White, ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
                     X = e.X;
                     Y = e.Y;
                 }
@@ -419,12 +419,14 @@ namespace Mine.Views
         }
 
        
-
-        
-
         private void BtnSeamNo_Click(object sender, EventArgs e)
         {
             a = 9;
+        }
+
+        private void Pdibujo_Paint(object sender, PaintEventArgs e)
+        {
+            //e.Graphics.DrawImage(bmp, Point.Empty);
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -445,13 +447,14 @@ namespace Mine.Views
 
         private void BtnExport_Click(object sender, EventArgs e)
         {
+            bmp = new Bitmap(Pdibujo.Width, Pdibujo.Height);
+            Pdibujo.DrawToBitmap(bmp, new Rectangle(0, 0, Pdibujo.Width, Pdibujo.Height));
             SaveFileDialog saveFileDialog = new SaveFileDialog();
 
             saveFileDialog.DefaultExt = "bmp";
             saveFileDialog.Filter = "Bitmap files|*.bmp";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                bmp = new Bitmap(Pdibujo.Width, Pdibujo.Height);
                 bmp.Save(saveFileDialog.FileName);
             }
         }
