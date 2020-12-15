@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.PanelLeft = new System.Windows.Forms.Panel();
-            this.Pdraw = new System.Windows.Forms.Panel();
+            this.Pdraw = new PruebaDraw();
             this.GbTools = new System.Windows.Forms.GroupBox();
             this.BtnTrianguloRectangulo = new FontAwesome.Sharp.IconButton();
             this.lblGrosor = new System.Windows.Forms.Label();
@@ -338,7 +338,7 @@
             // 
             // Pdibujo
             // 
-            this.Pdibujo.BackColor = System.Drawing.Color.Gray;
+            this.Pdibujo.BackColor = System.Drawing.Color.Maroon;
             this.Pdibujo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pdibujo.Location = new System.Drawing.Point(190, 52);
             this.Pdibujo.Name = "Pdibujo";

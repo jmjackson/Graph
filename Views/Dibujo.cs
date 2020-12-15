@@ -21,7 +21,6 @@ namespace Mine.Views
 
         //
         
-        private Graphics myPaint;
         private Boolean draw = false;
         private double diffxy;
         private int curX, curY,x,y, diffx, diffy;
@@ -42,6 +41,9 @@ namespace Mine.Views
             //g = PbLienzo.CreateGraphics();
             pdId = dev;
             //BtnDraw.Enabled = false;
+
+            bmp = new Bitmap(Pdibujo.Width,Pdibujo.Height);
+            Pdibujo.CreateGraphics().DrawImage(bmp, 0, 0);
         }
 
         //int? X = null;
@@ -49,12 +51,9 @@ namespace Mine.Views
         //bool dibujar = false;
         //Color color = Color.Black;
         //int ancho = 2;
-        Bitmap bmp;
+         private Bitmap bmp;
         private void Dibujo_Load(object sender, EventArgs e)
         {
-
-            myPaint = Pdibujo.CreateGraphics();
-
             var Pn = db.ProjectDevs.Include(a => a.Project).Where(a => a.Id == pdId).FirstOrDefault();
             
 
@@ -245,32 +244,38 @@ namespace Mine.Views
 
         private void Pdibujo_MouseMove(object sender, MouseEventArgs e)
         {
-           
+ 
             diffxy = Math.Sqrt((diffx * diffx) + (diffy * diffy));
-            
-
             if (draw == true)
             {
                 x = e.X;
                 y = e.Y;
-                if (a == 0)
-                {
-                    myPaint.DrawLine(new Pen(Color.White, ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
-                    X = e.X;
-                    Y = e.Y;
-                }
-                if (a == -1)
-                {
-                    myPaint.DrawLine(new Pen(Color.White,ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
-                    X = e.X;
-                    Y = e.Y;
-                }
-            }
 
+                using (Graphics g = Graphics.FromImage(bmp))
+                {
+                    if (a == 0)
+                    {
+                        g.DrawLine(new Pen(Color.Black, ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                        X = e.X;
+                        Y = e.Y;
+                    }
+                    if (a == -1)
+                    {
+                        
+                        g.DrawLine(new Pen(Color.White, ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                        X = e.X;
+                        Y = e.Y;
+                    }
+                }
+                Pdibujo.Invalidate();
+
+            }
         }
+            
 
         private void Pdibujo_MouseClick(object sender, MouseEventArgs e)
         {
+            Graphics myPaint = Graphics.FromImage(bmp);
             if (draw == true)
             {
                 x = e.X;
@@ -426,7 +431,7 @@ namespace Mine.Views
 
         private void Pdibujo_Paint(object sender, PaintEventArgs e)
         {
-            //e.Graphics.DrawImage(bmp, Point.Empty);
+            e.Graphics.DrawImage(bmp, Point.Empty);
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -447,16 +452,16 @@ namespace Mine.Views
 
         private void BtnExport_Click(object sender, EventArgs e)
         {
-            bmp = new Bitmap(Pdibujo.Width, Pdibujo.Height);
-            Pdibujo.DrawToBitmap(bmp, new Rectangle(0, 0, Pdibujo.Width, Pdibujo.Height));
             SaveFileDialog saveFileDialog = new SaveFileDialog();
 
             saveFileDialog.DefaultExt = "bmp";
             saveFileDialog.Filter = "Bitmap files|*.bmp";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Pdibujo.DrawToBitmap(bmp, new Rectangle(0, 0, Pdibujo.Width, Pdibujo.Height));
                 bmp.Save(saveFileDialog.FileName);
             }
+
         }
 
         //private void PbLienzo_MouseMove_1(object sender, MouseEventArgs e)
