@@ -251,18 +251,18 @@ namespace Mine.Views
                 x = e.X;
                 y = e.Y;
 
-                using (Graphics g = Graphics.FromImage(bmp))
+                using (Graphics myPaint = Graphics.FromImage(bmp))
                 {
                     if (a == 0)
                     {
-                        g.DrawLine(new Pen(Color.Black, ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+                        myPaint.DrawLine(new Pen(Color.Black, ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
                         X = e.X;
                         Y = e.Y;
                     }
                     if (a == -1)
                     {
-                        
-                        g.DrawLine(new Pen(Color.White, ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
+
+                        myPaint.DrawLine(new Pen(Color.White, ancho), new Point(X ?? e.X, Y ?? e.Y), new Point(e.X, e.Y));
                         X = e.X;
                         Y = e.Y;
                     }
@@ -275,111 +275,113 @@ namespace Mine.Views
 
         private void Pdibujo_MouseClick(object sender, MouseEventArgs e)
         {
-            Graphics myPaint = Graphics.FromImage(bmp);
             if (draw == true)
             {
                 x = e.X;
                 y = e.Y;
                 diffx = e.X - curX;
                 diffy = curY - e.Y;
-
                 //Medidas para el trinagulo Normal
                 // medio.X = x - (cx - x);
                 medio.X = curX - (x - curX);
                 // medio.Y = cy;//cx, cy, en este caso se usan como puntos iniciales
                 medio.Y = y;
-
-                int w = 100, h = 100;
-                Rectangle rect = new Rectangle(e.X, e.Y, diffx, diffy);
-                if (a == 1)
+                using (Graphics myPaint = Graphics.FromImage(bmp))
                 {
-                    //Linia
-                    myPaint.DrawLine(new Pen(Color.Black), curX, curY, e.X, e.Y);
-                    myPaint.DrawLine(new Pen(Color.Black), curX, curY, e.X, e.Y);
-                }
-                if (a == 2)
-                {
-                    //Rectangulo
-                    myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, -diffy);
-                    myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, -diffy);
-                }
-                if (a == 3)
-                {
-                    //Circulo
-                    myPaint.DrawEllipse(new Pen(Color.Black),curX,curY,diffx,-diffy);
-                    myPaint.DrawEllipse(new Pen(Color.Black), curX, curY, diffx, -diffy);
-                }
-                if (a == 4)
-                {
-                    //Cuadrado
-                    myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, diffx);
-                    myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, diffx);
-                }
-                if (a == 5)
-                {
-                    //Triangulo
-                    myPaint.DrawLine(new Pen(Color.Black), x, y, curX, curY);
-                    myPaint.DrawLine(new Pen(Color.Black), x, y, medio.X, medio.Y);
-                    myPaint.DrawLine(new Pen(Color.Black), medio.X, medio.Y, curX, curY);
-                }
-                if (a == 7)
-                {
-                    //texto
-                    var select = Convert.ToInt32(ListBoxData.SelectedItem.ToString());
-                    var tdev = db.Developments.Where(a => a.ProjectDevId == pdId).Where(a => a.PanelNo == select).FirstOrDefault();
-                    //var tgeo = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).FirstOrDefault();
-
-                    string text1 = "PNo:" + tdev.PanelNo.ToString() + ", RNo.: " + tdev.RollNo + "\nL:" + tdev.Lenght + ", W:" + tdev.Width +
-                        "\nT:" + tdev.Thickness + ", Date:" + tdev.DeploymentDate.ToShortDateString();
-                    using (Font font1 = new Font("Arial", 8, FontStyle.Regular, GraphicsUnit.Point))
+                    Rectangle rect = new Rectangle(e.X, e.Y, diffx, diffy);
+                    if (a == 1)
                     {
-                        //RectangleF rectF1 = new RectangleF(e.X, e.Y, diffx, diffy);
-                        RectangleF rectF1 = new RectangleF(e.X, e.Y, 150, 50);//cordenadas primero y luego tamano
-                        myPaint.DrawString(text1, font1, Brushes.DarkGray, rectF1);
-                        myPaint.DrawRectangle(Pens.White, Rectangle.Round(rectF1));
+                        //Linia
+                        myPaint.DrawLine(new Pen(Color.Black), curX, curY, e.X, e.Y);
+                        myPaint.DrawLine(new Pen(Color.Black), curX, curY, e.X, e.Y);
+                    }
+                    if (a == 2)
+                    {
+                        //Rectangulo
+                        myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, -diffy);
+                        myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, -diffy);
+                    }
+                    if (a == 3)
+                    {
+                        //Circulo
+                        myPaint.DrawEllipse(new Pen(Color.Black), curX, curY, diffx, -diffy);
+                        myPaint.DrawEllipse(new Pen(Color.Black), curX, curY, diffx, -diffy);
+                    }
+                    if (a == 4)
+                    {
+                        //Cuadrado
+                        myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, diffx);
+                        myPaint.DrawRectangle(new Pen(Color.Black), curX, curY, diffx, diffx);
+                    }
+                    if (a == 5)
+                    {
+                        //Triangulo
+                        myPaint.DrawLine(new Pen(Color.Black), x, y, curX, curY);
+                        myPaint.DrawLine(new Pen(Color.Black), x, y, medio.X, medio.Y);
+                        myPaint.DrawLine(new Pen(Color.Black), medio.X, medio.Y, curX, curY);
+                    }
+                    if (a == 7)
+                    {
+                        //texto
+                        var select = Convert.ToInt32(ListBoxData.SelectedItem.ToString());
+                        var tdev = db.Developments.Where(a => a.ProjectDevId == pdId).Where(a => a.PanelNo == select).FirstOrDefault();
+                        //var tgeo = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).FirstOrDefault();
+
+                        string text1 = "PNo:" + tdev.PanelNo.ToString() + ", RNo.: " + tdev.RollNo + "\nL:" + tdev.Lenght + ", W:" + tdev.Width +
+                            "\nT:" + tdev.Thickness + ", Date:" + tdev.DeploymentDate.ToShortDateString();
+                        using (Font font1 = new Font("Arial", 8, FontStyle.Regular, GraphicsUnit.Point))
+                        {
+                            //RectangleF rectF1 = new RectangleF(e.X, e.Y, diffx, diffy);
+                            RectangleF rectF1 = new RectangleF(e.X, e.Y, 150, 50);//cordenadas primero y luego tamano
+                            myPaint.DrawString(text1, font1, Brushes.DarkGray, rectF1);
+                            myPaint.DrawRectangle(Pens.White, Rectangle.Round(rectF1));
+                        }
+                    }
+                    if (a == 8)
+                    {
+                        int posx1 = x;
+                        int posy1 = y;
+
+                        int posx2 = curX;
+                        int posy2 = curY;
+
+                        int altura = posy2 - posy1;
+                        int base_ = posx2 - posx1;
+
+                        int posx = posx1;
+                        int posy = posy2;
+                        // Base
+                        myPaint.DrawLine(new Pen(Color.Black), posx, posy, posx + base_, posy);
+                        // Altura
+                        myPaint.DrawLine(new Pen(Color.Black), posx, posy, posx, posy - altura);
+                        // Hipotenusa
+                        myPaint.DrawLine(new Pen(Color.Black), posx, posy - altura, posx + base_, posy);
+
+                    }
+                    if (a == 9)
+                    {
+                        //texto
+                        var select = SNOList.SelectedItem.ToString();
+                        string[] data = select.Split('-');
+                        var sel = Convert.ToInt32(data[0]);
+                        var tgeo = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).Where(a => a.Id == sel).FirstOrDefault();
+
+
+                        string text1 = "SN:" + tgeo.SeamNo.ToString() + ", SL.: " + tgeo.SeamLength.ToString() + "\nST:" + tgeo.SeamTime + ", WT:" + tgeo.WedgeTemp +
+                            "\nWS:" + tgeo.WedgeSpeed + ", D:" + tgeo.Destructive.ToString() + "R:" + tgeo.RemarksDestructive;
+                        using (Font font1 = new Font("Arial", 8, FontStyle.Regular, GraphicsUnit.Point))
+                        {
+                            //RectangleF rectF1 = new RectangleF(e.X, e.Y, diffx, diffy);
+                            RectangleF rectF1 = new RectangleF(e.X, e.Y, 150, 50);//cordenadas primero y luego tamano
+                            myPaint.DrawString(text1, font1, Brushes.DarkGray, rectF1);
+                            myPaint.DrawRectangle(Pens.White, Rectangle.Round(rectF1));
+                        }
                     }
                 }
-                if (a == 8)
-                {
-                    int posx1 = x;
-                    int posy1 = y;
+                Pdibujo.Invalidate();
 
-                    int posx2 = curX;
-                    int posy2 = curY;
-
-                    int altura = posy2 - posy1;
-                    int base_ = posx2 - posx1;
-
-                    int posx = posx1;
-                    int posy = posy2;
-                    // Base
-                    myPaint.DrawLine(new Pen(Color.Black), posx, posy, posx + base_, posy);
-                    // Altura
-                    myPaint.DrawLine(new Pen(Color.Black), posx, posy, posx, posy - altura);
-                    // Hipotenusa
-                    myPaint.DrawLine(new Pen(Color.Black), posx, posy - altura, posx + base_, posy);
-
-                }
-                if (a==9)
-                {
-                    //texto
-                    var select = SNOList.SelectedItem.ToString();
-                    string[] data = select.Split('-');
-                    var sel = Convert.ToInt32(data[0]);
-                    var tgeo = db.GeoMembranes.Where(a => a.ProjectDevId == pdId).Where(a => a.Id == sel).FirstOrDefault();
-                    
-
-                    string text1 = "SN:" + tgeo.SeamNo.ToString() + ", SL.: " + tgeo.SeamLength.ToString() + "\nST:" + tgeo.SeamTime + ", WT:" + tgeo.WedgeTemp +
-                        "\nWS:" + tgeo.WedgeSpeed + ", D:" + tgeo.Destructive.ToString()+"R:"+tgeo.RemarksDestructive;
-                    using (Font font1 = new Font("Arial", 8, FontStyle.Regular, GraphicsUnit.Point))
-                    {
-                        //RectangleF rectF1 = new RectangleF(e.X, e.Y, diffx, diffy);
-                        RectangleF rectF1 = new RectangleF(e.X, e.Y, 150, 50);//cordenadas primero y luego tamano
-                        myPaint.DrawString(text1, font1, Brushes.DarkGray, rectF1);
-                        myPaint.DrawRectangle(Pens.White, Rectangle.Round(rectF1));
-                    }
-                }
             }
+                  
         }
 
         private void TbGrosor_Scroll(object sender, EventArgs e)
