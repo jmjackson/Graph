@@ -48,9 +48,10 @@
             this.BtnAccess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(179)))), ((int)(((byte)(219)))));
             this.BtnAccess.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.BtnAccess.ForeColor = System.Drawing.Color.White;
-            this.BtnAccess.Location = new System.Drawing.Point(360, 550);
+            this.BtnAccess.Location = new System.Drawing.Point(532, 916);
+            this.BtnAccess.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnAccess.Name = "BtnAccess";
-            this.BtnAccess.Size = new System.Drawing.Size(151, 51);
+            this.BtnAccess.Size = new System.Drawing.Size(287, 93);
             this.BtnAccess.TabIndex = 2;
             this.BtnAccess.Text = "Sign In ";
             this.BtnAccess.UseCustomBackColor = true;
@@ -62,9 +63,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(195, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(352, 58);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 237);
+            this.pictureBox1.Size = new System.Drawing.Size(313, 401);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -73,7 +75,8 @@
             // 
             this.LblError.AutoSize = true;
             this.LblError.ForeColor = System.Drawing.Color.Red;
-            this.LblError.Location = new System.Drawing.Point(144, 529);
+            this.LblError.Location = new System.Drawing.Point(216, 814);
+            this.LblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblError.Name = "LblError";
             this.LblError.Size = new System.Drawing.Size(0, 0);
             this.LblError.Style = MetroFramework.MetroColorStyle.Red;
@@ -84,9 +87,10 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(73, 276);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(109, 455);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(61, 32);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(89, 48);
             this.bunifuCustomLabel1.TabIndex = 5;
             this.bunifuCustomLabel1.Text = "User";
             // 
@@ -94,9 +98,10 @@
             // 
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(73, 397);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(109, 647);
+            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(112, 32);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(166, 48);
             this.bunifuCustomLabel2.TabIndex = 5;
             this.bunifuCustomLabel2.Text = "Password";
             // 
@@ -119,11 +124,11 @@
             this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.BtnClose.IconSize = 48;
             this.BtnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnClose.Location = new System.Drawing.Point(518, 9);
+            this.BtnClose.Location = new System.Drawing.Point(848, 14);
             this.BtnClose.Margin = new System.Windows.Forms.Padding(0);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Rotation = 0D;
-            this.BtnClose.Size = new System.Drawing.Size(58, 40);
+            this.BtnClose.Size = new System.Drawing.Size(87, 62);
             this.BtnClose.TabIndex = 3;
             this.BtnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnClose.UseCompatibleTextRendering = true;
@@ -140,26 +145,25 @@
             // TxtUser
             // 
             this.TxtUser.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUser.Location = new System.Drawing.Point(78, 329);
+            this.TxtUser.Location = new System.Drawing.Point(117, 529);
             this.TxtUser.Name = "TxtUser";
-            this.TxtUser.Size = new System.Drawing.Size(433, 39);
-            this.TxtUser.TabIndex = 0;
+            this.TxtUser.Size = new System.Drawing.Size(638, 55);
+            this.TxtUser.TabIndex = 6;
             // 
             // TxtPassword
             // 
             this.TxtPassword.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPassword.Location = new System.Drawing.Point(78, 444);
+            this.TxtPassword.Location = new System.Drawing.Point(117, 724);
             this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.Size = new System.Drawing.Size(433, 39);
-            this.TxtPassword.TabIndex = 1;
-            this.TxtPassword.UseSystemPasswordChar = true;
+            this.TxtPassword.Size = new System.Drawing.Size(638, 55);
+            this.TxtPassword.TabIndex = 7;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(598, 628);
+            this.ClientSize = new System.Drawing.Size(968, 1106);
             this.Controls.Add(this.TxtPassword);
             this.Controls.Add(this.TxtUser);
             this.Controls.Add(this.BtnClose);
@@ -170,6 +174,7 @@
             this.Controls.Add(this.BtnAccess);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
